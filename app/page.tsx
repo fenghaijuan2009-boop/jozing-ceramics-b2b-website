@@ -44,6 +44,26 @@ const capabilities = [
   ["03", "Export-ready delivery", "Protective packaging, inspection support and container planning for long-haul shipping."],
 ];
 
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "JOZING Ready Stock Ceramic Tableware",
+  description: "Ready-stock ceramic tableware lots available by carton, pallet, ton or container.",
+  itemListElement: stockLots.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Product",
+      name: item.name,
+      image: `https://www.jozing.cn${item.image}`,
+      url: `https://www.jozing.cn/contact?product=${encodeURIComponent(item.code)}`,
+      ...(item.tiers && item.tiers.length
+        ? { offers: { "@type": "Offer", price: item.tiers[0].price.replace(/[$,]/g, ""), priceCurrency: "USD", availability: "https://schema.org/InStock" } }
+        : {}),
+    },
+  })),
+};
+
 const factoryPhotos = [
   { src: "/factory/01-real-jozing-warehouse.webp", title: "JOZING warehouse", kind: "Real site photo" },
   { src: "/factory/02-white-ceramic-stock-wide.webp", title: "White ceramic inventory", kind: "AI-assisted visual" },
@@ -61,6 +81,7 @@ const factoryPhotos = [
 export default function Home() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <div className="topbar"><span>China ceramic tableware supply partner</span><span>Ready stock · OEM/ODM · Global shipping</span><HeaderTools /></div>
       <header className="nav shell">
         <a className="brand-logo" href="/" aria-label="JOZING home"><img src="/jozing-logo-fresh.png" alt="JOZING" width="567" height="158" /></a>

@@ -1,7 +1,16 @@
 import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
-export const metadata: Metadata = { title: "Contact JOZING | Request a Quote", description: "Contact JOZING for ready-stock ceramic tableware and OEM/ODM quotations." };
+export const metadata: Metadata = { alternates: { canonical: "/contact/" }, title: "Contact JOZING | Request a Quote", description: "Contact JOZING for ready-stock ceramic tableware and OEM/ODM quotations." };
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.jozing.cn/" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://www.jozing.cn/contact/" },
+  ],
+};
 export default function ContactPage() { return <main><SiteHeader />
+  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
   <PageHero eyebrow="CONTACT JOZING" title="A useful quote starts with a clear brief." intro="Tell us whether you need ready stock, mixed loading or an OEM/ODM collection. Include the details below so our team can respond with the right next step." />
   <section className="contact-page shell"><div className="contact-cards"><a href="https://wa.me/8615280186517?text=Hello%20JOZING%2C%20I%20would%20like%20to%20request%20a%20ceramic%20tableware%20quotation." target="_blank" rel="noreferrer"><small>FASTEST CONTACT</small><h2>WhatsApp</h2><strong>+86 152 8018 6517</strong><span>Start conversation →</span></a><a href="mailto:sales@jozing.cn?subject=Ceramic%20Tableware%20Inquiry"><small>BUSINESS EMAIL</small><h2>Email</h2><strong>sales@jozing.cn</strong><span>Send an inquiry →</span></a><article><small>COMPANY ADDRESS</small><h2>Visit / documents</h2><p>No. 3, Gubantou Village, Chao&apos;an District, Chaozhou, Guangdong, China</p></article></div>
   <div className="inquiry-panel"><div><p className="eyebrow">INQUIRY CHECKLIST</p><h2>What to include</h2><p>More detail helps us check the right stock lot or prepare a more relevant custom project response.</p></div><ol><li><b>01</b><span>Product photo, name or reference code</span></li><li><b>02</b><span>Required quantity and preferred sales unit</span></li><li><b>03</b><span>Carton packing or mixed-loading requirement</span></li><li><b>04</b><span>Target price or quality level</span></li><li><b>05</b><span>Destination country and port</span></li><li><b>06</b><span>Required delivery timing</span></li></ol></div></section>
