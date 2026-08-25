@@ -1,6 +1,7 @@
 import { HeaderTools } from "./header-tools";
-type PriceTier = { price: string; quantity: string };
-type StockLot = {
+import { productSlug } from "./product-utils";
+export type PriceTier = { price: string; quantity: string };
+export type StockLot = {
   code: string;
   name: string;
   type: string;
@@ -11,7 +12,7 @@ type StockLot = {
   priceLabel?: string;
 };
 
-const stockLots: StockLot[] = [
+export const stockLots: StockLot[] = [
   { code:"STOCK · 01", name:"Lemon Hand-Painted Ceramic Tableware for Microwave and Grill Use", type:"Hand-painted plates · cup · serving ware", pack:"Sold by set", stock:"200 sets", image:"/products/featured-row-1.webp", priceLabel:"Price / set", tiers:[{price:"$5.20",quantity:"200–999 sets"},{price:"$4.99",quantity:"1,000–4,999 sets"},{price:"$4.79",quantity:"≥5,000 sets"}] },
   { code:"STOCK · 02", name:"JOZING Ceramic Coffee Cup and Flower-Shaped Saucer Set for Cappuccino", type:"Ceramic coffee cup and flower-shaped saucer", pack:"Sold by set", stock:"200 sets", image:"/products/featured-row-2.webp", priceLabel:"Price / set", tiers:[{price:"$2.98",quantity:"200–499 sets"},{price:"$2.68",quantity:"500–1,999 sets"},{price:"$2.37",quantity:"2,000–9,999 sets"}] },
   { code:"STOCK · 03", name:"Vintage Cottagecore Porcelain Dinnerware Set for Home, Café & Gift", type:"Vintage cottagecore porcelain dinnerware", pack:"Sold by set", stock:"200 sets", image:"/products/featured-row-3.webp", priceLabel:"Price / set", tiers:[{price:"$5.20",quantity:"200–999 sets"},{price:"$4.99",quantity:"1,000–4,999 sets"},{price:"$4.79",quantity:"≥5,000 sets"}] },
@@ -44,26 +45,6 @@ const capabilities = [
   ["03", "Export-ready delivery", "Protective packaging, inspection support and container planning for long-haul shipping."],
 ];
 
-const itemListSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "JOZING Ready Stock Ceramic Tableware",
-  description: "Ready-stock ceramic tableware lots available by carton, pallet, ton or container.",
-  itemListElement: stockLots.map((item, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    item: {
-      "@type": "Product",
-      name: item.name,
-      image: `https://www.jozing.cn${item.image}`,
-      url: `https://www.jozing.cn/contact?product=${encodeURIComponent(item.code)}`,
-      ...(item.tiers && item.tiers.length
-        ? { offers: { "@type": "Offer", price: item.tiers[0].price.replace(/[$,]/g, ""), priceCurrency: "USD", availability: "https://schema.org/InStock" } }
-        : {}),
-    },
-  })),
-};
-
 const factoryPhotos = [
   { src: "/factory/01-real-jozing-warehouse.webp", title: "JOZING warehouse", kind: "Real site photo" },
   { src: "/factory/02-white-ceramic-stock-wide.webp", title: "White ceramic inventory", kind: "AI-assisted visual" },
@@ -81,12 +62,11 @@ const factoryPhotos = [
 export default function Home() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <div className="topbar"><span>China ceramic tableware supply partner</span><span>Ready stock · OEM/ODM · Global shipping</span><HeaderTools /></div>
       <header className="nav shell">
         <a className="brand-logo" href="/" aria-label="JOZING home"><img src="/jozing-logo-fresh.png" alt="JOZING" width="567" height="158" /></a>
         <nav aria-label="Main navigation">
-          <a href="/stock/">Stock Catalog</a><a href="/oem-odm/">OEM/ODM</a><a href="/blog/">Blog</a><a href="/about">About Us</a><a href="/faq">FAQ</a>
+          <a href="#stock">Ready Stock</a><a href="#oem">OEM/ODM</a><a href="#factory">Factory</a><a href="/about">About Us</a><a href="/faq">FAQ</a>
         </nav>
         <a className="nav-cta" href="#contact">Get a quote <span>↗</span></a>
       </header>
@@ -122,7 +102,7 @@ export default function Home() {
           <div className="section-head"><div><p className="eyebrow">UPDATED STOCK OPPORTUNITIES</p><h2>Ready to move.<br/><em>Priced to compete.</em></h2></div><div className="section-note"><p>Real availability changes quickly. Ask for the current list, loading quantity and best offer for your destination.</p><a href="#contact">Get the latest stock list →</a></div></div>
           <div className="product-grid" id="products">
             {stockLots.map((item, index) => <article className={`product-card${item.tiers ? " tiered-card" : ""}`} key={item.code}>
-              <div className="product-art"><span className="lot-badge">READY STOCK</span><button className="product-plus" aria-label={`Add ${item.name} to inquiry`}>+</button><img src={item.image} alt={item.name} loading="lazy"/><span className="preview-mark" aria-hidden="true">▧</span><a className="view-details" href={`/contact?product=${encodeURIComponent(item.code)}`}>View Details</a></div>
+              <div className="product-art"><span className="lot-badge">READY STOCK</span><button className="product-plus" aria-label={`Add ${item.name} to inquiry`}>+</button><img src={item.image} alt={item.name} loading="lazy"/><span className="preview-mark" aria-hidden="true">▧</span><a className="view-details" href={`/products/${productSlug(item.name)}`}>View Details</a></div>
               <div className="product-copy"><div><h3>{item.name}</h3><p>{item.type}</p></div>{item.tiers ? <div className="price-tiers" aria-label={`${item.name} tiered prices`}><span>{item.priceLabel ?? "Price / ton"}</span>{item.tiers.map((tier) => <div key={tier.quantity}><strong>{tier.price}</strong><small>{tier.quantity}</small></div>)}</div> : <dl><div><dt>Price</dt><dd>Request Quote</dd></div><div><dt>MOQ</dt><dd>{item.stock}</dd></div></dl>}</div>
             </article>)}
           </div>

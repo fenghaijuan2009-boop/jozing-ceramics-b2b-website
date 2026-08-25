@@ -2,6 +2,8 @@
 
 JOZING 陶瓷餐具 B2B 独立站，包含首页、Ready Stock 产品、OEM/ODM、工厂展示、About Us、Contact 和 FAQ 页面。
 
+本版本已完成第一阶段 AI/GEO 优化：24个独立产品页、6篇采购指南、Product/Offer/Breadcrumb/Article/Organization结构化数据、OAI-SearchBot抓取规则、自动Sitemap、IndexNow通知及`llms.txt`。
+
 ## 发布到 GitHub Pages
 
 为了保证图片与页面链接正常，请把仓库命名为：
