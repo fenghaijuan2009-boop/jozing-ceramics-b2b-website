@@ -13,7 +13,10 @@ const faqs = [
  ["Do you support COC and RoHS requirements?", "JOZING can discuss COC and RoHS compliance support based on the product and destination requirements. State the market, test or document requirement so it can be checked before order confirmation."],
  ["What information is needed for a quotation?", "Send the product photo or code, quality requirement, quantity, sales unit, carton packing, target price, destination port and required timing. For custom projects, also include artwork, logo and packaging references."],
 ];
-export default function FaqPage() { return <main><SiteHeader />
+export default function FaqPage() {
+ const faqSchema={"@context":"https://schema.org","@type":"FAQPage","mainEntity":faqs.map(([q,a])=>({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))};
+ return <main><SiteHeader />
+ <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}} />
  <PageHero eyebrow="BUYER FAQ" title="Clear answers before you source." intro="Practical guidance for ready-stock ceramic tableware, mixed loading and OEM/ODM projects. Final commercial details are always confirmed against the current stock lot or project brief." />
  <section className="faq-list shell">{faqs.map(([q,a],i)=><details key={q} open={i===0}><summary><span>{String(i+1).padStart(2,"0")}</span><h2>{q}</h2><b>+</b></summary><p>{a}</p></details>)}</section>
  <section className="faq-note"><div className="shell"><div><p className="eyebrow">IMPORTANT</p><h2>Stock and commercial terms change.</h2></div><p>Before procurement, confirm actual condition, available quantity, price unit, MOQ, packing list, payment terms, shipping terms and container loading information for the specific offer.</p></div></section>

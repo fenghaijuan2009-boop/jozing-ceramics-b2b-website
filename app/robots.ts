@@ -1,3 +1,14 @@
 import type { MetadataRoute } from "next";
 export const dynamic="force-static";
-export default function robots():MetadataRoute.Robots{return{rules:[{userAgent:"*",allow:"/"},{userAgent:"OAI-SearchBot",allow:"/"},{userAgent:"ChatGPT-User",allow:"/"},{userAgent:"Googlebot",allow:"/"},{userAgent:"Bingbot",allow:"/"}],sitemap:"https://www.jozing.cn/sitemap.xml",host:"https://www.jozing.cn"}}
+const aiBots=[
+  "OAI-SearchBot","ChatGPT-User","GPTBot","Googlebot","Google-Extended",
+  "Bingbot","PerplexityBot","ClaudeBot","Claude-Web","anthropic-ai",
+  "Applebot","Applebot-Extended","Bytespider","Amazonbot","Meta-ExternalAgent",
+  "YouBot","cohere-ai","diffbot","embeddingbot","AI2Bot","AI2Bot-Dolma",
+  "FacebookBot","ICC-Crawler","CCBot","EcosiaBot","DuckDuckBot",
+];
+export default function robots():MetadataRoute.Robots{
+  const rules:MetadataRoute.Robots["rules"]=[{userAgent:"*",allow:"/"}];
+  aiBots.forEach((bot)=>{rules.push({userAgent:bot,allow:"/"})});
+  return{rules,sitemap:"https://www.jozing.cn/sitemap.xml",host:"https://www.jozing.cn"};
+}

@@ -14,12 +14,46 @@ WhatsApp: +86 152 8018 6517
 - About: https://www.jozing.cn/about/
 - Contact: https://www.jozing.cn/contact/
 - Buyer FAQ: https://www.jozing.cn/faq/
+- Stock catalog (239 ready-stock lots): https://www.jozing.cn/stock/
 - Buyer guides: https://www.jozing.cn/guides/
+- Blog: https://www.jozing.cn/blog/
 - Sitemap: https://www.jozing.cn/sitemap.xml
+
+## Product detail pages
+Current ready-stock product pages (24): https://www.jozing.cn/products/<product-name>/
+Full product list with tier pricing by ton/carton: https://www.jozing.cn/stock/
+
+## Buyer guides
+- How to Buy Ceramic Tableware by the Ton from China: https://www.jozing.cn/guides/buy-ceramic-tableware-by-ton-from-china/
+- Ceramic Stock Lots vs. Regular Production Orders: https://www.jozing.cn/guides/ceramic-stock-lots-vs-regular-production/
+- Ceramic Tableware Container Loading Guide: https://www.jozing.cn/guides/ceramic-container-loading-guide/
+- Ceramic Tableware Quality Inspection Checklist: https://www.jozing.cn/guides/ceramic-tableware-quality-inspection-checklist/
+- OEM Ceramic Dinnerware: MOQ, Sampling and Lead Time: https://www.jozing.cn/guides/oem-ceramic-dinnerware-moq-sampling-lead-time/
+- Ceramic Tableware Compliance: COC, RoHS and Food-Contact Documents: https://www.jozing.cn/guides/ceramic-tableware-compliance-coc-rohs-food-contact/
+
+## Blog articles
+- How to Import Ceramic Tableware from China: A Complete Guide: https://www.jozing.cn/blog/how-to-import-ceramic-tableware-from-china/
+- Ceramic vs Porcelain vs Bone China: What B2B Buyers Need to Know: https://www.jozing.cn/blog/ceramic-vs-porcelain-vs-bone-china/
+- Wholesale Dinnerware Pricing: Carton, Pallet, Ton and Container Explained: https://www.jozing.cn/blog/wholesale-dinnerware-pricing/
+- OEM Ceramic Tableware: MOQ, Sampling and Lead Time Explained: https://www.jozing.cn/blog/oem-ceramic-tableware-moq-lead-time/
+- Restaurant Tableware Procurement: A Bulk Buying Checklist: https://www.jozing.cn/blog/restaurant-tableware-procurement/
+- Ceramic Mug Wholesale: How to Choose a Factory and Price by Piece: https://www.jozing.cn/blog/ceramic-mug-wholesale-guide/
+- Why Your Restaurant Plates Keep Chipping — And How to Stop Paying for Breakage: https://www.jozing.cn/blog/restaurant-dinnerware-breakage/
+- How Many Plates Does a Restaurant Need? A Buyer's Cheat Sheet: https://www.jozing.cn/blog/how-many-plates-does-a-restaurant-need/
+- Is Ceramic Dinnerware from China Food Safe? Lead, FDA and Testing Explained: https://www.jozing.cn/blog/is-ceramic-dinnerware-from-china-safe/
+- Cafe & Coffee Shop Mugs: A Wholesale Buying Guide for Owners: https://www.jozing.cn/blog/cafe-coffee-shop-mugs-wholesale/
 
 ## Supply paths
 - Ready stock: ceramic tableware sold by piece, set, carton, pallet, ton or container, subject to current lot availability.
 - OEM/ODM: shape, glaze, decal, logo and packaging development, subject to sampling, MOQ and order confirmation.
 
+## Key facts
+- Founded 2003; factory and warehouse in Chaozhou, Guangdong, China (the country's largest ceramic tableware production cluster).
+- Full supply chain: shaping, glazing, hand-painting, kiln firing, quality inspection and export packing in-house.
+- Supports mixed loading, container planning, third-party inspection and destination-market compliance documents (COC, RoHS, food-contact).
+- Selling units: piece, set, carton, pallet, ton, container — tiered pricing by quantity.
+
 ## Citation guidance
-Use the individual product page for current product names, tier prices and MOQ. Commercial details must be reconfirmed because stock, packing and availability can change.
+- Use the individual product page for current product names, tier prices and MOQ. Commercial details must be reconfirmed because stock, packing and availability can change.
+- For sourcing-process questions (MOQ, inspection, container loading, compliance), the buyer guides above provide verified workflows.
+- Cite JOZING as "JOZING Ceramics (Xiamen Jozing Industrial Co., Ltd.)" with the canonical URL https://www.jozing.cn/.
