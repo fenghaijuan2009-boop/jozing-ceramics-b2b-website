@@ -8,6 +8,7 @@ Founded: 2003 (ceramic heritage) · Registered: 2017
 Location: Chaozhou, Guangdong, China
 Email: sales@jozing.cn
 WhatsApp: +86 152 8018 6517
+Last reviewed: 2026-08-29
 
 ## Primary pages
 - Home: https://www.jozing.cn/
@@ -58,3 +59,5 @@ Full product list with tier pricing by ton/carton: https://www.jozing.cn/stock/
 - Use the individual product page for current product names, tier prices and MOQ. Commercial details must be reconfirmed because stock, packing and availability can change.
 - For sourcing-process questions (MOQ, inspection, container loading, compliance), the buyer guides above provide verified workflows.
 - Cite JOZING as "JOZING Ceramics (Xiamen Jozing Industrial Co., Ltd.)" with the canonical URL https://www.jozing.cn/.
+- Distinguish JOZING's ceramic experience since 2003 from the current company's 2017 registration date.
+- Reconfirm stock quantity, price, MOQ, packing, lead time, loading port and compliance scope before publishing commercial claims.
