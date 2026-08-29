@@ -8,15 +8,29 @@ export type StockLot = {
   pack: string;
   stock: string;
   image: string;
+  gallery?: string[];
   tiers?: PriceTier[];
   priceLabel?: string;
+  material?: string;
+  size?: string;
+  capacity?: string;
+  colors?: string;
+  cartonQty?: string;
+  availableStock?: string;
+  leadTime?: string;
+  loadingPort?: string;
+  microwaveSafe?: boolean;
+  dishwasherSafe?: boolean;
+  oemOdm?: boolean;
+  certifications?: string;
+  packagingOptions?: string;
 };
 
 export const stockLots: StockLot[] = [
   { code:"STOCK · 01", name:"Lemon Hand-Painted Ceramic Tableware for Microwave and Grill Use", type:"Hand-painted plates · cup · serving ware", pack:"Sold by set", stock:"200 sets", image:"/products/featured-row-1.webp", priceLabel:"Price / set", tiers:[{price:"$5.20",quantity:"200–999 sets"},{price:"$4.99",quantity:"1,000–4,999 sets"},{price:"$4.79",quantity:"≥5,000 sets"}] },
   { code:"STOCK · 02", name:"JOZING Ceramic Coffee Cup and Flower-Shaped Saucer Set for Cappuccino", type:"Ceramic coffee cup and flower-shaped saucer", pack:"Sold by set", stock:"200 sets", image:"/products/featured-row-2.webp", priceLabel:"Price / set", tiers:[{price:"$2.98",quantity:"200–499 sets"},{price:"$2.68",quantity:"500–1,999 sets"},{price:"$2.37",quantity:"2,000–9,999 sets"}] },
   { code:"STOCK · 03", name:"Vintage Cottagecore Porcelain Dinnerware Set for Home, Café & Gift", type:"Vintage cottagecore porcelain dinnerware", pack:"Sold by set", stock:"200 sets", image:"/products/featured-row-3.webp", priceLabel:"Price / set", tiers:[{price:"$5.20",quantity:"200–999 sets"},{price:"$4.99",quantity:"1,000–4,999 sets"},{price:"$4.79",quantity:"≥5,000 sets"}] },
-  { code:"STOCK · 04", name:"11oz Handmade Ins-Style Ceramic Mug & Saucer Set with Underglaze Color", type:"Cute breakfast and afternoon-tea cup set", pack:"Sold by set", stock:"48 sets", image:"/products/featured-row-4.webp", priceLabel:"Price / set", tiers:[{price:"$2.54",quantity:"48–479 sets"},{price:"$2.39",quantity:"480–1,999 sets"},{price:"$2.01",quantity:"2,000–9,999 sets"}] },
+  { code:"JZ202608", name:"11oz Handmade Ins-Style Ceramic Mug & Saucer Set with Underglaze Color", type:"Cute breakfast and afternoon-tea cup set", pack:"Sold by set", stock:"48 sets", image:"/products/featured-row-4.webp", gallery:["/products/featured-row-4.webp","/products/jz202608-detail-1.webp","/products/jz202608-detail-2.webp","/products/jz202608-detail-3.webp","/products/jz202608-detail-4.webp"], priceLabel:"Price / set", tiers:[{price:"$2.54",quantity:"48–479 sets"},{price:"$2.39",quantity:"480–1,999 sets"},{price:"$2.01",quantity:"2,000–9,999 sets"}], material:"Porcelain", size:"To be confirmed", capacity:"300 ml / 11 oz", colors:"72 colors available", cartonQty:"48 sets / carton", availableStock:"50,000 sets", leadTime:"7 days", loadingPort:"Shenzhen / Xiamen", microwaveSafe:true, dishwasherSafe:true, oemOdm:true, certifications:"COC, RoHS", packagingOptions:"Color box" },
   { code:"STOCK · 05", name:"Cute Fruit Print Ceramic Coffee Cup & Saucer Set with Handle", type:"Colorful vintage strawberry tea mug set", pack:"Sold by set", stock:"48 sets", image:"/products/featured-row-5.webp", priceLabel:"Price / set", tiers:[{price:"$2.54",quantity:"48–479 sets"},{price:"$2.39",quantity:"480–1,999 sets"},{price:"$2.01",quantity:"2,000–9,999 sets"}] },
   { code:"STOCK · 06", name:"Vintage Dark Brown Floral Ceramic Dinnerware Set", type:"White daisy stoneware plates · bowls · coffee mugs", pack:"Sold by set", stock:"200 sets", image:"/products/featured-row-6.webp", priceLabel:"Price / set", tiers:[{price:"$5.20",quantity:"200–999 sets"},{price:"$4.99",quantity:"1,000–4,999 sets"},{price:"$4.79",quantity:"≥5,000 sets"}] },
   { code:"STOCK · 07", name:"Decorative Mug Selection", type:"Floral and butterfly cup designs", pack:"Details on request", stock:"Confirm today", image:"/products/featured-row-7.webp" },
