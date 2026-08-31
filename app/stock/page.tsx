@@ -43,9 +43,7 @@ const itemListSchema = {
       name: p.name,
       category: p.category,
       url: `https://www.jozing.cn/contact?product=${encodeURIComponent(p.name.slice(0, 60))}`,
-      offers: p.tiers.length
-        ? { "@type": "Offer", price: p.tiers[0].price, priceCurrency: "USD", availability: "https://schema.org/InStock" }
-        : undefined,
+      description: `${p.category} ceramic tableware stock opportunity sold by ${p.unit}. Availability and final commercial terms require confirmation.`,
     },
   })),
 };
