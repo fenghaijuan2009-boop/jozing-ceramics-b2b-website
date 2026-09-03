@@ -19,7 +19,7 @@ const facts = [
   ["Supply paths", "Ready-stock / clearance lots and OEM/ODM manufacturing"],
   ["Buyer types", "Importers, wholesalers, hospitality suppliers and brands"],
   ["Sales units", "Piece, set, carton, pallet, ton and container, depending on the offer"],
-  ["Sales contact", "sales@jozing.cn · +86 152 8018 6517"],
+  ["Sales contact", "sales_b2b@jozing.cn · +86 152 8018 6517"],
   ["Warehouse address", "No. 3, Gubantou Village, Chao'an District, Chaozhou, Guangdong, China"],
 ];
 
