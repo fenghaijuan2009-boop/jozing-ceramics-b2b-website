@@ -77,26 +77,17 @@ const factoryPhotos = [
 export default function Home() {
   return (
     <main>
-      <div className="topbar"><span>China ceramic tableware supply partner</span><span>Ready stock · OEM/ODM · Global shipping</span><HeaderTools /></div>
+      <div className="topbar"><span>China Factory · Bulk Export Porcelain Supply</span><span>Ready stock · OEM / ODM · FOB · CIF · FCL · Mixed Container · Global shipping</span><div className="topbar-contacts"><a href="mailto:sales_b2b@jozing.cn">sales_b2b@jozing.cn</a><a href="https://wa.me/8615280186517" target="_blank" rel="noreferrer">WhatsApp: +86 152 8018 6517</a></div><HeaderTools /></div>
       <header className="nav shell">
         <a className="brand-logo" href="/" aria-label="JOZING home"><img src="/jozing-logo-fresh.png" alt="JOZING" width="567" height="158" /></a>
         <nav aria-label="Main navigation">
-          <a href="#stock">Ready Stock</a><a href="#oem">OEM/ODM</a><a href="#factory">Factory</a><a href="/about">About Us</a><a href="/faq">FAQ</a>
+          <a href="/">Home</a><a href="#stock">Ready Stock</a><a href="#oem">OEM/ODM</a><a href="#factory">Factory</a><a href="/about">About Us</a><a href="/faq">FAQ</a>
         </nav>
         <a className="nav-cta" href="#contact">Get a quote <span>↗</span></a>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-image" />
-        <div className="hero-wash" />
-        <div className="hero-poster-logo"><img src="/jozing-logo-fresh.png" alt="JOZING" /></div>
-        <div className="shell hero-content">
-          <p className="eyebrow">READY STOCK + CUSTOM MANUFACTURING</p>
-          <h1>Tableware supply,<br/><em>made flexible.</em></h1>
-          <p className="lead">From value-driven stock lots to distinctive OEM/ODM collections, JOZING helps importers, wholesalers and brands buy ceramic tableware with confidence.</p>
-          <div className="hero-actions"><a className="btn primary" href="#stock">Explore ready stock</a><a className="btn text" href="#oem">Start a custom project <span>→</span></a></div>
-          <div className="proof"><div><strong>6,000<span>m²</span></strong><small>Factory & warehouse</small></div><div><strong>2</strong><small>Flexible supply paths</small></div><div><strong>Global</strong><small>Export support</small></div></div>
-        </div>
       </section>
 
       <section className="pathways shell" aria-label="Supply options">
