@@ -27,7 +27,7 @@ export function InquiryForm({ initialProduct = "", compact = false }: { initialP
     message && `Additional requirements: ${message}`,
   ].filter(Boolean).join("\n"), [country, destination, email, message, product, purchaseType, quantity]);
   const whatsappUrl = `https://wa.me/8615280186517?text=${encodeURIComponent(inquiryText)}`;
-  const emailUrl = `mailto:sales@jozing.cn?subject=${encodeURIComponent(`JOZING ${purchaseType} inquiry${product ? ` - ${product.slice(0, 50)}` : ""}`)}&body=${encodeURIComponent(inquiryText)}`;
+  const emailUrl = `mailto:sales_b2b@jozing.cn?subject=${encodeURIComponent(`JOZING ${purchaseType} inquiry${product ? ` - ${product.slice(0, 50)}` : ""}`)}&body=${encodeURIComponent(inquiryText)}`;
   function submit(event: FormEvent<HTMLFormElement>) { event.preventDefault(); window.open(whatsappUrl, "_blank", "noopener,noreferrer"); }
   return <form className={`rfq-form${compact ? " rfq-form-compact" : ""}`} onSubmit={submit}>
     <div className="form-row"><label>Work email<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@company.com" /></label><label>Country / market<input type="text" value={country} onChange={(e) => setCountry(e.target.value)} placeholder="e.g. UAE" /></label></div>
