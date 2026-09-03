@@ -43,5 +43,5 @@ npm run dev
 ## 联系资料
 
 - WhatsApp: +86 152 8018 6517
-- Email: sales@jozing.cn
+- Email: sales_b2b@jozing.cn
 - Address: No. 3, Gubantou Village, Chao'an District, Chaozhou, Guangdong, China
