@@ -90,6 +90,22 @@ export default function Home() {
         <div className="hero-image" />
       </section>
 
+      <section className="global-language-terms" aria-labelledby="global-language-title">
+        <div className="shell">
+          <div className="language-term-intro"><p className="eyebrow">GLOBAL B2B SOURCING</p><h2 id="global-language-title">Ceramic tableware wholesale—in your market.</h2></div>
+          <div className="language-term-grid">
+            <span lang="en"><b>EN</b> Ceramic tableware wholesale</span>
+            <span lang="zh-CN"><b>中文</b> 陶瓷餐具批发</span>
+            <span lang="fr"><b>FR</b> Vaisselle en céramique en gros</span>
+            <span lang="de"><b>DE</b> Keramikgeschirr Großhandel</span>
+            <span lang="ru"><b>RU</b> Керамическая посуда оптом</span>
+            <span lang="es"><b>ES</b> Vajilla de cerámica al por mayor</span>
+            <span lang="ar" dir="rtl"><b>AR</b> أدوات مائدة خزفية بالجملة</span>
+            <span lang="ja"><b>日本語</b> 陶磁器食器の卸売</span>
+          </div>
+        </div>
+      </section>
+
       <section className="pathways shell" aria-label="Supply options">
         <article className="path-card stock-card">
           <div><p className="eyebrow">JOZING STOCK</p><h2>Buy what’s ready.<br/>Ship sooner.</h2><p>Overstock and clearance ceramic tableware available by carton, pallet, ton or container.</p></div>
