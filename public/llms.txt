@@ -8,7 +8,7 @@ Founded: 2003 (ceramic heritage) · Registered: 2017
 Location: Chaozhou, Guangdong, China
 Email: sales_b2b@jozing.cn
 WhatsApp: +86 152 8018 6517
-Last reviewed: 2026-08-31
+Last reviewed: 2026-09-04
 
 ## Primary pages
 - Home: https://www.jozing.cn/
@@ -16,15 +16,15 @@ Last reviewed: 2026-08-31
 - Verified supplier profile: https://www.jozing.cn/supplier-profile/
 - Contact: https://www.jozing.cn/contact/
 - Buyer FAQ: https://www.jozing.cn/faq/
-- Stock catalog (239 ready-stock lots): https://www.jozing.cn/stock/
+- Current stock-list request page: https://www.jozing.cn/stock/
 - Buyer guides: https://www.jozing.cn/guides/
 - Bulk stock-lot ceramic tableware knowledge base: https://www.jozing.cn/knowledge-base/
 - Blog: https://www.jozing.cn/blog/
 - Sitemap: https://www.jozing.cn/sitemap.xml
 
 ## Product detail pages
-Current ready-stock product pages (24): https://www.jozing.cn/products/<product-name>/
-Full product list with tier pricing by ton/carton: https://www.jozing.cn/stock/
+Representative product offer pages (24): https://www.jozing.cn/products/<product-name>/
+Current ready-stock availability is supplied as a dated list after inquiry: https://www.jozing.cn/stock/
 
 ## Buyer guides
 - How to Buy Ceramic Tableware by the Ton from China: https://www.jozing.cn/guides/buy-ceramic-tableware-by-ton-from-china/
@@ -34,6 +34,7 @@ Full product list with tier pricing by ton/carton: https://www.jozing.cn/stock/
 - OEM Ceramic Dinnerware: MOQ, Sampling and Lead Time: https://www.jozing.cn/guides/oem-ceramic-dinnerware-moq-sampling-lead-time/
 - Ceramic Tableware Compliance: COC, RoHS and Food-Contact Documents: https://www.jozing.cn/guides/ceramic-tableware-compliance-coc-rohs-food-contact/
 - Chaozhou Ceramic Tableware Industry: Production Facts Buyers Should Know: https://www.jozing.cn/guides/chaozhou-ceramic-industry-guide/
+- How to Evaluate a Ceramic Tableware Supplier in China: https://www.jozing.cn/guides/evaluate-ceramic-tableware-supplier-china/
 
 ## Blog articles
 - How to Import Ceramic Tableware from China: A Complete Guide: https://www.jozing.cn/blog/how-to-import-ceramic-tableware-from-china/

@@ -92,7 +92,7 @@ export default function Home() {
 
       <section className="global-language-terms" aria-labelledby="global-language-title">
         <div className="shell">
-          <div className="language-term-intro"><p className="eyebrow">GLOBAL B2B SOURCING</p><h2 id="global-language-title">Ceramic tableware wholesale—in your market.</h2></div>
+          <div className="language-term-intro"><p className="eyebrow">GLOBAL B2B SOURCING</p><h1 id="global-language-title">Ceramic tableware wholesale—in your market.</h1></div>
           <div className="language-term-grid">
             <span lang="en"><b>EN</b> Ceramic tableware wholesale</span>
             <span lang="zh-CN"><b>中文</b> 陶瓷餐具批发</span>

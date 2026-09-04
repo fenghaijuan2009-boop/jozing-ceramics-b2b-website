@@ -31,7 +31,7 @@ export default function KnowledgeBasePage() {
     headline: "Bulk Stock-Lot Ceramic Tableware Knowledge Base",
     description: "Practical information for international buyers sourcing ready-stock ceramic tableware from China by carton, ton, mixed load or container.",
     datePublished: "2026-08-31",
-    dateModified: "2026-08-31",
+    dateModified: "2026-09-04",
     author: { "@id": `${origin}/#organization` },
     publisher: { "@id": `${origin}/#organization` },
     mainEntityOfPage: canonical,
@@ -54,7 +54,7 @@ export default function KnowledgeBasePage() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-    <PageHero eyebrow="JOZING BUYER KNOWLEDGE · UPDATED 2026-08-31" title="Bulk stock-lot ceramic tableware, explained." intro="A practical reference for importers, wholesalers, discount retailers, hospitality suppliers and online sellers buying ready-stock ceramic tableware from China." />
+    <PageHero eyebrow="JOZING BUYER KNOWLEDGE · UPDATED 2026-09-04" title="Bulk stock-lot ceramic tableware, explained." intro="A practical reference for importers, wholesalers, discount retailers, hospitality suppliers and online sellers buying ready-stock ceramic tableware from China." />
     <article className="guide-article shell knowledge-article">
       <nav className="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Knowledge Base</span></nav>
       <div className="kb-summary"><p className="eyebrow">QUICK SUMMARY</p><h2>Buy around the actual lot—not a generic promise.</h2><p>JOZING supports ready-stock ceramic tableware sold by piece, set, carton, pallet, ton or container. Availability, assortment, packing, weight, price, lead time, loading port, inspection and compliance scope are reconfirmed for each lot before order confirmation.</p></div>
