@@ -124,3 +124,7 @@ body{background:#fbfaf6;color:#0d2b22}.topbar{background:#071e18;color:#d8e5df;b
 
 /* Keep every segment of the utility bar on one navy background. */
 .topbar,.language-menu summary,.social-tools,.quick-contact{background:#102b3c!important;color:#fff}
+.quick-contact{background:#25d366!important}
+.language-menu>div a{display:block!important;padding:9px 14px!important;text-align:left!important}
+.language-menu>div a .language-name{align-items:flex-start;text-align:left}
+.language-menu>div a[lang="ar"] .language-name{direction:rtl;align-items:flex-end;text-align:right}
