@@ -74,7 +74,8 @@ body{background:#fbfaf6;color:#0d2b22}.topbar{background:#071e18;color:#d8e5df;b
 .nav nav a,.nav-cta{color:#102b3c}
 .nav-cta{border-color:#102b3c}
 .hero{height:auto;aspect-ratio:1876/839;background:#fff}
-.hero-image{background-image:url('/hero-clearance-2026.png');background-position:center;background-size:contain;background-repeat:no-repeat}
+.hero-image{display:block;background:none}
+.hero-image img{display:block;width:100%;height:100%;object-fit:contain}
 @media(max-width:1180px){.topbar-contacts{display:none}.nav nav{gap:17px}}
 @media(max-width:900px){.nav nav a:first-child{display:inline}.hero{aspect-ratio:1876/839}}
 

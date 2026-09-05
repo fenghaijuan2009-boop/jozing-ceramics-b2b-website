@@ -87,7 +87,18 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-image" />
+        <picture className="hero-image">
+          <source media="(max-width: 620px)" srcSet="/hero-clearance-2026-mobile.webp" />
+          <img
+            src="/hero-clearance-2026.webp"
+            alt="JOZING factory clearance ceramic tableware available for bulk export"
+            width="1875"
+            height="839"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
       </section>
 
       <section className="global-language-terms" aria-labelledby="global-language-title">
