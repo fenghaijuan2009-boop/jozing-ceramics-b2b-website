@@ -136,3 +136,5 @@ body{background:#fbfaf6;color:#0d2b22}.topbar{background:#071e18;color:#d8e5df;b
 
 /* Skip layout and paint work for sections that are far below the mobile viewport. */
 .stock-section,.oem,.factory-gallery,.capabilities,.about,.client-proof,.contact,footer{content-visibility:auto;contain-intrinsic-size:auto 900px}
+.stock-page-products{padding-top:72px}
+.single-product-grid{max-width:360px}
