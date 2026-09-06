@@ -137,7 +137,28 @@ body{background:#fbfaf6;color:#0d2b22}.topbar{background:#071e18;color:#d8e5df;b
 /* Skip layout and paint work for sections that are far below the mobile viewport. */
 .stock-section,.oem,.factory-gallery,.capabilities,.about,.client-proof,.contact,footer{content-visibility:auto;contain-intrinsic-size:auto 900px}
 .stock-page-products{padding-top:72px}
-.single-product-grid{max-width:360px}
+.stock-shop-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;align-items:start}
+.stock-shop-card{min-width:0;background:#fff;border:1px solid #e0e5e8;border-radius:10px;overflow:hidden;box-shadow:0 3px 12px #102b3c08}
+.stock-shop-photo{display:block;aspect-ratio:1;background:#fff;overflow:hidden}
+.stock-shop-photo img{display:block;width:100%;height:100%;object-fit:contain}
+.stock-shop-info{padding:14px}
+.stock-shop-info h3{font-family:inherit;font-size:16px;font-weight:600;line-height:1.4;margin:0 0 8px;min-height:2.8em}
+.stock-shop-info a{color:#102b3c;text-decoration:none}
+.stock-shop-moq{font-size:12px;color:#536675;margin:0 0 14px}
+.stock-shop-prices{width:100%;border-collapse:collapse;margin-bottom:16px}
+.stock-shop-prices caption{text-align:left;font-size:11px;font-weight:600;color:#536675;letter-spacing:.06em;padding-bottom:5px}
+.stock-shop-prices th{font-size:11px;font-weight:400;text-align:left;padding:9px 0;white-space:nowrap}
+.stock-shop-prices td{text-align:right;font-size:20px;font-weight:700;padding:9px 0;color:#102b3c}
+.stock-shop-prices tbody tr+tr{border-top:1px solid #edf0f2}
+.stock-shop-info .stock-shop-whatsapp{display:flex;align-items:center;justify-content:center;gap:7px;min-height:44px;background:#168447;color:#fff;border-radius:6px;font-size:12px;font-weight:700;padding:9px 6px}
+.stock-shop-whatsapp svg{width:20px;height:20px;flex-shrink:0}
+.stock-shop-info .stock-shop-whatsapp:hover{background:#106b39}
+.stock-shop-details{display:block;text-align:center;font-size:12px;padding-top:12px;padding-bottom:4px}
+.stock-shop-card a:focus-visible{outline:3px solid #bc964d;outline-offset:-3px}
+.stock-shop-sr{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:1199px){.stock-shop-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:899px){.stock-shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:599px){.stock-shop-grid{grid-template-columns:minmax(0,1fr);max-width:360px}.stock-shop-info{padding:16px}.stock-shop-info h3{min-height:0}}
 .nav nav{align-items:center}
 .stock-menu{position:relative;color:#102b3c;font-size:13px}
 .stock-menu summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;gap:7px}
