@@ -1,4 +1,5 @@
 import { HeaderTools } from "./header-tools";
+import { StockMenu } from "./stock-menu";
 import { productSlug } from "./product-utils";
 import { InquiryForm } from "./inquiry-form";
 export type PriceTier = { price: string; quantity: string };
@@ -81,7 +82,7 @@ export default function Home() {
       <header className="nav shell">
         <a className="brand-logo" href="/" aria-label="JOZING home"><img src="/jozing-logo-fresh.png" alt="JOZING" width="567" height="158" /></a>
         <nav aria-label="Main navigation">
-          <a href="/">Home</a><a href="#stock">Ready Stock</a><a href="#oem">OEM/ODM</a><a href="#factory">Factory</a><a href="/about">About Us</a><a href="/faq">FAQ</a>
+          <a href="/">Home</a><StockMenu /><a href="#oem">OEM/ODM</a><a href="#factory">Factory</a><a href="/about">About Us</a><a href="/faq">FAQ</a>
         </nav>
         <a className="nav-cta" href="#contact">Get a quote <span>↗</span></a>
       </header>
