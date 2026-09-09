@@ -6,40 +6,30 @@ import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/stock/" },
-  title: "Current Ceramic Tableware Stock | JOZING",
+  title: "All Ready Stock | JOZING",
   description: "Request JOZING's current ceramic tableware stock list, packing details, quantities and export quotation. Availability changes frequently and is confirmed for each inquiry.",
 };
 
 export default function StockPage() {
-  const latestProduct = stockLots.find((product) => product.code === "JZ-A1601655571782");
-  const productUrl = latestProduct ? `/products/${productSlug(latestProduct.name)}/` : "/stock/";
-  const whatsappUrl = `https://wa.me/8615280186517?text=${encodeURIComponent(`Hello JOZING, I am interested in Assorted 3D Ceramic Coffee Mugs (${latestProduct?.code}). Please confirm available designs, wholesale pricing and shipping. https://www.jozing.cn${productUrl}`)}`;
-
   return (
     <main>
       <SiteHeader />
       <PageHero
         eyebrow="CURRENT READY STOCK"
-        title="Ask for today’s available stock."
-        intro="Our ceramic stock lots change frequently. Contact the JOZING team for current product photos, available quantities, packing details, loading options and the latest quotation for your destination."
+        title="All Ready stock"
+        intro="Browse all published ready-stock ceramic products. View product photos, wholesale prices and minimum order quantities, then contact us to confirm availability."
       />
-      {latestProduct ? <section className="stock-section stock-page-products">
-        <div className="shell">
-          <div className="section-head"><div><p className="eyebrow">NEW READY-STOCK PRODUCT</p><h2>Assorted 3D porcelain coffee mugs.</h2></div><div className="section-note"><p>Current colors and designs are allocated by lot. Ask for dated assortment photos before confirming an order.</p></div></div>
-          <div className="stock-shop-grid">
-            <article className="stock-shop-card">
-              <a className="stock-shop-photo" href={productUrl} aria-label={`View details: ${latestProduct.name}`}><Image src={latestProduct.image} alt={latestProduct.name} width={1200} height={1200} sizes="(max-width: 599px) 100vw, (max-width: 899px) 50vw, (max-width: 1199px) 33vw, 20vw" /></a>
-              <div className="stock-shop-info">
-                <h3><a href={productUrl}>3D Ceramic Mugs</a></h3>
-                <p className="stock-shop-moq">MOQ: {latestProduct.stock}</p>
-                <table className="stock-shop-prices"><caption>USD / piece</caption><thead className="stock-shop-sr"><tr><th scope="col">Order quantity</th><th scope="col">Unit price (USD)</th></tr></thead><tbody>{latestProduct.tiers?.map(tier => <tr key={tier.quantity}><th scope="row">{tier.quantity}</th><td>{tier.price}</td></tr>)}</tbody></table>
-                <a className="stock-shop-whatsapp" href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp about Assorted 3D Ceramic Coffee Mugs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M20.5 11.7a8.6 8.6 0 0 1-12.8 7.5L3 20.5l1.3-4.6A8.6 8.6 0 1 1 20.5 11.7Z"/><path d="M8 7.5c-1 1.2.5 4 2.3 5.8s4.4 3 5.6 1.7l.5-1.2-2.5-1.2-.9 1c-1.4-.6-2.5-1.7-3.1-3.1l.9-1-1.2-2.4Z"/></svg>Chat on WhatsApp</a>
-                <a className="stock-shop-details" href={productUrl}>View Details →</a>
-              </div>
-            </article>
-          </div>
+      <section className="shell stock-category-content">
+        <p>{stockLots.length} ready-stock products</p>
+        <div className="product-grid">{stockLots.map(product => <article className="product-card" key={product.code}>
+        <a className="category-whatsapp" href={`https://wa.me/8615280186517?text=${encodeURIComponent(`Hello JOZING, I am interested in ${product.name} (${product.code}). Please confirm pricing and availability. https://www.jozing.cn/products/${productSlug(product.name)}/`)}`} target="_blank" rel="noopener noreferrer" aria-label={`WhatsApp inquiry about ${product.name}`}>WhatsApp ↗</a>
+        <a className="category-product-image" href={`/products/${productSlug(product.name)}/`}><Image src={product.image} alt={product.name} width={600} height={600} sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 25vw" /></a>
+        <div className="product-copy"><h2>{product.name}</h2><p>{product.type}</p>
+          {product.tiers && <div className="price-tiers"><span>{product.priceLabel ?? "Price / ton"}</span>{product.tiers.map(tier => <div key={tier.quantity}><strong>{tier.price}</strong><small>{tier.quantity}</small></div>)}</div>}
+          <p>MOQ: {product.stock}</p><a href={`/products/${productSlug(product.name)}/`}>View Details →</a>
         </div>
-      </section> : null}
+      </article>)}</div>
+      </section>
       <section className="page-cta">
         <div className="shell">
           <p className="eyebrow">LIVE AVAILABILITY</p>
