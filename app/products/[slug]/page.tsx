@@ -44,12 +44,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <p className="product-intro">{product.type}. {isOem ? "Discuss customization, order quantity, sampling, packaging and production lead time with our team." : "Availability changes quickly; confirm current quantity, condition, packing and loading plan before ordering."}</p>
         {product.description ? <p className="product-description">{product.description}</p> : null}
         <dl className="spec-list">
+          {!product.specificationsOnly ? <>
           <div><dt>Product code</dt><dd>{product.code}</dd></div><div><dt>Material</dt><dd>{product.material ?? "Porcelain / ceramic, confirmed by lot"}</dd></div>
           {product.size ? <div><dt>Size</dt><dd>{product.size}</dd></div> : null}{product.capacity ? <div><dt>Capacity</dt><dd>{product.capacity}</dd></div> : null}{product.colors ? <div><dt>Color options</dt><dd>{product.colors}</dd></div> : null}
           <div><dt>Starting MOQ</dt><dd>{product.stock}</dd></div>{product.cartonQty ? <div><dt>Carton quantity</dt><dd>{product.cartonQty}</dd></div> : null}{product.availableStock ? <div><dt>Ready stock</dt><dd>{product.availableStock}</dd></div> : null}
           {product.leadTime ? <div><dt>Lead time</dt><dd>{product.leadTime}</dd></div> : null}{product.loadingPort ? <div><dt>Loading port</dt><dd>{product.loadingPort}</dd></div> : null}
           <div><dt>Microwave safe</dt><dd>{product.microwaveSafe ? "Yes" : "Confirm by item"}</dd></div><div><dt>Dishwasher safe</dt><dd>{product.dishwasherSafe ? "Yes" : "Confirm by item"}</dd></div><div><dt>OEM / ODM</dt><dd>{(isOem || product.oemOdm) ? "Supported" : "Subject to order quantity"}</dd></div>
           {product.certifications ? <div><dt>Compliance</dt><dd>{product.certifications}</dd></div> : null}{product.packagingOptions ? <div><dt>Packaging</dt><dd>{product.packagingOptions}</dd></div> : null}
+          </> : null}
           {product.specifications?.map(spec => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}
         </dl>
         {product.tiers ? <div className="detail-prices"><h2>{product.priceLabel ?? "Tier pricing"}</h2>{product.tiers.map((tier) => <div key={tier.quantity}><strong>{tier.price}</strong><span>{tier.quantity}</span></div>)}</div> : null}
