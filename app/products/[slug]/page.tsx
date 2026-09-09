@@ -39,6 +39,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <nav className="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/#stock">Ready Stock</a><span>/</span><b>{product.code}</b></nav>
         <p className="eyebrow">READY STOCK · {product.code}</p><h1>{product.name}</h1>
         <p className="product-intro">{product.type}. Availability changes quickly; confirm current quantity, condition, packing and loading plan before ordering.</p>
+        {product.description ? <p className="product-description">{product.description}</p> : null}
         <dl className="spec-list">
           <div><dt>Product code</dt><dd>{product.code}</dd></div><div><dt>Material</dt><dd>{product.material ?? "Porcelain / ceramic, confirmed by lot"}</dd></div>
           {product.size ? <div><dt>Size</dt><dd>{product.size}</dd></div> : null}{product.capacity ? <div><dt>Capacity</dt><dd>{product.capacity}</dd></div> : null}{product.colors ? <div><dt>Color options</dt><dd>{product.colors}</dd></div> : null}
@@ -46,11 +47,16 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           {product.leadTime ? <div><dt>Lead time</dt><dd>{product.leadTime}</dd></div> : null}{product.loadingPort ? <div><dt>Loading port</dt><dd>{product.loadingPort}</dd></div> : null}
           <div><dt>Microwave safe</dt><dd>{product.microwaveSafe ? "Yes" : "Confirm by item"}</dd></div><div><dt>Dishwasher safe</dt><dd>{product.dishwasherSafe ? "Yes" : "Confirm by item"}</dd></div><div><dt>OEM / ODM</dt><dd>{product.oemOdm ? "Supported" : "Subject to order quantity"}</dd></div>
           {product.certifications ? <div><dt>Compliance</dt><dd>{product.certifications}</dd></div> : null}{product.packagingOptions ? <div><dt>Packaging</dt><dd>{product.packagingOptions}</dd></div> : null}
+          {product.specifications?.map(spec => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}
         </dl>
         {product.tiers ? <div className="detail-prices"><h2>{product.priceLabel ?? "Tier pricing"}</h2>{product.tiers.map((tier) => <div key={tier.quantity}><strong>{tier.price}</strong><span>{tier.quantity}</span></div>)}</div> : null}
         <a className="btn primary" href={`/contact/?product=${encodeURIComponent(`${product.code} - ${product.name}`)}`}>Confirm stock & request quote</a>
       </div>
     </section>
+    {product.detailSections?.map(section => <section className="product-description-section shell" key={section.title}>
+      <h2>{section.title}</h2>
+      <div className="product-description-images">{section.images.map(image => <a href={image.src} target="_blank" rel="noopener noreferrer" key={image.src} aria-label={`Open image: ${image.alt}`}><img src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" /></a>)}</div>
+    </section>)}
     <section className="product-evidence"><div className="shell"><h2>Information buyers should confirm</h2><div className="evidence-grid"><article><b>01</b><h3>Current lot</h3><p>Ask for dated photos, available quantity and the exact assortment included.</p></article><article><b>02</b><h3>Packing list</h3><p>Confirm pieces per carton, carton dimensions, gross weight and CBM.</p></article><article><b>03</b><h3>Quality standard</h3><p>Agree inspection criteria, acceptable variation and compliance documents for your market.</p></article></div></div></section>
     <section className="page-cta"><div className="shell"><p className="eyebrow">BUY WITH CURRENT INFORMATION</p><h2>Request the latest packing list and availability.</h2><div><a className="btn primary" href="/contact">Contact JOZING</a><a className="btn text" href="/guides">Read buyer guides →</a></div></div></section>
     <SiteFooter />

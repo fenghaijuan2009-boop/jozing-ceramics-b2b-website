@@ -26,9 +26,175 @@ export type StockLot = {
   oemOdm?: boolean;
   certifications?: string;
   packagingOptions?: string;
+  description?: string;
+  specifications?: { label: string; value: string }[];
+  detailSections?: { title: string; images: { src: string; alt: string; width: number; height: number }[] }[];
 };
 
 export const stockLots: StockLot[] = [
+  {
+    code: "2026071501",
+    name: "10.2inch White Ceramic Leaf Pattern Serving Plate",
+    type: "Blue leaf pattern · irregular ceramic plate",
+    pack: "Sold by piece",
+    stock: "200 pieces",
+    image: "/products/leaf-plate-11000036706108/main-01.webp",
+    gallery: Array.from({ length: 6 }, (_, index) => `/products/leaf-plate-11000036706108/main-${String(index + 1).padStart(2, "0")}.webp`),
+    priceLabel: "Price / piece",
+    tiers: [{ price: "$0.41", quantity: "200–2,999 pieces" }, { price: "$0.40", quantity: "3,000–4,999 pieces" }, { price: "$0.39", quantity: "≥5,000 pieces" }],
+    material: "Ceramic",
+    size: "10.2 inch / approximately 26 cm",
+    colors: "White with blue leaf pattern",
+    microwaveSafe: true,
+    dishwasherSafe: true,
+    oemOdm: true,
+    description: "A white ceramic serving plate with a softly irregular outline and delicate blue leaf decoration. Its modern Nordic style suits everyday dining, cafés, desserts and party service. Available as ready stock, with microwave-safe and dishwasher-safe use.",
+    specifications: [
+      { label: "Shape", value: "Irregular" },
+      { label: "Pattern", value: "Plant / blue leaves" },
+      { label: "Style", value: "Minimalist / modern Nordic" },
+      { label: "Origin", value: "Guangdong, China" },
+      { label: "Selling unit", value: "Single item" },
+      { label: "Single package size", value: "26 × 26 × 3 cm" },
+      { label: "Single gross weight", value: "0.880 kg (including packaging)" },
+    ],
+    detailSections: [
+    {
+        "title": "Product features & serving ideas",
+        "images": [
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-01.webp",
+                "width": 1254,
+                "height": 1254,
+                "alt": "White ceramic plates with blue leaf patterns arranged as a collection"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-02.webp",
+                "width": 1254,
+                "height": 1254,
+                "alt": "White ceramic serving plate with blue leaf decoration"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-03.webp",
+                "width": 1254,
+                "height": 1254,
+                "alt": "Leaf pattern ceramic plate in a family dining setting"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-04.webp",
+                "width": 1254,
+                "height": 1254,
+                "alt": "Leaf pattern ceramic plate with coffee for everyday café use"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-05.webp",
+                "width": 1254,
+                "height": 1254,
+                "alt": "Ceramic plate material, glaze and care features"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-06.webp",
+                "width": 1254,
+                "height": 1254,
+                "alt": "Ceramic serving plate uses and wholesale supply options"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-07.webp",
+                "width": 1448,
+                "height": 1086,
+                "alt": "Leaf pattern plates arranged for an outdoor dining event"
+            }
+        ]
+    },
+    {
+        "title": "Ready-stock photos",
+        "images": [
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-08.webp",
+                "width": 1800,
+                "height": 1695,
+                "alt": "Stacks of the ceramic plates in the warehouse"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-09.webp",
+                "width": 1350,
+                "height": 1800,
+                "alt": "Leaf pattern ceramic plate inventory"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-10.webp",
+                "width": 1350,
+                "height": 1800,
+                "alt": "Close-up of blue leaf pattern plates in stock"
+            }
+        ]
+    },
+    {
+        "title": "Product views & dimensions",
+        "images": [
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-11.webp",
+                "width": 1254,
+                "height": 1254,
+                "alt": "Angled view of the white ceramic leaf pattern plate"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-12.webp",
+                "width": 1254,
+                "height": 1254,
+                "alt": "Side angle showing the irregular outline of the plate"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-13.webp",
+                "width": 1254,
+                "height": 1254,
+                "alt": "Top view of the white ceramic plate with blue leaves"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-14.webp",
+                "width": 1254,
+                "height": 1254,
+                "alt": "Ceramic plate dimensions and product weight shown in the supplier image"
+            }
+        ]
+    },
+    {
+        "title": "Factory, packaging & shipping",
+        "images": [
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-15.webp",
+                "width": 1350,
+                "height": 1800,
+                "alt": "JOZING factory exterior"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-16.webp",
+                "width": 1800,
+                "height": 1350,
+                "alt": "Factory warehouse with packed cartons"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-17.webp",
+                "width": 1279,
+                "height": 1706,
+                "alt": "Wrapped export cartons prepared for handling"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-18.webp",
+                "width": 1012,
+                "height": 1800,
+                "alt": "Packed cartons ready for shipping"
+            },
+            {
+                "src": "/products/leaf-plate-11000036706108/detail-19.webp",
+                "width": 1701,
+                "height": 1703,
+                "alt": "Shipping container used for export deliveries"
+            }
+        ]
+    }
+],
+  },
   { code:"STOCK · 01", name:"Lemon Hand-Painted Ceramic Tableware for Microwave and Grill Use", type:"Hand-painted plates · cup · serving ware", pack:"Sold by set", stock:"200 sets", image:"/products/featured-row-1.webp", priceLabel:"Price / set", tiers:[{price:"$5.20",quantity:"200–999 sets"},{price:"$4.99",quantity:"1,000–4,999 sets"},{price:"$4.79",quantity:"≥5,000 sets"}] },
   { code:"STOCK · 02", name:"JOZING Ceramic Coffee Cup and Flower-Shaped Saucer Set for Cappuccino", type:"Ceramic coffee cup and flower-shaped saucer", pack:"Sold by set", stock:"200 sets", image:"/products/featured-row-2.webp", priceLabel:"Price / set", tiers:[{price:"$2.98",quantity:"200–499 sets"},{price:"$2.68",quantity:"500–1,999 sets"},{price:"$2.37",quantity:"2,000–9,999 sets"}] },
   { code:"STOCK · 03", name:"Vintage Cottagecore Porcelain Dinnerware Set for Home, Café & Gift", type:"Vintage cottagecore porcelain dinnerware", pack:"Sold by set", stock:"200 sets", image:"/products/featured-row-3.webp", priceLabel:"Price / set", tiers:[{price:"$5.20",quantity:"200–999 sets"},{price:"$4.99",quantity:"1,000–4,999 sets"},{price:"$4.79",quantity:"≥5,000 sets"}] },
