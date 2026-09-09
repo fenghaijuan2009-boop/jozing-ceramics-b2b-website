@@ -1,3 +1,4 @@
+import { oemProductCodes } from "./product-classification";
 export const stockCategories = [
   { slug: "stock-best-sale", name: "Stock Best Sale", codes: ["STOCK · 01", "STOCK · 03", "JZ202608", "JZ-A1601655571782"] },
   { slug: "hot-sale-by-ton-carton", name: "Hot Sale By Ton & Carton", codes: [11,13,14,15,16,22,23,24].map(n => `STOCK · ${n}`) },
@@ -9,4 +10,4 @@ export const stockCategories = [
   { slug: "ceramic-canister-jar", name: "Ceramic Canister & Jar", codes: [] },
   { slug: "ceramic-decoration-vase", name: "Ceramic Decoration & Vase", codes: [] },
   { slug: "ungrouped", name: "Ungrouped", codes: ["STOCK · 07"] },
-];
+].map(category => ({ ...category, codes: category.codes.filter(code => !oemProductCodes.includes(code)) }));

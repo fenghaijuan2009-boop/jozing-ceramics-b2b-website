@@ -1,3 +1,4 @@
+import { oemProductCodes } from "./product-classification";
 import { HeaderTools } from "./header-tools";
 import { StockMenu } from "./stock-menu";
 import { productSlug } from "./product-utils";
@@ -31,7 +32,7 @@ export type StockLot = {
   detailSections?: { title: string; images: { src: string; alt: string; width: number; height: number }[] }[];
 };
 
-export const stockLots: StockLot[] = [
+export const allProducts: StockLot[] = [
   {
     code: "2026071501",
     name: "10.2inch White Ceramic Leaf Pattern Serving Plate",
@@ -220,6 +221,10 @@ export const stockLots: StockLot[] = [
   { code:"STOCK · 23", name:"Romantic Heart Lace Pink Ceramic Dessert Plate Set Sell by Cartons", type:"Pink heart-lace ceramic dessert plates", pack:"Sold by carton", stock:"6 cartons", image:"/products/featured-row-23.webp", priceLabel:"Price / carton", tiers:[{price:"$24",quantity:"6–99 cartons"},{price:"$23",quantity:"100–299 cartons"},{price:"$22",quantity:"≥300 cartons"}] },
   { code:"STOCK · 24", name:"Wholesale Price Ready Stock Mix Gold Inlay Luxury Porcelain Ceramic Tableware Set Sell by Ton", type:"Mixed gold-inlay luxury porcelain", pack:"Sold by ton", stock:"1 ton", image:"/products/featured-row-24.webp", priceLabel:"Price / ton", tiers:[{price:"$1,172",quantity:"1–4 tons"},{price:"$1,128",quantity:"5–9 tons"},{price:"$1,100",quantity:"≥10 tons"}] },
 ];
+
+export { oemProductCodes } from "./product-classification";
+export const stockLots = allProducts.filter(product => !oemProductCodes.includes(product.code));
+export const oemProducts = allProducts.filter(product => oemProductCodes.includes(product.code));
 
 const capabilities = [
   ["01", "Design & development", "Shapes, glazes, decals and market-ready collections developed around your brief."],

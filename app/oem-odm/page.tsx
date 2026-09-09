@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { oemProducts } from "../page";
+import { productSlug } from "../product-utils";
 import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
 
@@ -41,6 +44,18 @@ export default function OemOdmPage() {
         title="Your collection, built around your market."
         intro="JOZING coordinates custom ceramic tableware development from a reference or idea through sampling, production, quality control and export packaging — for brands, importers, wholesalers and hospitality groups."
       />
+
+      <section className="shell stock-category-content">
+        <p>{oemProducts.length} OEM/ODM products</p>
+        <div className="product-grid">{oemProducts.map(product => <article className="product-card" key={product.code}>
+        <a className="category-whatsapp" href={`https://wa.me/8615280186517?text=${encodeURIComponent(`Hello JOZING, I am interested in ${product.name} (${product.code}). Please confirm customization options, pricing and production lead time. https://www.jozing.cn/products/${productSlug(product.name)}/`)}`} target="_blank" rel="noopener noreferrer" aria-label={`WhatsApp inquiry about ${product.name}`}>WhatsApp ↗</a>
+        <a className="category-product-image" href={`/products/${productSlug(product.name)}/`}><Image src={product.image} alt={product.name} width={600} height={600} sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 25vw" /></a>
+        <div className="product-copy"><h2>{product.name}</h2><p>{product.type}</p>
+          {product.tiers && <div className="price-tiers"><span>{product.priceLabel ?? "Price / ton"}</span>{product.tiers.map(tier => <div key={tier.quantity}><strong>{tier.price}</strong><small>{tier.quantity}</small></div>)}</div>}
+          <p>MOQ: {product.stock}</p><a href={`/products/${productSlug(product.name)}/`}>View Details →</a>
+        </div>
+      </article>)}</div>
+      </section>
 
       <section className="shell" style={{ paddingBottom: "3rem" }}>
         <div className="oem-intro" style={{ marginBottom: "2rem" }}>
