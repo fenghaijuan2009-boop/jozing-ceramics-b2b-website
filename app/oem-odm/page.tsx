@@ -35,9 +35,11 @@ const customizations = [
 ];
 
 export default function OemOdmPage() {
+  const itemListSchema = { "@context": "https://schema.org", "@type": "ItemList", name: "JOZING OEM/ODM Ceramic Tableware", numberOfItems: oemProducts.length, itemListElement: oemProducts.map((product, index) => ({ "@type": "ListItem", position: index + 1, name: product.name, url: `https://www.jozing.cn/products/${productSlug(product.name)}/` })) };
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <SiteHeader />
       <PageHero
         eyebrow="OEM / ODM MANUFACTURING"

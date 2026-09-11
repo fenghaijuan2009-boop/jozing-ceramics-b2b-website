@@ -11,8 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function StockPage() {
+  const itemListSchema = { "@context": "https://schema.org", "@type": "ItemList", name: "JOZING Ready Stock Ceramic Tableware", numberOfItems: stockLots.length, itemListElement: stockLots.map((product, index) => ({ "@type": "ListItem", position: index + 1, name: product.name, url: `https://www.jozing.cn/products/${productSlug(product.name)}/` })) };
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <SiteHeader />
       <PageHero
         eyebrow="CURRENT READY STOCK"

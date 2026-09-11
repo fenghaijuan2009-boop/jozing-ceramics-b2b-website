@@ -20,7 +20,8 @@ export default async function CategoryPage({ params }: Props) {
   const item = stockCategories.find(c => c.slug === category);
   if (!item) notFound();
   const products = stockLots.filter(product => item.codes.includes(product.code));
-  return <main><SiteHeader /><PageHero eyebrow="READY STOCK" title={item.name} intro="Explore our selected ceramic stock lots. Confirm current availability and packing before ordering." />
+  const itemListSchema = { "@context": "https://schema.org", "@type": "ItemList", name: `JOZING ${item.name}`, numberOfItems: products.length, itemListElement: products.map((product, index) => ({ "@type": "ListItem", position: index + 1, name: product.name, url: `https://www.jozing.cn/products/${productSlug(product.name)}/` })) };
+  return <main><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} /><SiteHeader /><PageHero eyebrow="READY STOCK" title={item.name} intro="Explore our selected ceramic stock lots. Confirm current availability and packing before ordering." />
     <section className="shell stock-category-content">
       <p><a href="/">Home</a> / <a href="/stock/">Ready Stock</a> / {item.name}</p>
       {products.length ? <div className="product-grid">{products.map(product => <article className="product-card" key={product.code}>

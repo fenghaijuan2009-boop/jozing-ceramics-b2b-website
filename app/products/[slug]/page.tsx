@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { allProducts, oemProductCodes } from "../../page";
 import { productSlug } from "../../product-utils";
@@ -30,8 +32,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const url = `${origin}/products/${slug}/`;
   const images = product.gallery ?? [product.image];
   const offers = product.tiers?.map((tier) => ({ "@type": "Offer", priceCurrency: "USD", price: tier.price.replace(/[$,]/g, ""), description: `${tier.quantity}. Availability and final commercial terms require confirmation.`, availability: isOem ? "https://schema.org/PreOrder" : "https://schema.org/LimitedAvailability", itemCondition: "https://schema.org/NewCondition", seller: { "@id": `${origin}/#organization` }, url })) ?? [];
-  const productSchema = { "@context": "https://schema.org", "@type": "Product", "@id": `${url}#product`, name: product.name, sku: product.code, url, image: images.map((image) => `${origin}${image}`), description: `${product.type}. ${product.pack}. Starting MOQ: ${product.stock}.`, category: "Ceramic Tableware", material: product.material, color: product.colors, size: product.capacity, brand: { "@type": "Brand", name: "JOZING" }, manufacturer: { "@id": `${origin}/#organization` }, audience: { "@type": "BusinessAudience", audienceType: "Importers, wholesalers, hospitality suppliers and brands" }, offers: offers.length ? offers : undefined };
+  const productSchema = { "@context": "https://schema.org", "@type": "Product", "@id": `${url}#product`, name: product.name, sku: product.code, url, image: images.map((image) => `${origin}${image}`), description: `${product.type}. ${product.pack}. Starting MOQ: ${product.stock}.`, category: "Ceramic Tableware", material: product.material, color: product.colors, size: product.size ?? product.capacity, brand: { "@type": "Brand", name: "JOZING" }, manufacturer: { "@id": `${origin}/#organization` }, audience: { "@type": "BusinessAudience", audienceType: "Importers, wholesalers, hospitality suppliers and brands" }, offers: offers.length ? offers : undefined };
   const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${origin}/` }, { "@type": "ListItem", position: 2, name: categoryName, item: `${origin}${categoryUrl}` }, { "@type": "ListItem", position: 3, name: product.name, item: url }] };
+  const relatedProducts = allProducts.filter((item) => item.code !== product.code && oemProductCodes.includes(item.code) === isOem).slice(0, 3);
 
   return <main><SiteHeader />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
@@ -62,6 +65,13 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <h2>{section.title}</h2>
       <div className="product-description-images">{section.images.map(image => <a href={image.src} target="_blank" rel="noopener noreferrer" key={image.src} aria-label={`Open image: ${image.alt}`}><img src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" /></a>)}</div>
     </section>)}
+    <section className="related-products shell" aria-labelledby="related-products-title">
+      <div className="related-products-head"><div><p className="eyebrow">KEEP EXPLORING</p><h2 id="related-products-title">More {categoryName.toLowerCase()} products</h2></div><Link href={categoryUrl}>View all {categoryName} →</Link></div>
+      <div className="related-products-grid">{relatedProducts.map((item) => <article key={item.code}>
+        <Link className="related-products-image" href={`/products/${productSlug(item.name)}/`}><Image src={item.image} alt={item.name} width={600} height={600} sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" /></Link>
+        <div><small>{item.code}</small><h3><Link href={`/products/${productSlug(item.name)}/`}>{item.name}</Link></h3><p>{item.type}</p></div>
+      </article>)}</div>
+    </section>
     <section className="product-evidence"><div className="shell"><h2>Information buyers should confirm</h2><div className="evidence-grid"><article><b>01</b><h3>{isOem ? "Custom design" : "Current lot"}</h3><p>{isOem ? "Confirm shape, decoration, logo, sample requirements and production lead time." : "Ask for dated photos, available quantity and the exact assortment included."}</p></article><article><b>02</b><h3>Packing list</h3><p>Confirm pieces per carton, carton dimensions, gross weight and CBM.</p></article><article><b>03</b><h3>Quality standard</h3><p>Agree inspection criteria, acceptable variation and compliance documents for your market.</p></article></div></div></section>
     <section className="page-cta"><div className="shell"><p className="eyebrow">BUY WITH CURRENT INFORMATION</p><h2>{isOem ? "Discuss your custom collection and production plan." : "Request the latest packing list and availability."}</h2><div><a className="btn primary" href="/contact">Contact JOZING</a><a className="btn text" href="/guides">Read buyer guides →</a></div></div></section>
     <SiteFooter />
