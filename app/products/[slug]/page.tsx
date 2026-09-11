@@ -43,7 +43,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <div className="product-detail-media"><ProductGallery images={images} productName={product.name} /></div>
       <div className="product-detail-copy">
         <nav className="breadcrumbs"><a href="/">Home</a><span>/</span><a href={categoryUrl}>{categoryName}</a><span>/</span><b>{product.code}</b></nav>
-        <p className="eyebrow">{isOem ? "OEM / ODM" : "READY STOCK"} · {product.code}</p><h1>{product.name}</h1>
+          <p className="eyebrow">{isOem ? "OEM / ODM" : "READY STOCK"} · {product.code}</p><h1>{product.name}</h1>
+          {product.tiers ? <div className="detail-prices"><h2>{product.priceLabel ?? "Tier pricing"}</h2>{product.tiers.map((tier) => <div key={tier.quantity}><strong>{tier.price}</strong><span>{tier.quantity}</span></div>)}</div> : null}
         <p className="product-intro">{product.type}. {isOem ? "Discuss customization, order quantity, sampling, packaging and production lead time with our team." : "Availability changes quickly; confirm current quantity, condition, packing and loading plan before ordering."}</p>
         {product.description ? <p className="product-description">{product.description}</p> : null}
         <dl className="spec-list">
@@ -57,8 +58,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </> : null}
           {product.specifications?.map(spec => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}
         </dl>
-        {product.tiers ? <div className="detail-prices"><h2>{product.priceLabel ?? "Tier pricing"}</h2>{product.tiers.map((tier) => <div key={tier.quantity}><strong>{tier.price}</strong><span>{tier.quantity}</span></div>)}</div> : null}
-        <a className="btn primary" href={`/contact/?product=${encodeURIComponent(`${product.code} - ${product.name}`)}`}>{isOem ? "Discuss customization & request quote" : "Confirm stock & request quote"}</a>
+          <a className="btn primary" href={`/contact/?product=${encodeURIComponent(`${product.code} - ${product.name}`)}`}>{isOem ? "Discuss customization & request quote" : "Confirm stock & request quote"}</a>
       </div>
     </section>
     {product.detailSections?.map(section => <section className="product-description-section shell" key={section.title}>
