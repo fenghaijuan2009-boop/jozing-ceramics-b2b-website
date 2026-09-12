@@ -6,8 +6,8 @@ import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/stock/" },
-  title: "All Ready Stock | JOZING",
-  description: "Request JOZING's current ceramic tableware stock list, packing details, quantities and export quotation. Availability changes frequently and is confirmed for each inquiry.",
+  title: "Ready Stock Ceramic Tableware Wholesale | JOZING",
+  description: "Browse ready-stock ceramic mugs, plates and dinnerware with wholesale prices and MOQs. Compare piece, carton and ton offers; request current stock and export packing.",
 };
 
 export default function StockPage() {
@@ -22,7 +22,7 @@ export default function StockPage() {
         intro="Browse all published ready-stock ceramic products. View product photos, wholesale prices and minimum order quantities, then contact us to confirm availability."
       />
       <section className="shell stock-category-content">
-        <p>{stockLots.length} ready-stock products</p>
+        <nav className="stock-buying-nav" aria-label="Popular wholesale categories"><a href="/stock/ceramic-mug-cup/">Wholesale ceramic mugs</a><a href="/stock/hot-sale-by-ton-carton/">Stock lots by ton & carton</a><a href="/stock/dinner-set-tableware/">Ready-stock dinnerware</a></nav><p>{stockLots.length} ready-stock products</p>
         <div className="product-grid">{stockLots.map(product => <article className="product-card" key={product.code}>
         <a className="category-whatsapp" href={`https://wa.me/8615280186517?text=${encodeURIComponent(`Hello JOZING, I am interested in ${product.name} (${product.code}). Please confirm pricing and availability. https://www.jozing.cn/products/${productSlug(product.name)}/`)}`} target="_blank" rel="noopener noreferrer" aria-label={`WhatsApp inquiry about ${product.name}`}>WhatsApp ↗</a>
         <a className="category-product-image" href={`/products/${productSlug(product.name)}/`}><Image src={product.image} alt={product.name} width={600} height={600} sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 25vw" /></a>

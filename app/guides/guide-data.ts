@@ -1,6 +1,6 @@
-export type Guide = { slug: string; title: string; description: string; updated: string; readTime: string; sections: { heading: string; paragraphs: string[]; bullets?: string[] }[] };
+export type Guide = { slug: string; title: string; description: string; updated: string; published?: string; readTime: string; relatedLinks?: { href: string; label: string }[]; sections: { heading: string; paragraphs: string[]; bullets?: string[] }[] };
 
-export const guides: Guide[] = [
+const baseGuides: Guide[] = [
   { slug: "buy-ceramic-tableware-by-ton-from-china", title: "How to Buy Ceramic Tableware by the Ton from China", description: "A practical guide to pricing units, mixed lots, packing lists, inspection and container planning for ceramic stock purchases.", updated: "2026-08-25", readTime: "8 min", sections: [
     { heading: "What buying by the ton means", paragraphs: ["Ton-based ceramic offers usually refer to the net or gross weight of a mixed or defined stock lot, not a fixed retail set. Before comparing prices, ask whether the quoted weight includes cartons and protective materials."], bullets: ["Confirm net versus gross weight", "Request the assortment and condition breakdown", "Ask whether replacements or second-quality pieces are included"] },
     { heading: "The documents to request", paragraphs: ["A useful quotation should connect price, weight and loading data. Ask for a dated packing list rather than relying only on showroom photographs."], bullets: ["SKU or assortment list", "Pieces per carton and carton count", "Gross weight, dimensions and CBM", "Available quantity and validity date"] },
@@ -44,3 +44,135 @@ export const guides: Guide[] = [
     { heading: "When JOZING may be a fit", paragraphs: ["JOZING is positioned for importers, wholesalers, hospitality suppliers and brands that need either current ceramic stock opportunities or OEM/ODM development. Buyers should send their market, product reference, quantity, target price, packing requirements and destination port. JOZING then confirms whether a current stock lot, mixed loading plan or custom production route is appropriate."], bullets: ["Ready-stock and clearance sourcing", "Ceramic tableware sold by multiple commercial units", "OEM/ODM shape, glaze, decoration, logo and packaging support", "Export preparation from Chaozhou, Guangdong"] }
   ]}
 ];
+
+const buyingGuideUpdates: Record<string, Pick<Guide, "sections" | "relatedLinks">> = {
+  "buy-ceramic-tableware-by-ton-from-china": {
+    "relatedLinks": [
+      {
+        "href": "/stock/hot-sale-by-ton-carton/",
+        "label": "Compare ceramic stock lots by ton and carton"
+      },
+      {
+        "href": "/guides/ceramic-container-loading-guide/",
+        "label": "Build a mixed-container packing plan"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How do you convert a ton price into a piece cost?",
+        "paragraphs": [
+          "Use the confirmed saleable piece count, not a guessed average mug or plate weight. Goods cost per piece = total goods price ÷ saleable pieces. A ton of large plates and a ton of small cups will contain different numbers of pieces.",
+          "Illustrative example only: a $600 lot containing 2,000 saleable pieces costs $0.30 per piece before other charges. If only 1,900 pieces are saleable, the same goods price becomes approximately $0.316 per saleable piece. These figures explain the calculation; they are not a current offer."
+        ]
+      },
+      {
+        "heading": "What belongs in the landed-cost comparison?",
+        "paragraphs": [
+          "Add the applicable packing, inspection, inland transport, freight, insurance, destination handling and import charges to the goods cost, then divide by saleable pieces. Confirm the quoted delivery terms so you do not count the same charge twice. Get route-specific costs before deciding which lot is cheaper."
+        ]
+      },
+      {
+        "heading": "How can you compare two stock offers fairly?",
+        "paragraphs": [
+          "Use a written comparison with the same weight basis, selling unit, assortment, quality grade and delivery terms. Record the quote date and validity. A lower ton price is not necessarily a lower saleable-piece cost."
+        ],
+        "bullets": [
+          "Net ceramic weight versus gross packed weight",
+          "Pieces and cartons included in the lot",
+          "Acceptable defects and excluded pieces",
+          "Availability, quote validity and loading terms"
+        ]
+      }
+    ]
+  },
+  "ceramic-container-loading-guide": {
+    "relatedLinks": [
+      {
+        "href": "/products/wholesale-ready-stock-ceramic-coffee-mug-cute-3d-porcelain-cups/",
+        "label": "Source: cute 3D mug carton specifications"
+      },
+      {
+        "href": "/stock/ceramic-mug-cup/",
+        "label": "Browse wholesale ceramic mug lots"
+      },
+      {
+        "href": "/stock/hot-sale-by-ton-carton/",
+        "label": "Compare ton and carton stock offers"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How do you calculate carton volume and piece count?",
+        "paragraphs": [
+          "Carton CBM = length × width × height in metres. Multiply that volume by the carton count; calculate gross weight and piece quantity separately. Do not substitute net product weight for the packed shipping weight.",
+          "A current JOZING cute 3D mug listing specifies 54 pieces per carton, 62 × 35 × 33 cm and 24–25 kg per carton. The dimensions calculate to 0.07161 CBM; the listing rounds this to 0.07 CBM. Use unrounded dimensions for planning and reconfirm the final packed carton.",
+          "An illustrative 100-carton shipment using those figures contains 5,400 mugs, occupies approximately 7.161 CBM before pallets or bracing, and weighs 2,400–2,500 kg. This is a calculation example, not a confirmed loading capacity or stock reservation."
+        ]
+      },
+      {
+        "heading": "What goes into a mixed-SKU loading sheet?",
+        "paragraphs": [
+          "Create one row for each product code and packing configuration. Total the rows only after checking whether pallets, additional protection or handling restrictions apply."
+        ],
+        "bullets": [
+          "Product code and selected design",
+          "Carton count and pieces per carton",
+          "Carton dimensions and total CBM",
+          "Gross weight per carton and total gross weight",
+          "Pallet requirements and stacking restrictions"
+        ]
+      },
+      {
+        "heading": "What evidence should be confirmed before loading?",
+        "paragraphs": [
+          "Request the final packing list, dated carton photos, shipping marks and an agreed inspection record. Confirm the booked equipment and permitted weight with the logistics provider. Photos of a previous shipment do not establish the capacity or packing quality of the current order."
+        ]
+      }
+    ]
+  },
+  "ceramic-stock-lots-vs-regular-production": {
+    "relatedLinks": [
+      {
+        "href": "/stock/dinner-set-tableware/",
+        "label": "Browse ready-stock dinnerware"
+      },
+      {
+        "href": "/oem-odm/",
+        "label": "Discuss OEM/ODM ceramic production"
+      },
+      {
+        "href": "/guides/oem-ceramic-dinnerware-moq-sampling-lead-time/",
+        "label": "Plan custom sampling and production"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How should buyers compare MOQ and lead time?",
+        "paragraphs": [
+          "Use the selected product and customization brief. There is no single MOQ or delivery time that applies to every stock lot or OEM order. Some ready-stock JOZING mug listings start at 1,000 pieces; this does not establish an OEM minimum or the MOQ of other stock products.",
+          "For ready stock, ask when the quantity can be reserved, inspected, packed and dispatched. For OEM/ODM, request separate estimates for sample development, approval, production and shipment. Compare dispatch timing separately from transit time."
+        ]
+      },
+      {
+        "heading": "Which route suits a repeatable dinnerware collection?",
+        "paragraphs": [
+          "If matching plates and bowls must be available for future replenishment, discuss production against an approved sample, written tolerances and decoration specification. For a flexible promotional assortment, a finite stock lot may fit, provided the buyer accepts the available mix.",
+          "Adding a logo to an existing stock shape does not automatically make the shape repeatable. Confirm future availability and whether customization changes the packing, cost or schedule."
+        ]
+      },
+      {
+        "heading": "What information helps JOZING recommend the right route?",
+        "paragraphs": [
+          "Send the reference image or product code, quantity, destination, required dispatch date and packaging brief. State whether exact matching and repeat orders are essential. We can then check the current stock option or discuss custom production."
+        ],
+        "bullets": [
+          "One-off purchase or planned replenishment",
+          "Fixed design or flexible assortment",
+          "Plain product, logo, new decoration or new shape",
+          "Quantity per design and total order quantity"
+        ]
+      }
+    ]
+  }
+};
+export const guides: Guide[] = baseGuides.map(guide => { const update = buyingGuideUpdates[guide.slug]; return update ? { ...guide, published: guide.updated, updated: "2026-09-12", sections: [...guide.sections, ...update.sections], relatedLinks: update.relatedLinks } : guide; });
