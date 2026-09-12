@@ -203,3 +203,7 @@ body{background:#fbfaf6;color:#0d2b22}.topbar{background:#071e18;color:#d8e5df;b
 .buying-guide{padding-top:40px;padding-bottom:56px;max-width:1100px}.buying-guide h2{font-family:var(--font-sans),Arial,sans-serif;font-size:28px;line-height:1.3;margin:0 0 24px}.buying-guide article{border-top:1px solid var(--line,#d8e1dd);padding:20px 0}.buying-guide h3{font-size:19px;line-height:1.4;margin:0 0 10px}.buying-guide p{line-height:1.8;max-width:850px;margin:0;color:var(--muted)}.buying-links{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin-top:24px}.buying-guide a:not(.btn){text-decoration:underline;text-underline-offset:4px}@media(max-width:620px){.buying-guide h2{font-size:24px}.buying-guide h3{font-size:18px}}
 
 .stock-buying-nav{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}.stock-buying-nav a{border:1px solid #cbd8d1;border-radius:24px;padding:12px 18px;font-size:14px}.stock-buying-nav a:hover{background:#eaf1ed}
+
+.analytics-choice{position:fixed;bottom:18px;left:18px;z-index:1000;max-width:400px;width:calc(100% - 36px);padding:18px;background:#fff;border:1px solid #cbd8d1;border-radius:12px;box-shadow:0 4px 24px #0002}.analytics-choice p{font-size:14px;line-height:1.5;margin:0 0 12px}.analytics-choice button{padding:10px 14px;margin:4px 8px 0 0;border:1px solid #173e32;border-radius:6px;background:white;color:#173e32;cursor:pointer}
+
+.analytics-settings{position:fixed;bottom:4px;left:8px;z-index:99;background:#fff;color:#52665c;border:1px solid #d8e1dd;border-radius:4px;font-size:10px;padding:4px 8px;cursor:pointer}
