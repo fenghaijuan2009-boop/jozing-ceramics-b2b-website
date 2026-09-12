@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { readCampaignAttribution } from "./analytics-attribution";
 
 type AnalyticsWindow = Window & { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void };
 const consentKey = "jozing-analytics-consent";
@@ -18,7 +19,7 @@ export function SiteAnalytics({ measurementId }: { measurementId: string }) {
     w.dataLayer = w.dataLayer || [];
     w.gtag = w.gtag || function () { w.dataLayer!.push(arguments); };
     w.gtag("js", new Date());
-    w.gtag("config", measurementId, { send_page_view: false, allow_google_signals: false, allow_ad_personalization_signals: false, page_location: location.origin + location.pathname, page_referrer: document.referrer ? new URL(document.referrer).origin : "" });
+    w.gtag("config", measurementId, { send_page_view: false, allow_google_signals: false, allow_ad_personalization_signals: false, page_location: location.origin + location.pathname, page_referrer: document.referrer ? new URL(document.referrer).origin : "", ...(readCampaignAttribution(location.search) ?? {}) });
     const script = document.createElement("script");
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
@@ -35,6 +36,10 @@ export function SiteAnalytics({ measurementId }: { measurementId: string }) {
     const click = (event: MouseEvent) => {
       const link = event.target instanceof Element ? event.target.closest("a") : null;
       if (!link) return;
+      if (link.hasAttribute("data-catalog-download")) {
+        w.gtag?.("event", "file_download", { file_name: "jozing-ready-stock-catalog.csv", page_location: page, send_to: measurementId });
+        return;
+      }
       const href = link.getAttribute("href") || "";
       let channel: string | null = null;
       if (/^https:\/\/wa\.me\//.test(href)) channel = "whatsapp";

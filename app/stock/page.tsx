@@ -3,6 +3,7 @@ import Image from "next/image";
 import { stockLots } from "../page";
 import { productSlug } from "../product-utils";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
+import { CatalogLink } from "./catalog-link";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/stock/" },
@@ -22,6 +23,7 @@ export default function StockPage() {
         intro="Browse all published ready-stock ceramic products. View product photos, wholesale prices and minimum order quantities, then contact us to confirm availability."
       />
       <section className="shell stock-category-content">
+        <CatalogLink />
         <nav className="stock-buying-nav" aria-label="Popular wholesale categories"><a href="/stock/ceramic-mug-cup/">Wholesale ceramic mugs</a><a href="/stock/hot-sale-by-ton-carton/">Stock lots by ton & carton</a><a href="/stock/dinner-set-tableware/">Ready-stock dinnerware</a></nav><p>{stockLots.length} ready-stock products</p>
         <div className="product-grid">{stockLots.map(product => <article className="product-card" key={product.code}>
         <a className="category-whatsapp" href={`https://wa.me/8615280186517?text=${encodeURIComponent(`Hello JOZING, I am interested in ${product.name} (${product.code}). Please confirm pricing and availability. https://www.jozing.cn/products/${productSlug(product.name)}/`)}`} target="_blank" rel="noopener noreferrer" aria-label={`WhatsApp inquiry about ${product.name}`}>WhatsApp ↗</a>

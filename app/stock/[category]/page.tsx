@@ -7,6 +7,7 @@ import { productSlug } from "../../product-utils";
 import { SiteHeader, SiteFooter, PageHero } from "../../site-shell";
 
 import { buyingPages } from "../buying-pages";
+import { CatalogLink } from "../catalog-link";
 
 type Props = { params: Promise<{ category: string }> };
 export const dynamicParams = false;
@@ -16,7 +17,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = stockCategories.find(c => c.slug === category);
   if (!item) notFound();
   const buying = buyingPages[category];
-  return { title: buying?.title ?? `${item.name} | JOZING Ready Stock`, description: buying?.description ?? `Explore JOZING ${item.name.toLowerCase()}. Request current availability, wholesale quantities and export packing details.`, alternates: { canonical: `/stock/${item.slug}/` }, ...(item.codes.length ? {} : { robots: { index: false, follow: true } }) };
+  const title = buying?.title ?? `${item.name} | JOZING Ready Stock`;
+  const description = buying?.description ?? `Explore JOZING ${item.name.toLowerCase()}. Request current availability, wholesale quantities and export packing details.`;
+  const image = stockLots.find(product => item.codes.includes(product.code))?.image ?? "/og.png";
+  return { title, description, alternates: { canonical: `/stock/${item.slug}/` }, openGraph: { title, description, url: `https://www.jozing.cn/stock/${item.slug}/`, images: [{ url: image, alt: item.name }] }, twitter: { card: "summary_large_image", title, description, images: [image] }, ...(item.codes.length ? {} : { robots: { index: false, follow: true } }) };
 }
 export default async function CategoryPage({ params }: Props) {
   const { category } = await params;
@@ -28,6 +32,7 @@ export default async function CategoryPage({ params }: Props) {
   return <main><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} /><SiteHeader /><PageHero eyebrow="READY STOCK" title={buying ? buying.title.split(" | ")[0] : item.name} intro={buying?.intro ?? "Explore our selected ceramic stock lots. Confirm current availability and packing before ordering."} />
     <section className="shell stock-category-content">
       <p><a href="/">Home</a> / <a href="/stock/">Ready Stock</a> / {item.name}</p>
+      {buying && <CatalogLink />}
       {products.length ? <div className="product-grid">{products.map(product => <article className="product-card" key={product.code}>
         <a className="category-whatsapp" href={`https://wa.me/8615280186517?text=${encodeURIComponent(`Hello JOZING, I am interested in ${product.name} (${product.code}). Please confirm pricing and availability. https://www.jozing.cn/products/${productSlug(product.name)}/`)}`} target="_blank" rel="noopener noreferrer" aria-label={`WhatsApp inquiry about ${product.name}`}>WhatsApp ↗</a>
         <a className="category-product-image" href={`/products/${productSlug(product.name)}/`}><Image src={product.image} alt={product.name} width={600} height={600} sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 25vw" /></a>

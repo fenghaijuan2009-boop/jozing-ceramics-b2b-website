@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { allProducts, oemProductCodes } from "../../page";
 import { productSlug } from "../../product-utils";
+import { productSeoTitles } from "../../product-seo";
+import { stockCategories } from "../../stock-categories";
 import { SiteFooter, SiteHeader } from "../../site-shell";
 import { ProductGallery } from "../product-gallery";
 
@@ -17,9 +19,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const product = allProducts.find((item) => productSlug(item.name) === slug);
   if (!product) return {};
-  const title = `${product.name} | Wholesale Ceramic Tableware — JOZING`;
+  const title = productSeoTitles[product.code] ?? `${product.name} | Wholesale Ceramic Tableware — JOZING`;
   const description = `${product.type}. ${product.pack}; MOQ ${product.stock}. Request current availability, packing details and a factory-direct quotation from JOZING.`;
-  return { title, description, alternates: { canonical: `${origin}/products/${slug}/` }, openGraph: { title, description, images: product.gallery ?? [product.image] } };
+  const url = `${origin}/products/${slug}/`;
+  const images = (product.gallery?.length ? product.gallery : [product.image]).map(image => ({ url: `${origin}${image}`, alt: product.name }));
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "website", images },
+    twitter: { card: "summary_large_image", title, description, images: [images[0]] },
+  };
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -29,12 +39,24 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const isOem = oemProductCodes.includes(product.code);
   const categoryName = isOem ? "OEM/ODM" : "Ready Stock";
   const categoryUrl = isOem ? "/oem-odm/" : "/stock/";
+  const productCategories = isOem ? [] : stockCategories.filter(category => category.codes.includes(product.code));
   const url = `${origin}/products/${slug}/`;
   const images = product.gallery ?? [product.image];
-  const offers = product.tiers?.map((tier) => ({ "@type": "Offer", priceCurrency: "USD", price: tier.price.replace(/[$,]/g, ""), description: `${tier.quantity}. Availability and final commercial terms require confirmation.`, availability: isOem ? "https://schema.org/PreOrder" : "https://schema.org/LimitedAvailability", itemCondition: "https://schema.org/NewCondition", seller: { "@id": `${origin}/#organization` }, url })) ?? [];
+  const offers = product.tiers?.map((tier) => ({ "@type": "Offer", priceCurrency: "USD", price: tier.price.replace(/[$,]/g, ""), description: `${product.priceLabel ?? product.pack}. Order tier: ${tier.quantity}. Availability and final commercial terms require confirmation.`, availability: isOem ? "https://schema.org/PreOrder" : "https://schema.org/LimitedAvailability", itemCondition: "https://schema.org/NewCondition", seller: { "@id": `${origin}/#organization` }, url })) ?? [];
   const productSchema = { "@context": "https://schema.org", "@type": "Product", "@id": `${url}#product`, name: product.name, sku: product.code, url, image: images.map((image) => `${origin}${image}`), description: `${product.type}. ${product.pack}. Starting MOQ: ${product.stock}.`, category: "Ceramic Tableware", material: product.material, color: product.colors, size: product.size ?? product.capacity, brand: { "@type": "Brand", name: "JOZING" }, manufacturer: { "@id": `${origin}/#organization` }, audience: { "@type": "BusinessAudience", audienceType: "Importers, wholesalers, hospitality suppliers and brands" }, offers: offers.length ? offers : undefined };
   const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${origin}/` }, { "@type": "ListItem", position: 2, name: categoryName, item: `${origin}${categoryUrl}` }, { "@type": "ListItem", position: 3, name: product.name, item: url }] };
-  const relatedProducts = allProducts.filter((item) => item.code !== product.code && oemProductCodes.includes(item.code) === isOem).slice(0, 3);
+  const relatedProducts = allProducts
+    .filter(item => item.code !== product.code && oemProductCodes.includes(item.code) === isOem)
+    .map(item => ({
+      product: item,
+      relevance: productCategories.reduce((score, category) => {
+        if (!category.codes.includes(item.code) || ["stock-best-sale", "ungrouped"].includes(category.slug)) return score;
+        return score + (category.slug === "hot-sale-by-ton-carton" ? 1 : 2);
+      }, 0),
+    }))
+    .sort((a, b) => b.relevance - a.relevance)
+    .slice(0, 3)
+    .map(item => item.product);
 
   return <main><SiteHeader />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
@@ -58,6 +80,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </> : null}
           {product.specifications?.map(spec => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}
         </dl>
+        {!isOem && <nav className="stock-buying-nav" aria-label="Related ready-stock categories and comparison">
+          {productCategories.filter(category => !["stock-best-sale", "ungrouped"].includes(category.slug)).map(category => <Link key={category.slug} href={`/stock/${category.slug}/`}>{category.name}</Link>)}
+          <Link href="/stock/catalog/">Compare stock & packing →</Link>
+        </nav>}
           <a className="btn primary" href={`/contact/?product=${encodeURIComponent(`${product.code} - ${product.name}`)}`}>{isOem ? "Discuss customization & request quote" : "Confirm stock & request quote"}</a>
       </div>
     </section>
