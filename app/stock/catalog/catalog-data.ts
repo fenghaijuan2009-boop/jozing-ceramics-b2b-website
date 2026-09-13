@@ -2,7 +2,7 @@ import { stockLots } from "../../page";
 import { stockCategories } from "../../stock-categories";
 import { productSlug } from "../../product-utils";
 
-export const catalogPrepared = "2026-09-12";
+export const catalogPrepared = "2026-09-13";
 export const catalogNotice = "Published listing information; current stock, assortment, prices and packing must be confirmed before ordering.";
 export const catalogRows = stockLots.map(product => {
   const specifications = product.specifications ?? [];
@@ -18,7 +18,7 @@ export const catalogRows = stockLots.map(product => {
     tiers: product.tiers ?? [],
     cartonQuantity: product.cartonQty ?? spec("Packing quantity", "Quantity of Each Carton") ?? "Confirm for this lot",
     cartonSize: spec("Carton size") ?? "Confirm for this lot",
-    cartonWeight: spec("Carton gross weight", "Weight Per Box") ?? "Confirm for this lot",
+    cartonWeight: spec("Carton gross weight", "Weight Per Box", "Weight per carton") ?? "Confirm for this lot",
   };
 });
 export type CatalogRow = (typeof catalogRows)[number];

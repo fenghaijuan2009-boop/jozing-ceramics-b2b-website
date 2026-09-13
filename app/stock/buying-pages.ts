@@ -1,6 +1,7 @@
-export type BuyingPage = { title: string; description: string; intro: string; questions: { question: string; answer: string }[]; guide: string; guideLabel: string };
+export type BuyingPage = { title: string; description: string; intro: string; questions: { question: string; answer: string }[]; guide: string; guideLabel: string; selections?: { title: string; description: string; codes: string[] } };
 export const buyingPages: Record<string, BuyingPage> = {
   "ceramic-mug-cup": {
+    selections: { title: "Choose your wholesale mug assortment", description: "Compare white mugs for a simple range, colorful mugs for variety, and decorated 3D designs. Prices and MOQs below belong to each individual listing.", codes: ["STOCK · 09", "STOCK · 10", "JZ-A1601655571782"] },
     title: "Ready Stock Ceramic Mugs Wholesale | JOZING",
     description: "Compare ready-stock ceramic coffee mugs, listed MOQs and tier prices. Request current designs, carton quantities and export packing from JOZING.",
     intro: "Source assorted ceramic coffee mugs for wholesale, retail and promotional supply. Compare each listing's MOQ and price tiers, then request current designs and packing for your order.",
@@ -12,6 +13,7 @@ export const buyingPages: Record<string, BuyingPage> = {
     ], guide: "ceramic-container-loading-guide", guideLabel: "Plan carton quantities and mixed loading"
   },
   "hot-sale-by-ton-carton": {
+    selections: { title: "Compare mixed tableware lots", description: "Start with white, colorful or black tableware. Ask for the actual assortment and confirm the weight basis before comparing ton prices. Freight and sorting requirements are quoted separately.", codes: ["JZ-A11000037703372", "STOCK · 13", "STOCK · 14"] },
     title: "Ceramic Stock Lots by Ton & Carton | JOZING Wholesale",
     description: "Browse ceramic stock lots sold by ton or carton. Compare MOQ, assortment, weight basis and packing before requesting a mixed-shipment quotation.",
     intro: "Buy ceramic stock lots by ton or carton for wholesale distribution. Each offer has its own selling unit, assortment and MOQ; compare the full packing list before comparing prices.",
@@ -23,6 +25,7 @@ export const buyingPages: Record<string, BuyingPage> = {
     ], guide: "buy-ceramic-tableware-by-ton-from-china", guideLabel: "Calculate and compare ton-based offers"
   },
   "dinner-set-tableware": {
+    selections: { title: "White ceramic dinnerware: individual plates or mixed lots", description: "Choose defined plate sizes when consistency matters, or a mixed white stock lot when your assortment is flexible. A mixed lot is not a matching dinner set.", codes: ["2026082901", "STOCK · 18", "JZ-A11000037703372"] },
     title: "Ready Stock Dinnerware Wholesale | Plates & Sets | JOZING",
     description: "Explore ready-stock ceramic plates and dinnerware lots for wholesale. Compare selling units, MOQs, designs and packing; request current availability.",
     intro: "Explore ready-stock plates and ceramic tableware for wholesale sourcing. Offers may be sold by piece, set, carton or ton; check each listing and confirm the available mix before ordering.",

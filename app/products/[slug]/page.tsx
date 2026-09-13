@@ -61,7 +61,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   return <main><SiteHeader />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-    <section className="product-detail shell">
+    <section className="product-detail shell" data-product-code={product.code} data-product-name={product.name} data-product-category={categoryName}>
       <div className="product-detail-media"><ProductGallery images={images} productName={product.name} /></div>
       <div className="product-detail-copy">
         <nav className="breadcrumbs"><a href="/">Home</a><span>/</span><a href={categoryUrl}>{categoryName}</a><span>/</span><b>{product.code}</b></nav>

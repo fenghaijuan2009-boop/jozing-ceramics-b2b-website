@@ -33,6 +33,9 @@ export function SiteAnalytics({ measurementId }: { measurementId: string }) {
     const page = location.origin + pathname;
     w.gtag?.("set", { page_location: page, page_referrer: document.referrer ? new URL(document.referrer).origin : "" });
     w.gtag?.("event", "page_view", { page_location: page, page_title: document.title, send_to: measurementId });
+    const product = document.querySelector<HTMLElement>("[data-product-code]");
+    const productCode = product?.dataset.productCode;
+    if (productCode) w.gtag?.("event", "view_item", { items: [{ item_id: productCode, item_name: product.dataset.productName, item_category: product.dataset.productCategory }], page_location: page, send_to: measurementId });
     const click = (event: MouseEvent) => {
       const link = event.target instanceof Element ? event.target.closest("a") : null;
       if (!link) return;
@@ -45,7 +48,7 @@ export function SiteAnalytics({ measurementId }: { measurementId: string }) {
       if (/^https:\/\/wa\.me\//.test(href)) channel = "whatsapp";
       if (/^mailto:/i.test(href)) channel = "email";
       if (!channel) return;
-      w.gtag?.("event", link.hasAttribute("data-email-inquiry") ? "inquiry_handoff" : "contact_click", { channel, page_location: page, send_to: measurementId });
+      w.gtag?.("event", link.hasAttribute("data-email-inquiry") ? "inquiry_handoff" : "contact_click", { channel, ...(productCode ? { item_id: productCode } : {}), page_location: page, send_to: measurementId });
     };
     const submit = (event: Event) => {
       if (!(event.target instanceof HTMLFormElement) || !event.target.matches(".rfq-form") || !event.target.checkValidity()) return;
