@@ -274,9 +274,516 @@ export const allProducts: StockLot[] = [
       })),
     }],
   },
-  { code:"STOCK · 10", name:"Manufacturer Price Porcelain Coffee Cup 12oz Stock Ceramic Mugs", type:"Ready-stock porcelain coffee mugs", pack:"Sold by piece", stock:"200 pieces", image:"/products/featured-row-10.webp", priceLabel:"Price / piece", tiers:[{price:"$0.22",quantity:"200–1,999 pieces"},{price:"$0.19",quantity:"2,000–9,999 pieces"},{price:"$0.17",quantity:"≥10,000 pieces"}] },
-  { code:"STOCK · 11", name:"90ml Capacity Porcelain Espresso Cup and Saucer Set Sell by Ton", type:"Porcelain espresso cup and saucer sets", pack:"Sold by ton", stock:"1 ton", image:"/products/featured-row-11.webp", priceLabel:"Price / ton", tiers:[{price:"$808.80",quantity:"1–27 tons"},{price:"$779.40",quantity:"28–99 tons"},{price:"$735.30",quantity:"≥100 tons"}] },
-  { code:"STOCK · 12", name:"Dinnerware Supplier Stock Lot Coffee Cup Set", type:"Ready-stock coffee cup sets", pack:"Sold by set", stock:"200 sets", image:"/products/featured-row-12.webp", priceLabel:"Price / set", tiers:[{price:"$0.45",quantity:"200–999 sets"},{price:"$0.40",quantity:"≥1,000 sets"},{price:"$0.35",quantity:"≥5,000 sets"}] },
+  {
+    "code": "STOCK · 10",
+    "name": "Manufacturer Price Porcelain Coffee Cup 12oz Stock Ceramic Mugs",
+    "type": "350–400 ml assorted ceramic coffee mugs",
+    "pack": "Sold by piece",
+    "stock": "200 pieces",
+    "priceLabel": "Price / piece",
+    "tiers": [
+      {
+        "price": "$0.22",
+        "quantity": "200–1,999 pieces"
+      },
+      {
+        "price": "$0.19",
+        "quantity": "2,000–9,999 pieces"
+      },
+      {
+        "price": "$0.17",
+        "quantity": "≥10,000 pieces"
+      }
+    ],
+    "material": "Ceramic / porcelain",
+    "capacity": "350–400 ml, depending on design",
+    "colors": "Mixed colors and patterns",
+    "cartonQty": "50–55 pieces / carton",
+    "dishwasherSafe": true,
+    "description": "Assorted ceramic coffee mugs with solid colors, two-tone glazes and patterned designs. Comfortable handles and a retro Nordic look suit cafés, hotels, home and office use. Sizes vary across the assortment; confirm the selected designs and packing list before ordering.",
+    "specifications": [
+      {
+        "label": "Model number",
+        "value": "2026040402"
+      },
+      {
+        "label": "Product type",
+        "value": "Coffee mugs"
+      },
+      {
+        "label": "Style",
+        "value": "Retro / Nordic"
+      },
+      {
+        "label": "Features",
+        "value": "Stocked, reusable, food safe"
+      },
+      {
+        "label": "Applications",
+        "value": "Home, hotel, restaurant, office and gifts"
+      },
+      {
+        "label": "Brand",
+        "value": "JOZING"
+      },
+      {
+        "label": "Place of origin",
+        "value": "Guangdong, China"
+      },
+      {
+        "label": "Carton size",
+        "value": "61 × 31 × 31 cm"
+      },
+      {
+        "label": "Carton gross weight",
+        "value": "22–23 kg"
+      },
+      {
+        "label": "Single package size",
+        "value": "12 × 9 × 9.5 cm"
+      },
+      {
+        "label": "Single gross weight",
+        "value": "0.520 kg"
+      }
+    ],
+    "image": "/products/mug-1601736106826/main-01.webp",
+    "gallery": [
+      "/products/mug-1601736106826/main-01.webp",
+      "/products/mug-1601736106826/main-02.webp",
+      "/products/mug-1601736106826/main-03.webp",
+      "/products/mug-1601736106826/main-04.webp",
+      "/products/mug-1601736106826/main-05.webp",
+      "/products/mug-1601736106826/main-06.webp"
+    ],
+    "detailSections": [
+      {
+        "title": "Product design & details",
+        "images": [
+          {
+            "src": "/products/mug-1601736106826/detail-01.webp",
+            "width": 1024,
+            "height": 1024,
+            "alt": "350–400 ml assorted ceramic coffee mugs — detail 1"
+          },
+          {
+            "src": "/products/mug-1601736106826/detail-02.webp",
+            "width": 1024,
+            "height": 1024,
+            "alt": "350–400 ml assorted ceramic coffee mugs — detail 2"
+          },
+          {
+            "src": "/products/mug-1601736106826/detail-03.webp",
+            "width": 1024,
+            "height": 1024,
+            "alt": "350–400 ml assorted ceramic coffee mugs — detail 3"
+          },
+          {
+            "src": "/products/mug-1601736106826/detail-04.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "350–400 ml assorted ceramic coffee mugs — detail 4"
+          },
+          {
+            "src": "/products/mug-1601736106826/detail-05.webp",
+            "width": 1024,
+            "height": 1024,
+            "alt": "350–400 ml assorted ceramic coffee mugs — detail 5"
+          },
+          {
+            "src": "/products/mug-1601736106826/detail-06.webp",
+            "width": 1024,
+            "height": 1024,
+            "alt": "350–400 ml assorted ceramic coffee mugs — detail 6"
+          }
+        ]
+      },
+      {
+        "title": "Factory & export packing",
+        "images": [
+          {
+            "src": "/products/mug-1601736106826/detail-07.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and export packing — image 1"
+          },
+          {
+            "src": "/products/mug-1601736106826/detail-08.webp",
+            "width": 1500,
+            "height": 1125,
+            "alt": "JOZING factory and export packing — image 2"
+          },
+          {
+            "src": "/products/mug-1601736106826/detail-09.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and export packing — image 3"
+          },
+          {
+            "src": "/products/mug-1601736106826/detail-10.webp",
+            "width": 1500,
+            "height": 1502,
+            "alt": "JOZING factory and export packing — image 4"
+          },
+          {
+            "src": "/products/mug-1601736106826/detail-11.webp",
+            "width": 900,
+            "height": 1600,
+            "alt": "JOZING factory and export packing — image 5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "STOCK · 11",
+    "name": "90ml Capacity Porcelain Espresso Cup and Saucer Set Sell by Ton",
+    "type": "90 ml white porcelain espresso cups and saucers",
+    "pack": "Sold by ton",
+    "stock": "1 ton",
+    "priceLabel": "Price / ton",
+    "tiers": [
+      {
+        "price": "$808.80",
+        "quantity": "1–27 tons"
+      },
+      {
+        "price": "$779.40",
+        "quantity": "28–99 tons"
+      },
+      {
+        "price": "$735.30",
+        "quantity": "≥100 tons"
+      }
+    ],
+    "material": "Ceramic / porcelain",
+    "capacity": "90 ml",
+    "colors": "White; gold-colored gift box",
+    "description": "Small white ceramic espresso cups with matching saucers for coffee service, hospitality and gifting. The gallery shows plain and fluted designs, including a presentation box with six cups and six saucers. The displayed quotation is for bulk stock sold by ton. Gift-box packing is a separate option; confirm its contents, availability and quotation before ordering.",
+    "specifications": [
+      {
+        "label": "Reference model",
+        "value": "2026052001"
+      },
+      {
+        "label": "Product type",
+        "value": "Cups and saucers"
+      },
+      {
+        "label": "Gift-box option",
+        "value": "6 cups + 6 saucers; confirm separately from bulk-by-ton packing"
+      },
+      {
+        "label": "Style",
+        "value": "Minimalist coffee service"
+      },
+      {
+        "label": "Brand",
+        "value": "JOZING"
+      },
+      {
+        "label": "Place of origin",
+        "value": "Guangdong, China"
+      },
+      {
+        "label": "Gift-box package size",
+        "value": "32 × 14 × 7 cm"
+      },
+      {
+        "label": "Gift-box gross weight",
+        "value": "1.560 kg"
+      },
+      {
+        "label": "Packing note",
+        "value": "Gift-box measurements do not describe a bulk shipping carton"
+      }
+    ],
+    "image": "/products/espresso-1601795859505/main-01.webp",
+    "gallery": [
+      "/products/espresso-1601795859505/main-01.webp",
+      "/products/espresso-1601795859505/main-02.webp",
+      "/products/espresso-1601795859505/main-03.webp",
+      "/products/espresso-1601795859505/main-04.webp",
+      "/products/espresso-1601795859505/main-05.webp",
+      "/products/espresso-1601795859505/main-06.webp"
+    ],
+    "detailSections": [
+      {
+        "title": "Product design & details",
+        "images": [
+          {
+            "src": "/products/espresso-1601795859505/detail-01.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "90 ml white porcelain espresso cups and saucers — detail 1"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-02.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "90 ml white porcelain espresso cups and saucers — detail 2"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-03.webp",
+            "width": 1500,
+            "height": 1500,
+            "alt": "90 ml white porcelain espresso cups and saucers — detail 3"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-04.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "90 ml white porcelain espresso cups and saucers — detail 4"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-05.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "90 ml white porcelain espresso cups and saucers — detail 5"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-06.webp",
+            "width": 800,
+            "height": 800,
+            "alt": "90 ml white porcelain espresso cups and saucers — detail 6"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-07.webp",
+            "width": 1024,
+            "height": 1024,
+            "alt": "90 ml white porcelain espresso cups and saucers — detail 7"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-08.webp",
+            "width": 1500,
+            "height": 1500,
+            "alt": "90 ml white porcelain espresso cups and saucers — detail 8"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-09.webp",
+            "width": 1024,
+            "height": 1024,
+            "alt": "90 ml white porcelain espresso cups and saucers — detail 9"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-10.webp",
+            "width": 1500,
+            "height": 1500,
+            "alt": "90 ml white porcelain espresso cups and saucers — detail 10"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-11.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "90 ml white porcelain espresso cups and saucers — detail 11"
+          }
+        ]
+      },
+      {
+        "title": "Factory & export packing",
+        "images": [
+          {
+            "src": "/products/espresso-1601795859505/detail-12.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and export packing — image 1"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-13.webp",
+            "width": 1500,
+            "height": 1125,
+            "alt": "JOZING factory and export packing — image 2"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-14.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and export packing — image 3"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-15.webp",
+            "width": 900,
+            "height": 1600,
+            "alt": "JOZING factory and export packing — image 4"
+          },
+          {
+            "src": "/products/espresso-1601795859505/detail-16.webp",
+            "width": 1500,
+            "height": 1502,
+            "alt": "JOZING factory and export packing — image 5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "STOCK · 12",
+    "name": "Dinnerware Supplier Stock Lot Coffee Cup Set",
+    "type": "220 ml white ceramic cup and saucer with embossed lace pattern",
+    "pack": "Sold by set",
+    "stock": "200 sets",
+    "priceLabel": "Price / set",
+    "tiers": [
+      {
+        "price": "$0.45",
+        "quantity": "200–999 sets"
+      },
+      {
+        "price": "$0.40",
+        "quantity": "1,000–4,999 sets"
+      },
+      {
+        "price": "$0.35",
+        "quantity": "≥5,000 sets"
+      }
+    ],
+    "material": "Ceramic / porcelain",
+    "capacity": "220 ml (approximately 7 oz)",
+    "colors": "White",
+    "dishwasherSafe": true,
+    "description": "A white ceramic coffee cup and matching saucer with an embossed lace crochet pattern. The rounded cup and decorative relief suit breakfast, afternoon tea, cafés and gift assortments. Dishwasher safe; confirm the current lot and packaging before ordering.",
+    "specifications": [
+      {
+        "label": "Product type",
+        "value": "Coffee cup and saucer set"
+      },
+      {
+        "label": "Decoration",
+        "value": "Embossed lace / crochet pattern"
+      },
+      {
+        "label": "Shape",
+        "value": "Round"
+      },
+      {
+        "label": "Saucer diameter",
+        "value": "6.5 inch / approximately 16.5 cm"
+      },
+      {
+        "label": "Technique",
+        "value": "Underglaze"
+      },
+      {
+        "label": "Style",
+        "value": "Contemporary / vintage-inspired"
+      },
+      {
+        "label": "Brand",
+        "value": "JOZING"
+      },
+      {
+        "label": "Place of origin",
+        "value": "Guangdong, China"
+      },
+      {
+        "label": "Single package size",
+        "value": "16.5 × 12 × 10.5 cm"
+      },
+      {
+        "label": "Single gross weight",
+        "value": "0.650 kg"
+      }
+    ],
+    "image": "/products/lace-cup-1601722627309/main-01.webp",
+    "gallery": [
+      "/products/lace-cup-1601722627309/main-01.webp",
+      "/products/lace-cup-1601722627309/main-02.webp",
+      "/products/lace-cup-1601722627309/main-03.webp",
+      "/products/lace-cup-1601722627309/main-04.webp",
+      "/products/lace-cup-1601722627309/main-05.webp",
+      "/products/lace-cup-1601722627309/main-06.webp"
+    ],
+    "detailSections": [
+      {
+        "title": "Product design & details",
+        "images": [
+          {
+            "src": "/products/lace-cup-1601722627309/detail-01.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "220 ml white ceramic cup and saucer with embossed lace pattern — detail 1"
+          },
+          {
+            "src": "/products/lace-cup-1601722627309/detail-02.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "220 ml white ceramic cup and saucer with embossed lace pattern — detail 2"
+          },
+          {
+            "src": "/products/lace-cup-1601722627309/detail-03.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "220 ml white ceramic cup and saucer with embossed lace pattern — detail 3"
+          },
+          {
+            "src": "/products/lace-cup-1601722627309/detail-04.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "220 ml white ceramic cup and saucer with embossed lace pattern — detail 4"
+          },
+          {
+            "src": "/products/lace-cup-1601722627309/detail-05.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "220 ml white ceramic cup and saucer with embossed lace pattern — detail 5"
+          },
+          {
+            "src": "/products/lace-cup-1601722627309/detail-06.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "220 ml white ceramic cup and saucer with embossed lace pattern — detail 6"
+          },
+          {
+            "src": "/products/lace-cup-1601722627309/detail-08.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "220 ml white ceramic cup and saucer with embossed lace pattern — detail 7"
+          },
+          {
+            "src": "/products/lace-cup-1601722627309/detail-09.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "220 ml white ceramic cup and saucer with embossed lace pattern — detail 8"
+          }
+        ]
+      },
+      {
+        "title": "Factory & export packing",
+        "images": [
+          {
+            "src": "/products/lace-cup-1601722627309/detail-07.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and export packing — image 1"
+          },
+          {
+            "src": "/products/lace-cup-1601722627309/detail-10.webp",
+            "width": 1500,
+            "height": 1125,
+            "alt": "JOZING factory and export packing — image 2"
+          },
+          {
+            "src": "/products/lace-cup-1601722627309/detail-11.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and export packing — image 3"
+          },
+          {
+            "src": "/products/lace-cup-1601722627309/detail-12.webp",
+            "width": 900,
+            "height": 1600,
+            "alt": "JOZING factory and export packing — image 4"
+          },
+          {
+            "src": "/products/lace-cup-1601722627309/detail-13.webp",
+            "width": 1500,
+            "height": 1502,
+            "alt": "JOZING factory and export packing — image 5"
+          }
+        ]
+      }
+    ]
+  },
   { code:"STOCK · 13", name:"Wholesale Colorful Porcelain Mix Mugs Bowls Plates by the Ton", type:"Mixed colorful porcelain stock", pack:"Sold by ton", stock:"1 ton", image:"/products/featured-row-13.webp", tiers:[{price:"$588",quantity:"1–4 tons"},{price:"$559",quantity:"5–27 tons"},{price:"$529",quantity:"≥28 tons"}] },
   { code:"STOCK · 14", name:"Ready Stock Black Porcelain Dinnerware by the Ton", type:"Modern black porcelain plates and bowls", pack:"Sold by ton", stock:"1 ton", image:"/products/black-dinnerware-1600788258230/main-01.webp", gallery:["/products/black-dinnerware-1600788258230/main-01.webp","/products/black-dinnerware-1600788258230/main-02.webp","/products/black-dinnerware-1600788258230/main-03.webp","/products/black-dinnerware-1600788258230/main-04.webp","/products/black-dinnerware-1600788258230/main-05.webp","/products/black-dinnerware-1600788258230/main-06.webp"], priceLabel:"Price / ton", tiers:[{price:"$515",quantity:"1–14 tons"},{price:"$485",quantity:"15–27 tons"},{price:"$455",quantity:"≥28 tons"}], material:"Ceramic / porcelain", colors:"Black", microwaveSafe:true, dishwasherSafe:true, description:"Modern black ceramic dinnerware stock lot with assorted plates, bowls and serving pieces. Suitable for home, hotel, restaurant, coffee service and mixed-container buyers. Availability changes quickly; confirm the current quantity, condition, packing and loading plan before ordering.", specificationsOnly:true, specifications:[{label:"Product code",value:"STOCK · 14"},{label:"Model number",value:"2026062101"},{label:"Material",value:"Ceramic"},{label:"Dinnerware type",value:"Dinnerware sets"},{label:"Shape",value:"Multiple"},{label:"Style",value:"Modern"},{label:"Color",value:"Black"},{label:"Features",value:"Durable, stocked, eco-friendly, microwave safe"},{label:"Microwave safe",value:"Yes"},{label:"Dishwasher safe",value:"Yes"},{label:"Usage",value:"Home, hotel, restaurant, coffee, salad and beverages"},{label:"Quality grade",value:"A grade"},{label:"Brand",value:"JOZING"},{label:"Place of origin",value:"Guangdong, China"},{label:"Starting MOQ",value:"1 ton"},{label:"Delivery time",value:"1–7 days; confirm before ordering"},{label:"Carton size",value:"50 × 30 × 30 cm"},{label:"Weight per carton",value:"23–24 kg / carton"},{label:"Packing quantity",value:"60–70 pieces / carton"},{label:"Cartons per ton",value:"40–43 cartons"},{label:"OEM / ODM",value:"Subject to order quantity"}] },
   { code:"STOCK · 15", name:"Factory Direct White Ceramic Plates Bowls Dishes Mix Packaging", type:"White ceramic mixed packaging", pack:"Sold by ton", stock:"1 ton", image:"/products/featured-row-15.webp", tiers:[{price:"$258",quantity:"1–9 tons"},{price:"$242",quantity:"10–27 tons"},{price:"$228",quantity:"≥28 tons"}] },
