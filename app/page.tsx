@@ -36,6 +36,500 @@ export type StockLot = {
 
 export const allProducts: StockLot[] = [
   {
+    "code": "JZ-A11000036948656",
+    "name": "Ready Stock Ceramic Baking Dishes in Four Colors",
+    "type": "Square and rectangular ceramic baking dishes",
+    "pack": "Sold by piece · price varies by shape",
+    "stock": "200 pieces",
+    "priceLabel": "From / piece",
+    "tiers": [
+      {
+        "price": "$0.33",
+        "quantity": "200+ pieces · $0.33–$0.56 by shape"
+      }
+    ],
+    "material": "Ceramic / stoneware",
+    "colors": "Red, blue, green and gray",
+    "microwaveSafe": true,
+    "dishwasherSafe": true,
+    "description": "Glossy ceramic baking dishes in square and rectangular shapes, with side handles and a stackable design. Four colors suit oven-to-table serving in home kitchens, cafés and restaurants. Prices range from US$0.33 to US$0.56 per piece depending on the selected shape; confirm the available color mix and final packing before ordering.",
+    "specifications": [
+      {
+        "label": "Brand",
+        "value": "JOZING"
+      },
+      {
+        "label": "Place of origin",
+        "value": "Guangdong, China"
+      },
+      {
+        "label": "Model number",
+        "value": "2026072502"
+      },
+      {
+        "label": "Shapes",
+        "value": "Square and rectangular"
+      },
+      {
+        "label": "Oven safe",
+        "value": "Yes"
+      },
+      {
+        "label": "Single package size",
+        "value": "17 × 13.5 × 6.5 cm"
+      },
+      {
+        "label": "Single gross weight",
+        "value": "0.880 kg"
+      }
+    ],
+    "image": "/products/bakeware-11000036948656/main-01.webp",
+    "gallery": [
+      "/products/bakeware-11000036948656/main-01.webp",
+      "/products/bakeware-11000036948656/main-02.webp",
+      "/products/bakeware-11000036948656/main-03.webp",
+      "/products/bakeware-11000036948656/main-04.webp",
+      "/products/bakeware-11000036948656/main-05.webp",
+      "/products/bakeware-11000036948656/main-06.webp"
+    ],
+    "detailSections": [
+      {
+        "title": "Product details & applications",
+        "images": [
+          {
+            "src": "/products/bakeware-11000036948656/detail-01.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 1"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-02.webp",
+            "width": 1122,
+            "height": 1122,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 2"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-03.webp",
+            "width": 1122,
+            "height": 1402,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 3"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-04.webp",
+            "width": 1122,
+            "height": 1402,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 4"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-05.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 5"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-06.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 6"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-07.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 7"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-08.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 8"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-09.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 9"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-10.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 10"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-11.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 11"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-12.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 12"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-13.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 13"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-14.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 14"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-15.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 15"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-16.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square and rectangular ceramic baking dishes — product detail 16"
+          }
+        ]
+      },
+      {
+        "title": "Factory & wholesale packing",
+        "images": [
+          {
+            "src": "/products/bakeware-11000036948656/detail-17.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 1"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-18.webp",
+            "width": 1500,
+            "height": 1125,
+            "alt": "JOZING factory and wholesale packing 2"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-19.webp",
+            "width": 1500,
+            "height": 1570,
+            "alt": "JOZING ceramic production and wholesale packaging"
+          },
+          {
+            "src": "/products/bakeware-11000036948656/detail-20.webp",
+            "width": 1500,
+            "height": 1526,
+            "alt": "JOZING ceramic production and wholesale packaging"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "JZ-A11000037703372",
+    "name": "Large White Ceramic Dinnerware Mixed Stock by the Ton",
+    "type": "Assorted large white plates, bowls and mugs",
+    "pack": "Sold by ton",
+    "stock": "1 ton",
+    "priceLabel": "Price / ton",
+    "tiers": [
+      {
+        "price": "$299",
+        "quantity": "1–14 tons"
+      },
+      {
+        "price": "$284",
+        "quantity": "15–27 tons"
+      },
+      {
+        "price": "$269",
+        "quantity": "≥28 tons"
+      }
+    ],
+    "material": "Ceramic",
+    "colors": "White",
+    "cartonQty": "60–70 pieces / carton",
+    "microwaveSafe": true,
+    "dishwasherSafe": true,
+    "description": "A ready-stock assortment of large white ceramic plates, bowls and mugs in mixed shapes. Sold by the ton for wholesale tableware buyers, restaurants and hotels. Contents vary by stock lot; confirm the assortment, condition, quantities and loading plan before ordering.",
+    "specifications": [
+      {
+        "label": "Brand",
+        "value": "JOZING"
+      },
+      {
+        "label": "Place of origin",
+        "value": "Guangdong, China"
+      },
+      {
+        "label": "Model number",
+        "value": "2026082302"
+      },
+      {
+        "label": "Style",
+        "value": "Contemporary"
+      },
+      {
+        "label": "Shapes",
+        "value": "Various"
+      },
+      {
+        "label": "Oven safe",
+        "value": "Yes"
+      },
+      {
+        "label": "Carton size",
+        "value": "50 × 30 × 30 cm"
+      },
+      {
+        "label": "Weight per carton",
+        "value": "23–24 kg"
+      },
+      {
+        "label": "Cartons per ton",
+        "value": "40–43 cartons (as listed; confirm packing by lot)"
+      }
+    ],
+    "image": "/products/white-stock-11000037703372/main-01.webp",
+    "gallery": [
+      "/products/white-stock-11000037703372/main-01.webp",
+      "/products/white-stock-11000037703372/main-02.webp",
+      "/products/white-stock-11000037703372/main-03.webp",
+      "/products/white-stock-11000037703372/main-04.webp",
+      "/products/white-stock-11000037703372/main-05.webp",
+      "/products/white-stock-11000037703372/main-06.webp"
+    ],
+    "detailSections": [
+      {
+        "title": "Product details & applications",
+        "images": [
+          {
+            "src": "/products/white-stock-11000037703372/detail-01.webp",
+            "width": 1500,
+            "height": 1500,
+            "alt": "Assorted large white plates, bowls and mugs — product detail 1"
+          },
+          {
+            "src": "/products/white-stock-11000037703372/detail-02.webp",
+            "width": 1500,
+            "height": 1500,
+            "alt": "Assorted large white plates, bowls and mugs — product detail 2"
+          },
+          {
+            "src": "/products/white-stock-11000037703372/detail-03.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "Assorted large white plates, bowls and mugs — product detail 3"
+          },
+          {
+            "src": "/products/white-stock-11000037703372/detail-04.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "Assorted large white plates, bowls and mugs — product detail 4"
+          },
+          {
+            "src": "/products/white-stock-11000037703372/detail-05.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "Assorted large white plates, bowls and mugs — product detail 5"
+          },
+          {
+            "src": "/products/white-stock-11000037703372/detail-06.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "Assorted large white plates, bowls and mugs — product detail 6"
+          }
+        ]
+      },
+      {
+        "title": "Factory & wholesale packing",
+        "images": [
+          {
+            "src": "/products/white-stock-11000037703372/detail-07.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 1"
+          },
+          {
+            "src": "/products/white-stock-11000037703372/detail-08.webp",
+            "width": 1500,
+            "height": 1125,
+            "alt": "JOZING factory and wholesale packing 2"
+          },
+          {
+            "src": "/products/white-stock-11000037703372/detail-09.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 3"
+          },
+          {
+            "src": "/products/white-stock-11000037703372/detail-10.webp",
+            "width": 900,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 4"
+          },
+          {
+            "src": "/products/white-stock-11000037703372/detail-11.webp",
+            "width": 1500,
+            "height": 1502,
+            "alt": "JOZING factory and wholesale packing 5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "JZ-A1601674765483",
+    "name": "Luxury Gold Rim Ceramic Dinnerware Mixed Stock by the Ton",
+    "type": "Colorful gold-rim porcelain tableware assortment",
+    "pack": "Sold by ton",
+    "stock": "1 ton",
+    "priceLabel": "Price / ton",
+    "tiers": [
+      {
+        "price": "$999",
+        "quantity": "1–9 tons"
+      },
+      {
+        "price": "$988",
+        "quantity": "10–27 tons"
+      },
+      {
+        "price": "$975",
+        "quantity": "≥28 tons"
+      }
+    ],
+    "material": "Ceramic / porcelain",
+    "colors": "Assorted colors with gold-rim decoration",
+    "cartonQty": "60–70 pieces / carton",
+    "description": "Colorful ceramic dinnerware with decorative gold rims, supplied as a mixed ready-stock assortment by the ton. Suitable for wholesale tableware collections, hotel and restaurant service, and home dining. Shapes and colors vary by lot; confirm the available mix, care instructions and final packing before ordering.",
+    "specifications": [
+      {
+        "label": "Brand",
+        "value": "JOZING"
+      },
+      {
+        "label": "Place of origin",
+        "value": "Guangdong, China"
+      },
+      {
+        "label": "Model number",
+        "value": "2026052701"
+      },
+      {
+        "label": "Style",
+        "value": "Luxury"
+      },
+      {
+        "label": "Pattern",
+        "value": "Gold inlay"
+      },
+      {
+        "label": "Shapes",
+        "value": "Various"
+      },
+      {
+        "label": "Carton size",
+        "value": "50 × 30 × 30 cm"
+      },
+      {
+        "label": "Weight per carton",
+        "value": "23–24 kg"
+      },
+      {
+        "label": "Cartons per ton",
+        "value": "40–43 cartons (as listed; confirm packing by lot)"
+      }
+    ],
+    "image": "/products/gold-rim-1601674765483/main-01.webp",
+    "gallery": [
+      "/products/gold-rim-1601674765483/main-01.webp",
+      "/products/gold-rim-1601674765483/main-02.webp",
+      "/products/gold-rim-1601674765483/main-03.webp",
+      "/products/gold-rim-1601674765483/main-04.webp",
+      "/products/gold-rim-1601674765483/main-05.webp",
+      "/products/gold-rim-1601674765483/main-06.webp"
+    ],
+    "detailSections": [
+      {
+        "title": "Product details & applications",
+        "images": [
+          {
+            "src": "/products/gold-rim-1601674765483/detail-01.webp",
+            "width": 1024,
+            "height": 1536,
+            "alt": "Colorful gold-rim porcelain tableware assortment — product detail 1"
+          },
+          {
+            "src": "/products/gold-rim-1601674765483/detail-02.webp",
+            "width": 1024,
+            "height": 1536,
+            "alt": "Colorful gold-rim porcelain tableware assortment — product detail 2"
+          },
+          {
+            "src": "/products/gold-rim-1601674765483/detail-03.webp",
+            "width": 1024,
+            "height": 1536,
+            "alt": "Colorful gold-rim porcelain tableware assortment — product detail 3"
+          },
+          {
+            "src": "/products/gold-rim-1601674765483/detail-04.webp",
+            "width": 1024,
+            "height": 1536,
+            "alt": "Colorful gold-rim porcelain tableware assortment — product detail 4"
+          },
+          {
+            "src": "/products/gold-rim-1601674765483/detail-05.webp",
+            "width": 1024,
+            "height": 1536,
+            "alt": "Colorful gold-rim porcelain tableware assortment — product detail 5"
+          },
+          {
+            "src": "/products/gold-rim-1601674765483/detail-06.webp",
+            "width": 796,
+            "height": 796,
+            "alt": "Colorful gold-rim porcelain tableware assortment — product detail 6"
+          }
+        ]
+      },
+      {
+        "title": "Factory & wholesale packing",
+        "images": [
+          {
+            "src": "/products/gold-rim-1601674765483/detail-07.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 1"
+          },
+          {
+            "src": "/products/gold-rim-1601674765483/detail-08.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 2"
+          },
+          {
+            "src": "/products/gold-rim-1601674765483/detail-09.webp",
+            "width": 1500,
+            "height": 1125,
+            "alt": "JOZING factory and wholesale packing 3"
+          },
+          {
+            "src": "/products/gold-rim-1601674765483/detail-10.webp",
+            "width": 900,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 4"
+          },
+          {
+            "src": "/products/gold-rim-1601674765483/detail-11.webp",
+            "width": 1500,
+            "height": 1502,
+            "alt": "JOZING factory and wholesale packing 5"
+          }
+        ]
+      }
+    ]
+  },
+  {
     code: "2026071501",
     name: "10.2inch White Ceramic Leaf Pattern Serving Plate",
     type: "Blue leaf pattern · irregular ceramic plate",
@@ -784,12 +1278,348 @@ export const allProducts: StockLot[] = [
       }
     ]
   },
-  { code:"STOCK · 13", name:"Wholesale Colorful Porcelain Mix Mugs Bowls Plates by the Ton", type:"Mixed colorful porcelain stock", pack:"Sold by ton", stock:"1 ton", image:"/products/featured-row-13.webp", tiers:[{price:"$588",quantity:"1–4 tons"},{price:"$559",quantity:"5–27 tons"},{price:"$529",quantity:"≥28 tons"}] },
+  {
+    "code": "STOCK · 13",
+    "name": "Wholesale Colorful Porcelain Mix Mugs Bowls Plates by the Ton",
+    "type": "Mixed colorful porcelain stock",
+    "pack": "Sold by ton",
+    "stock": "1 ton",
+    "priceLabel": "Price / ton",
+    "tiers": [
+      {
+        "price": "$588",
+        "quantity": "1–4 tons"
+      },
+      {
+        "price": "$559",
+        "quantity": "5–27 tons"
+      },
+      {
+        "price": "$529",
+        "quantity": "≥28 tons"
+      }
+    ],
+    "material": "Ceramic / porcelain",
+    "colors": "Assorted colors",
+    "cartonQty": "60–70 pieces / carton",
+    "microwaveSafe": true,
+    "dishwasherSafe": true,
+    "description": "Ready-stock ceramic kitchenware including colorful mugs, bowls and plates in assorted shapes. Supplied in mixed cartons and sold by the ton. The assortment varies with available stock; confirm the current mix, quantities, condition and packing plan before ordering.",
+    "specifications": [
+      {
+        "label": "Brand",
+        "value": "JOZING"
+      },
+      {
+        "label": "Place of origin",
+        "value": "Guangdong, China"
+      },
+      {
+        "label": "Model number",
+        "value": "2026080501"
+      },
+      {
+        "label": "Style",
+        "value": "Modern"
+      },
+      {
+        "label": "Technique",
+        "value": "Underglazed"
+      },
+      {
+        "label": "Shapes",
+        "value": "Various"
+      },
+      {
+        "label": "Carton size",
+        "value": "50 × 30 × 30 cm"
+      },
+      {
+        "label": "Weight per carton",
+        "value": "23–24 kg"
+      },
+      {
+        "label": "Cartons per ton",
+        "value": "40–43 cartons (as listed; confirm packing by lot)"
+      }
+    ],
+    "image": "/products/color-mix-11000037428009/main-01.webp",
+    "gallery": [
+      "/products/color-mix-11000037428009/main-01.webp",
+      "/products/color-mix-11000037428009/main-02.webp",
+      "/products/color-mix-11000037428009/main-03.webp",
+      "/products/color-mix-11000037428009/main-04.webp",
+      "/products/color-mix-11000037428009/main-05.webp",
+      "/products/color-mix-11000037428009/main-06.webp"
+    ],
+    "detailSections": [
+      {
+        "title": "Product details & applications",
+        "images": [
+          {
+            "src": "/products/color-mix-11000037428009/detail-01.webp",
+            "width": 1500,
+            "height": 1500,
+            "alt": "Mixed colorful porcelain stock — product detail 1"
+          },
+          {
+            "src": "/products/color-mix-11000037428009/detail-02.webp",
+            "width": 1164,
+            "height": 1600,
+            "alt": "Mixed colorful porcelain stock — product detail 2"
+          },
+          {
+            "src": "/products/color-mix-11000037428009/detail-03.webp",
+            "width": 1500,
+            "height": 1125,
+            "alt": "Mixed colorful porcelain stock — product detail 3"
+          },
+          {
+            "src": "/products/color-mix-11000037428009/detail-04.webp",
+            "width": 1500,
+            "height": 1125,
+            "alt": "Mixed colorful porcelain stock — product detail 4"
+          },
+          {
+            "src": "/products/color-mix-11000037428009/detail-05.webp",
+            "width": 1500,
+            "height": 1125,
+            "alt": "Mixed colorful porcelain stock — product detail 5"
+          },
+          {
+            "src": "/products/color-mix-11000037428009/detail-06.webp",
+            "width": 1500,
+            "height": 1125,
+            "alt": "Mixed colorful porcelain stock — product detail 6"
+          },
+          {
+            "src": "/products/color-mix-11000037428009/detail-07.webp",
+            "width": 798,
+            "height": 599,
+            "alt": "Mixed colorful porcelain stock — product detail 7"
+          }
+        ]
+      },
+      {
+        "title": "Factory & wholesale packing",
+        "images": [
+          {
+            "src": "/products/color-mix-11000037428009/detail-09.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 1"
+          },
+          {
+            "src": "/products/color-mix-11000037428009/detail-10.webp",
+            "width": 1500,
+            "height": 1125,
+            "alt": "JOZING factory and wholesale packing 2"
+          },
+          {
+            "src": "/products/color-mix-11000037428009/detail-11.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 3"
+          },
+          {
+            "src": "/products/color-mix-11000037428009/detail-12.webp",
+            "width": 900,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 4"
+          },
+          {
+            "src": "/products/color-mix-11000037428009/detail-13.webp",
+            "width": 1500,
+            "height": 1502,
+            "alt": "JOZING factory and wholesale packing 5"
+          }
+        ]
+      }
+    ]
+  },
   { code:"STOCK · 14", name:"Ready Stock Black Porcelain Dinnerware by the Ton", type:"Modern black porcelain plates and bowls", pack:"Sold by ton", stock:"1 ton", image:"/products/black-dinnerware-1600788258230/main-01.webp", gallery:["/products/black-dinnerware-1600788258230/main-01.webp","/products/black-dinnerware-1600788258230/main-02.webp","/products/black-dinnerware-1600788258230/main-03.webp","/products/black-dinnerware-1600788258230/main-04.webp","/products/black-dinnerware-1600788258230/main-05.webp","/products/black-dinnerware-1600788258230/main-06.webp"], priceLabel:"Price / ton", tiers:[{price:"$515",quantity:"1–14 tons"},{price:"$485",quantity:"15–27 tons"},{price:"$455",quantity:"≥28 tons"}], material:"Ceramic / porcelain", colors:"Black", microwaveSafe:true, dishwasherSafe:true, description:"Modern black ceramic dinnerware stock lot with assorted plates, bowls and serving pieces. Suitable for home, hotel, restaurant, coffee service and mixed-container buyers. Availability changes quickly; confirm the current quantity, condition, packing and loading plan before ordering.", specificationsOnly:true, specifications:[{label:"Product code",value:"STOCK · 14"},{label:"Model number",value:"2026062101"},{label:"Material",value:"Ceramic"},{label:"Dinnerware type",value:"Dinnerware sets"},{label:"Shape",value:"Multiple"},{label:"Style",value:"Modern"},{label:"Color",value:"Black"},{label:"Features",value:"Durable, stocked, eco-friendly, microwave safe"},{label:"Microwave safe",value:"Yes"},{label:"Dishwasher safe",value:"Yes"},{label:"Usage",value:"Home, hotel, restaurant, coffee, salad and beverages"},{label:"Quality grade",value:"A grade"},{label:"Brand",value:"JOZING"},{label:"Place of origin",value:"Guangdong, China"},{label:"Starting MOQ",value:"1 ton"},{label:"Delivery time",value:"1–7 days; confirm before ordering"},{label:"Carton size",value:"50 × 30 × 30 cm"},{label:"Weight per carton",value:"23–24 kg / carton"},{label:"Packing quantity",value:"60–70 pieces / carton"},{label:"Cartons per ton",value:"40–43 cartons"},{label:"OEM / ODM",value:"Subject to order quantity"}] },
   { code:"STOCK · 15", name:"Factory Direct White Ceramic Plates Bowls Dishes Mix Packaging", type:"White ceramic mixed packaging", pack:"Sold by ton", stock:"1 ton", image:"/products/featured-row-15.webp", tiers:[{price:"$258",quantity:"1–9 tons"},{price:"$242",quantity:"10–27 tons"},{price:"$228",quantity:"≥28 tons"}] },
   { code:"STOCK · 16", name:"Unbeatable Bulk Pricing Porcelain Stackable Baking Pans Mixed Sale by Ton", type:"Stackable baking pans · mixed sale", pack:"Sold by ton", stock:"1 ton", image:"/products/featured-row-16.webp", gallery:["/products/bakeware-1601779255006/main-01.webp","/products/bakeware-1601779255006/main-02.webp","/products/bakeware-1601779255006/main-03.webp","/products/bakeware-1601779255006/main-04.webp","/products/bakeware-1601779255006/main-05.webp","/products/bakeware-1601779255006/main-06.webp"], specificationsOnly:true, specifications:[{label:"Product code",value:"STOCK · 16"},{label:"Baking dishes & pans type",value:"Souffle Dishes & Ramekins"},{label:"Material",value:"Ceramic"},{label:"Shape",value:"Various"},{label:"Coating",value:"Ceramic Coating"},{label:"Thickness",value:"Various"},{label:"Feature",value:"Durable, Eco-Friendly, food safe"},{label:"Model number",value:"2026050702"},{label:"Place of origin",value:"Guangdong, China"},{label:"Brand name",value:"Jozing"},{label:"Usage",value:"Home Kitchen"},{label:"Carton Size",value:"44*44*31CM"},{label:"Weight Per Box",value:"22-23KG/CTN"},{label:"Quantity of Each Carton",value:"30-35PCS/CTN"},{label:"Per ton, Number of Boxes",value:"43-45CTN"},{label:"Color",value:"Mix"}], tiers:[{price:"$609",quantity:"1–9 tons"},{price:"$594",quantity:"10–27 tons"},{price:"$565",quantity:"≥28 tons"}] },
   { code:"STOCK · 17", name:"3.5inch Fluted Ceramic Ramekin Set", type:"Colorful fluted ceramic ramekins", pack:"Sold by piece", stock:"200 pieces", image:"/products/featured-row-17.webp", priceLabel:"Price / piece", tiers:[{price:"$0.15",quantity:"200–1,999 pieces"},{price:"$0.13",quantity:"2,000–9,999 pieces"},{price:"$0.12",quantity:"≥10,000 pieces"}] },
-  { code:"STOCK · 18", name:"Square White Ceramic Dinnerware Plate Set", type:"Square white ceramic plates · three sizes", pack:"MOQ 300 per size", stock:"300 pieces", image:"/products/featured-row-18.webp", priceLabel:"Price by size", tiers:[{price:"$0.56",quantity:"10.5 inch · MOQ 300"},{price:"$0.32",quantity:"7.5 inch · MOQ 300"},{price:"$0.21",quantity:"5.5 inch · MOQ 300"}] },
+  {
+    "code": "STOCK · 18",
+    "name": "Square White Ceramic Dinnerware Plate Set",
+    "type": "Square white ceramic plates · three sizes",
+    "pack": "MOQ 300 per size",
+    "stock": "300 pieces",
+    "priceLabel": "Price by size",
+    "tiers": [
+      {
+        "price": "$0.56",
+        "quantity": "Large · MOQ 300"
+      },
+      {
+        "price": "$0.32",
+        "quantity": "Medium · MOQ 300"
+      },
+      {
+        "price": "$0.21",
+        "quantity": "Small · MOQ 300"
+      }
+    ],
+    "material": "Ceramic / porcelain",
+    "colors": "White",
+    "size": "Large 10.6 inch · medium 7.5 inch · small 5.7 inch (source options)",
+    "microwaveSafe": true,
+    "dishwasherSafe": true,
+    "description": "Three nesting sizes of white square ceramic plates with pierced lattice borders, scalloped edges and embossed decoration. Suitable for desserts, serving and table settings at home, cafés, hotels and wedding events. Prices are per plate by size; confirm exact measurements and packing before ordering.",
+    "specifications": [
+      {
+        "label": "Brand",
+        "value": "JOZING"
+      },
+      {
+        "label": "Place of origin",
+        "value": "Guangdong, China"
+      },
+      {
+        "label": "Model number",
+        "value": "2026080601"
+      },
+      {
+        "label": "Shape",
+        "value": "Square"
+      },
+      {
+        "label": "Style",
+        "value": "Classic"
+      },
+      {
+        "label": "Design",
+        "value": "Pierced lattice border with scalloped edges"
+      },
+      {
+        "label": "Single package size",
+        "value": "27 × 27 × 2.5 cm"
+      },
+      {
+        "label": "Single gross weight",
+        "value": "1.030 kg"
+      }
+    ],
+    "image": "/products/square-plates-11000037447074/main-01.webp",
+    "gallery": [
+      "/products/square-plates-11000037447074/main-01.webp",
+      "/products/square-plates-11000037447074/main-02.webp",
+      "/products/square-plates-11000037447074/main-03.webp",
+      "/products/square-plates-11000037447074/main-04.webp",
+      "/products/square-plates-11000037447074/main-05.webp",
+      "/products/square-plates-11000037447074/main-06.webp"
+    ],
+    "detailSections": [
+      {
+        "title": "Product details & applications",
+        "images": [
+          {
+            "src": "/products/square-plates-11000037447074/detail-01.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square white ceramic plates · three sizes — product detail 1"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-02.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square white ceramic plates · three sizes — product detail 2"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-03.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square white ceramic plates · three sizes — product detail 3"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-04.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square white ceramic plates · three sizes — product detail 4"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-05.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square white ceramic plates · three sizes — product detail 5"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-06.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square white ceramic plates · three sizes — product detail 6"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-07.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square white ceramic plates · three sizes — product detail 7"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-08.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square white ceramic plates · three sizes — product detail 8"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-09.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square white ceramic plates · three sizes — product detail 9"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-10.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square white ceramic plates · three sizes — product detail 10"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-12.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Square white ceramic plates · three sizes — product detail 11"
+          }
+        ]
+      },
+      {
+        "title": "Factory & wholesale packing",
+        "images": [
+          {
+            "src": "/products/square-plates-11000037447074/detail-11.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 1"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-13.webp",
+            "width": 1200,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 2"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-14.webp",
+            "width": 1500,
+            "height": 1125,
+            "alt": "JOZING factory and wholesale packing 3"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-15.webp",
+            "width": 900,
+            "height": 1600,
+            "alt": "JOZING factory and wholesale packing 4"
+          },
+          {
+            "src": "/products/square-plates-11000037447074/detail-16.webp",
+            "width": 1500,
+            "height": 1502,
+            "alt": "JOZING factory and wholesale packing 5"
+          }
+        ]
+      }
+    ]
+  },
   { code:"STOCK · 19", name:"Clearance Stock Unbeatable Bulk Pricing Porcelain Wavy Edge Serving Dish", type:"Wavy-edge porcelain serving dishes", pack:"Sold by piece", stock:"200 pieces", image:"/products/featured-row-19.webp", priceLabel:"Price / piece", tiers:[{price:"$0.41",quantity:"200–2,999 pieces"},{price:"$0.40",quantity:"3,000–49,999 pieces"},{price:"$0.39",quantity:"≥50,000 pieces"}] },
   { code:"STOCK · 20", name:"Wholesale Modern White Ceramic Dinnerware Set for Restaurant & Hotel", type:"Modern white ceramic dinnerware", pack:"Sold by set", stock:"100 sets", image:"/products/featured-row-20.webp", priceLabel:"Price / set", tiers:[{price:"$1.80",quantity:"100–999 sets"},{price:"$1.60",quantity:"1,000–1,999 sets"},{price:"$1.50",quantity:"≥2,000 sets"}] },
   { code:"STOCK · 21", name:"Wholesale Vintage Embossed White Ceramic 8-inch and 10-inch Dinnerware Set for Wedding", type:"Vintage embossed white ceramic dinnerware", pack:"Mixed sizes", stock:"200 sets", image:"/products/featured-row-21.webp", priceLabel:"Tier pricing", tiers:[{price:"$0.90",quantity:"200–999 sets"},{price:"$0.80",quantity:"1,000–4,999 pieces"},{price:"$0.70",quantity:"≥5,000 pieces"}] },
