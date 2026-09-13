@@ -3,6 +3,7 @@ import { HeaderTools } from "./header-tools";
 import { StockMenu } from "./stock-menu";
 import { productSlug } from "./product-utils";
 import { InquiryForm } from "./inquiry-form";
+import { preload } from "react-dom";
 export type PriceTier = { price: string; quantity: string };
 export type StockLot = {
   code: string;
@@ -315,6 +316,11 @@ const factoryPhotos = [
 ];
 
 export default function Home() {
+  // The clearance image is the visible mobile LCP element. Preload the exact
+  // source for each viewport so icons and below-the-fold product cards cannot
+  // delay its discovery.
+  preload("/hero-clearance-2026-mobile.webp", { as: "image", media: "(max-width: 620px)", fetchPriority: "high" });
+  preload("/hero-clearance-2026.webp", { as: "image", media: "(min-width: 621px)", fetchPriority: "high" });
   return (
     <main>
       <div className="topbar"><span>China Factory · Bulk Export Porcelain Supply</span><span>Ready stock · OEM / ODM · FOB · CIF · FCL · Mixed Container · Global shipping</span><div className="topbar-contacts"><a href="mailto:sales_b2b@jozing.cn">sales_b2b@jozing.cn</a><a href="https://wa.me/8615280186517" target="_blank" rel="noreferrer">WhatsApp: +86 152 8018 6517</a></div><HeaderTools /></div>
