@@ -13,10 +13,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
+  const searchCopy: Record<string, { title: string; description: string }> = {
+    "is-ceramic-dinnerware-from-china-safe": { title: "Is Dinnerware from China Safe? Buyer Testing Checklist | JOZING", description: "Buying ceramic dinnerware from China? Review glaze and decoration risks, lab reports and the questions to ask your supplier before placing a wholesale order." },
+    "ceramic-vs-porcelain-vs-bone-china": { title: "Ceramic vs Porcelain vs Bone China: Weight & Cost | JOZING", description: "Compare porcelain, bone china and stoneware by weight, durability, cost and use. A practical tableware material guide for restaurant and wholesale buyers." },
+  };
+  const search = searchCopy[slug];
   return {
     alternates: { canonical: `/blog/${post.slug}/` },
-    title: `${post.title} | JOZING Blog`,
-    description: post.description,
+    title: search?.title ?? `${post.title} | JOZING Blog`,
+    description: search?.description ?? post.description,
     openGraph: { title: post.title, description: post.description, type: "article", url: `https://www.jozing.cn/blog/${post.slug}/` },
   };
 }
@@ -104,3 +109,4 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     </main>
   );
 }
+

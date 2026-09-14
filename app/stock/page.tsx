@@ -7,7 +7,7 @@ import { CatalogLink } from "./catalog-link";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/stock/" },
-  title: "Ready Stock Ceramic Tableware Wholesale | JOZING",
+  title: "Wholesale Ceramic Stock: Prices & MOQ | JOZING",
   description: "Browse ready-stock ceramic mugs, plates and dinnerware with wholesale prices and MOQs. Compare piece, carton and ton offers; request current stock and export packing.",
 };
 
@@ -49,3 +49,4 @@ export default function StockPage() {
     </main>
   );
 }
+
