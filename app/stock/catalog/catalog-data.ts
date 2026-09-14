@@ -3,7 +3,7 @@ import { stockLots } from "../../page";
 import { stockCategories } from "../../stock-categories";
 import { productSlug } from "../../product-utils";
 
-export const catalogPrepared = "2026-09-13";
+export const catalogPrepared = "2026-09-14";
 export const catalogNotice = "Published listing information; current stock, assortment, prices and packing must be confirmed before ordering.";
 export const catalogRows = stockLots.map(product => {
   const specifications = product.specifications ?? [];
@@ -30,4 +30,5 @@ export function catalogCsv() {
   const cell = (value: string) => `"${(/^[=+@\-\t\r]/.test(value) ? "'" + value : value).replaceAll('"', '""')}"`;
   return "\uFEFF" + [header, ...rows].map(row => row.map(cell).join(",")).join("\r\n");
 }
+
 

@@ -78,7 +78,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           {product.size ? <div><dt>Size</dt><dd>{product.size}</dd></div> : null}{product.capacity ? <div><dt>Capacity</dt><dd>{product.capacity}</dd></div> : null}{product.colors ? <div><dt>Color options</dt><dd>{product.colors}</dd></div> : null}
           <div><dt>Starting MOQ</dt><dd>{product.stock}</dd></div>{product.cartonQty ? <div><dt>Carton quantity</dt><dd>{product.cartonQty}</dd></div> : null}{product.availableStock ? <div><dt>Ready stock</dt><dd>{product.availableStock}</dd></div> : null}
           {product.leadTime ? <div><dt>Lead time</dt><dd>{product.leadTime}</dd></div> : null}{product.loadingPort ? <div><dt>Loading port</dt><dd>{product.loadingPort}</dd></div> : null}
-          <div><dt>Microwave safe</dt><dd>{product.microwaveSafe ? "Yes" : "Confirm by item"}</dd></div><div><dt>Dishwasher safe</dt><dd>{product.dishwasherSafe ? "Yes" : "Confirm by item"}</dd></div><div><dt>OEM / ODM</dt><dd>{(isOem || product.oemOdm) ? "Supported" : "Subject to order quantity"}</dd></div>
+          <div><dt>Microwave safe</dt><dd>{product.microwaveSafe === true ? "Yes" : product.microwaveSafe === false ? "No" : "Confirm by item"}</dd></div><div><dt>Dishwasher safe</dt><dd>{product.dishwasherSafe === true ? "Yes" : product.dishwasherSafe === false ? "No" : "Confirm by item"}</dd></div><div><dt>OEM / ODM</dt><dd>{(isOem || product.oemOdm) ? "Supported" : "Subject to order quantity"}</dd></div>
           {product.certifications ? <div><dt>Compliance</dt><dd>{product.certifications}</dd></div> : null}{product.packagingOptions ? <div><dt>Packaging</dt><dd>{product.packagingOptions}</dd></div> : null}
           </> : null}
           {product.specifications?.map(spec => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}
@@ -106,4 +106,5 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     <SiteFooter />
   </main>;
 }
+
 
