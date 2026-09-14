@@ -1656,8 +1656,8 @@ export default function Home() {
   // The clearance image is the visible mobile LCP element. Preload the exact
   // source for each viewport so icons and below-the-fold product cards cannot
   // delay its discovery.
-  preload("/hero-clearance-2026-mobile.webp", { as: "image", media: "(max-width: 620px)", fetchPriority: "high" });
-  preload("/hero-clearance-2026.webp", { as: "image", media: "(min-width: 621px)", fetchPriority: "high" });
+  preload("/hero-clearance-mobile-v2.avif", { as: "image", type: "image/avif", media: "(max-width: 620px)", fetchPriority: "high" });
+  preload("/hero-clearance-desktop-v2.avif", { as: "image", type: "image/avif", media: "(min-width: 621px)", fetchPriority: "high" });
   return (
     <main>
       <div className="topbar"><span>China Factory · Bulk Export Porcelain Supply</span><span>Ready stock · OEM / ODM · FOB · CIF · FCL · Mixed Container · Global shipping</span><div className="topbar-contacts"><a href="mailto:sales_b2b@jozing.cn">sales_b2b@jozing.cn</a><a href="https://wa.me/8615280186517" target="_blank" rel="noreferrer">WhatsApp: +86 152 8018 6517</a></div><HeaderTools /></div>
@@ -1671,6 +1671,8 @@ export default function Home() {
 
       <section className="hero" id="top">
         <picture className="hero-image">
+          <source type="image/avif" media="(max-width: 620px)" srcSet="/hero-clearance-mobile-v2.avif" />
+          <source type="image/avif" media="(min-width: 621px)" srcSet="/hero-clearance-desktop-v2.avif" />
           <source media="(max-width: 620px)" srcSet="/hero-clearance-2026-mobile.webp" />
           <img
             src="/hero-clearance-2026.webp"

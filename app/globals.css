@@ -228,3 +228,12 @@ body{background:#fbfaf6;color:#0d2b22}.topbar{background:#071e18;color:#d8e5df;b
   .nav>nav{justify-content:space-evenly;gap:8px 18px}
   .nav nav>a,.nav .stock-menu>summary,.nav>.nav-cta{font-size:16px}
 }
+
+/* Readable supporting copy and reliably sized touch targets. */
+.section-head h2 em,.oem h2 em{color:#876135}
+.section-note p,.product-copy p,.price-tiers>span,.price-tiers small,.oem-intro>p:not(.eyebrow),.gallery-head>p,.client-proof-head>p,.client-proof figcaption,.contact address span{color:#496158}
+.whatsapp-float b{color:#11693f}
+.footer-logo{min-height:44px;display:flex;align-items:center}
+.rfq-form label{min-width:0}
+.rfq-form input,.rfq-form select,.rfq-form textarea{display:block;min-height:48px}
+.rfq-form textarea{height:auto;min-height:112px;line-height:1.5}
