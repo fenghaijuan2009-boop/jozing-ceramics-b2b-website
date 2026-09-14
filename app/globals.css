@@ -237,3 +237,5 @@ body{background:#fbfaf6;color:#0d2b22}.topbar{background:#071e18;color:#d8e5df;b
 .rfq-form label{min-width:0}
 .rfq-form input,.rfq-form select,.rfq-form textarea{display:block;min-height:48px}
 .rfq-form textarea{height:auto;min-height:112px;line-height:1.5}
+
+.product-quote-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:20px 0}.product-quote-actions a{min-height:48px}.product-gallery-main img{aspect-ratio:1/1;object-fit:contain}

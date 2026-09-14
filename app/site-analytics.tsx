@@ -44,6 +44,10 @@ export function SiteAnalytics({ measurementId }: { measurementId: string }) {
         return;
       }
       const href = link.getAttribute("href") || "";
+      if (href.startsWith("/contact/?product=")) {
+        w.gtag?.("event", "quote_request_click", { ...(productCode ? { item_id: productCode } : {}), page_location: page, send_to: measurementId });
+        return;
+      }
       let channel: string | null = null;
       if (/^https:\/\/wa\.me\//.test(href)) channel = "whatsapp";
       if (/^mailto:/i.test(href)) channel = "email";
@@ -63,4 +67,5 @@ export function SiteAnalytics({ measurementId }: { measurementId: string }) {
   if (consent !== "unset" && !showChoice) return <button className="analytics-settings" type="button" onClick={() => setShowChoice(true)}>Analytics preferences</button>;
   return <aside className="analytics-choice" aria-label="Website analytics preference"><p>Allow usage analytics to help us improve this website? Inquiry messages and contact details are not included.</p><button type="button" onClick={() => choose("accepted")}>Allow analytics</button><button type="button" onClick={() => choose("declined")}>Decline</button></aside>;
 }
+
 

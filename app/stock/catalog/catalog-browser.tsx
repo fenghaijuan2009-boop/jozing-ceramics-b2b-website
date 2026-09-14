@@ -16,8 +16,9 @@ export function CatalogBrowser({ rows }: { rows: CatalogRow[] }) {
       <a className="catalog-photo" href={row.href}><Image src={row.image} alt={row.name} width={220} height={220} sizes="(max-width: 600px) 92px, 140px" /></a>
       <div className="catalog-product-copy"><span className="catalog-code">{row.code}</span><h3><a href={row.href}>{row.name}</a></h3><p>MOQ: <strong>{row.moq}</strong></p><p>{row.categories.map(item => item.name).join(" · ")}</p><a className="catalog-details" href={row.href}>Photos & specifications →</a></div>
       <div className="catalog-prices"><span className="eyebrow">{row.unit} · USD</span>{row.tiers.length ? row.tiers.map(tier => <div key={tier.quantity}><strong>{tier.price}</strong><span>{tier.quantity}</span></div>) : <p>Request a quotation</p>}</div>
-      <details className="catalog-packing"><summary>Packing & quotation</summary><dl><div><dt>Carton quantity</dt><dd>{row.cartonQuantity}</dd></div><div><dt>Carton size</dt><dd>{row.cartonSize}</dd></div><div><dt>Carton gross weight</dt><dd>{row.cartonWeight}</dd></div></dl><a href={`/contact/?product=${encodeURIComponent(`${row.name} (${row.code})`)}`}>Confirm this lot & request a quote →</a></details>
+      <details className="catalog-packing"><summary>Packing & quotation</summary><dl><div><dt>Carton quantity</dt><dd>{row.cartonQuantity}</dd></div><div><dt>Carton size</dt><dd>{row.cartonSize}</dd></div><div><dt>Carton gross weight</dt><dd>{row.cartonWeight}</dd></div></dl><a href={`/contact/?product=${encodeURIComponent(`${row.name} (${row.code})`)}&productUrl=${encodeURIComponent(`https://www.jozing.cn${row.href}`)}`}>Confirm this lot & request a quote →</a></details>
     </article>)}</div>
     {!products.length && <p className="catalog-empty">No matching products. Try another product name or select All Ready Stock.</p>}
   </section>;
 }
+

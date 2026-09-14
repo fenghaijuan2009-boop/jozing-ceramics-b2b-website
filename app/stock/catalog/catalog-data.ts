@@ -1,3 +1,4 @@
+import thumbnails from "../../product-thumbnails.json";
 import { stockLots } from "../../page";
 import { stockCategories } from "../../stock-categories";
 import { productSlug } from "../../product-utils";
@@ -10,7 +11,7 @@ export const catalogRows = stockLots.map(product => {
   return {
     code: product.code,
     name: product.name,
-    image: product.image,
+    image: (thumbnails as Record<string, string>)[product.image] ?? product.image,
     href: `/products/${productSlug(product.name)}/`,
     categories: stockCategories.filter(category => category.codes.includes(product.code)).map(category => ({ slug: category.slug, name: category.name })),
     unit: product.priceLabel ?? (product.pack.toLowerCase().includes("ton") ? "Price / ton" : product.pack),
@@ -29,3 +30,4 @@ export function catalogCsv() {
   const cell = (value: string) => `"${(/^[=+@\-\t\r]/.test(value) ? "'" + value : value).replaceAll('"', '""')}"`;
   return "\uFEFF" + [header, ...rows].map(row => row.map(cell).join(",")).join("\r\n");
 }
+

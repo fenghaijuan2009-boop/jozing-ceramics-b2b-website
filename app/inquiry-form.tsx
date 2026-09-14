@@ -7,11 +7,15 @@ export function InquiryForm({ initialProduct = "", compact = false }: { initialP
     const field = (name) => form.elements.namedItem(name);
     const product = field("product");
     if (product && !product.value) product.value = new URLSearchParams(location.search).get("product") || "";
+    const requestedUrl = new URLSearchParams(location.search).get("productUrl");
+    let productUrl = "";
+    try { const parsed = new URL(requestedUrl || ""); if (parsed.origin === "https://www.jozing.cn" && parsed.pathname.startsWith("/products/")) productUrl = parsed.origin + parsed.pathname; } catch {}
     const inquiry = () => {
       const purchaseType = field("purchaseType").value;
       const lines = [
         "Hello JOZING, I would like to request a ceramic tableware quotation.",
         "Purchase type: " + purchaseType,
+        productUrl && "Product page: " + productUrl,
         product.value && "Product / reference: " + product.value,
         field("quantity").value && "Required quantity: " + field("quantity").value,
         field("country").value && "Country / market: " + field("country").value,
@@ -46,3 +50,4 @@ export function InquiryForm({ initialProduct = "", compact = false }: { initialP
     <script dangerouslySetInnerHTML={{ __html: script }} />
   </>;
 }
+

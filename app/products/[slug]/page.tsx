@@ -42,6 +42,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const productCategories = isOem ? [] : stockCategories.filter(category => category.codes.includes(product.code));
   const url = `${origin}/products/${slug}/`;
   const images = product.gallery ?? [product.image];
+  const inquiryUrl = `/contact/?product=${encodeURIComponent(`${product.code} - ${product.name}`)}&productUrl=${encodeURIComponent(url)}`;
+  const whatsappUrl = `https://wa.me/8615280186517?text=${encodeURIComponent(`Hello JOZING, please quote ${product.code} - ${product.name}.\nProduct: ${url}\nPlease confirm availability, MOQ and packing.`)}`;
   const offers = product.tiers?.map((tier) => ({ "@type": "Offer", priceCurrency: "USD", price: tier.price.replace(/[$,]/g, ""), description: `${product.priceLabel ?? product.pack}. Order tier: ${tier.quantity}. Availability and final commercial terms require confirmation.`, availability: isOem ? "https://schema.org/PreOrder" : "https://schema.org/LimitedAvailability", itemCondition: "https://schema.org/NewCondition", seller: { "@id": `${origin}/#organization` }, url })) ?? [];
   const productSchema = { "@context": "https://schema.org", "@type": "Product", "@id": `${url}#product`, name: product.name, sku: product.code, url, image: images.map((image) => `${origin}${image}`), description: `${product.type}. ${product.pack}. Starting MOQ: ${product.stock}.`, category: "Ceramic Tableware", material: product.material, color: product.colors, size: product.size ?? product.capacity, brand: { "@type": "Brand", name: "JOZING" }, manufacturer: { "@id": `${origin}/#organization` }, audience: { "@type": "BusinessAudience", audienceType: "Importers, wholesalers, hospitality suppliers and brands" }, offers: offers.length ? offers : undefined };
   const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${origin}/` }, { "@type": "ListItem", position: 2, name: categoryName, item: `${origin}${categoryUrl}` }, { "@type": "ListItem", position: 3, name: product.name, item: url }] };
@@ -67,6 +69,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <nav className="breadcrumbs"><a href="/">Home</a><span>/</span><a href={categoryUrl}>{categoryName}</a><span>/</span><b>{product.code}</b></nav>
           <p className="eyebrow">{isOem ? "OEM / ODM" : "READY STOCK"} · {product.code}</p><h1>{product.name}</h1>
           {product.tiers ? <div className="detail-prices"><h2>{product.priceLabel ?? "Tier pricing"}</h2>{product.tiers.map((tier) => <div key={tier.quantity}><strong>{tier.price}</strong><span>{tier.quantity}</span></div>)}</div> : null}
+        <div className="product-quote-actions"><a className="btn primary" href={inquiryUrl}>Request a quote</a><a className="btn text" href={whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div>
         <p className="product-intro">{product.type}. {isOem ? "Discuss customization, order quantity, sampling, packaging and production lead time with our team." : "Availability changes quickly; confirm current quantity, condition, packing and loading plan before ordering."}</p>
         {product.description ? <p className="product-description">{product.description}</p> : null}
         <dl className="spec-list">
@@ -84,7 +87,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           {productCategories.filter(category => !["stock-best-sale", "ungrouped"].includes(category.slug)).map(category => <Link key={category.slug} href={`/stock/${category.slug}/`}>{category.name}</Link>)}
           <Link href="/stock/catalog/">Compare stock & packing →</Link>
         </nav>}
-          <a className="btn primary" href={`/contact/?product=${encodeURIComponent(`${product.code} - ${product.name}`)}`}>{isOem ? "Discuss customization & request quote" : "Confirm stock & request quote"}</a>
+          <a className="btn primary" href={inquiryUrl}>{isOem ? "Discuss customization & request quote" : "Confirm stock & request quote"}</a>
       </div>
     </section>
     {product.detailSections?.map(section => <section className="product-description-section shell" key={section.title}>
@@ -99,7 +102,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </article>)}</div>
     </section>
     <section className="product-evidence"><div className="shell"><h2>Information buyers should confirm</h2><div className="evidence-grid"><article><b>01</b><h3>{isOem ? "Custom design" : "Current lot"}</h3><p>{isOem ? "Confirm shape, decoration, logo, sample requirements and production lead time." : "Ask for dated photos, available quantity and the exact assortment included."}</p></article><article><b>02</b><h3>Packing list</h3><p>Confirm pieces per carton, carton dimensions, gross weight and CBM.</p></article><article><b>03</b><h3>Quality standard</h3><p>Agree inspection criteria, acceptable variation and compliance documents for your market.</p></article></div></div></section>
-    <section className="page-cta"><div className="shell"><p className="eyebrow">BUY WITH CURRENT INFORMATION</p><h2>{isOem ? "Discuss your custom collection and production plan." : "Request the latest packing list and availability."}</h2><div><a className="btn primary" href="/contact">Contact JOZING</a><a className="btn text" href="/guides">Read buyer guides →</a></div></div></section>
+    <section className="page-cta"><div className="shell"><p className="eyebrow">BUY WITH CURRENT INFORMATION</p><h2>{isOem ? "Discuss your custom collection and production plan." : "Request the latest packing list and availability."}</h2><div><a className="btn primary" href={inquiryUrl}>Contact JOZING</a><a className="btn text" href="/guides">Read buyer guides →</a></div></div></section>
     <SiteFooter />
   </main>;
 }
+
