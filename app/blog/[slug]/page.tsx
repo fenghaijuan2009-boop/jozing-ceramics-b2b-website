@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteFooter, SiteHeader } from "../../site-shell";
 import { blogPosts } from "../../../lib/blog-posts";
+import Link from "next/link";
+import { allProducts } from "../../page";
+import { productSlug } from "../../product-utils";
+import { blogProductCodes, blogProductLinksUpdated } from "../product-links";
 
 export const dynamicParams = false;
 
@@ -34,6 +38,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
+  const relatedProducts = (blogProductCodes[slug] ?? []).flatMap(code => {
+    const product = allProducts.find(item => item.code === code);
+    return product ? [product] : [];
+  });
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -41,6 +49,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     headline: post.title,
     description: post.description,
     datePublished: post.date,
+    ...(relatedProducts.length ? { dateModified: blogProductLinksUpdated } : {}),
     author: { "@type": "Organization", name: "JOZING Industrial Co., Ltd." },
     publisher: { "@type": "Organization", name: "JOZING Ceramics", url: "https://www.jozing.cn/" },
     mainEntityOfPage: `https://www.jozing.cn/blog/${post.slug}/`,
@@ -94,6 +103,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             ))}
           </section>
         )}
+        {relatedProducts.length > 0 && <section aria-labelledby="stock-options-title" style={{ margin: "2rem 0", padding: "1.5rem", background: "#edf3ef", borderRadius: "12px" }}>
+          <h2 id="stock-options-title" style={{ fontSize: "1.3rem", margin: "0 0 0.8rem" }}>Ready-stock options for your sourcing shortlist</h2>
+          <p style={pStyle}>Compare the selling unit, starting MOQ and product details. Confirm current availability and packing before ordering.</p>
+          <ul style={{ ...listStyle, marginBottom: 0 }}>
+            {relatedProducts.map(product => <li key={product.code} style={{ marginBottom: "1rem" }}>
+              <Link href={`/products/${productSlug(product.name)}/`} style={{ fontWeight: 600, textDecoration: "underline" }}>{product.name}</Link>
+              <p style={{ margin: "0.25rem 0 0", fontSize: "0.95rem" }}>{product.pack} · Starting MOQ: {product.stock}. View prices and details →</p>
+            </li>)}
+          </ul>
+        </section>}
         <section className="page-cta" style={{ marginTop: "1rem" }}>
           <div className="shell">
             <p className="eyebrow">READY TO SOURCE?</p>
