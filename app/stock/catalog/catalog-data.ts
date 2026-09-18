@@ -3,7 +3,7 @@ import { stockLots } from "../../page";
 import { stockCategories } from "../../stock-categories";
 import { productSlug } from "../../product-utils";
 
-export const catalogPrepared = "2026-09-14";
+export const catalogPrepared = "2026-09-18";
 export const catalogNotice = "Published listing information; current stock, assortment, prices and packing must be confirmed before ordering.";
 export const catalogRows = stockLots.map(product => {
   const specifications = product.specifications ?? [];
