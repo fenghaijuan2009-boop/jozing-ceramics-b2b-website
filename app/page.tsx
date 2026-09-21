@@ -1,3 +1,4 @@
+import { sep21StockProducts } from "./imported-stock-products-sep21";
 import { sep18StockProducts } from "./imported-stock-products-sep18";
 import { importedStockProducts } from "./imported-stock-products";
 import { oemProductCodes } from "./product-classification";
@@ -37,6 +38,7 @@ export type StockLot = {
 };
 
 export const allProducts: StockLot[] = [
+  ...sep21StockProducts,
   ...sep18StockProducts,
   ...importedStockProducts.filter(product => product.code !== "STOCK · 20"),
   {
