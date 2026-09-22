@@ -1213,65 +1213,65 @@ export const sep18StockProducts: StockLot[] = [
     "pack": "Sold by piece",
     "priceLabel": "Price / piece",
     "gallery": [
-      "/products/import-11000036994605/main-01.webp",
-      "/products/import-11000036994605/main-02.webp",
-      "/products/import-11000036994605/main-03.webp",
-      "/products/import-11000036994605/main-04.webp",
-      "/products/import-11000036994605/main-05.webp",
-      "/products/import-11000036994605/main-06.webp"
+      "/products/import-11000036994605/main-v2-01.webp",
+      "/products/import-11000036994605/main-v2-02.webp",
+      "/products/import-11000036994605/main-v2-03.webp",
+      "/products/import-11000036994605/main-v2-04.webp",
+      "/products/import-11000036994605/main-v2-05.webp",
+      "/products/import-11000036994605/main-v2-06.webp"
     ],
-    "image": "/products/import-11000036994605/main-01.webp",
+    "image": "/products/import-11000036994605/main-v2-01.webp",
     "detailSections": [
       {
         "title": "Product details, dimensions and designs",
         "images": [
           {
-            "src": "/products/import-11000036994605/detail-01.webp",
+            "src": "/products/import-11000036994605/detail-v2-01.webp",
             "alt": "9.3inch Glossy White Ceramic Dinner Plates — product detail 1",
-            "width": 1200,
-            "height": 1200
+            "width": 1121,
+            "height": 1403
           },
           {
-            "src": "/products/import-11000036994605/detail-02.webp",
+            "src": "/products/import-11000036994605/detail-v2-02.webp",
             "alt": "9.3inch Glossy White Ceramic Dinner Plates — product detail 2",
-            "width": 1200,
-            "height": 1200
+            "width": 1121,
+            "height": 1403
           },
           {
-            "src": "/products/import-11000036994605/detail-03.webp",
+            "src": "/products/import-11000036994605/detail-v2-03.webp",
             "alt": "9.3inch Glossy White Ceramic Dinner Plates — product detail 3",
-            "width": 1200,
-            "height": 1200
+            "width": 1254,
+            "height": 1254
           },
           {
-            "src": "/products/import-11000036994605/detail-04.webp",
+            "src": "/products/import-11000036994605/detail-v2-04.webp",
             "alt": "9.3inch Glossy White Ceramic Dinner Plates — product detail 4",
-            "width": 1200,
-            "height": 1200
+            "width": 1121,
+            "height": 1403
           },
           {
-            "src": "/products/import-11000036994605/detail-05.webp",
+            "src": "/products/import-11000036994605/detail-v2-05.webp",
             "alt": "9.3inch Glossy White Ceramic Dinner Plates — product detail 5",
-            "width": 1200,
-            "height": 1200
+            "width": 1254,
+            "height": 1254
           },
           {
-            "src": "/products/import-11000036994605/detail-06.webp",
+            "src": "/products/import-11000036994605/detail-v2-06.webp",
             "alt": "9.3inch Glossy White Ceramic Dinner Plates — product detail 6",
-            "width": 1200,
-            "height": 1200
+            "width": 1121,
+            "height": 1403
           },
           {
-            "src": "/products/import-11000036994605/detail-07.webp",
+            "src": "/products/import-11000036994605/detail-v2-07.webp",
             "alt": "9.3inch Glossy White Ceramic Dinner Plates — product detail 7",
-            "width": 1200,
-            "height": 1200
+            "width": 1254,
+            "height": 1254
           },
           {
-            "src": "/products/import-11000036994605/detail-08.webp",
+            "src": "/products/import-11000036994605/detail-v2-08.webp",
             "alt": "9.3inch Glossy White Ceramic Dinner Plates — product detail 8",
-            "width": 1200,
-            "height": 1200
+            "width": 1254,
+            "height": 1254
           }
         ]
       }
