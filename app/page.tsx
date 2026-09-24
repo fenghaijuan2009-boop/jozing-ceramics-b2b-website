@@ -7,6 +7,7 @@ import { StockMenu } from "./stock-menu";
 import { productSlug } from "./product-utils";
 import { InquiryForm } from "./inquiry-form";
 import { preload } from "react-dom";
+import Link from "next/link";
 export type PriceTier = { price: string; quantity: string };
 export type StockLot = {
   code: string;
@@ -1708,26 +1709,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pathways shell" aria-label="Supply options">
-        <article className="path-card stock-card">
-          <div><p className="eyebrow">JOZING STOCK</p><h2>Buy what’s ready.<br/>Ship sooner.</h2><p>Overstock and clearance ceramic tableware available by carton, pallet, ton or container.</p></div>
-          <a href="#stock">Browse stock lots <span>↗</span></a>
-          <div className="mini-plates" aria-hidden="true"><i/><i/><i/></div>
-        </article>
-        <article className="path-card custom-card">
-          <div><p className="eyebrow">JOZING CUSTOM</p><h2>Build a collection<br/>that is yours.</h2><p>OEM/ODM development from a reference image or idea to packaging and bulk production.</p></div>
-          <a href="#oem">Explore OEM/ODM <span>↗</span></a>
-          <div className="line-mark" aria-hidden="true">J</div>
-        </article>
-      </section>
-
-      <section className="stock-section" id="stock">
+      <section className="stock-section home-stock-section" id="stock" aria-label="Ready stock products">
         <div className="shell">
-          <div className="section-head"><div><p className="eyebrow">UPDATED STOCK OPPORTUNITIES</p><h2>Ready to move.<br/><em>Priced to compete.</em></h2></div><div className="section-note"><p>Real availability changes quickly. Ask for the current list, loading quantity and best offer for your destination.</p><a href="#contact">Get the latest stock list →</a></div></div>
-          <div className="product-grid" id="products">
-            {stockLots.map((item, index) => <article className={`product-card${item.tiers ? " tiered-card" : ""}`} key={item.code}>
-              <div className="product-art"><span className="lot-badge">READY STOCK</span><a className="product-plus" href={`/contact/?product=${encodeURIComponent(`${item.code} - ${item.name}`)}`} aria-label={`Request a quote for ${item.name}`}>+</a><img src={item.image} alt={item.name} loading="lazy"/><span className="preview-mark" aria-hidden="true">▧</span><a className="view-details" href={`/products/${productSlug(item.name)}`}>View Details</a></div>
-              <div className="product-copy"><div><h3>{item.name}</h3><p>{item.type}</p></div>{item.tiers ? <div className="price-tiers" aria-label={`${item.name} tiered prices`}><span>{item.priceLabel ?? "Price / ton"}</span>{item.tiers.map((tier) => <div key={tier.quantity}><strong>{tier.price}</strong><small>{tier.quantity}</small></div>)}</div> : <dl><div><dt>Price</dt><dd>Request Quote</dd></div><div><dt>MOQ</dt><dd>{item.stock}</dd></div></dl>}</div>
+          <div className="product-grid home-stock-grid" id="products">
+            {stockLots.map((item) => <article className="home-stock-tile" key={item.code}>
+              <Link className="home-stock-link" href={"/products/" + productSlug(item.name)} aria-label={item.name}>
+                <img src={item.image} alt={item.name} loading="lazy" width="600" height="600" />
+                <span className="home-stock-label">{item.type}</span>
+              </Link>
             </article>)}
           </div>
         </div>
