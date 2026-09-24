@@ -1,3 +1,4 @@
+import { BuyerNextStep, buyerNextStepSlugs } from "../buyer-next-step";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteFooter, SiteHeader } from "../../site-shell";
@@ -49,7 +50,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    ...(relatedProducts.length ? { dateModified: blogProductLinksUpdated } : {}),
+    ...(buyerNextStepSlugs.includes(slug) ? { dateModified: "2026-09-24" } : relatedProducts.length ? { dateModified: blogProductLinksUpdated } : {}),
     author: { "@type": "Organization", name: "JOZING Industrial Co., Ltd." },
     publisher: { "@type": "Organization", name: "JOZING Ceramics", url: "https://www.jozing.cn/" },
     mainEntityOfPage: `https://www.jozing.cn/blog/${post.slug}/`,
@@ -92,6 +93,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             )}
           </section>
         ))}
+        <BuyerNextStep slug={slug} />
         {post.faq && (
           <section style={{ margin: "2rem 0", border: "1px solid #e5e7eb", borderRadius: "12px", padding: "1.5rem" }}>
             <h2 style={{ fontSize: "1.2rem", margin: "0 0 1rem" }}>Quick answers</h2>

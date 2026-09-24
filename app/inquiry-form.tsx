@@ -7,6 +7,8 @@ export function InquiryForm({ initialProduct = "", compact = false }: { initialP
     const field = (name) => form.elements.namedItem(name);
     const product = field("product");
     if (product && !product.value) product.value = new URLSearchParams(location.search).get("product") || "";
+    const requestedType = new URLSearchParams(location.search).get("purchaseType");
+    if (["Ready stock", "OEM / ODM", "Mixed container", "Not sure yet"].includes(requestedType)) field("purchaseType").value = requestedType;
     const requestedUrl = new URLSearchParams(location.search).get("productUrl");
     let productUrl = "";
     try { const parsed = new URL(requestedUrl || ""); if (parsed.origin === "https://www.jozing.cn" && parsed.pathname.startsWith("/products/")) productUrl = parsed.origin + parsed.pathname; } catch {}

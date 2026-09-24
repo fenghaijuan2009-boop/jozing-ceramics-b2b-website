@@ -7,6 +7,8 @@ import { blogPosts } from "../lib/blog-posts";
 import { importedStockProducts } from "./imported-stock-products";
 import { sep18StockProducts } from "./imported-stock-products-sep18";
 import { sep21StockProducts } from "./imported-stock-products-sep21";
+import { buyerNextStepSlugs } from "./blog/buyer-next-step";
+import { buyingPages } from "./stock/buying-pages";
 import { blogProductCodes, blogProductLinksUpdated } from "./blog/product-links";
 export const dynamic="force-static";
 export default function sitemap():MetadataRoute.Sitemap{
@@ -17,9 +19,9 @@ export default function sitemap():MetadataRoute.Sitemap{
   const sep18Codes=new Set(sep18StockProducts.map(product=>product.code));
   const sep21Codes=new Set(sep21StockProducts.map(product=>product.code));
   const refreshedCodes=new Set(["JZ-A11000036994605"]);
-  const products=allProducts.map((product)=>({url:`${origin}/products/${productSlug(product.name)}/`,lastModified:new Date(refreshedCodes.has(product.code)?"2026-09-22":sep21Codes.has(product.code)?"2026-09-21":sep18Codes.has(product.code)?"2026-09-18":importedCodes.has(product.code)?"2026-09-14":"2026-09-12"),changeFrequency:"weekly" as const,priority:.8}));
+  const products=allProducts.map((product)=>({url:`${origin}/products/${productSlug(product.name)}/`,lastModified:new Date("2026-09-24"),changeFrequency:"weekly" as const,priority:.8}));
   const articles=guides.map((guide)=>({url:`${origin}/guides/${guide.slug}/`,lastModified:new Date(guide.updated),changeFrequency:"monthly" as const,priority:.7}));
-  const blogs=blogPosts.map((post)=>({url:`${origin}/blog/${post.slug}/`,lastModified:new Date(blogProductCodes[post.slug]?blogProductLinksUpdated:post.date),changeFrequency:"monthly" as const,priority:.6}));
-  const categories=stockCategories.filter(c=>c.codes.length).map(c=>({url:`${origin}/stock/${c.slug}/`,lastModified:c.codes.some(code=>refreshedCodes.has(code))?new Date("2026-09-22"):c.codes.some(code=>sep21Codes.has(code))?new Date("2026-09-21"):c.codes.some(code=>sep18Codes.has(code))?new Date("2026-09-18"):c.codes.some(code=>importedCodes.has(code))?new Date("2026-09-14"):now,changeFrequency:"weekly" as const,priority:.7}));
-  return[...core.map(page=>page.url===`${origin}/stock/`||page.url===`${origin}/`?{...page,lastModified:new Date("2026-09-22")}:page),...products,...categories,...articles,...blogs,{url:`${origin}/stock/catalog/`,lastModified:new Date("2026-09-22"),changeFrequency:"weekly",priority:.8}]
+  const blogs=blogPosts.map((post)=>({url:`${origin}/blog/${post.slug}/`,lastModified:new Date(buyerNextStepSlugs.includes(post.slug)?"2026-09-24":blogProductCodes[post.slug]?blogProductLinksUpdated:post.date),changeFrequency:"monthly" as const,priority:.6}));
+  const categories=stockCategories.filter(c=>c.codes.length).map(c=>({url:`${origin}/stock/${c.slug}/`,lastModified:buyingPages[c.slug]?new Date("2026-09-24"):c.codes.some(code=>refreshedCodes.has(code))?new Date("2026-09-22"):c.codes.some(code=>sep21Codes.has(code))?new Date("2026-09-21"):c.codes.some(code=>sep18Codes.has(code))?new Date("2026-09-18"):c.codes.some(code=>importedCodes.has(code))?new Date("2026-09-14"):now,changeFrequency:"weekly" as const,priority:.7}));
+  return[...core.map(page=>page.url===`${origin}/oem-odm/`?{...page,lastModified:new Date("2026-09-24")}:page.url===`${origin}/stock/`||page.url===`${origin}/`?{...page,lastModified:new Date("2026-09-22")}:page),...products,...categories,...articles,...blogs,{url:`${origin}/stock/catalog/`,lastModified:new Date("2026-09-22"),changeFrequency:"weekly",priority:.8}]
 }

@@ -7,6 +7,7 @@ import { productSlug } from "../../product-utils";
 import { SiteHeader, SiteFooter, PageHero } from "../../site-shell";
 
 import { buyingPages } from "../buying-pages";
+import { BuyingComparison } from "../../buying-comparison";
 import { CatalogLink } from "../catalog-link";
 
 type Props = { params: Promise<{ category: string }> };
@@ -33,9 +34,9 @@ export default async function CategoryPage({ params }: Props) {
     <section className="shell stock-category-content">
       <p><a href="/">Home</a> / <a href="/stock/">Ready Stock</a> / {item.name}</p>
       {buying && <CatalogLink />}
-      {buying?.selections && <section className="buying-selection" aria-labelledby="selection-heading"><h2 id="selection-heading">{buying.selections.title}</h2><p>{buying.selections.description}</p><ul>{buying.selections.codes.map(code => { const product = products.find(p => p.code === code); return product ? <li key={code}><a href={`/products/${productSlug(product.name)}/`}>{product.name}</a><span>{product.pack} · MOQ: {product.stock}</span></li> : null; })}</ul></section>}
+      {buying?.selections && <BuyingComparison category={item.name} products={buying.selections.codes.flatMap(code => { const product = products.find(p => p.code === code); return product ? [product] : []; })} />}
       {products.length ? <div className="product-grid">{products.map(product => <article className="product-card" key={product.code}>
-        <a className="category-whatsapp" href={`https://wa.me/8615280186517?text=${encodeURIComponent(`Hello JOZING, I am interested in ${product.name} (${product.code}). Please confirm pricing and availability. https://www.jozing.cn/products/${productSlug(product.name)}/`)}`} target="_blank" rel="noopener noreferrer" aria-label={`WhatsApp inquiry about ${product.name}`}>WhatsApp ↗</a>
+        <a className="category-whatsapp" data-inquiry-item={product.code} data-inquiry-category={item.slug} href={`https://wa.me/8615280186517?text=${encodeURIComponent(`Hello JOZING, I am interested in ${product.name} (${product.code}). Please confirm pricing and availability. https://www.jozing.cn/products/${productSlug(product.name)}/`)}`} target="_blank" rel="noopener noreferrer" aria-label={`WhatsApp inquiry about ${product.name}`}>WhatsApp ↗</a>
         <a className="category-product-image" href={`/products/${productSlug(product.name)}/`}><Image src={product.image} alt={product.name} width={600} height={600} sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 25vw" /></a>
         <div className="product-copy"><h2>{product.name}</h2><p>{product.type}</p>
           {product.tiers && <div className="price-tiers"><span>{product.priceLabel ?? product.pack}</span>{product.tiers.map(tier => <div key={tier.quantity}><strong>{tier.price}</strong><small>{tier.quantity}</small></div>)}</div>}

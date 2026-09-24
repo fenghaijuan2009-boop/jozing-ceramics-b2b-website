@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { allProducts, oemProductCodes } from "../../page";
 import { productSlug } from "../../product-utils";
-import { productSeoTitles } from "../../product-seo";
+import { productSeoTitles, productSeoTitlesBySlug } from "../../product-seo";
 import { stockCategories } from "../../stock-categories";
 import { SiteFooter, SiteHeader } from "../../site-shell";
 import { ProductGallery } from "../product-gallery";
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const product = allProducts.find((item) => productSlug(item.name) === slug);
   if (!product) return {};
-  const title = productSeoTitles[product.code] ?? `${product.name} | Wholesale Ceramic Tableware — JOZING`;
+  const title = productSeoTitles[product.code] ?? productSeoTitlesBySlug[slug] ?? `${product.name} | JOZING`;
   const description = `${product.type}. ${product.pack}; MOQ ${product.stock}. Request current availability, packing details and a factory-direct quotation from JOZING.`;
   const url = `${origin}/products/${slug}/`;
   const images = (product.gallery?.length ? product.gallery : [product.image]).map(image => ({ url: `${origin}${image}`, alt: product.name }));

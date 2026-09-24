@@ -48,11 +48,13 @@ export function SiteAnalytics({ measurementId }: { measurementId: string }) {
         w.gtag?.("event", "quote_request_click", { ...(productCode ? { item_id: productCode } : {}), page_location: page, send_to: measurementId });
         return;
       }
+      const clickedItem = link.dataset.inquiryItem ?? productCode;
+      const clickedCategory = link.dataset.inquiryCategory;
       let channel: string | null = null;
       if (/^https:\/\/wa\.me\//.test(href)) channel = "whatsapp";
       if (/^mailto:/i.test(href)) channel = "email";
       if (!channel) return;
-      w.gtag?.("event", link.hasAttribute("data-email-inquiry") ? "inquiry_handoff" : "contact_click", { channel, ...(productCode ? { item_id: productCode } : {}), page_location: page, send_to: measurementId });
+      w.gtag?.("event", link.hasAttribute("data-email-inquiry") ? "inquiry_handoff" : "contact_click", { channel, ...(clickedItem ? { item_id: clickedItem } : {}), ...(clickedCategory ? { item_category: clickedCategory } : {}), page_location: page, send_to: measurementId });
     };
     const submit = (event: Event) => {
       if (!(event.target instanceof HTMLFormElement) || !event.target.matches(".rfq-form") || !event.target.checkValidity()) return;

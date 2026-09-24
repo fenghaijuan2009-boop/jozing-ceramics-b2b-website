@@ -6,7 +6,7 @@ import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/oem-odm/" },
-  title: "OEM/ODM Ceramic Tableware Manufacturer | Custom Dinnerware Factory in China — JOZING",
+  title: "Ceramic Tableware Manufacturer in China | OEM/ODM | JOZING",
   description: "JOZING is a custom ceramic tableware OEM/ODM manufacturer in Chaozhou, China. Shape, glaze, decal, logo and packaging customization with sampling support for brands, importers and wholesalers.",
 };
 
@@ -43,10 +43,17 @@ export default function OemOdmPage() {
       <SiteHeader />
       <PageHero
         eyebrow="OEM / ODM MANUFACTURING"
-        title="Your collection, built around your market."
+        title="Ceramic tableware manufacturer for your custom collection."
         intro="JOZING coordinates custom ceramic tableware development from a reference or idea through sampling, production, quality control and export packaging — for brands, importers, wholesalers and hospitality groups."
       />
 
+      <section className="shell buyer-next-step">
+        <h2>Plan your wholesale or private-label dinnerware order</h2>
+        <p>Choose the shapes, decoration and packaging you need, then ask us to confirm feasibility, MOQ and sampling for that specification. Ready-stock prices are not custom-production quotations.</p>
+        <div className="oem-buying-grid"><article><h3>Retail brands & importers</h3><p>Send your target range, logo artwork, quantity per design and retail packaging brief. Confirm artwork approval and an approved sample before production.</p></article><article><h3>Restaurants & hotels</h3><p>List the matching plates, bowls and cups, size requirements and replenishment needs. Discuss a repeatable specification when a one-off stock assortment will not fit.</p></article><article><h3>Custom ceramic mugs</h3><p>Specify capacity, handle shape, glaze, logo placement and quantity per design. Ask which existing shapes can be adapted and whether new tooling is required.</p></article></div>
+        <h3>What your quotation should confirm</h3><ul><li>MOQ per shape, decoration and packaging option</li><li>Sample cost, approval steps and production lead time</li><li>Carton quantity, dimensions, gross weight and destination</li><li>Inspection criteria and testing documents for your target market</li></ul>
+        <div className="buying-links"><a className="btn primary" href="/contact/?product=Custom%20ceramic%20tableware&purchaseType=OEM%20%2F%20ODM">Send your OEM buying brief</a><a href="/guides/oem-ceramic-dinnerware-moq-sampling-lead-time/">Read the MOQ and sampling guide →</a><a href="/supplier-profile/">Review our supplier profile →</a></div>
+      </section>
       <section className="shell stock-category-content">
         <p>{oemProducts.length} OEM/ODM products</p>
         <div className="product-grid">{oemProducts.map(product => <article className="product-card" key={product.code}>
@@ -104,7 +111,7 @@ export default function OemOdmPage() {
           <p className="eyebrow">START A CUSTOM PROJECT</p>
           <h2>Send your reference — we&apos;ll check feasibility.</h2>
           <div>
-            <a className="btn primary" href="/contact">Discuss your project</a>
+            <a className="btn primary" href="/contact/?product=Custom%20ceramic%20tableware&purchaseType=OEM%20%2F%20ODM">Discuss your project</a>
             <a className="btn text" href="/stock">Browse ready stock instead →</a>
           </div>
         </div>

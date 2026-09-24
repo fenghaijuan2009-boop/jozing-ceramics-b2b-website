@@ -1,5 +1,27 @@
 export type BuyingPage = { title: string; description: string; intro: string; questions: { question: string; answer: string }[]; guide: string; guideLabel: string; selections?: { title: string; description: string; codes: string[] } };
 export const buyingPages: Record<string, BuyingPage> = {
+  "ceramic-bowl": {
+    title: "Ceramic Bowls Wholesale | Ready Stock | JOZING",
+    description: "Compare wholesale ceramic soup, cereal and serving bowls. Check capacity, handles, selling units and MOQ; request current stock and export packing.",
+    intro: "Source ceramic bowls for retail and food service. Choose by serving capacity, rim shape, handles and storage needs, then confirm the specifications and packing of the selected lot.",
+    questions: [
+      { question: "Which bowl size should I choose?", answer: "Send the intended portion size and use, such as soup, cereal or sharing dishes. Compare capacity and outer dimensions on the individual listing; diameter alone does not describe usable volume." },
+      { question: "Are lids, handles or saucers included?", answer: "Check the selected listing and ask for an itemized quote. A bowl, bowl-and-saucer set and lidded cocotte have different contents and selling units." },
+      { question: "Can bowls be used in an oven or microwave?", answer: "Confirm the intended use, temperature limits and decoration with the selected product specification. Do not apply one item's care instructions to an entire mixed lot." },
+      { question: "What packing information do I need?", answer: "Request units per carton, carton dimensions, gross weight and protective packing. For mixed orders, provide the quantities of each design and destination port." }
+    ], guide: "ceramic-container-loading-guide", guideLabel: "Compare export packing and loading"
+  },
+  "ceramic-cup-saucers": {
+    title: "Ceramic Cups & Saucers Wholesale | JOZING Ready Stock",
+    description: "Browse wholesale ceramic espresso and coffee cups with saucers. Compare capacities, set contents, MOQ and packing for ready-stock export orders.",
+    intro: "Compare ceramic espresso and coffee cup-and-saucer options for cafes, retailers and wholesalers. Check capacity, the pieces included in each set and the quoted selling unit before comparing prices.",
+    questions: [
+      { question: "Does a set include one cup and one saucer?", answer: "Confirm the exact contents on the chosen listing. Some offers are assorted lots sold by ton, while others have defined set contents. Milk jugs and accessories are quoted separately unless listed as included." },
+      { question: "How do I select an espresso or coffee cup?", answer: "Match the cup capacity to the drinks you serve, then check the outer dimensions, handle clearance and saucer fit. Ask for a sample when stacking, machine clearance or presentation is important." },
+      { question: "Can I reorder the same design?", answer: "Confirm remaining stock and replenishment potential before ordering. For a matching collection intended for repeat purchases, discuss an approved OEM specification." },
+      { question: "Can I mix designs for export?", answer: "Send product codes and quantities. We will check assortment rules, MOQ per design and packing suitability for a shared shipment." }
+    ], guide: "ceramic-stock-lots-vs-regular-production", guideLabel: "Choose ready stock or repeatable production"
+  },
   "ceramic-mug-cup": {
     selections: { title: "Choose your wholesale mug assortment", description: "Compare white mugs for a simple range, colorful mugs for variety, and decorated 3D designs. Prices and MOQs below belong to each individual listing.", codes: ["STOCK · 09", "STOCK · 10", "JZ-A1601655571782"] },
     title: "Ready Stock Ceramic Mugs Wholesale | JOZING",
