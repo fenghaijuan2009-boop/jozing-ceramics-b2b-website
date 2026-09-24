@@ -7,7 +7,7 @@ import { StockMenu } from "./stock-menu";
 import { productSlug } from "./product-utils";
 import { InquiryForm } from "./inquiry-form";
 import { preload } from "react-dom";
-import Link from "next/link";
+import { ProductCard } from "./product-card";
 export type PriceTier = { price: string; quantity: string };
 export type StockLot = {
   code: string;
@@ -1712,12 +1712,7 @@ export default function Home() {
       <section className="stock-section home-stock-section" id="stock" aria-label="Ready stock products">
         <div className="shell">
           <div className="product-grid home-stock-grid" id="products">
-            {stockLots.map((item) => <article className="home-stock-tile" key={item.code}>
-              <Link className="home-stock-link" href={"/products/" + productSlug(item.name)} aria-label={item.name}>
-                <img src={item.image} alt={item.name} loading="lazy" width="600" height="600" />
-                <span className="home-stock-label">{item.type}</span>
-              </Link>
-            </article>)}
+            {stockLots.map(item => <ProductCard key={item.code} item={item} category="ready-stock" />)}
           </div>
         </div>
       </section>

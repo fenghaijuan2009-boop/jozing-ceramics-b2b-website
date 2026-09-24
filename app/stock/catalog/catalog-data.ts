@@ -11,6 +11,7 @@ export const catalogRows = stockLots.map(product => {
   return {
     code: product.code,
     name: product.name,
+    type: product.type,
     image: (thumbnails as Record<string, string>)[product.image] ?? product.image,
     href: `/products/${productSlug(product.name)}/`,
     categories: stockCategories.filter(category => category.codes.includes(product.code)).map(category => ({ slug: category.slug, name: category.name })),
