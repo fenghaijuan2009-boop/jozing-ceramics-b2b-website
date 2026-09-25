@@ -1,6 +1,79 @@
 export type Guide = { slug: string; title: string; description: string; updated: string; published?: string; readTime: string; relatedLinks?: { href: string; label: string }[]; sections: { heading: string; paragraphs: string[]; bullets?: string[] }[] };
 
 const baseGuides: Guide[] = [
+{
+  "slug": "ceramic-price-per-ton-to-price-per-piece",
+  "title": "Ceramic Price per Ton to Price per Piece: A Buyer’s Calculation",
+  "description": "Convert a ceramic stock-lot quotation into cost per saleable piece. Compare ton prices, assortment counts, packing and landed costs before buying.",
+  "updated": "2026-09-25",
+  "readTime": "5 min",
+  "relatedLinks": [
+    {
+      "href": "/products/pure-white-assorted-ceramic-salad-plates-by-the-ton/",
+      "label": "White ceramic stock: pricing tiers and approximate pieces per ton"
+    },
+    {
+      "href": "/stock/hot-sale-by-ton-carton/",
+      "label": "Compare ceramic stock lots by ton and carton"
+    },
+    {
+      "href": "/guides/ceramic-container-loading-guide/",
+      "label": "Check weight, carton volume and container loading"
+    },
+    {
+      "href": "/stock/catalog/",
+      "label": "Compare product MOQ and quotation units"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "How do you convert a ton price into a piece price?",
+      "paragraphs": [
+        "Divide the goods price for the lot by the number of saleable pieces in that same lot. A price per ton cannot be compared directly with a price per piece or per set. First confirm whether the quoted ton is net ceramic weight or packed gross weight, and count the pieces included in the selected assortment.",
+        "Goods cost per saleable piece = total goods price ÷ saleable piece count. Freight, insurance, duties, taxes, inspection and local handling are separate unless the quotation explicitly includes them."
+      ]
+    },
+    {
+      "heading": "Worked example: JOZING white ceramic stock",
+      "paragraphs": [
+        "The linked white ceramic assortment lists $430 per ton for 1–27 tons, $418 for 28–99 tons and $398 for 100 tons or more. Its listed estimate is 1,000–1,100 pieces per ton, depending on the selected styles. These are published product figures checked on 25 September 2026; request a current quotation before ordering.",
+        "At the 1-ton tier, $430 ÷ 1,100 gives approximately $0.39 per piece, while $430 ÷ 1,000 gives $0.43. This is an illustrative goods-cost range, not a separate piece-price offer or a guaranteed piece count. Larger or heavier styles change the result."
+      ]
+    },
+    {
+      "heading": "Why the cheapest ton price may not be the cheapest usable piece",
+      "paragraphs": [
+        "An assortment with more heavy serving platters can contain fewer pieces than a lighter plate assortment of the same weight. Compare the size mix, saleable condition and usable quantities for your business before choosing a lot. A cup-and-saucer set is also a different sales unit from a single plate."
+      ],
+      "bullets": [
+        "Request counts by style and size, rather than one total weight only.",
+        "Agree acceptable chips, glaze variation, decoration and quality condition before inspection.",
+        "For a restaurant needing repeat replacements, ask whether the design can be reordered after the stock lot sells out."
+      ]
+    },
+    {
+      "heading": "How do you calculate landed cost per piece?",
+      "paragraphs": [
+        "Add the goods cost and the charges that apply to your agreed shipping terms, then divide by the expected saleable pieces received. Use actual destination and shipment quotations; do not count the same freight charge twice if it is already included.",
+        "Landed cost per saleable piece = (goods + applicable freight, insurance, duty, tax, inspection and handling) ÷ saleable pieces received. Taxes may be recoverable depending on the buyer’s situation, so compare costs on a consistent basis."
+      ]
+    },
+    {
+      "heading": "What should you send when requesting a quotation?",
+      "paragraphs": [
+        "Send the product link or code, desired styles, order quantity and unit, destination country and port, and packing requirements. Ask for a dated quotation and packing list so the calculation can be repeated using the actual lot."
+      ],
+      "bullets": [
+        "Product code and preferred size or assortment",
+        "Tons, cartons, pieces or sets required",
+        "Piece count, net and gross weight, carton count and CBM",
+        "Quotation currency, shipping terms and validity",
+        "Inspection criteria and destination-specific documentation"
+      ]
+    }
+  ]
+},
+
   { slug: "buy-ceramic-tableware-by-ton-from-china", title: "How to Buy Ceramic Tableware by the Ton from China", description: "A practical guide to pricing units, mixed lots, packing lists, inspection and container planning for ceramic stock purchases.", updated: "2026-08-25", readTime: "8 min", sections: [
     { heading: "What buying by the ton means", paragraphs: ["Ton-based ceramic offers usually refer to the net or gross weight of a mixed or defined stock lot, not a fixed retail set. Before comparing prices, ask whether the quoted weight includes cartons and protective materials."], bullets: ["Confirm net versus gross weight", "Request the assortment and condition breakdown", "Ask whether replacements or second-quality pieces are included"] },
     { heading: "The documents to request", paragraphs: ["A useful quotation should connect price, weight and loading data. Ask for a dated packing list rather than relying only on showroom photographs."], bullets: ["SKU or assortment list", "Pieces per carton and carton count", "Gross weight, dimensions and CBM", "Available quantity and validity date"] },

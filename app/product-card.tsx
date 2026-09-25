@@ -18,7 +18,7 @@ export function ProductCard({ item, category, children }: { item: CardItem; cate
                 <h2><Link href={"/products/" + productSlug(item.name)}>{item.type.toLowerCase()}</Link></h2>
                 <div className="home-stock-prices" aria-label={`${item.name} prices`}>
                   <span>{item.priceLabel ?? item.pack}</span>
-                  {item.tiers?.map((tier) => <div key={tier.quantity}><strong>{tier.price}</strong><small>{tier.quantity}</small></div>)}
+                  {item.tiers?.map((tier) => <div key={tier.quantity}><strong>{tier.price}</strong>{" "}<small>{tier.quantity}</small></div>)}
                   {!item.tiers?.length && <p>Request a quote</p>}
                 </div>
                 {children}
