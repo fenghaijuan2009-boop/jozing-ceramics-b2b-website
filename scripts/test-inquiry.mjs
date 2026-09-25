@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import { safeSourcePath, procurementGroup, inquiryReference, buildInquiry } from '../app/inquiry-utils.ts';
+assert.equal(safeSourcePath('https://evil.example/stock/ceramic-plates/'),null);
+assert.equal(safeSourcePath('javascript:alert(1)'),null);
+assert.equal(safeSourcePath('/stock/ceramic-plates/?email=private@example.com'),'/stock/ceramic-plates/');
+assert.equal(safeSourcePath('/products/white-plates/?secret=123'),'/products/white-plates/');
+assert.equal(safeSourcePath('/contact/private@example.com'),null);
+assert.equal(procurementGroup('/stock/ceramic-plates/'),'plates');
+const ref=inquiryReference();assert.match(ref,/^JZ-\d{8}-[A-F0-9]{8}$/);assert.notEqual(ref,inquiryReference());
+const msg=buildInquiry({product:'White plates',quantity:'2,000 pieces',country:'UAE',purchaseType:'Ready stock',email:'test@example.invalid'},ref,'/stock/ceramic-plates/?email=secret','https://evil.example/products/fake/');
+assert.ok(msg.includes(ref));assert.ok(msg.includes('Required quantity: 2,000 pieces'));assert.ok(!msg.includes('secret'));assert.ok(!msg.includes('evil.example'));
+assert.ok(msg.includes('\n'));assert.ok(!msg.includes('\\n'));
+assert.ok(buildInquiry({product:'Mugs',quantity:'500',country:'UAE',purchaseType:'untrusted'},ref,'/').includes('Purchase type: Not sure yet'));
+console.log('Inquiry checks passed: references, message encoding, source sanitization and group attribution.');

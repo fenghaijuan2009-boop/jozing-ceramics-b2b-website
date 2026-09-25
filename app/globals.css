@@ -281,3 +281,6 @@ body{background:#fbfaf6;color:#0d2b22}.topbar{background:#071e18;color:#d8e5df;b
 .home-stock-link:hover .home-stock-label{background:#e2c9ad}
 .home-stock-link:focus-visible{outline:3px solid #173b31;outline-offset:4px}
 @media(max-width:620px){.home-stock-section{padding:24px 0 40px}.home-stock-label{font-size:16px}}
+
+/* Procurement shortcuts stay compact above the existing product grid. */
+.procurement-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:24px 0}.procurement-nav a{display:flex;flex-direction:column;gap:7px;padding:18px;border:1px solid #cdd4df;border-radius:8px;background:#fff;color:#17263c;text-decoration:none;min-width:0}.procurement-nav a:hover,.procurement-nav a[aria-current="page"]{border-color:#0030f8;background:#f2f5ff}.procurement-nav strong{font-size:15px;line-height:1.4}.procurement-nav span{font-size:13px;line-height:1.5;color:#526078}.procurement-intro{max-width:760px;line-height:1.7}.inquiry-email-button{background:none;border:0;padding:0;text-align:left;font:inherit;cursor:pointer}.inquiry-notice:empty{display:none}.inquiry-notice{font-size:14px;line-height:1.6;padding:12px;background:#eef3ff;border-radius:6px}@media(max-width:800px){.procurement-nav{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:420px){.procurement-nav a{padding:12px}.procurement-nav strong{font-size:14px}}

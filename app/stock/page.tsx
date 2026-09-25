@@ -1,3 +1,4 @@
+import { ProcurementNav } from "../procurement-nav";
 import type { Metadata } from "next";
 import { ProductCard } from "../product-card";
 import { stockLots } from "../page";
@@ -23,7 +24,7 @@ export default function StockPage() {
         intro="Browse all published ready-stock ceramic products. View product photos, wholesale prices and minimum order quantities, then contact us to confirm availability."
       />
       <section className="shell stock-category-content">
-        <CatalogLink />
+        <ProcurementNav /><CatalogLink />
         <nav className="stock-buying-nav" aria-label="Popular wholesale categories"><a href="/stock/ceramic-mug-cup/">Wholesale ceramic mugs</a><a href="/stock/hot-sale-by-ton-carton/">Stock lots by ton & carton</a><a href="/stock/dinner-set-tableware/">Ready-stock dinnerware</a></nav><p>{stockLots.length} ready-stock products</p>
         <div className="product-grid">{stockLots.map(product => <ProductCard key={product.code} item={product} category={"ready-stock"} />)}</div>
       </section>

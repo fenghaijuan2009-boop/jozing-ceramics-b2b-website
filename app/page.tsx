@@ -1,3 +1,4 @@
+import { ProcurementNav } from "./procurement-nav";
 import { sep21StockProducts } from "./imported-stock-products-sep21";
 import { sep18StockProducts } from "./imported-stock-products-sep18";
 import { importedStockProducts } from "./imported-stock-products";
@@ -1671,7 +1672,7 @@ export default function Home() {
       <header className="nav shell">
         <a className="brand-logo" href="/" aria-label="JOZING home"><img src="/jozing-logo-fresh.png" alt="JOZING" width="567" height="158" /></a>
         <nav aria-label="Main navigation">
-          <a href="/">Home</a><StockMenu /><a href="#oem">OEM/ODM</a><a href="#factory">Factory</a><a href="/about">About Us</a><a href="/faq">FAQ</a>
+          <a href="/">Home</a><StockMenu /><a href="/oem-odm/">OEM/ODM</a><a href="#factory">Factory</a><a href="/about">About Us</a><a href="/faq">FAQ</a>
         </nav>
         <a className="nav-cta" href="#contact">Get a quote <span>↗</span></a>
       </header>
@@ -1695,8 +1696,8 @@ export default function Home() {
 
       <section className="global-language-terms" aria-labelledby="global-language-title">
         <div className="shell">
-          <div className="language-term-intro"><p className="eyebrow">GLOBAL B2B SOURCING</p><h1 id="global-language-title">Ceramic tableware wholesale—in your market.</h1></div>
-          <div className="language-term-grid">
+          <div className="language-term-intro"><p className="eyebrow">GLOBAL B2B SOURCING</p><h1 id="global-language-title">Wholesale ceramic tableware from China.</h1></div>
+          <p className="procurement-intro">Ready-stock plates, dinnerware and mugs for importers and wholesalers. Explore available lots or plan a custom OEM / ODM collection.</p><ProcurementNav /><div className="language-term-grid">
             <span lang="en"><b>EN</b> Ceramic tableware wholesale</span>
             <span lang="zh-CN"><b>中文</b> 陶瓷餐具批发</span>
             <span lang="fr"><b>FR</b> Vaisselle en céramique en gros</span>
@@ -1718,7 +1719,7 @@ export default function Home() {
       </section>
 
       <section className="oem shell" id="oem">
-        <div className="oem-intro"><p className="eyebrow">OEM / ODM MANUFACTURING</p><h2>One idea.<br/><em>A complete collection.</em></h2><p>Bring us a sketch, reference image or target market. We coordinate product development, sampling, production, quality control and export packaging around your commercial goal.</p><a className="btn primary" href="#contact">Discuss your project</a></div>
+        <div className="oem-intro"><p className="eyebrow">OEM / ODM MANUFACTURING</p><h2>One idea.<br/><em>A complete collection.</em></h2><p>Bring us a sketch, reference image or target market. We coordinate product development, sampling, production, quality control and export packaging around your commercial goal.</p><a className="btn primary" href="/oem-odm/">Explore OEM / ODM options</a></div>
         <div className="oem-board">
           <div className="sample-tag">CUSTOM SAMPLE<br/><b>JC · 024</b></div>
           <div className="design-plate"><span>JOZING</span></div>
@@ -1736,7 +1737,7 @@ export default function Home() {
       <section className="client-proof home-client-proof"><div className="shell"><div className="client-proof-head"><div><p className="eyebrow">SELECTED CLIENT COOPERATION</p><h2>Experience supporting international buyers and brands.</h2></div><p>Reference logos supplied by JOZING are shown with a clear ownership and endorsement disclaimer.</p></div><figure><img src="/jozing-selected-client-brands.png" width="1525" height="430" loading="lazy" alt="Selected customer and brand cooperation references supplied by JOZING"/><figcaption>Selected cooperation references supplied by JOZING. All logos remain the property of their respective owners; display does not imply endorsement or an ongoing exclusive relationship.</figcaption></figure></div></section>
       <section className="contact" id="contact"><div className="shell contact-grid"><div><p className="eyebrow">START A CONVERSATION</p><h2>What are you<br/>sourcing next?</h2><p>Tell us whether you need ready stock, a mixed container or a custom ceramic collection. Your completed brief will be carried into WhatsApp or email.</p><div className="contact-pills"><span>Ready stock</span><span>Mixed container</span><span>OEM/ODM</span></div><address><span>WhatsApp</span><a href="https://wa.me/8615280186517" target="_blank" rel="noreferrer">+86 152 8018 6517</a><span>Email</span><a href="mailto:sales_b2b@jozing.cn">sales_b2b@jozing.cn</a><span>Address</span><p>No. 3, Gubantou Village, Chao&apos;an District, Chaozhou, Guangdong, China</p></address></div><InquiryForm compact /></div></section>
 
-      <footer><div className="shell footer-grid"><a className="brand-logo footer-logo" href="#top" aria-label="JOZING home"><img src="/jozing-logo-fresh.png" alt="JOZING" width="567" height="158" /></a><p>Flexible ceramic tableware supply<br/>for global B2B buyers.</p><div><a href="#stock">Ready Stock</a><a href="#oem">OEM/ODM</a><a href="#factory">Capability</a><a href="https://wa.me/8615280186517" target="_blank" rel="noreferrer">WhatsApp</a><a href="mailto:sales_b2b@jozing.cn">Email</a><a href="#contact">Contact</a></div></div><div className="shell copyright"><span>© 2026 JOZING Ceramics. All rights reserved.</span><span>No. 3, Gubantou Village, Chao&apos;an District, Chaozhou, Guangdong, China</span></div></footer>
+      <footer><div className="shell footer-grid"><a className="brand-logo footer-logo" href="#top" aria-label="JOZING home"><img src="/jozing-logo-fresh.png" alt="JOZING" width="567" height="158" /></a><p>Flexible ceramic tableware supply<br/>for global B2B buyers.</p><div><a href="/stock/">Ready Stock</a><a href="/oem-odm/">OEM/ODM</a><a href="#factory">Capability</a><a href="https://wa.me/8615280186517" target="_blank" rel="noreferrer">WhatsApp</a><a href="mailto:sales_b2b@jozing.cn">Email</a><a href="#contact">Contact</a></div></div><div className="shell copyright"><span>© 2026 JOZING Ceramics. All rights reserved.</span><span>No. 3, Gubantou Village, Chao&apos;an District, Chaozhou, Guangdong, China</span></div></footer>
       <a className="whatsapp-float" href="https://wa.me/8615280186517?text=Hello%20JOZING%2C%20I%20am%20looking%20for%20ceramic%20tableware." target="_blank" rel="noreferrer" aria-label="Contact JOZING on WhatsApp"><b>WA</b><span>WhatsApp</span></a>
     </main>
   );

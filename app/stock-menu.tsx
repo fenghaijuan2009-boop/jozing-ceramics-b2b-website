@@ -6,7 +6,7 @@ export function StockMenu() {
     <div className="stock-submenu">
       <a className="stock-menu-all" href="/stock/">All Ready stock →</a>
       <a href="/stock/catalog/">Procurement catalogue ↓</a>
-      {stockCategories.map(category => <a key={category.slug} href={`/stock/${category.slug}/`}>{category.name}</a>)}
+      {stockCategories.filter(category => category.codes.length > 0).map(category => <a key={category.slug} href={`/stock/${category.slug}/`}>{category.name}</a>)}
     </div>
   </details>;
 }

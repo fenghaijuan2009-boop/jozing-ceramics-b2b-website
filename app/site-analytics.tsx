@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { readCampaignAttribution } from "./analytics-attribution";
+import { procurementGroup, purchaseTypes } from "./inquiry-utils";
 
 type AnalyticsWindow = Window & { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void };
 const consentKey = "jozing-analytics-consent";
@@ -32,7 +33,7 @@ export function SiteAnalytics({ measurementId }: { measurementId: string }) {
     const w = window as AnalyticsWindow;
     const page = location.origin + pathname;
     w.gtag?.("set", { page_location: page, page_referrer: document.referrer ? new URL(document.referrer).origin : "" });
-    w.gtag?.("event", "page_view", { page_location: page, page_title: document.title, send_to: measurementId });
+    w.gtag?.("event", "page_view", { page_location: page, page_title: document.title, content_group: procurementGroup(pathname), send_to: measurementId });
     const product = document.querySelector<HTMLElement>("[data-product-code]");
     const productCode = product?.dataset.productCode;
     if (productCode) w.gtag?.("event", "view_item", { items: [{ item_id: productCode, item_name: product.dataset.productName, item_category: product.dataset.productCategory }], page_location: page, send_to: measurementId });
@@ -54,15 +55,16 @@ export function SiteAnalytics({ measurementId }: { measurementId: string }) {
       if (/^https:\/\/wa\.me\//.test(href)) channel = "whatsapp";
       if (/^mailto:/i.test(href)) channel = "email";
       if (!channel) return;
-      w.gtag?.("event", link.hasAttribute("data-email-inquiry") ? "inquiry_handoff" : "contact_click", { channel, ...(clickedItem ? { item_id: clickedItem } : {}), ...(clickedCategory ? { item_category: clickedCategory } : {}), page_location: page, send_to: measurementId });
+      w.gtag?.("event", "contact_click", { channel, content_group: procurementGroup(pathname), ...(clickedItem ? { item_id: clickedItem } : {}), ...(clickedCategory ? { item_category: clickedCategory } : {}), page_location: page, send_to: measurementId });
     };
-    const submit = (event: Event) => {
-      if (!(event.target instanceof HTMLFormElement) || !event.target.matches(".rfq-form") || !event.target.checkValidity()) return;
-      w.gtag?.("event", "inquiry_handoff", { channel: "whatsapp", page_location: page, send_to: measurementId });
+    const handoff = (event: Event) => {
+      const detail = (event as CustomEvent).detail;
+      if (!detail || !["whatsapp", "email"].includes(detail.channel) || !purchaseTypes.includes(detail.purchase_type) || !["plates", "dinnerware", "mugs", "oem", "product", "stock", "home", "other"].includes(detail.source_group)) return;
+      w.gtag?.("event", "inquiry_handoff", { channel: detail.channel, purchase_type: detail.purchase_type, source_group: detail.source_group, page_location: page, send_to: measurementId });
     };
     document.addEventListener("click", click);
-    document.addEventListener("submit", submit);
-    return () => { document.removeEventListener("click", click); document.removeEventListener("submit", submit); };
+    document.addEventListener("jozing:inquiry-handoff", handoff);
+    return () => { document.removeEventListener("click", click); document.removeEventListener("jozing:inquiry-handoff", handoff); };
   }, [ready, consent, pathname, measurementId]);
   const choose = (value: string) => { try { localStorage.setItem(consentKey, value); } catch {} if (consent === "accepted" && value !== "accepted") { (window as unknown as Record<string, unknown>)[`ga-disable-${measurementId}`] = true; location.reload(); return; } (window as unknown as Record<string, unknown>)[`ga-disable-${measurementId}`] = false; setConsent(value); setShowChoice(false); };
   if (consent === null) return null;
