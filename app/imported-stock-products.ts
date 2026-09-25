@@ -24,7 +24,7 @@ export const importedStockProducts: StockLot[] = [
     "size": "8–16 inches; assorted shapes",
     "colors": "White",
     "dishwasherSafe": true,
-    "description": "Assorted white ceramic salad and serving plates for wholesale buyers, restaurants and hotels. Sold by the ton with different shapes and sizes available; confirm the exact assortment and packing list before ordering.",
+    "description": "Assorted white ceramic salad and serving plates for wholesale buyers, restaurants and hotels. Sold by the ton with 8–16 inch sizes and different shapes available. Approximately 1,000–1,100 pieces and 1.5–1.7 cubic metres per ton, depending on the selected styles; confirm the final assortment and packing list before ordering.",
     "specifications": [
       {
         "label": "Model number",
@@ -49,63 +49,124 @@ export const importedStockProducts: StockLot[] = [
       {
         "label": "Place of origin",
         "value": "Guangdong, China"
+      },
+      {
+        "label": "Approximate quantity per ton",
+        "value": "1,000–1,100 pieces; varies by selected style"
+      },
+      {
+        "label": "Approximate volume per ton",
+        "value": "1.5–1.7 cubic metres; varies by selected style"
+      },
+      {
+        "label": "Plate type",
+        "value": "Salad plate"
+      },
+      {
+        "label": "Style",
+        "value": "American style"
+      },
+      {
+        "label": "Technique",
+        "value": "On-glazed"
       }
     ],
     "code": "JZ-A1601732106162",
     "gallery": [
-      "/products/import-1601732106162/main-01.webp",
-      "/products/import-1601732106162/main-02.webp",
-      "/products/import-1601732106162/main-03.webp",
-      "/products/import-1601732106162/main-04.webp",
-      "/products/import-1601732106162/main-05.webp",
-      "/products/import-1601732106162/main-06.webp"
+      "/products/refresh-1601732106162-sep25/main-01.webp",
+      "/products/refresh-1601732106162-sep25/main-02.webp",
+      "/products/refresh-1601732106162-sep25/main-03.webp",
+      "/products/refresh-1601732106162-sep25/main-04.webp",
+      "/products/refresh-1601732106162-sep25/main-05.webp",
+      "/products/refresh-1601732106162-sep25/main-06.webp"
     ],
-    "image": "/products/import-1601732106162/main-01.webp",
+    "image": "/products/refresh-1601732106162-sep25/main-01.webp",
     "detailSections": [
       {
-        "title": "Product details, dimensions and designs",
+        "title": "Available white ceramic styles",
         "images": [
           {
-            "src": "/products/import-1601732106162/detail-01.webp",
-            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — product detail 1",
-            "width": 1200,
+            "src": "/products/refresh-1601732106162-sep25/detail-01.webp",
+            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — available style 1",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "src": "/products/refresh-1601732106162-sep25/detail-02.webp",
+            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — available style 2",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "src": "/products/refresh-1601732106162-sep25/detail-03.webp",
+            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — available style 3",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "src": "/products/refresh-1601732106162-sep25/detail-04.webp",
+            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — available style 4",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "src": "/products/refresh-1601732106162-sep25/detail-05.webp",
+            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — available style 5",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "src": "/products/refresh-1601732106162-sep25/detail-06.webp",
+            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — available style 6",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "src": "/products/refresh-1601732106162-sep25/detail-07.webp",
+            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — available style 7",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "src": "/products/refresh-1601732106162-sep25/detail-08.webp",
+            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — available style 8",
+            "width": 1254,
+            "height": 1254
+          }
+        ]
+      },
+      {
+        "title": "Factory, packing and shipping",
+        "images": [
+          {
+            "src": "/products/refresh-1601732106162-sep25/detail-09.webp",
+            "alt": "JOZING factory, packing and shipping 1",
+            "width": 1600,
+            "height": 2133
+          },
+          {
+            "src": "/products/refresh-1601732106162-sep25/detail-10.webp",
+            "alt": "JOZING factory, packing and shipping 2",
+            "width": 1600,
             "height": 1200
           },
           {
-            "src": "/products/import-1601732106162/detail-02.webp",
-            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — product detail 2",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/refresh-1601732106162-sep25/detail-11.webp",
+            "alt": "JOZING factory, packing and shipping 3",
+            "width": 1080,
+            "height": 1920
           },
           {
-            "src": "/products/import-1601732106162/detail-03.webp",
-            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — product detail 3",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/refresh-1601732106162-sep25/detail-12.webp",
+            "alt": "JOZING factory, packing and shipping 4",
+            "width": 1279,
+            "height": 1706
           },
           {
-            "src": "/products/import-1601732106162/detail-04.webp",
-            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — product detail 4",
-            "width": 1200,
-            "height": 1200
-          },
-          {
-            "src": "/products/import-1601732106162/detail-05.webp",
-            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — product detail 5",
-            "width": 1200,
-            "height": 1200
-          },
-          {
-            "src": "/products/import-1601732106162/detail-06.webp",
-            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — product detail 6",
-            "width": 1200,
-            "height": 1200
-          },
-          {
-            "src": "/products/import-1601732106162/detail-07.webp",
-            "alt": "Pure White Assorted Ceramic Salad Plates by the Ton — product detail 7",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/refresh-1601732106162-sep25/detail-13.webp",
+            "alt": "JOZING factory, packing and shipping 5",
+            "width": 1600,
+            "height": 1602
           }
         ]
       }
