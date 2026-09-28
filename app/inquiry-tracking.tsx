@@ -11,7 +11,7 @@ export function InquiryTracking() {
       if (!link) return;
       let url: URL;
       try { url = new URL(link.href); } catch { return; }
-      if (url.origin !== "https://wa.me" || url.pathname !== "/8615280186517") return;
+      if (url.origin !== "https://wa.me" || url.pathname !== "/8617825907898") return;
       const reference = references.get(link) ?? inquiryReference();
       references.set(link, reference);
       const text = (url.searchParams.get("text") || "Hello JOZING, I am interested in ceramic tableware.").split("\nInquiry reference: JZ-")[0];

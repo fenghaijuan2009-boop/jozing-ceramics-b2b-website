@@ -35,7 +35,7 @@ export default function StockPage() {
           <p>Include the product category, estimated quantity, target price and destination port so we can match the right stock lot.</p>
           <div>
             <a className="btn primary" href="/contact/">Request the current stock list</a>
-            <a className="btn text" href="https://wa.me/8615280186517?text=Hello%20JOZING%2C%20please%20send%20me%20your%20current%20ceramic%20tableware%20stock%20list." target="_blank" rel="noreferrer">Ask on WhatsApp →</a>
+            <a className="btn text" href="https://wa.me/8617825907898?text=Hello%20JOZING%2C%20please%20send%20me%20your%20current%20ceramic%20tableware%20stock%20list." target="_blank" rel="noreferrer">Ask on WhatsApp →</a>
           </div>
         </div>
       </section>

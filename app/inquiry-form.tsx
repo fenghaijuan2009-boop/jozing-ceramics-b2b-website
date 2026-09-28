@@ -23,7 +23,7 @@ export function InquiryForm({ initialProduct = "", compact = false }: { initialP
     const source = safeSourcePath(params.get("source")) ?? safeSourcePath(document.referrer) ?? safeSourcePath(location.pathname) ?? "/contact/";
     reference.current ||= inquiryReference();
     const text = buildInquiry(data, reference.current, source, params.get("productUrl") ?? "");
-    const href = channel === "whatsapp" ? "https://wa.me/8615280186517?text=" + encodeURIComponent(text) : "mailto:sales_b2b@jozing.cn?subject=" + encodeURIComponent("JOZING " + reference.current + " " + data.purchaseType + " inquiry") + "&body=" + encodeURIComponent(text);
+    const href = channel === "whatsapp" ? "https://wa.me/8617825907898?text=" + encodeURIComponent(text) : "mailto:sales_b2b@jozing.cn?subject=" + encodeURIComponent("JOZING " + reference.current + " " + data.purchaseType + " inquiry") + "&body=" + encodeURIComponent(text);
     document.dispatchEvent(new CustomEvent("jozing:inquiry-handoff", { detail: { channel, purchase_type: data.purchaseType, source_group: procurementGroup(source) } }));
     if (channel === "whatsapp") window.open(href, "_blank", "noopener,noreferrer");
     else window.location.href = href;
@@ -39,6 +39,6 @@ export function InquiryForm({ initialProduct = "", compact = false }: { initialP
     <button className="email-link inquiry-email-button" type="button" onClick={() => handoff("email")}>Prepare the same inquiry by email</button>
     <p className="inquiry-notice" role="status">{notice}</p>
     <small>Send the prepared message in WhatsApp or your email app to complete your inquiry. Your information is only used to answer this business inquiry. Stock, price, packing and delivery are reconfirmed for each order.</small>
-    <noscript>Please email sales_b2b@jozing.cn or contact +86 152 8018 6517 on WhatsApp with your product, quantity and destination.</noscript>
+    <noscript>Please email sales_b2b@jozing.cn or contact +8617825907898 on WhatsApp with your product, quantity and destination.</noscript>
   </form>;
 }
