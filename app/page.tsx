@@ -1,3 +1,4 @@
+import { sep28StockProducts } from "./imported-stock-products-sep28";
 import { ProcurementNav } from "./procurement-nav";
 import { sep21StockProducts } from "./imported-stock-products-sep21";
 import { sep18StockProducts } from "./imported-stock-products-sep18";
@@ -40,6 +41,7 @@ export type StockLot = {
 };
 
 export const allProducts: StockLot[] = [
+  ...sep28StockProducts,
   ...sep21StockProducts,
   ...sep18StockProducts,
   ...importedStockProducts.filter(product => product.code !== "STOCK · 20"),

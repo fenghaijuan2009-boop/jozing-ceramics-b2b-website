@@ -253,35 +253,118 @@ export const sep21StockProducts: StockLot[] = [
     "code": "JZ-A1601777397875",
     "material": "Ceramic / porcelain",
     "gallery": [
-      "/products/import-1601777397875/main-01.webp",
-      "/products/import-1601777397875/main-02.webp",
-      "/products/import-1601777397875/main-03.webp",
-      "/products/import-1601777397875/main-04.webp",
-      "/products/import-1601777397875/main-05.webp",
-      "/products/import-1601777397875/main-06.webp"
+      "/products/sep28-1601777397875/main-01.webp",
+      "/products/sep28-1601777397875/main-02.webp",
+      "/products/sep28-1601777397875/main-03.webp",
+      "/products/sep28-1601777397875/main-04.webp",
+      "/products/sep28-1601777397875/main-05.webp",
+      "/products/sep28-1601777397875/main-06.webp"
     ],
-    "image": "/products/import-1601777397875/main-01.webp",
+    "image": "/products/sep28-1601777397875/main-01.webp",
     "detailSections": [
       {
-        "title": "Product details, dimensions and designs",
+        "title": "Product details",
         "images": [
           {
-            "src": "/products/import-1601777397875/detail-01.webp",
-            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 1",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-1601777397875/detail-01.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 1"
           },
           {
-            "src": "/products/import-1601777397875/detail-02.webp",
-            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 2",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-1601777397875/detail-02.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 2"
           },
           {
-            "src": "/products/import-1601777397875/detail-03.webp",
-            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 3",
-            "width": 1200,
-            "height": 900
+            "src": "/products/sep28-1601777397875/detail-03.webp",
+            "width": 1400,
+            "height": 1400,
+            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 3"
+          },
+          {
+            "src": "/products/sep28-1601777397875/detail-04.webp",
+            "width": 1400,
+            "height": 1400,
+            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 4"
+          },
+          {
+            "src": "/products/sep28-1601777397875/detail-05.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 5"
+          },
+          {
+            "src": "/products/sep28-1601777397875/detail-06.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 6"
+          },
+          {
+            "src": "/products/sep28-1601777397875/detail-07.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 7"
+          },
+          {
+            "src": "/products/sep28-1601777397875/detail-08.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 8"
+          },
+          {
+            "src": "/products/sep28-1601777397875/detail-09.webp",
+            "width": 1024,
+            "height": 1024,
+            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 9"
+          },
+          {
+            "src": "/products/sep28-1601777397875/detail-10.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 10"
+          },
+          {
+            "src": "/products/sep28-1601777397875/detail-11.webp",
+            "width": 1400,
+            "height": 1400,
+            "alt": "4-Piece Nordic Blue Porcelain Dinnerware Set — product detail 11"
+          }
+        ]
+      },
+      {
+        "title": "Factory, packing and shipping",
+        "images": [
+          {
+            "src": "/products/sep28-1601777397875/detail-12.webp",
+            "width": 1280,
+            "height": 1280,
+            "alt": "JOZING factory and export packing 1"
+          },
+          {
+            "src": "/products/sep28-1601777397875/detail-13.webp",
+            "width": 1280,
+            "height": 1280,
+            "alt": "JOZING factory and export packing 2"
+          },
+          {
+            "src": "/products/sep28-1601777397875/detail-14.webp",
+            "width": 1224,
+            "height": 1224,
+            "alt": "JOZING factory and export packing 3"
+          },
+          {
+            "src": "/products/sep28-1601777397875/detail-15.webp",
+            "width": 1080,
+            "height": 1080,
+            "alt": "JOZING factory and export packing 4"
+          },
+          {
+            "src": "/products/sep28-1601777397875/detail-16.webp",
+            "width": 1400,
+            "height": 1402,
+            "alt": "JOZING factory and export packing 5"
           }
         ]
       }

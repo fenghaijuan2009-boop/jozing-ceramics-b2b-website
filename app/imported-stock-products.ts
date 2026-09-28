@@ -222,59 +222,94 @@ export const importedStockProducts: StockLot[] = [
     ],
     "code": "JZ-A1601753894472",
     "gallery": [
-      "/products/import-1601753894472/main-02.webp",
-      "/products/import-1601753894472/main-01.webp",
-      "/products/import-1601753894472/main-03.webp",
-      "/products/import-1601753894472/main-04.webp",
-      "/products/import-1601753894472/main-05.webp",
-      "/products/import-1601753894472/main-06.webp"
+      "/products/sep28-1601753894472/main-01.webp",
+      "/products/sep28-1601753894472/main-02.webp",
+      "/products/sep28-1601753894472/main-03.webp",
+      "/products/sep28-1601753894472/main-04.webp",
+      "/products/sep28-1601753894472/main-05.webp",
+      "/products/sep28-1601753894472/main-06.webp"
     ],
-    "image": "/products/import-1601753894472/main-02.webp",
+    "image": "/products/sep28-1601753894472/main-01.webp",
     "detailSections": [
       {
-        "title": "Product details, dimensions and designs",
+        "title": "Product details",
         "images": [
           {
-            "src": "/products/import-1601753894472/detail-01.webp",
-            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 1",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-1601753894472/detail-06.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 1"
           },
           {
-            "src": "/products/import-1601753894472/detail-02.webp",
-            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 2",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-1601753894472/detail-07.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 2"
           },
           {
-            "src": "/products/import-1601753894472/detail-03.webp",
-            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 3",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-1601753894472/detail-08.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 3"
           },
           {
-            "src": "/products/import-1601753894472/detail-04.webp",
-            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 4",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-1601753894472/detail-09.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 4"
           },
           {
-            "src": "/products/import-1601753894472/detail-05.webp",
-            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 5",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-1601753894472/detail-10.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 5"
           },
           {
-            "src": "/products/import-1601753894472/detail-06.webp",
-            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 6",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-1601753894472/detail-11.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 6"
           },
           {
-            "src": "/products/import-1601753894472/detail-07.webp",
-            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 7",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-1601753894472/detail-12.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "22oz Green Christmas Tree Ceramic Mug with Snowflake Relief — product detail 7"
+          }
+        ]
+      },
+      {
+        "title": "Factory, packing and shipping",
+        "images": [
+          {
+            "src": "/products/sep28-1601753894472/detail-01.webp",
+            "width": 1400,
+            "height": 1867,
+            "alt": "JOZING factory and export packing 1"
+          },
+          {
+            "src": "/products/sep28-1601753894472/detail-02.webp",
+            "width": 1400,
+            "height": 1050,
+            "alt": "JOZING factory and export packing 2"
+          },
+          {
+            "src": "/products/sep28-1601753894472/detail-03.webp",
+            "width": 1279,
+            "height": 1706,
+            "alt": "JOZING factory and export packing 3"
+          },
+          {
+            "src": "/products/sep28-1601753894472/detail-04.webp",
+            "width": 1080,
+            "height": 1920,
+            "alt": "JOZING factory and export packing 4"
+          },
+          {
+            "src": "/products/sep28-1601753894472/detail-05.webp",
+            "width": 1400,
+            "height": 1402,
+            "alt": "JOZING factory and export packing 5"
           }
         ]
       }

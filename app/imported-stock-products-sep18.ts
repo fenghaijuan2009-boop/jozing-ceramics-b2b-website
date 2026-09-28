@@ -570,101 +570,136 @@ export const sep18StockProducts: StockLot[] = [
     "pack": "Sold by piece",
     "priceLabel": "Price / piece",
     "gallery": [
-      "/products/import-11000037630204/main-01.webp",
-      "/products/import-11000037630204/main-02.webp",
-      "/products/import-11000037630204/main-03.webp",
-      "/products/import-11000037630204/main-04.webp",
-      "/products/import-11000037630204/main-05.webp",
-      "/products/import-11000037630204/main-06.webp"
+      "/products/sep28-11000037630204/main-01.webp",
+      "/products/sep28-11000037630204/main-02.webp",
+      "/products/sep28-11000037630204/main-03.webp",
+      "/products/sep28-11000037630204/main-04.webp",
+      "/products/sep28-11000037630204/main-05.webp",
+      "/products/sep28-11000037630204/main-06.webp"
     ],
-    "image": "/products/import-11000037630204/main-01.webp",
+    "image": "/products/sep28-11000037630204/main-01.webp",
     "detailSections": [
       {
-        "title": "Product details, dimensions and designs",
+        "title": "Product details",
         "images": [
           {
-            "src": "/products/import-11000037630204/detail-01.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 1",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-06.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 1"
           },
           {
-            "src": "/products/import-11000037630204/detail-02.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 2",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-07.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 2"
           },
           {
-            "src": "/products/import-11000037630204/detail-03.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 3",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-08.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 3"
           },
           {
-            "src": "/products/import-11000037630204/detail-04.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 4",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-09.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 4"
           },
           {
-            "src": "/products/import-11000037630204/detail-05.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 5",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-10.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 5"
           },
           {
-            "src": "/products/import-11000037630204/detail-06.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 6",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-11.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 6"
           },
           {
-            "src": "/products/import-11000037630204/detail-07.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 7",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-12.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 7"
           },
           {
-            "src": "/products/import-11000037630204/detail-08.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 8",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-13.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 8"
           },
           {
-            "src": "/products/import-11000037630204/detail-09.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 9",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-14.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 9"
           },
           {
-            "src": "/products/import-11000037630204/detail-10.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 10",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-15.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 10"
           },
           {
-            "src": "/products/import-11000037630204/detail-11.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 11",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-16.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 11"
           },
           {
-            "src": "/products/import-11000037630204/detail-12.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 12",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-17.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 12"
           },
           {
-            "src": "/products/import-11000037630204/detail-13.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 13",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-18.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 13"
           },
           {
-            "src": "/products/import-11000037630204/detail-14.webp",
-            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 14",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037630204/detail-19.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "14inch Rectangular Ceramic Baking Dish in Red Navy and Brown — product detail 14"
+          }
+        ]
+      },
+      {
+        "title": "Factory, packing and shipping",
+        "images": [
+          {
+            "src": "/products/sep28-11000037630204/detail-01.webp",
+            "width": 1400,
+            "height": 1867,
+            "alt": "JOZING factory and export packing 1"
+          },
+          {
+            "src": "/products/sep28-11000037630204/detail-02.webp",
+            "width": 1400,
+            "height": 1050,
+            "alt": "JOZING factory and export packing 2"
+          },
+          {
+            "src": "/products/sep28-11000037630204/detail-03.webp",
+            "width": 1279,
+            "height": 1706,
+            "alt": "JOZING factory and export packing 3"
+          },
+          {
+            "src": "/products/sep28-11000037630204/detail-04.webp",
+            "width": 1080,
+            "height": 1920,
+            "alt": "JOZING factory and export packing 4"
+          },
+          {
+            "src": "/products/sep28-11000037630204/detail-05.webp",
+            "width": 1400,
+            "height": 1402,
+            "alt": "JOZING factory and export packing 5"
           }
         ]
       }
@@ -724,89 +759,124 @@ export const sep18StockProducts: StockLot[] = [
     "material": "Ceramic",
     "pack": "Sold by piece",
     "gallery": [
-      "/products/import-11000037229098/main-01.webp",
-      "/products/import-11000037229098/main-02.webp",
-      "/products/import-11000037229098/main-03.webp",
-      "/products/import-11000037229098/main-04.webp",
-      "/products/import-11000037229098/main-05.webp",
-      "/products/import-11000037229098/main-06.webp"
+      "/products/sep28-11000037229098/main-01.webp",
+      "/products/sep28-11000037229098/main-02.webp",
+      "/products/sep28-11000037229098/main-03.webp",
+      "/products/sep28-11000037229098/main-04.webp",
+      "/products/sep28-11000037229098/main-05.webp",
+      "/products/sep28-11000037229098/main-06.webp"
     ],
-    "image": "/products/import-11000037229098/main-01.webp",
+    "image": "/products/sep28-11000037229098/main-01.webp",
     "detailSections": [
       {
-        "title": "Product details, dimensions and designs",
+        "title": "Product details",
         "images": [
           {
-            "src": "/products/import-11000037229098/detail-01.webp",
-            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 1",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037229098/detail-06.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 1"
           },
           {
-            "src": "/products/import-11000037229098/detail-02.webp",
-            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 2",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037229098/detail-07.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 2"
           },
           {
-            "src": "/products/import-11000037229098/detail-03.webp",
-            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 3",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037229098/detail-08.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 3"
           },
           {
-            "src": "/products/import-11000037229098/detail-04.webp",
-            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 4",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037229098/detail-09.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 4"
           },
           {
-            "src": "/products/import-11000037229098/detail-05.webp",
-            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 5",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037229098/detail-10.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 5"
           },
           {
-            "src": "/products/import-11000037229098/detail-06.webp",
-            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 6",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037229098/detail-11.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 6"
           },
           {
-            "src": "/products/import-11000037229098/detail-07.webp",
-            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 7",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037229098/detail-12.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 7"
           },
           {
-            "src": "/products/import-11000037229098/detail-08.webp",
-            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 8",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037229098/detail-13.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 8"
           },
           {
-            "src": "/products/import-11000037229098/detail-09.webp",
-            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 9",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037229098/detail-14.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 9"
           },
           {
-            "src": "/products/import-11000037229098/detail-10.webp",
-            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 10",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037229098/detail-15.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 10"
           },
           {
-            "src": "/products/import-11000037229098/detail-11.webp",
-            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 11",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037229098/detail-16.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 11"
           },
           {
-            "src": "/products/import-11000037229098/detail-12.webp",
-            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 12",
-            "width": 1200,
-            "height": 1200
+            "src": "/products/sep28-11000037229098/detail-17.webp",
+            "width": 1254,
+            "height": 1254,
+            "alt": "Baroque White Ceramic Plates with Embossed Scroll and Beaded Rim — product detail 12"
+          }
+        ]
+      },
+      {
+        "title": "Factory, packing and shipping",
+        "images": [
+          {
+            "src": "/products/sep28-11000037229098/detail-01.webp",
+            "width": 1400,
+            "height": 1867,
+            "alt": "JOZING factory and export packing 1"
+          },
+          {
+            "src": "/products/sep28-11000037229098/detail-02.webp",
+            "width": 1400,
+            "height": 1050,
+            "alt": "JOZING factory and export packing 2"
+          },
+          {
+            "src": "/products/sep28-11000037229098/detail-03.webp",
+            "width": 1279,
+            "height": 1706,
+            "alt": "JOZING factory and export packing 3"
+          },
+          {
+            "src": "/products/sep28-11000037229098/detail-04.webp",
+            "width": 1080,
+            "height": 1920,
+            "alt": "JOZING factory and export packing 4"
+          },
+          {
+            "src": "/products/sep28-11000037229098/detail-05.webp",
+            "width": 1400,
+            "height": 1402,
+            "alt": "JOZING factory and export packing 5"
           }
         ]
       }
