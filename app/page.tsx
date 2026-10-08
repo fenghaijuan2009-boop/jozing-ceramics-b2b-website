@@ -1,3 +1,4 @@
+import { oct8StockProducts } from "./imported-stock-products-oct8";
 import { sep28StockProducts } from "./imported-stock-products-sep28";
 import { ProcurementNav } from "./procurement-nav";
 import { sep21StockProducts } from "./imported-stock-products-sep21";
@@ -41,6 +42,7 @@ export type StockLot = {
 };
 
 export const allProducts: StockLot[] = [
+  ...oct8StockProducts,
   ...sep28StockProducts,
   ...sep21StockProducts,
   ...sep18StockProducts,
@@ -778,167 +780,7 @@ export const allProducts: StockLot[] = [
       })),
     }],
   },
-  {
-    "code": "STOCK · 10",
-    "name": "Manufacturer Price Porcelain Coffee Cup 12oz Stock Ceramic Mugs",
-    "type": "350–400 ml assorted ceramic coffee mugs",
-    "pack": "Sold by piece",
-    "stock": "200 pieces",
-    "priceLabel": "Price / piece",
-    "tiers": [
-      {
-        "price": "$0.22",
-        "quantity": "200–1,999 pieces"
-      },
-      {
-        "price": "$0.19",
-        "quantity": "2,000–9,999 pieces"
-      },
-      {
-        "price": "$0.17",
-        "quantity": "≥10,000 pieces"
-      }
-    ],
-    "material": "Ceramic / porcelain",
-    "capacity": "350–400 ml, depending on design",
-    "colors": "Mixed colors and patterns",
-    "cartonQty": "50–55 pieces / carton",
-    "dishwasherSafe": true,
-    "description": "Assorted ceramic coffee mugs with solid colors, two-tone glazes and patterned designs. Comfortable handles and a retro Nordic look suit cafés, hotels, home and office use. Sizes vary across the assortment; confirm the selected designs and packing list before ordering.",
-    "specifications": [
-      {
-        "label": "Model number",
-        "value": "2026040402"
-      },
-      {
-        "label": "Product type",
-        "value": "Coffee mugs"
-      },
-      {
-        "label": "Style",
-        "value": "Retro / Nordic"
-      },
-      {
-        "label": "Features",
-        "value": "Stocked, reusable, food safe"
-      },
-      {
-        "label": "Applications",
-        "value": "Home, hotel, restaurant, office and gifts"
-      },
-      {
-        "label": "Brand",
-        "value": "JOZING"
-      },
-      {
-        "label": "Place of origin",
-        "value": "Guangdong, China"
-      },
-      {
-        "label": "Carton size",
-        "value": "61 × 31 × 31 cm"
-      },
-      {
-        "label": "Carton gross weight",
-        "value": "22–23 kg"
-      },
-      {
-        "label": "Single package size",
-        "value": "12 × 9 × 9.5 cm"
-      },
-      {
-        "label": "Single gross weight",
-        "value": "0.520 kg"
-      }
-    ],
-    "image": "/products/mug-1601736106826/main-01.webp",
-    "gallery": [
-      "/products/mug-1601736106826/main-01.webp",
-      "/products/mug-1601736106826/main-02.webp",
-      "/products/mug-1601736106826/main-03.webp",
-      "/products/mug-1601736106826/main-04.webp",
-      "/products/mug-1601736106826/main-05.webp",
-      "/products/mug-1601736106826/main-06.webp"
-    ],
-    "detailSections": [
-      {
-        "title": "Product design & details",
-        "images": [
-          {
-            "src": "/products/mug-1601736106826/detail-01.webp",
-            "width": 1024,
-            "height": 1024,
-            "alt": "350–400 ml assorted ceramic coffee mugs — detail 1"
-          },
-          {
-            "src": "/products/mug-1601736106826/detail-02.webp",
-            "width": 1024,
-            "height": 1024,
-            "alt": "350–400 ml assorted ceramic coffee mugs — detail 2"
-          },
-          {
-            "src": "/products/mug-1601736106826/detail-03.webp",
-            "width": 1024,
-            "height": 1024,
-            "alt": "350–400 ml assorted ceramic coffee mugs — detail 3"
-          },
-          {
-            "src": "/products/mug-1601736106826/detail-04.webp",
-            "width": 1254,
-            "height": 1254,
-            "alt": "350–400 ml assorted ceramic coffee mugs — detail 4"
-          },
-          {
-            "src": "/products/mug-1601736106826/detail-05.webp",
-            "width": 1024,
-            "height": 1024,
-            "alt": "350–400 ml assorted ceramic coffee mugs — detail 5"
-          },
-          {
-            "src": "/products/mug-1601736106826/detail-06.webp",
-            "width": 1024,
-            "height": 1024,
-            "alt": "350–400 ml assorted ceramic coffee mugs — detail 6"
-          }
-        ]
-      },
-      {
-        "title": "Factory & export packing",
-        "images": [
-          {
-            "src": "/products/mug-1601736106826/detail-07.webp",
-            "width": 1200,
-            "height": 1600,
-            "alt": "JOZING factory and export packing — image 1"
-          },
-          {
-            "src": "/products/mug-1601736106826/detail-08.webp",
-            "width": 1500,
-            "height": 1125,
-            "alt": "JOZING factory and export packing — image 2"
-          },
-          {
-            "src": "/products/mug-1601736106826/detail-09.webp",
-            "width": 1200,
-            "height": 1600,
-            "alt": "JOZING factory and export packing — image 3"
-          },
-          {
-            "src": "/products/mug-1601736106826/detail-10.webp",
-            "width": 1500,
-            "height": 1502,
-            "alt": "JOZING factory and export packing — image 4"
-          },
-          {
-            "src": "/products/mug-1601736106826/detail-11.webp",
-            "width": 900,
-            "height": 1600,
-            "alt": "JOZING factory and export packing — image 5"
-          }
-        ]
-      }
-    ]
-  },
+
   {
     "code": "STOCK · 11",
     "name": "90ml Capacity Porcelain Espresso Cup and Saucer Set Sell by Ton",

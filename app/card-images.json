@@ -222,5 +222,29 @@
   "/products/featured-row-24.webp": {
     "360": "/products/cards-v2/c7a8831ef9efd4-360.webp",
     "720": "/products/cards-v2/c7a8831ef9efd4-720.webp"
+  },
+  "/products/oct8-11000036276894/main-01.webp": {
+    "360": "/products/oct8-11000036276894/thumb-01.webp",
+    "720": "/products/oct8-11000036276894/card-720.webp"
+  },
+  "/products/oct8-11000035656742/main-01.webp": {
+    "360": "/products/oct8-11000035656742/thumb-01.webp",
+    "720": "/products/oct8-11000035656742/card-720.webp"
+  },
+  "/products/oct8-1600532523997/main-01.webp": {
+    "360": "/products/oct8-1600532523997/thumb-01.webp",
+    "720": "/products/oct8-1600532523997/card-720.webp"
+  },
+  "/products/oct8-11000037731090/main-01.webp": {
+    "360": "/products/oct8-11000037731090/thumb-01.webp",
+    "720": "/products/oct8-11000037731090/card-720.webp"
+  },
+  "/products/oct8-1601736106826/main-01.webp": {
+    "360": "/products/oct8-1601736106826/thumb-01.webp",
+    "720": "/products/oct8-1601736106826/card-720.webp"
+  },
+  "/products/oct8-1601786860380/main-01.webp": {
+    "360": "/products/oct8-1601786860380/thumb-01.webp",
+    "720": "/products/oct8-1601786860380/card-720.webp"
   }
 }

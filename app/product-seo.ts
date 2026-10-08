@@ -6,7 +6,7 @@ export const productSeoTitles: Record<string, string> = {
   "STOCK · 24": "Mixed Gold-Inlay Porcelain Tableware by Ton | JOZING",
   "STOCK · 23": "Pink Heart-Lace Dessert Plates by Carton | JOZING",
   "STOCK · 16": "Mixed Porcelain Baking Pans by Ton | JOZING",
-  "STOCK · 10": "12oz Ready-Stock Porcelain Coffee Mugs | JOZING",
+  "STOCK · 10": "300–350ml Textured Ceramic Mugs Wholesale | JOZING",
   "STOCK · 11": "90ml Espresso Cups & Saucers by Ton | JOZING",
   "STOCK · 13": "Mixed Colorful Porcelain Tableware by Ton | JOZING",
 };
