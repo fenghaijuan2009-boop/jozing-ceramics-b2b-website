@@ -1,4 +1,3 @@
-import { ProcurementNav } from "../procurement-nav";
 import { ProductCard } from "../product-card";
 import { oemProducts } from "../page";
 import { oemBakewareCodes } from "../product-classification";
@@ -49,12 +48,13 @@ export default function OemOdmPage() {
         intro="JOZING coordinates custom ceramic tableware development from a reference or idea through sampling, production, quality control and export packaging — for brands, importers, wholesalers and hospitality groups."
       />
 
-      <section className="shell buyer-next-step">
-        <ProcurementNav current="/oem-odm/" /><h2>Plan your wholesale or private-label dinnerware order</h2>
-        <p>Choose the shapes, decoration and packaging you need, then ask us to confirm feasibility, MOQ and sampling for that specification. Ready-stock prices are not custom-production quotations.</p>
-        <div className="oem-buying-grid"><article><h3>Retail brands & importers</h3><p>Send your target range, logo artwork, quantity per design and retail packaging brief. Confirm artwork approval and an approved sample before production.</p></article><article><h3>Restaurants & hotels</h3><p>List the matching plates, bowls and cups, size requirements and replenishment needs. Discuss a repeatable specification when a one-off stock assortment will not fit.</p></article><article><h3>Custom ceramic mugs</h3><p>Specify capacity, handle shape, glaze, logo placement and quantity per design. Ask which existing shapes can be adapted and whether new tooling is required.</p></article></div>
-        <h3>Custom ceramic dinnerware: stock shapes or a new design?</h3><p>For an existing shape, send the product reference and changes to the glaze, logo or packaging. For a new shape, provide drawings, dimensions and intended use so tooling and sample requirements can be assessed. MOQ and lead time depend on the approved specification.</p><h3>Private-label packaging and approval</h3><p>Include your artwork, barcode requirements, pieces per set and packaging layout. Confirm the approved sample, carton markings and inspection criteria in writing before bulk production.</p><h3>What your quotation should confirm</h3><ul><li>MOQ per shape, decoration and packaging option</li><li>Sample cost, approval steps and production lead time</li><li>Carton quantity, dimensions, gross weight and destination</li><li>Inspection criteria and testing documents for your target market</li></ul>
-        <div className="buying-links"><a className="btn primary" href="/contact/?product=Custom%20ceramic%20tableware&purchaseType=OEM%20%2F%20ODM&source=%2Foem-odm%2F">Send your OEM buying brief</a><a href="/guides/oem-ceramic-dinnerware-moq-sampling-lead-time/">Read the MOQ and sampling guide →</a><a href="/supplier-profile/">Review our supplier profile →</a></div>
+      <section className="page-band">
+        <div className="shell fact-row">
+          <div><strong>20+ years</strong><span>Ceramic manufacturing expertise</span></div>
+          <div><strong>6,000 m²</strong><span>Factory & warehouse, Chaozhou</span></div>
+          <div><strong>100+</strong><span>Professional team members</span></div>
+          <div><strong>ISO 9001</strong><span>Quality management certified</span></div>
+        </div>
       </section>
       <section className="shell stock-category-content">
         <div className="product-grid">{oemProducts.filter(product => oemBakewareCodes.includes(product.code)).map(product => <ProductCard key={product.code} item={product} category="oem-bakeware" />)}</div>
@@ -93,14 +93,7 @@ export default function OemOdmPage() {
         </div>
       </section>
 
-      <section className="page-band">
-        <div className="shell fact-row">
-          <div><strong>20+ years</strong><span>Ceramic manufacturing expertise</span></div>
-          <div><strong>6,000 m²</strong><span>Factory & warehouse, Chaozhou</span></div>
-          <div><strong>100+</strong><span>Professional team members</span></div>
-          <div><strong>ISO 9001</strong><span>Quality management certified</span></div>
-        </div>
-      </section>
+
 
       <section className="page-cta">
         <div className="shell">
