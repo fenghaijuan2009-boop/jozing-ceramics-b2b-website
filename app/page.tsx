@@ -1,3 +1,4 @@
+import { HeroImage } from "./hero-image";
 import { oct8StockProducts } from "./imported-stock-products-oct8";
 import { sep28StockProducts } from "./imported-stock-products-sep28";
 import { ProcurementNav } from "./procurement-nav";
@@ -1522,20 +1523,7 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <picture className="hero-image">
-          <source type="image/avif" media="(max-width: 620px)" srcSet="/hero-clearance-mobile-v2.avif" />
-          <source type="image/avif" media="(min-width: 621px)" srcSet="/hero-clearance-desktop-v2.avif" />
-          <source media="(max-width: 620px)" srcSet="/hero-clearance-2026-mobile.webp" />
-          <img
-            src="/hero-clearance-2026.webp"
-            alt="JOZING factory clearance ceramic tableware available for bulk export"
-            width="1875"
-            height="839"
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-          />
-        </picture>
+        <HeroImage />
       </section>
 
       <section className="global-language-terms" aria-labelledby="global-language-title">
