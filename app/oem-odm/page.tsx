@@ -1,6 +1,7 @@
 import { ProcurementNav } from "../procurement-nav";
 import { ProductCard } from "../product-card";
 import { oemProducts } from "../page";
+import { oemBakewareCodes } from "../product-classification";
 import { productSlug } from "../product-utils";
 import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
@@ -57,7 +58,11 @@ export default function OemOdmPage() {
       </section>
       <section className="shell stock-category-content">
         <p>{oemProducts.length} OEM/ODM products</p>
-        <div className="product-grid">{oemProducts.map(product => <ProductCard key={product.code} item={product} category={"oem-odm"} />)}</div>
+        <h2>Ceramic Baking Dishes &amp; Pans</h2>
+        <p>Coordinated three-piece bakeware sets with logo, decoration and packaging options. <a href="/oem-odm/bakeware/">Explore custom ceramic bakeware →</a></p>
+        <div className="product-grid">{oemProducts.filter(product => oemBakewareCodes.includes(product.code)).map(product => <ProductCard key={product.code} item={product} category="oem-bakeware" />)}</div>
+        <h2 style={{ marginTop: "3rem" }}>Tableware, Cups &amp; Serving Collections</h2>
+        <div className="product-grid">{oemProducts.filter(product => !oemBakewareCodes.includes(product.code)).map(product => <ProductCard key={product.code} item={product} category={"oem-odm"} />)}</div>
       </section>
 
       <section className="shell" style={{ paddingBottom: "3rem" }}>

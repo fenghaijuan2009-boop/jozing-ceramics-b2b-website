@@ -1,3 +1,4 @@
+import { oct12OemProducts } from "./imported-oem-products-oct12";
 import { HeroImage } from "./hero-image";
 import { oct8StockProducts } from "./imported-stock-products-oct8";
 import { sep28StockProducts } from "./imported-stock-products-sep28";
@@ -43,6 +44,7 @@ export type StockLot = {
 };
 
 export const allProducts: StockLot[] = [
+  ...oct12OemProducts,
   ...oct8StockProducts,
   ...sep28StockProducts,
   ...sep21StockProducts,

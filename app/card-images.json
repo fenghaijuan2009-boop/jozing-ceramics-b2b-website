@@ -246,5 +246,13 @@
   "/products/oct8-1601786860380/main-01.webp": {
     "360": "/products/oct8-1601786860380/thumb-01.webp",
     "720": "/products/oct8-1601786860380/card-720.webp"
+  },
+  "/products/oem-oct12-1601758843227/main-01.webp": {
+    "360": "/products/oem-oct12-1601758843227/card-360.webp",
+    "720": "/products/oem-oct12-1601758843227/card-720.webp"
+  },
+  "/products/oem-oct12-11000038799156/main-01.webp": {
+    "360": "/products/oem-oct12-11000038799156/card-360.webp",
+    "720": "/products/oem-oct12-11000038799156/card-720.webp"
   }
 }

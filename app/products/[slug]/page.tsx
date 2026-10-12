@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { allProducts, oemProductCodes } from "../../page";
+import { oemBakewareCodes } from "../../product-classification";
 import { productSlug } from "../../product-utils";
 import { productSeoTitles, productSeoTitlesBySlug } from "../../product-seo";
 import { stockCategories } from "../../stock-categories";
@@ -43,7 +44,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const productCategories = isOem ? [] : stockCategories.filter(category => category.codes.includes(product.code));
   const url = `${origin}/products/${slug}/`;
   const images = product.gallery ?? [product.image];
-  const inquiryUrl = `/contact/?product=${encodeURIComponent(`${product.code} - ${product.name}`)}&productUrl=${encodeURIComponent(url)}`;
+  const inquiryUrl = `/contact/?product=${encodeURIComponent(`${product.code} - ${product.name}`)}&productUrl=${encodeURIComponent(url)}${isOem ? "&purchaseType=OEM%20%2F%20ODM" : ""}`;
   const whatsappUrl = `https://wa.me/8617825907898?text=${encodeURIComponent(`Hello JOZING, please quote ${product.code} - ${product.name}.\nProduct: ${url}\nPlease confirm availability, MOQ and packing.`)}`;
   const offers = product.tiers?.map((tier) => ({ "@type": "Offer", priceCurrency: "USD", price: tier.price.replace(/[$,]/g, ""), eligibleQuantity: offerQuantity(tier.quantity), priceSpecification: unitPrice(product.priceLabel ?? product.pack, tier.price.replace(/[$,]/g, "")), description: `${product.priceLabel ?? product.pack}. Order tier: ${tier.quantity}. Availability and final commercial terms require confirmation.`, availability: isOem ? "https://schema.org/PreOrder" : "https://schema.org/LimitedAvailability", itemCondition: "https://schema.org/NewCondition", seller: { "@id": `${origin}/#organization` }, url })) ?? [];
   const productSchema = { "@context": "https://schema.org", "@type": "Product", "@id": `${url}#product`, name: product.name, sku: product.code, url, image: images.map((image) => `${origin}${image}`), description: `${product.type}. ${product.pack}. Starting MOQ: ${product.stock}.`, additionalProperty: [{ "@type": "PropertyValue", name: "Starting MOQ", value: product.stock }, { "@type": "PropertyValue", name: "Pricing basis", value: product.priceLabel ?? product.pack }], category: "Ceramic Tableware", material: product.material, color: product.colors, size: product.size ?? product.capacity, brand: { "@type": "Brand", name: "JOZING" }, manufacturer: { "@id": `${origin}/#organization` }, audience: { "@type": "BusinessAudience", audienceType: "Importers, wholesalers, hospitality suppliers and brands" }, offers: offers.length ? offers : undefined };
@@ -84,6 +85,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </> : null}
           {product.specifications?.map(spec => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}
         </dl>
+        {oemBakewareCodes.includes(product.code) && <nav className="stock-buying-nav" aria-label="OEM bakeware category"><Link href="/oem-odm/bakeware/">OEM/ODM Ceramic Baking Dishes &amp; Pans →</Link></nav>}
         {!isOem && <nav className="stock-buying-nav" aria-label="Related ready-stock categories and comparison">
           {productCategories.filter(category => !["stock-best-sale", "ungrouped"].includes(category.slug)).map(category => <Link key={category.slug} href={`/stock/${category.slug}/`}>{category.name}</Link>)}
           <Link href="/stock/catalog/">Compare stock & packing →</Link>
