@@ -57,9 +57,6 @@ export default function OemOdmPage() {
         <div className="buying-links"><a className="btn primary" href="/contact/?product=Custom%20ceramic%20tableware&purchaseType=OEM%20%2F%20ODM&source=%2Foem-odm%2F">Send your OEM buying brief</a><a href="/guides/oem-ceramic-dinnerware-moq-sampling-lead-time/">Read the MOQ and sampling guide →</a><a href="/supplier-profile/">Review our supplier profile →</a></div>
       </section>
       <section className="shell stock-category-content">
-        <p>{oemProducts.length} OEM/ODM products</p>
-        <h2>Ceramic Baking Dishes &amp; Pans</h2>
-        <p>Coordinated three-piece bakeware sets with logo, decoration and packaging options. <a href="/oem-odm/bakeware/">Explore custom ceramic bakeware →</a></p>
         <div className="product-grid">{oemProducts.filter(product => oemBakewareCodes.includes(product.code)).map(product => <ProductCard key={product.code} item={product} category="oem-bakeware" />)}</div>
         <h2 style={{ marginTop: "3rem" }}>Tableware, Cups &amp; Serving Collections</h2>
         <div className="product-grid">{oemProducts.filter(product => !oemBakewareCodes.includes(product.code)).map(product => <ProductCard key={product.code} item={product} category={"oem-odm"} />)}</div>
