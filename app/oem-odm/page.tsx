@@ -3,7 +3,7 @@ import { oemProducts } from "../page";
 import { oemBakewareCodes } from "../product-classification";
 import { productSlug } from "../product-utils";
 import type { Metadata } from "next";
-import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
+import { SiteFooter, SiteHeader } from "../site-shell";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/oem-odm/" },
@@ -42,20 +42,6 @@ export default function OemOdmPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <SiteHeader />
-      <PageHero
-        eyebrow="OEM / ODM MANUFACTURING"
-        title="Ceramic tableware manufacturer for your custom collection."
-        intro="JOZING coordinates custom ceramic tableware development from a reference or idea through sampling, production, quality control and export packaging — for brands, importers, wholesalers and hospitality groups."
-      />
-
-      <section className="page-band">
-        <div className="shell fact-row">
-          <div><strong>20+ years</strong><span>Ceramic manufacturing expertise</span></div>
-          <div><strong>6,000 m²</strong><span>Factory & warehouse, Chaozhou</span></div>
-          <div><strong>100+</strong><span>Professional team members</span></div>
-          <div><strong>ISO 9001</strong><span>Quality management certified</span></div>
-        </div>
-      </section>
       <section className="shell stock-category-content">
         <div className="product-grid">{oemProducts.filter(product => oemBakewareCodes.includes(product.code)).map(product => <ProductCard key={product.code} item={product} category="oem-bakeware" />)}</div>
         <h2 style={{ marginTop: "3rem" }}>Tableware, Cups &amp; Serving Collections</h2>
