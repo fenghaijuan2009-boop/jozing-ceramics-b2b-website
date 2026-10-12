@@ -2,8 +2,8 @@ import type { StockLot } from "./page";
 export const oct12OemProducts: StockLot[] = [
   {
     "code": "JZ-A1601758843227",
-    "name": "Wholesale 3-Piece Oval Ceramic Baking Dish Set with Strawberry Floral Designs",
-    "type": "Wholesale 3-Piece Oval Ceramic Baking Dish Set with Strawberry Floral Designs",
+    "name": "3-Piece Oval Ceramic Baking Dish Set – Strawberry & Floral",
+    "type": "3-Piece Oval Ceramic Baking Dish Set – Strawberry & Floral",
     "pack": "Sold by set · 3 pieces per set",
     "priceLabel": "Price / set",
     "stock": "1,000 sets",
@@ -85,55 +85,55 @@ export const oct12OemProducts: StockLot[] = [
             "src": "/products/oem-oct12-1601758843227/detail-01.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Oval Ceramic Baking Dish Set with Strawberry Floral Designs — product detail 1"
+            "alt": "3-Piece Oval Ceramic Baking Dish Set – Strawberry & Floral — product detail 1"
           },
           {
             "src": "/products/oem-oct12-1601758843227/detail-02.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Oval Ceramic Baking Dish Set with Strawberry Floral Designs — product detail 2"
+            "alt": "3-Piece Oval Ceramic Baking Dish Set – Strawberry & Floral — product detail 2"
           },
           {
             "src": "/products/oem-oct12-1601758843227/detail-03.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Oval Ceramic Baking Dish Set with Strawberry Floral Designs — product detail 3"
+            "alt": "3-Piece Oval Ceramic Baking Dish Set – Strawberry & Floral — product detail 3"
           },
           {
             "src": "/products/oem-oct12-1601758843227/detail-04.webp",
             "width": 1122,
             "height": 1402,
-            "alt": "Wholesale 3-Piece Oval Ceramic Baking Dish Set with Strawberry Floral Designs — product detail 4"
+            "alt": "3-Piece Oval Ceramic Baking Dish Set – Strawberry & Floral — product detail 4"
           },
           {
             "src": "/products/oem-oct12-1601758843227/detail-05.webp",
             "width": 1122,
             "height": 1402,
-            "alt": "Wholesale 3-Piece Oval Ceramic Baking Dish Set with Strawberry Floral Designs — product detail 5"
+            "alt": "3-Piece Oval Ceramic Baking Dish Set – Strawberry & Floral — product detail 5"
           },
           {
             "src": "/products/oem-oct12-1601758843227/detail-06.webp",
             "width": 1122,
             "height": 1402,
-            "alt": "Wholesale 3-Piece Oval Ceramic Baking Dish Set with Strawberry Floral Designs — product detail 6"
+            "alt": "3-Piece Oval Ceramic Baking Dish Set – Strawberry & Floral — product detail 6"
           },
           {
             "src": "/products/oem-oct12-1601758843227/detail-07.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Oval Ceramic Baking Dish Set with Strawberry Floral Designs — product detail 7"
+            "alt": "3-Piece Oval Ceramic Baking Dish Set – Strawberry & Floral — product detail 7"
           },
           {
             "src": "/products/oem-oct12-1601758843227/detail-08.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Oval Ceramic Baking Dish Set with Strawberry Floral Designs — product detail 8"
+            "alt": "3-Piece Oval Ceramic Baking Dish Set – Strawberry & Floral — product detail 8"
           },
           {
             "src": "/products/oem-oct12-1601758843227/detail-09.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Oval Ceramic Baking Dish Set with Strawberry Floral Designs — product detail 9"
+            "alt": "3-Piece Oval Ceramic Baking Dish Set – Strawberry & Floral — product detail 9"
           }
         ]
       },
@@ -170,8 +170,8 @@ export const oct12OemProducts: StockLot[] = [
   },
   {
     "code": "JZ-A11000038799156",
-    "name": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles",
-    "type": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles",
+    "name": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral",
+    "type": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral",
     "pack": "Sold by set · 3 pieces per set",
     "priceLabel": "Price / set",
     "stock": "1,000 sets",
@@ -253,67 +253,67 @@ export const oct12OemProducts: StockLot[] = [
             "src": "/products/oem-oct12-11000038799156/detail-01.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles — product detail 1"
+            "alt": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral — product detail 1"
           },
           {
             "src": "/products/oem-oct12-11000038799156/detail-02.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles — product detail 2"
+            "alt": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral — product detail 2"
           },
           {
             "src": "/products/oem-oct12-11000038799156/detail-03.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles — product detail 3"
+            "alt": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral — product detail 3"
           },
           {
             "src": "/products/oem-oct12-11000038799156/detail-04.webp",
             "width": 1122,
             "height": 1402,
-            "alt": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles — product detail 4"
+            "alt": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral — product detail 4"
           },
           {
             "src": "/products/oem-oct12-11000038799156/detail-05.webp",
             "width": 1122,
             "height": 1402,
-            "alt": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles — product detail 5"
+            "alt": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral — product detail 5"
           },
           {
             "src": "/products/oem-oct12-11000038799156/detail-06.webp",
             "width": 1122,
             "height": 1402,
-            "alt": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles — product detail 6"
+            "alt": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral — product detail 6"
           },
           {
             "src": "/products/oem-oct12-11000038799156/detail-07.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles — product detail 7"
+            "alt": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral — product detail 7"
           },
           {
             "src": "/products/oem-oct12-11000038799156/detail-08.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles — product detail 8"
+            "alt": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral — product detail 8"
           },
           {
             "src": "/products/oem-oct12-11000038799156/detail-09.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles — product detail 9"
+            "alt": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral — product detail 9"
           },
           {
             "src": "/products/oem-oct12-11000038799156/detail-10.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles — product detail 10"
+            "alt": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral — product detail 10"
           },
           {
             "src": "/products/oem-oct12-11000038799156/detail-11.webp",
             "width": 1254,
             "height": 1254,
-            "alt": "Wholesale 3-Piece Blue Floral Ceramic Baking Dish Set with Handles — product detail 11"
+            "alt": "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral — product detail 11"
           }
         ]
       },
