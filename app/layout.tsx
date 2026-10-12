@@ -4,8 +4,8 @@ import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { SiteAnalytics } from "./site-analytics";
 
-const sans = DM_Sans({ variable: "--font-sans", subsets: ["latin"] });
-const serif = Cormorant_Garamond({ variable: "--font-serif", subsets: ["latin"], weight: ["500", "600"] });
+const sans = DM_Sans({ display: "optional", variable: "--font-sans", subsets: ["latin"] });
+const serif = Cormorant_Garamond({ display: "optional", preload: false, variable: "--font-serif", subsets: ["latin"], weight: ["500", "600"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.jozing.cn"),
