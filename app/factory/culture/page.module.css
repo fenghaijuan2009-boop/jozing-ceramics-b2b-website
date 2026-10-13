@@ -1,0 +1,28 @@
+.page{background:#faf8f3;color:#17382e}
+.intro{max-width:1180px;margin:auto;text-align:center;padding:28px 32px 76px}
+.breadcrumb{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;text-align:left;margin-bottom:65px;color:#59665f}
+.breadcrumb a{color:inherit;text-decoration:none}
+.label{font-size:11px;font-weight:600;letter-spacing:.2em;line-height:1.7;color:#7c6038;margin:0 0 22px}
+.intro h1{font-family:var(--font-serif),Georgia,serif;font-size:clamp(44px,5.5vw,76px);font-weight:500;line-height:1.06;margin:0;letter-spacing:-.035em}
+.rule{width:52px;height:1px;background:#a58c61;margin:30px auto}
+.subtitle{font-size:15px;line-height:1.8;color:#58665e;margin:0}
+.mission{background:#12382c;color:#fffdf5;padding:68px 32px}
+.missionInner{max-width:940px;margin:auto;text-align:center}
+.mission .label{color:#dbc69f}
+.mission h2{font-family:var(--font-serif),Georgia,serif;font-size:clamp(32px,3.6vw,48px);font-weight:500;line-height:1.15;margin:0 0 30px}
+.mission h2 em{color:#e0cba6;font-weight:500}
+.missionCopy{max-width:710px;margin:16px auto 0;color:#e0e8e0;font-size:16px;line-height:1.95}
+.values{max-width:1180px;margin:auto;padding:80px 32px 65px}
+.valuesHeading{text-align:center;margin-bottom:48px}
+.valuesHeading .label{margin-bottom:14px}
+.valuesHeading h2,.closing h2{font-family:var(--font-serif),Georgia,serif;font-size:46px;line-height:1.1;font-weight:500;margin:0 0 17px}
+.valuesHeading>p:last-child{color:#58665e;font-size:15px;line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:44px;row-gap:38px}
+.value{border-top:1px solid #cabc9f;padding:27px 0 10px}
+.number{font-family:var(--font-serif),Georgia,serif;font-size:25px;color:#856a40}
+.value h3{font-family:var(--font-serif),Georgia,serif;font-weight:600;font-size:29px;line-height:1.2;margin:20px 0 14px}
+.value p{font-size:15px;line-height:1.85;color:#4b5c51;margin:0}
+.closing{text-align:center;border-top:1px solid #ded6c5;max-width:1116px;margin:auto;padding:50px 24px 70px}
+.closing h2{font-size:38px}.closing a{display:inline-flex;align-items:center;gap:35px;padding:14px 0;border-bottom:1px solid #90764d;text-decoration:none;color:#17382e;font-size:14px;font-weight:600}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.intro{padding-bottom:55px}.breadcrumb{margin-bottom:45px}}
+@media(max-width:540px){.intro{padding:24px 22px 45px}.grid{grid-template-columns:1fr}.mission{padding:45px 24px}.missionCopy{font-size:15px}.values{padding:50px 24px}.value{padding-top:22px}.value h3{margin-top:12px}.valuesHeading h2{font-size:38px}.closing h2{font-size:32px}}

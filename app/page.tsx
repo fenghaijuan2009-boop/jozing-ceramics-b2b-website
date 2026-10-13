@@ -1,3 +1,4 @@
+import { FactoryMenu } from "./factory-menu";
 import { oct12OemProducts } from "./imported-oem-products-oct12";
 import { HeroImage } from "./hero-image";
 import { oct8StockProducts } from "./imported-stock-products-oct8";
@@ -1519,7 +1520,7 @@ export default function Home() {
       <header className="nav shell">
         <a className="brand-logo" href="/" aria-label="JOZING home"><img src="/jozing-logo-fresh-v2.webp" srcSet="/jozing-logo-fresh-284-v2.webp 284w, /jozing-logo-fresh-v2.webp 567w" sizes="(max-width: 620px) 132px, 154px" alt="JOZING" width="567" height="158" fetchPriority="low" /></a>
         <nav aria-label="Main navigation">
-          <a href="/">Home</a><StockMenu /><a href="/oem-odm/">OEM/ODM</a><a href="#factory">Factory</a><a href="/about">About Us</a><a href="/faq">FAQ</a>
+          <a href="/">Home</a><StockMenu /><a href="/oem-odm/">OEM/ODM</a><FactoryMenu /><a href="/about">About Us</a><a href="/faq">FAQ</a>
         </nav>
         <a className="nav-cta" href="#contact">Get a quote <span>↗</span></a>
       </header>
