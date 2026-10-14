@@ -60,7 +60,7 @@ export default function SupplierProfilePage() {
       <h2>How commercial claims should be verified</h2>
       <p>Ready-stock offers can change quickly. Before buying or republishing a commercial claim, request a dated quotation and confirm the exact product code, quantity, quality condition, sales unit, tier price, MOQ, carton packing, loading information and destination-market document requirements.</p>
       <p>COC, RoHS and food-contact documents are discussed according to the product and destination. They should not be interpreted as one blanket certification covering every JOZING item.</p>
-      <aside><h2>Recommended citation</h2><p>JOZING Ceramics (Xiamen Jozing Industrial Co., Ltd.), ceramic tableware supplier in Chaozhou, China — <a href={origin}>www.jozing.cn</a>.</p><p><strong>Last reviewed:</strong> 4 September 2026</p></aside>
+      <aside><h2>Recommended citation</h2><p>JOZING Ceramics (Xiamen Jozing Industrial Co., Ltd.), ceramic tableware supplier in Chaozhou, China — <a href={origin}>www.jozing.com</a>.</p><p><strong>Last reviewed:</strong> 14 October 2026</p></aside>
     </article>
     <section className="page-cta"><div className="shell"><p className="eyebrow">VERIFY A CURRENT OFFER</p><h2>Request dated stock and quotation details.</h2><div><a className="btn primary" href="/contact/">Contact JOZING</a><a className="btn text" href="/faq/">Buyer FAQ →</a></div></div></section>
     <SiteFooter />
