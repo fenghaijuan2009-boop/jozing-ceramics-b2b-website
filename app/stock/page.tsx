@@ -9,7 +9,7 @@ import { CatalogLink } from "./catalog-link";
 export const metadata: Metadata = {
   alternates: { canonical: "/stock/" },
   title: "Wholesale Ceramic Stock: Prices & MOQ | JOZING",
-  description: "Browse ready-stock ceramic mugs, plates and dinnerware with wholesale prices and MOQs. Compare piece, carton and ton offers; request current stock and export packing.",
+  description: "Browse ready-stock ceramic mugs, plates and dinnerware with wholesale prices and MOQs. Compare offers by piece, carton or ton and confirm availability.",
 };
 
 export default function StockPage() {

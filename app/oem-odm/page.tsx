@@ -8,7 +8,7 @@ import { SiteFooter, SiteHeader } from "../site-shell";
 export const metadata: Metadata = {
   alternates: { canonical: "/oem-odm/" },
   title: "Ceramic Tableware Manufacturer in China | OEM/ODM | JOZING",
-  description: "JOZING is a custom ceramic tableware OEM/ODM manufacturer in Chaozhou, China. Shape, glaze, decal, logo and packaging customization with sampling support for brands, importers and wholesalers.",
+  description: "Custom ceramic tableware from Chaozhou, China. Explore OEM/ODM shapes, glazes, logos and packaging, with sampling support for brands and importers.",
 };
 
 const breadcrumbSchema = {
