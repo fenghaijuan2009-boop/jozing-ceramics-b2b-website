@@ -1,4 +1,4 @@
-const host = "www.jozing.cn";
+const host = "www.jozing.com";
 const key = "6f3e9a2c84b741d5a7e8c12f90b6d431";
 const keyLocation = `https://${host}/${key}.txt`;
 const keyResponse = await fetch(keyLocation, { signal: AbortSignal.timeout(30000) });

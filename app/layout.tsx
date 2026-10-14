@@ -10,7 +10,7 @@ const serif = Cormorant_Garamond({ display: "optional", preload: false, variable
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.jozing.com"),
   alternates: { canonical: "/" },
-  verification: { google: "PyzNVgmVXAYdBNxB2x4bVG306-fMzeVaKbCZH_98pQ0" },
+  verification: { google: ["PyzNVgmVXAYdBNxB2x4bVG306-fMzeVaKbCZH_98pQ0", "WG98Abrx_wPH8IVbfPUX7fCuSqpiD4-vaGrOmMYHELg"] },
   title: "Wholesale Ceramic Tableware from China | JOZING",
   description: "Source ceramic tableware from China by carton, pallet, ton or container. Ready stock, mixed loading and OEM/ODM manufacturing for global B2B buyers.",
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
