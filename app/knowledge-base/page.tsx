@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
 
-const origin = "https://www.jozing.cn";
+const origin = "https://www.jozing.com";
 const canonical = `${origin}/knowledge-base/`;
 
 export const metadata: Metadata = {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
-export const metadata: Metadata = { title: "Ceramic Tableware Buyer FAQ | JOZING", description: "Answers about JOZING ready stock, packing, mixed loading, OEM/ODM, MOQ, samples and compliance support.", alternates: { canonical: "https://www.jozing.cn/faq/" } };
+export const metadata: Metadata = { title: "Ceramic Tableware Buyer FAQ | JOZING", description: "Answers about JOZING ready stock, packing, mixed loading, OEM/ODM, MOQ, samples and compliance support.", alternates: { canonical: "https://www.jozing.com/faq/" } };
 const faqs = [
  ["How do I get the latest ready-stock list?", "Contact us by WhatsApp or email and tell us your market and preferred product types. Because stock changes quickly, photos, available quantity, packing, MOQ and pricing are confirmed for each inquiry."],
  ["Can I buy ceramic tableware by carton or by ton?", "Depending on the stock lot, supply may be discussed by carton, pallet, ton or container. The applicable sales unit and minimum quantity will be confirmed with the current packing list."],

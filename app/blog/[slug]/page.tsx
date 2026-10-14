@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: { canonical: `/blog/${post.slug}/` },
     title: search?.title ?? `${post.title} | JOZING Blog`,
     description: search?.description ?? post.description,
-    openGraph: { title: post.title, description: post.description, type: "article", url: `https://www.jozing.cn/blog/${post.slug}/` },
+    openGraph: { title: post.title, description: post.description, type: "article", url: `https://www.jozing.com/blog/${post.slug}/` },
   };
 }
 
@@ -52,8 +52,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     datePublished: post.date,
     ...(buyerNextStepSlugs.includes(slug) ? { dateModified: "2026-09-24" } : relatedProducts.length ? { dateModified: blogProductLinksUpdated } : {}),
     author: { "@type": "Organization", name: "JOZING Industrial Co., Ltd." },
-    publisher: { "@type": "Organization", name: "JOZING Ceramics", url: "https://www.jozing.cn/" },
-    mainEntityOfPage: `https://www.jozing.cn/blog/${post.slug}/`,
+    publisher: { "@type": "Organization", name: "JOZING Ceramics", url: "https://www.jozing.com/" },
+    mainEntityOfPage: `https://www.jozing.com/blog/${post.slug}/`,
   };
   const faqSchema = post.faq
     ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: post.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }
@@ -62,9 +62,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.jozing.cn/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.jozing.cn/blog/" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://www.jozing.cn/blog/${post.slug}/` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.jozing.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.jozing.com/blog/" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://www.jozing.com/blog/${post.slug}/` },
     ],
   };
 

@@ -11,7 +11,7 @@ import { SiteFooter, SiteHeader } from "../../site-shell";
 import { offerQuantity, unitPrice } from "../../offer-quantity";
 import { ProductGallery } from "../product-gallery";
 
-const origin = "https://www.jozing.cn";
+const origin = "https://www.jozing.com";
 
 export function generateStaticParams() {
   return allProducts.map((product) => ({ slug: productSlug(product.name) }));

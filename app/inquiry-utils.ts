@@ -4,8 +4,8 @@ const sourcePaths = ["/", "/stock/", "/stock/ceramic-plates/", "/stock/dinner-se
 export function safeSourcePath(value: string | null): string | null {
   if (!value) return null;
   try {
-    const url = new URL(value, "https://www.jozing.cn");
-    if (url.origin !== "https://www.jozing.cn") return null;
+    const url = new URL(value, "https://www.jozing.com");
+    if (!["https://www.jozing.com", "https://www.jozing.cn", "https://jozing.cn", "https://jozing.com"].includes(url.origin)) return null;
     const path = url.pathname.endsWith("/") ? url.pathname : url.pathname + "/";
     return sourcePaths.includes(path) || /^\/products\/[a-z0-9-]+\/$/.test(path) ? path : null;
   } catch { return null; }
@@ -25,9 +25,9 @@ export function inquiryReference(): string {
 export function buildInquiry(data: Record<string, string>, reference: string, source: string, productUrl = ""): string {
   return ["Hello JOZING, I would like to request a ceramic tableware quotation.",
     "Inquiry reference: " + reference,
-    "Source page: https://www.jozing.cn" + (safeSourcePath(source) ?? "/contact/"),
+    "Source page: https://www.jozing.com" + (safeSourcePath(source) ?? "/contact/"),
     "Purchase type: " + (purchaseTypes.some(t => t === data.purchaseType) ? data.purchaseType : "Not sure yet"),
-    productUrl && safeSourcePath(productUrl)?.startsWith("/products/") ? "Product page: https://www.jozing.cn" + safeSourcePath(productUrl) : "",
+    productUrl && safeSourcePath(productUrl)?.startsWith("/products/") ? "Product page: https://www.jozing.com" + safeSourcePath(productUrl) : "",
     "Product / reference: " + data.product, "Required quantity: " + data.quantity, "Country / market: " + data.country,
     data.destination && "Destination port: " + data.destination, data.email && "Work email: " + data.email,
     data.message && "Additional requirements: " + data.message,

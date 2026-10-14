@@ -10,5 +10,5 @@ const aiBots=[
 export default function robots():MetadataRoute.Robots{
   const rules:MetadataRoute.Robots["rules"]=[{userAgent:"*",allow:"/"}];
   aiBots.forEach((bot)=>{rules.push({userAgent:bot,allow:"/"})});
-  return{rules,sitemap:"https://www.jozing.cn/sitemap.xml",host:"https://www.jozing.cn"};
+  return{rules,sitemap:"https://www.jozing.com/sitemap.xml",host:"https://www.jozing.com"};
 }

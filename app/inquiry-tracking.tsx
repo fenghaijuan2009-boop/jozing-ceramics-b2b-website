@@ -16,7 +16,7 @@ export function InquiryTracking() {
       references.set(link, reference);
       const text = (url.searchParams.get("text") || "Hello JOZING, I am interested in ceramic tableware.").split("\nInquiry reference: JZ-")[0];
       const source = safeSourcePath(location.pathname) ?? "/contact/";
-      url.searchParams.set("text", text + "\nInquiry reference: " + reference + "\nSource page: https://www.jozing.cn" + source);
+      url.searchParams.set("text", text + "\nInquiry reference: " + reference + "\nSource page: https://www.jozing.com" + source);
       link.href = url.toString();
     };
     document.addEventListener("click", click, true);

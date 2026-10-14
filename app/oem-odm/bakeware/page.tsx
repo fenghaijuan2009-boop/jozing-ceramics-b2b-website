@@ -15,11 +15,11 @@ export default function BakewarePage() {
   const products = oemProducts.filter(product => oemBakewareCodes.includes(product.code));
   const schema = [
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.jozing.cn/" },
-      { "@type": "ListItem", position: 2, name: "OEM/ODM", item: "https://www.jozing.cn/oem-odm/" },
-      { "@type": "ListItem", position: 3, name: "Ceramic Bakeware", item: "https://www.jozing.cn/oem-odm/bakeware/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.jozing.com/" },
+      { "@type": "ListItem", position: 2, name: "OEM/ODM", item: "https://www.jozing.com/oem-odm/" },
+      { "@type": "ListItem", position: 3, name: "Ceramic Bakeware", item: "https://www.jozing.com/oem-odm/bakeware/" },
     ] },
-    { "@context": "https://schema.org", "@type": "ItemList", name: "OEM/ODM Ceramic Bakeware", numberOfItems: products.length, itemListElement: products.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p.name, url: `https://www.jozing.cn/products/${productSlug(p.name)}/` })) },
+    { "@context": "https://schema.org", "@type": "ItemList", name: "OEM/ODM Ceramic Bakeware", numberOfItems: products.length, itemListElement: products.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p.name, url: `https://www.jozing.com/products/${productSlug(p.name)}/` })) },
   ];
   return <main>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />

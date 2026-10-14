@@ -27,7 +27,7 @@ export type CatalogRow = (typeof catalogRows)[number];
 
 export function catalogCsv() {
   const header = ["Product code", "Product", "Categories", "Price basis (USD)", "Listed price tiers", "Starting MOQ", "Carton quantity", "Carton size", "Carton gross weight", "Product URL", "Catalogue prepared", "Availability status"];
-  const rows = catalogRows.map(row => [row.code, row.name, row.categories.map(category => category.name).join("; "), row.unit, row.tiers.map(tier => `${tier.price}: ${tier.quantity}`).join("; ") || "Request a quote", row.moq, row.cartonQuantity, row.cartonSize, row.cartonWeight, `https://www.jozing.cn${row.href}`, catalogPrepared, catalogNotice]);
+  const rows = catalogRows.map(row => [row.code, row.name, row.categories.map(category => category.name).join("; "), row.unit, row.tiers.map(tier => `${tier.price}: ${tier.quantity}`).join("; ") || "Request a quote", row.moq, row.cartonQuantity, row.cartonSize, row.cartonWeight, `https://www.jozing.com${row.href}`, catalogPrepared, catalogNotice]);
   const cell = (value: string) => `"${(/^[=+@\-\t\r]/.test(value) ? "'" + value : value).replaceAll('"', '""')}"`;
   return "\uFEFF" + [header, ...rows].map(row => row.map(cell).join(",")).join("\r\n");
 }

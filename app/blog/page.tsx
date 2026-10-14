@@ -12,8 +12,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.jozing.cn/" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.jozing.cn/blog/" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.jozing.com/" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.jozing.com/blog/" },
   ],
 };
 

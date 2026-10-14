@@ -15,8 +15,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.jozing.cn/" },
-    { "@type": "ListItem", position: 2, name: "OEM/ODM", item: "https://www.jozing.cn/oem-odm/" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.jozing.com/" },
+    { "@type": "ListItem", position: 2, name: "OEM/ODM", item: "https://www.jozing.com/oem-odm/" },
   ],
 };
 
@@ -36,7 +36,7 @@ const customizations = [
 ];
 
 export default function OemOdmPage() {
-  const itemListSchema = { "@context": "https://schema.org", "@type": "ItemList", name: "JOZING OEM/ODM Ceramic Tableware", numberOfItems: oemProducts.length, itemListElement: oemProducts.map((product, index) => ({ "@type": "ListItem", position: index + 1, name: product.name, url: `https://www.jozing.cn/products/${productSlug(product.name)}/` })) };
+  const itemListSchema = { "@context": "https://schema.org", "@type": "ItemList", name: "JOZING OEM/ODM Ceramic Tableware", numberOfItems: oemProducts.length, itemListElement: oemProducts.map((product, index) => ({ "@type": "ListItem", position: index + 1, name: product.name, url: `https://www.jozing.com/products/${productSlug(product.name)}/` })) };
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

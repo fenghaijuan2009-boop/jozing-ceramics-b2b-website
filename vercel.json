@@ -2,7 +2,47 @@
   "headers": [
     {
       "source": "/hero-clearance-:device-v2.avif",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.jozing.cn"
+        }
+      ],
+      "destination": "https://www.jozing.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "jozing.cn"
+        }
+      ],
+      "destination": "https://www.jozing.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "jozing.com"
+        }
+      ],
+      "destination": "https://www.jozing.com/:path*",
+      "permanent": true
     }
   ]
 }

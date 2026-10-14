@@ -15,7 +15,7 @@ import { buyingPages } from "./stock/buying-pages";
 import { blogProductCodes, blogProductLinksUpdated } from "./blog/product-links";
 export const dynamic="force-static";
 export default function sitemap():MetadataRoute.Sitemap{
-  const origin="https://www.jozing.cn";
+  const origin="https://www.jozing.com";
   const now=new Date("2026-09-11");
   const core=["","/about","/supplier-profile","/contact","/faq","/guides","/knowledge-base","/stock","/oem-odm","/blog"].map((path,index)=>({url:`${origin}${path}/`,lastModified:now,changeFrequency:index===0?"weekly" as const:"monthly" as const,priority:index===0?1:.7}));
   const importedCodes=new Set(importedStockProducts.map(product=>product.code));
