@@ -22,6 +22,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const analyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-43Z67R5H54";
   const organization = { "@context": "https://schema.org", "@type": "Organization", "@id": "https://www.jozing.com/#organization", name: "Xiamen Jozing Industrial Co., Ltd.", alternateName: ["JOZING", "JOZING Ceramics"], url: "https://www.jozing.com/", logo: { "@type": "ImageObject", url: "https://www.jozing.com/jozing-logo.png" }, image: "https://www.jozing.com/og.png", foundingDate: "2017", description: "China ceramic tableware supplier with ceramic experience since 2003, supporting ready-stock clearance lots and OEM/ODM manufacturing for global B2B buyers.", slogan: "Tableware supply, made flexible.", knowsAbout: ["ceramic tableware", "porcelain dinnerware", "ready-stock ceramic lots", "ceramic tableware OEM", "ceramic tableware ODM", "ceramic export packing"], areaServed: "Worldwide", sameAs: ["https://www.youtube.com/@jozingstockceramic", "https://www.facebook.com/haijuan.feng", "https://www.instagram.com/jozingstockceramic"], address: { "@type": "PostalAddress", streetAddress: "No. 3, Gubantou Village, Chao'an District", addressLocality: "Chaozhou", addressRegion: "Guangdong", addressCountry: "CN" }, contactPoint: { "@type": "ContactPoint", telephone: "+8617825907898", email: "sales_b2b@jozing.cn", contactType: "sales", areaServed: "Worldwide", availableLanguage: ["English", "Chinese"] } };
-  const website = { "@context": "https://schema.org", "@type": "WebSite", "@id": "https://www.jozing.com/#website", name: "JOZING Ceramics", url: "https://www.jozing.com/", publisher: { "@id": "https://www.jozing.com/#organization" }, inLanguage: "en" };
-  return <html lang="en"><body className={`${sans.variable} ${serif.variable}`}><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organization)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(website)}}/>{children}<InquiryTracking />{analyticsId && /^G-[A-Z0-9]+$/.test(analyticsId) ? <SiteAnalytics measurementId={analyticsId} /> : null}</body></html>;
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.jozing.com/#website",
+    name: "JOZING - Wholesale Clearance Ceramic Tableware",
+    alternateName: ["JOZING", "JOZING Ceramics"],
+    url: "https://www.jozing.com/",
+    description: "Wholesale ready-stock clearance ceramic tableware and stocklot porcelain plates, bowls and mugs from China. Sourcing by carton, pallet, ton or container, with OEM/ODM manufacturing for global B2B buyers.",
+    publisher: { "@id": "https://www.jozing.com/#organization" },
+    inLanguage: "en",
+  };
+  return <html lang="en"><head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organization)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(website)}}/></head><body className={`${sans.variable} ${serif.variable}`}>{children}<InquiryTracking />{analyticsId && /^G-[A-Z0-9]+$/.test(analyticsId) ? <SiteAnalytics measurementId={analyticsId} /> : null}</body></html>;
 }
