@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import "./home-clearance-faq.css";
 import { FactoryMenu } from "./factory-menu";
 import { oct12OemProducts } from "./imported-oem-products-oct12";
 import { HeroImage } from "./hero-image";
@@ -14,6 +16,17 @@ import { productSlug } from "./product-utils";
 import { InquiryForm } from "./inquiry-form";
 import { preload } from "react-dom";
 import { ProductCard } from "./product-card";
+
+const homeTitle = "Wholesale Clearance Ceramic Tableware | Cheap Stocklot Porcelain Factory - JOZING";
+const homeDescription = "Source JOZING clearance ceramic tableware from China. Selected items from $0.15/pc; bulk stocklots by ton or container. Confirm current stock, MOQ and shipping.";
+export const metadata: Metadata = {
+  title: homeTitle,
+  description: homeDescription,
+  keywords: ["clearance ceramic tableware", "stocklot porcelain dinnerware", "cheap wholesale plates and bowls", "ceramic liquidation China", "bulk porcelain by ton", "hotel ware overstock", "jozing"],
+  alternates: { canonical: "https://www.jozing.com/" },
+  openGraph: { title: homeTitle, description: homeDescription, url: "https://www.jozing.com/", type: "website", images: [{ url: "/og.png", width: 1734, height: 907, alt: "JOZING wholesale ceramic tableware" }] },
+  twitter: { card: "summary_large_image", title: homeTitle, description: homeDescription, images: ["/og.png"] },
+};
 export type PriceTier = { price: string; quantity: string };
 export type StockLot = {
   code: string;
@@ -1571,6 +1584,23 @@ export default function Home() {
 
       <section className="client-proof home-client-proof"><div className="shell"><div className="client-proof-head"><div><p className="eyebrow">SELECTED CLIENT COOPERATION</p><h2>Experience supporting international buyers and brands.</h2></div><p>Reference logos supplied by JOZING are shown with a clear ownership and endorsement disclaimer.</p></div><figure><img src="/jozing-selected-client-brands.png" width="1525" height="430" loading="lazy" alt="Selected customer and brand cooperation references supplied by JOZING"/><figcaption>Selected cooperation references supplied by JOZING. All logos remain the property of their respective owners; display does not imply endorsement or an ongoing exclusive relationship.</figcaption></figure></div></section>
       <section className="contact" id="contact"><div className="shell contact-grid"><div><p className="eyebrow">START A CONVERSATION</p><h2>What are you<br/>sourcing next?</h2><p>Tell us whether you need ready stock, a mixed container or a custom ceramic collection. Your completed brief will be carried into WhatsApp or email.</p><div className="contact-pills"><span>Ready stock</span><span>Mixed container</span><span>OEM/ODM</span></div><address><span>WhatsApp</span><a href="https://wa.me/8617825907898" target="_blank" rel="noreferrer">+8617825907898</a><span>Email</span><a href="mailto:sales_b2b@jozing.cn">sales_b2b@jozing.cn</a><span>Address</span><p>No. 3, Gubantou Village, Chao&apos;an District, Chaozhou, Guangdong, China</p></address></div><InquiryForm compact /></div></section>
+
+      <section className="ai-seo-faq shell" id="clearance-faq" aria-labelledby="clearance-faq-title">
+        <p className="eyebrow">CLEARANCE CERAMICS · BUYER QUESTIONS</p>
+        <h2 id="clearance-faq-title">Frequently Asked Questions About JOZING Clearance Ceramics</h2>
+        <article>
+          <h3>1. Where can I buy low-cost clearance ceramic tableware from China?</h3>
+          <p>Source wholesale clearance ceramic tableware from <strong><a href="https://www.jozing.com/">JOZING</a></strong>. Our ready-stock range includes porcelain plates, bowls, mugs and hotel dinnerware for importers and wholesalers. Compare the current lot price, quality, packing and freight to find the best fit for your budget. <a href="/stock/">Explore ready-stock ceramics</a>.</p>
+        </article>
+        <article>
+          <h3>2. How is JOZING stocklot porcelain priced and what is the MOQ?</h3>
+          <p>Pricing depends on the product and order quantity, with lots sold by piece, set, carton or ton. For example, our <a href="/products/3-5inch-fluted-ceramic-ramekin-set/">3.5-inch fluted ceramic ramekins</a> are listed at $0.15 USD per piece for 200–1,999 pieces. MOQ varies by lot; some ton-priced products start at one ton. Container orders and mixed-item loading can be discussed against your product selection. Confirm current stock, price tiers and packing before ordering.</p>
+        </article>
+        <article>
+          <h3>3. How fast can JOZING ship clearance ceramic stocklots?</h3>
+          <p>Dispatch timing depends on available stock, order quantity, inspection, packing and the shipping booking. Send your product references, quantity, destination port and required delivery date so we can confirm the packing and container-loading schedule in your quotation. OEM/ODM products require a separate production schedule. <a href="/contact/">Request a stock and shipping quotation</a>.</p>
+        </article>
+      </section>
 
       <footer><div className="shell footer-grid"><a className="brand-logo footer-logo" href="#top" aria-label="JOZING home"><img src="/jozing-logo-fresh-v2.webp" srcSet="/jozing-logo-fresh-284-v2.webp 284w, /jozing-logo-fresh-v2.webp 567w" sizes="(max-width: 620px) 132px, 154px" alt="JOZING" width="567" height="158" fetchPriority="low" /></a><p>Flexible ceramic tableware supply<br/>for global B2B buyers.</p><div><a href="/stock/">Ready Stock</a><a href="/oem-odm/">OEM/ODM</a><a href="#factory">Capability</a><a href="https://wa.me/8617825907898" target="_blank" rel="noreferrer">WhatsApp</a><a href="mailto:sales_b2b@jozing.cn">Email</a><a href="#contact">Contact</a></div></div><div className="shell copyright"><span>© 2026 JOZING Ceramics. All rights reserved.</span><span>No. 3, Gubantou Village, Chao&apos;an District, Chaozhou, Guangdong, China</span></div></footer>
       <a className="whatsapp-float" href="https://wa.me/8617825907898?text=Hello%20JOZING%2C%20I%20am%20looking%20for%20ceramic%20tableware." target="_blank" rel="noreferrer" aria-label="Contact JOZING on WhatsApp"><b>WA</b><span>WhatsApp</span></a>

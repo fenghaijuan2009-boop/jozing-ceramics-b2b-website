@@ -1,0 +1,8 @@
+.ai-seo-faq{padding-top:72px;padding-bottom:80px;max-width:960px}
+.ai-seo-faq h2{font-family:var(--font-serif),Georgia,serif;font-size:clamp(30px,4vw,44px);font-weight:500;line-height:1.12;margin:0 0 30px}
+.ai-seo-faq article{padding:24px 0;border-top:1px solid var(--line)}
+.ai-seo-faq h3{font-size:17px;line-height:1.5;margin:0 0 12px}
+.ai-seo-faq p:not(.eyebrow){font-size:14px;line-height:1.85;margin:0;max-width:850px}
+.ai-seo-faq a{color:inherit;text-underline-offset:3px}
+.ai-seo-faq a:hover{color:var(--forest2)}
+@media(max-width:620px){.ai-seo-faq{padding-top:48px;padding-bottom:52px}.ai-seo-faq h3{font-size:16px}}
