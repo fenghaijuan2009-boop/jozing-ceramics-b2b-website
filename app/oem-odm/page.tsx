@@ -42,6 +42,7 @@ export default function OemOdmPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <SiteHeader />
+      <h1 style={{ position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clipPath: "inset(50%)", whiteSpace: "nowrap", border: 0 }}>OEM/ODM Ceramic Tableware</h1>
       <section className="shell stock-category-content">
         <div className="product-grid">{oemProducts.filter(product => oemBakewareCodes.includes(product.code)).map(product => <ProductCard key={product.code} item={product} category="oem-bakeware" />)}</div>
         <h2 style={{ marginTop: "3rem" }}>Tableware, Cups &amp; Serving Collections</h2>
