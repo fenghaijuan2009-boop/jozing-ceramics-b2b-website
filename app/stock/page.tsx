@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { ProductCard } from "../product-card";
 import { stockLots } from "../page";
 import { productSlug } from "../product-utils";
-import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
+import { SiteFooter, SiteHeader } from "../site-shell";
 import { CatalogLink } from "./catalog-link";
 
 export const metadata: Metadata = {
@@ -18,11 +18,7 @@ export default function StockPage() {
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <SiteHeader />
-      <PageHero
-        eyebrow="CURRENT READY STOCK"
-        title="All Ready stock"
-        intro="Browse all published ready-stock ceramic products. View product photos, wholesale prices and minimum order quantities, then contact us to confirm availability."
-      />
+      <h1 style={{ position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clipPath: "inset(50%)", whiteSpace: "nowrap", border: 0 }}>Ready Stock Ceramic Tableware</h1>
       <section className="shell stock-category-content">
         <ProcurementNav /><CatalogLink />
         <nav className="stock-buying-nav" aria-label="Popular wholesale categories"><a href="/stock/ceramic-mug-cup/">Wholesale ceramic mugs</a><a href="/stock/hot-sale-by-ton-carton/">Stock lots by ton & carton</a><a href="/stock/dinner-set-tableware/">Ready-stock dinnerware</a></nav><p>{stockLots.length} ready-stock products</p>
