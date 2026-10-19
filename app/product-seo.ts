@@ -1,4 +1,6 @@
 export const productSeoTitles: Record<string, string> = {
+  "JZ-A1601764351805": "White Ribbed Porcelain Plates & Bowls Wholesale | JOZING",
+  "JZ-A1601758727785": "3-Piece Ribbed Ceramic Dinnerware Set Wholesale | JOZING",
   "JZ-A1601758843227": "Oval Ceramic Baking Dish Set Wholesale | Strawberry Floral | JOZING",
   "JZ-A11000038799156": "Blue & White Ceramic Baking Dish Set Wholesale | OEM | JOZING",
   "STOCK · 09": "White 12oz Ceramic Mugs Wholesale | JOZING",

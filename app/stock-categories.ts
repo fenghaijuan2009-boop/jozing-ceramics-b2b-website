@@ -1,4 +1,9 @@
 import { oemProductCodes } from "./product-classification";
+const oct19CategoryCodes: Record<string, string[]> = {
+  "dinner-set-tableware": ["JZ-A1601764351805", "JZ-A1601758727785"],
+  "ceramic-plates": ["JZ-A1601764351805", "JZ-A1601758727785"],
+  "ceramic-bowl": ["JZ-A1601764351805", "JZ-A1601758727785"],
+};
 const oct15CategoryCodes: Record<string, string[]> = {
   "dinner-set-tableware": ["JZ-A1601682648513", "JZ-A1601757506179", "JZ-A1601764290018"],
   "hot-sale-by-ton-carton": ["JZ-A1601682648513"],
@@ -19,5 +24,5 @@ export const stockCategories = [
   { slug: "ceramic-canister-jar", name: "Storage & Utensil Holders", codes: ["JZ-A11000037735085", "JZ-A1600154684883"] },
   { slug: "ceramic-decoration-vase", name: "Ceramic Decoration & Vase", codes: ["JZ-A1601771195975", "JZ-A11000037735085", "JZ-A1601930734277", ] },
   { slug: "ungrouped", name: "Ungrouped", codes: ["STOCK · 07"] },
-].map(category => ({ ...category, codes: [...new Set([...(oct15CategoryCodes[category.slug] ?? []), ...category.codes])].filter(code => !oemProductCodes.includes(code)) }));
+].map(category => ({ ...category, codes: [...new Set([...(oct19CategoryCodes[category.slug] ?? []), ...(oct15CategoryCodes[category.slug] ?? []), ...category.codes])].filter(code => !oemProductCodes.includes(code)) }));
 

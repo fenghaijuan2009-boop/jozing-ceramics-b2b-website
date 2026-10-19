@@ -5,6 +5,7 @@ import { oct12OemProducts } from "./imported-oem-products-oct12";
 import { HeroImage } from "./hero-image";
 import { oct8StockProducts } from "./imported-stock-products-oct8";
 import { oct15StockProducts } from "./imported-stock-products-oct15";
+import { oct19StockProducts } from "./imported-stock-products-oct19";
 import { sep28StockProducts } from "./imported-stock-products-sep28";
 import { ProcurementNav } from "./procurement-nav";
 import { sep21StockProducts } from "./imported-stock-products-sep21";
@@ -59,6 +60,7 @@ export type StockLot = {
 };
 
 export const allProducts: StockLot[] = [
+  ...oct19StockProducts,
   ...oct15StockProducts,
   ...oct12OemProducts,
   ...oct8StockProducts,
