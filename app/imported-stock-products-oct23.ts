@@ -1,0 +1,35 @@
+import type { StockLot } from "./page";
+
+// Alibaba 11000036308030: both listed sizes verified on 23 October 2026.
+export const oct23StockProducts: StockLot[] = [{
+  code: "JZ-A11000036308030",
+  name: "Colorful Rectangular Ceramic Serving Platter With Curved Handles",
+  type: "Colorful Rectangular Ceramic Serving Platter With Curved Handles",
+  pack: "Sold by piece",
+  stock: "200 pieces",
+  priceLabel: "Price / piece",
+  tiers: [{ price: "$0.90", quantity: "≥200 pieces" }],
+  material: "Ceramic",
+  size: "14 inch or 15.9 inch",
+  colors: "Yellow, red, orange, gray and sage green",
+  oemOdm: true,
+  description: "Bring color to appetizers, desserts and shared dishes with a glossy rectangular ceramic serving platter. Raised edges and curved side handles make it a practical choice for restaurant, hotel and home table settings. Choose 14-inch or 15.9-inch sizes in five colors. Both listed sizes are US$0.90 per piece, with a minimum order of 200 pieces. Confirm the available size and color mix, export packing and shipping quotation before ordering.",
+  image: "/products/oct23-11000036308030/main-01.webp",
+  gallery: Array.from({ length: 6 }, (_, index) => `/products/oct23-11000036308030/main-${String(index + 1).padStart(2, "0")}.webp`),
+  specifications: [
+    { label: "Alibaba product ID", value: "11000036308030" },
+    { label: "Model number", value: "2026102001" },
+    { label: "Brand", value: "JOZING" },
+    { label: "Place of origin", value: "Guangdong, China" },
+    { label: "Shape / style", value: "Rectangular / modern" },
+    { label: "Finish", value: "Glossy colored glaze" },
+    { label: "Design", value: "Raised edges and curved side handles" },
+    { label: "Sizes", value: "14 inch and 15.9 inch; confirm exact dimensions for the selected size" },
+    { label: "Wholesale price", value: "US$0.90 per piece for either listed size; minimum order 200 pieces" },
+    { label: "Listed single package size", value: "36 × 22 × 3 cm; confirm packaging for the selected size" },
+    { label: "Listed single gross weight", value: "1.11 kg; confirm weight for the selected size" },
+    { label: "Uses", value: "Appetizers, desserts, snacks and pastries for homes, hotels and restaurants" },
+    { label: "Customization", value: "OEM/ODM available; confirm logo, packing, MOQ and lead time with your quotation" },
+    { label: "Shipping", value: "Shipping fee and delivery date to be agreed for the order" },
+  ],
+}];
