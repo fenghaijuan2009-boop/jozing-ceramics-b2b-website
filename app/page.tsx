@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { testReports } from "../lib/test-reports";
 import "./home-clearance-faq.css";
 import { FactoryMenu } from "./factory-menu";
 import { oct12OemProducts } from "./imported-oem-products-oct12";
@@ -1587,6 +1589,14 @@ export default function Home() {
       <section className="capabilities"><div className="shell trust-facts"><div><strong>6,000<span>m²</span></strong><small>Factory & warehouse</small></div><div><strong>COC</strong><small>Compliance support</small></div><div><strong>RoHS</strong><small>Compliance support</small></div><div><strong>Global</strong><small>Export markets</small></div></div><div className="shell capability-main"><div className="cap-title"><p className="eyebrow">BUILT FOR B2B BUYERS</p><h2>More than a supplier.<br/>A practical sourcing partner.</h2></div><div className="cap-list">{capabilities.map(([n,t,d]) => <article key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div></div></section>
 
       <section className="about shell" id="about"><div className="about-label"><p className="eyebrow">ABOUT JOZING</p><span>CHAOZHOU · CHINA</span></div><blockquote>“We combine the value of ready stock with the discipline of ceramic manufacturing—helping buyers move faster without giving up choice.”</blockquote></section>
+
+      <section className="shell" aria-labelledby="test-reports-title" style={{paddingTop:40,paddingBottom:48}}>
+        <p className="eyebrow">LABORATORY DOCUMENTS</p>
+        <h2 id="test-reports-title">Food-contact testing, with the details available.</h2>
+        <p style={{maxWidth:800,lineHeight:1.8,marginTop:16}}>Read the SGS and ZTS reports issued in 2023 for identified ceramic samples. These documents cover the submitted samples and test conditions; confirm applicability to your selected product and destination market.</p>
+        <ul style={{lineHeight:2,marginTop:20}}>{testReports.map(report=><li key={report.id}><a href={report.file}>{report.title} — {report.id} (PDF)</a></li>)}</ul>
+        <Link className="btn primary" style={{marginTop:20}} href="/factory/test-reports/">View Test Reports &amp; Scope →</Link>
+      </section>
 
       <section className="client-proof home-client-proof"><div className="shell"><div className="client-proof-head"><div><p className="eyebrow">SELECTED CLIENT COOPERATION</p><h2>Experience supporting international buyers and brands.</h2></div><p>Reference logos supplied by JOZING are shown with a clear ownership and endorsement disclaimer.</p></div><figure><img src="/jozing-selected-client-brands.png" width="1525" height="430" loading="lazy" alt="Selected customer and brand cooperation references supplied by JOZING"/><figcaption>Selected cooperation references supplied by JOZING. All logos remain the property of their respective owners; display does not imply endorsement or an ongoing exclusive relationship.</figcaption></figure></div></section>
       <section className="contact" id="contact"><div className="shell contact-grid"><div><p className="eyebrow">START A CONVERSATION</p><h2>What are you<br/>sourcing next?</h2><p>Tell us whether you need ready stock, a mixed container or a custom ceramic collection. Your completed brief will be carried into WhatsApp or email.</p><div className="contact-pills"><span>Ready stock</span><span>Mixed container</span><span>OEM/ODM</span></div><address><span>WhatsApp</span><a href="https://wa.me/8617825907898" target="_blank" rel="noreferrer">+8617825907898</a><span>Email</span><a href="mailto:sales_b2b@jozing.cn">sales_b2b@jozing.cn</a><span>Address</span><p>No. 3, Gubantou Village, Chao&apos;an District, Chaozhou, Guangdong, China</p></address></div><InquiryForm compact /></div></section>

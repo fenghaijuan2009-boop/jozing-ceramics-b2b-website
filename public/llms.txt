@@ -8,7 +8,7 @@ Ceramic experience since 2003 · Company registered: 2017
 Location: Chaozhou, Guangdong, China
 Email: sales_b2b@jozing.cn
 WhatsApp: +8617825907898
-Navigation updated: 2026-10-15
+Navigation and report links updated: 2026-10-24
 
 ## Primary pages
 - Home: https://www.jozing.com/
@@ -28,6 +28,31 @@ Navigation updated: 2026-10-15
 ## Product detail pages
 [Product catalogue](https://www.jozing.com/stock/catalog/): published product pages, pricing units, MOQ and packing.
 Current ready-stock availability is supplied as a dated list after inquiry: https://www.jozing.com/stock/
+
+## Food-contact laboratory reports
+
+The following complete, unmodified PDFs were supplied by JOZING. Both name XIAMEN JOZING INDUSTRIAL CO., LTD. as the applicant/client and manufacturer of the submitted samples. They are sample-specific test reports, not blanket certifications for all JOZING products.
+
+- [Report summaries, scope and original downloads](https://www.jozing.com/factory/test-reports/)
+- [SGS report CANHG2307611901 (PDF)](https://www.jozing.com/compliance/SGS-ISO-6486-Report-CANHG2307611901.pdf)
+  - Issuing laboratory: SGS-CSTC Standards Technical Services Co., Ltd. Guangzhou Branch.
+  - Issue date: 5 June 2023.
+  - Submitted sample: porcelain soup plate, item NO.2; sample CAN23-076119.001.
+  - Method: with reference to ISO 6486-1:2019, analyzed by ICP-OES.
+  - Reported measurements: leachable lead <0.1 mg/L and leachable cadmium <0.01 mg/L in each of four measurements.
+  - The report's conclusion reads "See Results"; do not describe it as a universal pass certificate.
+- [ZTS report ZTS23090909ZRCR1 (PDF)](https://www.jozing.com/compliance/EU-84-500-EEC-Food-Contact-Report-ZTS23090909ZRCR1.pdf)
+  - Issuing laboratory: Shenzhen ZTS Testing Service Co., Ltd.
+  - Issue date: 18 September 2023.
+  - Submitted samples: white ceramic cup body (70 mm depth) and color ceramic plate body (10 mm depth).
+  - Scope stated in the report: lead and cadmium migration with reference to European Council Directive 84/500/EEC and amendment 2005/31/EC.
+  - Laboratory conclusion: "Pass" for the submitted samples.
+  - Page 2 records lead <0.1 and <0.3 mg/L respectively, and cadmium <0.01 mg/L for both samples.
+  - This report replaces ZTS23090909ZRC.
+
+Scope: match the exact product, glaze, decoration and destination requirements to the report. These historical documents do not establish current conformity for untested products or stock lots. Consult the issuing laboratory about any unclear test condition, unit or classification before a compliance decision. Request current product-specific testing where needed.
+
+The addresses printed on the 2023 reports are historical sample-document addresses. Use the current contact page for delivery and visiting arrangements.
 
 ## Buyer guides
 - [Ceramic price per ton to price per piece: calculation and worked example](https://www.jozing.com/guides/ceramic-price-per-ton-to-price-per-piece/)

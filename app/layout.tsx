@@ -1,4 +1,5 @@
 import { InquiryTracking } from "./inquiry-tracking";
+import { reportStructuredData } from "../lib/test-reports";
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const analyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-43Z67R5H54";
   const organization = { "@context": "https://schema.org", "@type": "Organization", "@id": "https://www.jozing.com/#organization", name: "Xiamen Jozing Industrial Co., Ltd.", alternateName: ["JOZING", "JOZING Ceramics"], url: "https://www.jozing.com/", logo: { "@type": "ImageObject", url: "https://www.jozing.com/jozing-logo.png", width: 240, height: 241 }, image: "https://www.jozing.com/og.png", foundingDate: "2017", description: "China ceramic tableware supplier with ceramic experience since 2003, supporting ready-stock clearance lots and OEM/ODM manufacturing for global B2B buyers.", slogan: "Tableware supply, made flexible.", knowsAbout: ["ceramic tableware", "porcelain dinnerware", "ready-stock ceramic lots", "ceramic tableware OEM", "ceramic tableware ODM", "ceramic export packing"], areaServed: "Worldwide", sameAs: ["https://www.youtube.com/@jozingstockceramic", "https://www.facebook.com/haijuan.feng", "https://www.instagram.com/jozingstockceramic"], address: { "@type": "PostalAddress", streetAddress: "No. 3, Gubantou Village, Chao'an District", addressLocality: "Chaozhou", addressRegion: "Guangdong", addressCountry: "CN" }, contactPoint: { "@type": "ContactPoint", telephone: "+8617825907898", email: "sales_b2b@jozing.cn", contactType: "sales", areaServed: "Worldwide", availableLanguage: ["English", "Chinese"] } };
+  const organizationWithReports = { ...organization, legalName: "Xiamen Jozing Industrial Co., Ltd.", subjectOf: reportStructuredData };
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -42,5 +44,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     publisher: { "@id": "https://www.jozing.com/#organization" },
     inLanguage: "en",
   };
-  return <html lang="en"><head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organization)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(website)}}/></head><body className={`${sans.variable} ${serif.variable}`}>{children}<InquiryTracking />{analyticsId && /^G-[A-Z0-9]+$/.test(analyticsId) ? <SiteAnalytics measurementId={analyticsId} /> : null}</body></html>;
+  return <html lang="en"><head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organizationWithReports)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(website)}}/></head><body className={`${sans.variable} ${serif.variable}`}>{children}<InquiryTracking />{analyticsId && /^G-[A-Z0-9]+$/.test(analyticsId) ? <SiteAnalytics measurementId={analyticsId} /> : null}</body></html>;
 }
