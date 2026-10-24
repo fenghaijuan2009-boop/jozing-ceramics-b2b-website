@@ -1596,6 +1596,7 @@ export default function Home() {
         <p style={{maxWidth:800,lineHeight:1.8,marginTop:16}}>Read the SGS and ZTS reports issued in 2023 for identified ceramic samples. These documents cover the submitted samples and test conditions; confirm applicability to your selected product and destination market.</p>
         <ul style={{lineHeight:2,marginTop:20}}>{testReports.map(report=><li key={report.id}><a href={report.file}>{report.title} — {report.id} (PDF)</a></li>)}</ul>
         <Link className="btn primary" style={{marginTop:20}} href="/factory/test-reports/">View Test Reports &amp; Scope →</Link>
+        <p style={{marginTop:20}}><Link href="/supplier-profile/">Company facts, supply options &amp; buyer verification →</Link></p>
       </section>
 
       <section className="client-proof home-client-proof"><div className="shell"><div className="client-proof-head"><div><p className="eyebrow">SELECTED CLIENT COOPERATION</p><h2>Experience supporting international buyers and brands.</h2></div><p>Reference logos supplied by JOZING are shown with a clear ownership and endorsement disclaimer.</p></div><figure><img src="/jozing-selected-client-brands.png" width="1525" height="430" loading="lazy" alt="Selected customer and brand cooperation references supplied by JOZING"/><figcaption>Selected cooperation references supplied by JOZING. All logos remain the property of their respective owners; display does not imply endorsement or an ongoing exclusive relationship.</figcaption></figure></div></section>

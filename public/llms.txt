@@ -1,6 +1,6 @@
 # JOZING Ceramics
 
-> JOZING is a China-based ceramic tableware supplier supporting ready-stock clearance lots and OEM/ODM manufacturing for global B2B buyers.
+> JOZING is a China-based ceramic tableware supplier supporting ready-stock clearance lots and custom OEM/ODM sourcing for global B2B buyers.
 
 Canonical website: https://www.jozing.com/
 Company: Xiamen Jozing Industrial Co., Ltd.
@@ -10,10 +10,14 @@ Email: sales_b2b@jozing.cn
 WhatsApp: +8617825907898
 Navigation and report links updated: 2026-10-24
 
+## Full reference
+- [Full supplier, procurement and product reference](https://www.jozing.com/llms-full.txt): company facts, sample-specific laboratory results, two complete buying guides and the published product catalogue in plain text. Generated from the same data used on the website.
+- Publisher: JOZING. Company statements are distinguished from independent laboratory findings. Published commercial information must be reconfirmed for the actual order.
+
 ## Primary pages
 - Home: https://www.jozing.com/
 - [About](https://www.jozing.com/about/)
-- [Verified supplier profile](https://www.jozing.com/supplier-profile/)
+- [Supplier facts and original test reports](https://www.jozing.com/supplier-profile/)
 - [OEM/ODM ceramic tableware](https://www.jozing.com/oem-odm/)
 - [Custom ceramic bakeware](https://www.jozing.com/oem-odm/bakeware/)
 - [JOZING culture and core values](https://www.jozing.com/factory/culture/)
@@ -82,7 +86,7 @@ The addresses printed on the 2023 reports are historical sample-document address
 - OEM/ODM: shape, glaze, decal, logo and packaging development, subject to sampling, MOQ and order confirmation.
 
 ## Key facts
-- Ceramic heritage since 2003; company registered 2017; factory and warehouse in Chaozhou, Guangdong, China.
+- Ceramic experience since 2003; company registered 2017; facility and warehouse in Chaozhou, Guangdong, China. These company facts are published by JOZING.
 - OEM/ODM enquiries cover shape, glaze, decoration, logo and packaging; confirm the production scope for the actual order.
 - Supports mixed loading, container planning, third-party inspection and destination-market compliance documents (COC, RoHS, food-contact).
 - Selling units: piece, set, carton, pallet, ton, container — tiered pricing by quantity.

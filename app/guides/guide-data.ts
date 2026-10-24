@@ -1,3 +1,6 @@
+import { evidenceGuideUpdates } from "./evidence-updates";
+import { supplierFactsUpdated } from "../../lib/supplier-facts";
+
 export type Guide = { slug: string; title: string; description: string; updated: string; published?: string; readTime: string; relatedLinks?: { href: string; label: string }[]; sections: { heading: string; paragraphs: string[]; bullets?: string[] }[] };
 
 const baseGuides: Guide[] = [
@@ -248,4 +251,19 @@ const buyingGuideUpdates: Record<string, Pick<Guide, "sections" | "relatedLinks"
     ]
   }
 };
-export const guides: Guide[] = baseGuides.map(guide => { const update = buyingGuideUpdates[guide.slug]; return update ? { ...guide, published: guide.updated, updated: "2026-09-12", sections: [...guide.sections, ...update.sections], relatedLinks: [...(update.relatedLinks ?? []), { href: "/stock/catalog/", label: "Download the Ready Stock procurement catalogue & calculate carton volume" }] } : guide; });
+export const guides: Guide[] = baseGuides.map(guide => {
+  const update = buyingGuideUpdates[guide.slug];
+  const current = update ? {
+    ...guide, published: guide.updated, updated: "2026-09-12",
+    sections: [...guide.sections, ...update.sections],
+    relatedLinks: [...(update.relatedLinks ?? []), { href: "/stock/catalog/", label: "Download the Ready Stock procurement catalogue & calculate carton volume" }],
+  } : guide;
+  const evidence = evidenceGuideUpdates[guide.slug];
+  return evidence ? {
+    ...current,
+    published: current.published ?? current.updated,
+    updated: supplierFactsUpdated,
+    sections: [...current.sections, ...evidence.sections],
+    relatedLinks: [...new Map([...(current.relatedLinks ?? []), ...(evidence.relatedLinks ?? [])].map(link => [link.href, link])).values()],
+  } : current;
+});

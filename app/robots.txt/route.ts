@@ -17,6 +17,7 @@ export function GET() {
     ...groups,
     "Sitemap: https://www.jozing.com/sitemap.xml",
     "# LLMs Guide: https://www.jozing.com/llms.txt",
+    "# Full reference: https://www.jozing.com/llms-full.txt",
     "",
   ].join("\n\n");
   return new Response(text, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
