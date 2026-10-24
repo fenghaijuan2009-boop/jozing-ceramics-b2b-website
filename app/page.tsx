@@ -20,7 +20,7 @@ import { InquiryForm } from "./inquiry-form";
 import { preload } from "react-dom";
 import { ProductCard } from "./product-card";
 
-const homeTitle = "Wholesale Clearance Ceramic Tableware | Cheap Stocklot Porcelain Factory - JOZING";
+const homeTitle = "Wholesale Clearance Ceramic Tableware & Stocklots | JOZING";
 const homeDescription = "Source JOZING clearance ceramic tableware from China. Selected items from $0.15/pc; bulk stocklots by ton or container. Confirm current stock, MOQ and shipping.";
 export const metadata: Metadata = {
   title: homeTitle,
