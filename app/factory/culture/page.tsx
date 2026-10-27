@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader, SiteFooter } from "../../site-shell";
 import styles from "./page.module.css";
@@ -22,7 +23,7 @@ export default function CulturePage() {
     <SiteHeader />
     <main className={styles.page}>
       <header className={styles.intro}>
-        <nav className={styles.breadcrumb} aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/#factory">Factory</a><span>/</span><span>Our Culture</span></nav>
+        <nav className={styles.breadcrumb} aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/#factory">Factory</Link><span>/</span><span>Our Culture</span></nav>
         <p className={styles.label}>THE JOZING PHILOSOPHY</p>
         <h1>Corporate Culture<br />&amp; Core Values</h1>
         <div className={styles.rule} aria-hidden="true" />
@@ -40,7 +41,7 @@ export default function CulturePage() {
         <div className={styles.valuesHeading}><p className={styles.label}>WHAT WE STAND FOR</p><h2 id="values-title">Our Core Values</h2><p>Six principles that guide how we work and grow together.</p></div>
         <div className={styles.grid}>{values.map(([title, text], index) => <article className={styles.value} key={title}><span className={styles.number}>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
-      <section className={styles.closing}><p className={styles.label}>PUTTING OUR VALUES INTO PRACTICE</p><h2>A clear brief. A clear agreement.</h2><p>Our values guide how we aim to work with buyers: explain the selling unit and assortment, confirm packing and condition requirements, and identify which documents apply to the selected product. Use these details to agree the order in writing.</p><p><a href="/supplier-profile/">Review supplier facts →</a></p><p><a href="/factory/test-reports/">Read test reports and their scope →</a></p><a href="/contact/">Discuss your buying requirements <span aria-hidden="true">↗</span></a></section>
+      <section className={styles.closing}><p className={styles.label}>PUTTING OUR VALUES INTO PRACTICE</p><h2>A clear brief. A clear agreement.</h2><p>Our values guide how we aim to work with buyers: explain the selling unit and assortment, confirm packing and condition requirements, and identify which documents apply to the selected product. Use these details to agree the order in writing.</p><p><Link href="/supplier-profile/">Review supplier facts →</Link></p><p><Link href="/factory/test-reports/">Read test reports and their scope →</Link></p><Link href="/contact/">Discuss your buying requirements <span aria-hidden="true">↗</span></Link></section>
     </main>
     <SiteFooter />
   </>;

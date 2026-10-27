@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ProcurementNav } from "../../procurement-nav";
 import type { Metadata } from "next";
 import { ProductCard } from "../../product-card";
@@ -34,7 +35,7 @@ export default async function CategoryPage({ params }: Props) {
   const itemListSchema = { "@context": "https://schema.org", "@type": "ItemList", name: `JOZING ${item.name}`, numberOfItems: products.length, itemListElement: products.map((product, index) => ({ "@type": "ListItem", position: index + 1, name: product.name, url: `https://www.jozing.com/products/${productSlug(product.name)}/` })) };
   return <main><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} /><SiteHeader /><PageHero eyebrow="READY STOCK" title={buying ? buying.title.split(" | ")[0] : item.name} intro={buying?.intro ?? "Explore our selected ceramic stock lots. Confirm current availability and packing before ordering."} />
     <section className="shell stock-category-content">
-      <p><a href="/">Home</a> / <a href="/stock/">Ready Stock</a> / {item.name}</p>
+      <p><Link href="/">Home</Link> / <Link href="/stock/">Ready Stock</Link> / {item.name}</p>
       <ProcurementNav current={`/stock/${item.slug}/`} />{buying && <CatalogLink />}
       <CategoryBuyingChecklist category={item.slug} />
       {buying?.selections && <BuyingComparison category={item.name} sourcePath={`/stock/${item.slug}/`} title={buying.selections.title} description={buying.selections.description} products={buying.selections.codes.flatMap(code => { const product = products.find(p => p.code === code); return product ? [product] : []; })} />}

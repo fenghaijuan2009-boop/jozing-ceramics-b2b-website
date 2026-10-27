@@ -69,7 +69,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     <section className="product-detail shell" data-product-code={product.code} data-product-name={product.name} data-product-category={categoryName}>
       <div className="product-detail-media"><ProductGallery images={images} productName={product.name} /></div>
       <div className="product-detail-copy">
-        <nav className="breadcrumbs"><a href="/">Home</a><span>/</span><a href={categoryUrl}>{categoryName}</a><span>/</span><b>{product.code}</b></nav>
+        <nav className="breadcrumbs"><Link href="/">Home</Link><span>/</span><a href={categoryUrl}>{categoryName}</a><span>/</span><b>{product.code}</b></nav>
           <p className="eyebrow">{isOem ? "OEM / ODM" : "READY STOCK"} · {product.code}</p><h1>{product.name}</h1>
           {product.tiers ? <div className="detail-prices"><h2>{product.priceLabel ?? "Tier pricing"}</h2>{product.tiers.map((tier) => <div key={tier.quantity}><strong>{tier.price}</strong><span>{tier.quantity}</span></div>)}</div> : null}
         <div className="product-quote-actions"><a className="btn primary" href={inquiryUrl}>Request a quote</a><a className="btn text" href={whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div>
@@ -108,7 +108,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </article>)}</div>
     </section>
     <section className="product-evidence"><div className="shell"><h2>Information buyers should confirm</h2><div className="evidence-grid"><article><b>01</b><h3>{isOem ? "Custom design" : "Current lot"}</h3><p>{isOem ? "Confirm shape, decoration, logo, sample requirements and production lead time." : "Ask for dated photos, available quantity and the exact assortment included."}</p></article><article><b>02</b><h3>Packing list</h3><p>Confirm pieces per carton, carton dimensions, gross weight and CBM.</p></article><article><b>03</b><h3>Quality standard</h3><p>Agree inspection criteria, acceptable variation and compliance documents for your market.</p></article></div></div></section>
-    <section className="page-cta"><div className="shell"><p className="eyebrow">BUY WITH CURRENT INFORMATION</p><h2>{isOem ? "Discuss your custom collection and production plan." : "Request the latest packing list and availability."}</h2><div><a className="btn primary" href={inquiryUrl}>Contact JOZING</a><a className="btn text" href="/guides">Read buyer guides →</a></div></div></section>
+    <section className="page-cta"><div className="shell"><p className="eyebrow">BUY WITH CURRENT INFORMATION</p><h2>{isOem ? "Discuss your custom collection and production plan." : "Request the latest packing list and availability."}</h2><div><a className="btn primary" href={inquiryUrl}>Contact JOZING</a><Link className="btn text" href="/guides">Read buyer guides →</Link></div></div></section>
     <SiteFooter />
   </main>;
 }

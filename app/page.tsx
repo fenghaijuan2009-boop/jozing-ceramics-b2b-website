@@ -1560,7 +1560,7 @@ export default function Home() {
         </article>
         <article>
           <h3>3. How fast can JOZING ship clearance ceramic stocklots?</h3>
-          <p>Dispatch timing depends on available stock, order quantity, inspection, packing and the shipping booking. Send your product references, quantity, destination port and required delivery date so we can confirm the packing and container-loading schedule in your quotation. OEM/ODM products require a separate production schedule. <a href="/contact/">Request a stock and shipping quotation</a>.</p>
+          <p>Dispatch timing depends on available stock, order quantity, inspection, packing and the shipping booking. Send your product references, quantity, destination port and required delivery date so we can confirm the packing and container-loading schedule in your quotation. OEM/ODM products require a separate production schedule. <Link href="/contact/">Request a stock and shipping quotation</Link>.</p>
         </article>
       </section>
 
