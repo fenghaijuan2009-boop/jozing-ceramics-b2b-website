@@ -164,8 +164,8 @@ const buyingGuideUpdates: Record<string, Pick<Guide, "sections" | "relatedLinks"
   "ceramic-container-loading-guide": {
     "relatedLinks": [
       {
-        "href": "/products/wholesale-ready-stock-ceramic-coffee-mug-cute-3d-porcelain-cups/",
-        "label": "Source: cute 3D mug carton specifications"
+        "href": "/stock/ceramic-mug-cup/",
+        "label": "Browse current ceramic mug listings"
       },
       {
         "href": "/stock/ceramic-mug-cup/",
@@ -181,7 +181,7 @@ const buyingGuideUpdates: Record<string, Pick<Guide, "sections" | "relatedLinks"
         "heading": "How do you calculate carton volume and piece count?",
         "paragraphs": [
           "Carton CBM = length × width × height in metres. Multiply that volume by the carton count; calculate gross weight and piece quantity separately. Do not substitute net product weight for the packed shipping weight.",
-          "A current JOZING cute 3D mug listing specifies 54 pieces per carton, 62 × 35 × 33 cm and 24–25 kg per carton. The dimensions calculate to 0.07161 CBM; the listing rounds this to 0.07 CBM. Use unrounded dimensions for planning and reconfirm the final packed carton.",
+          "For an illustrative calculation, assume 54 pieces per carton, 62 × 35 × 33 cm and 24–25 kg per carton. These dimensions calculate to 0.07161 CBM, or approximately 0.07 CBM. These are example inputs, not a current product offer. Use the selected product's confirmed carton specifications for your order.",
           "An illustrative 100-carton shipment using those figures contains 5,400 mugs, occupies approximately 7.161 CBM before pallets or bracing, and weighs 2,400–2,500 kg. This is a calculation example, not a confirmed loading capacity or stock reservation."
         ]
       },
