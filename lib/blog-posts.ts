@@ -505,7 +505,7 @@ export const blogPosts: BlogPost[] = [
         h2: "What buyers should request from a supplier",
         paragraphs: [
           "A practical compliance checklist for sourcing dinnerware from China: (1) lab test report for lead/cadmium migration per your market (FDA, LFGB or Prop 65), (2) confirmation that all food-contact surfaces use food-safe glaze, (3) for decorated items, overglaze firing confirmation, (4) factory registration and ISO quality systems, and (5) product-level test coverage for your specific order.",
-          "JOZING's porcelain lines are manufactured with lead-free glazes and tested for microwave and dishwasher safety; our team can discuss COC and RoHS compliance support for your destination market. Send your market and test requirements with your inquiry.",
+          "JOZING publishes SGS and ZTS laboratory reports for identified ceramic samples. Check the report number, tested item, glaze, decoration and test conditions against your chosen product and destination requirements. These reports do not certify every current stock lot or establish microwave and dishwasher suitability; request product-specific evidence where needed.",
         ],
       },
     ],
