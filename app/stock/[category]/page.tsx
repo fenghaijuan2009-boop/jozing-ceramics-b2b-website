@@ -1,3 +1,4 @@
+import { MugLoadingPlan } from "../mug-loading-plan";
 import Link from "next/link";
 import { ProcurementNav } from "../../procurement-nav";
 import type { Metadata } from "next";
@@ -40,5 +41,5 @@ export default async function CategoryPage({ params }: Props) {
       <CategoryBuyingChecklist category={item.slug} />
       {buying?.selections && <BuyingComparison category={item.name} sourcePath={`/stock/${item.slug}/`} title={buying.selections.title} description={buying.selections.description} products={buying.selections.codes.flatMap(code => { const product = products.find(p => p.code === code); return product ? [product] : []; })} />}
       {products.length ? <div className="product-grid">{products.map(product => <ProductCard key={product.code} item={product} category={item.slug} />)}</div> : <div className="category-empty"><h2>Ask for current options</h2><p>Products in this category have not yet been published. Contact us for current photos, specifications and availability.</p><a className="btn primary" href={`/contact/?product=${encodeURIComponent(item.name)}&source=${encodeURIComponent(`/stock/${item.slug}/`)}`}>Request this category</a></div>}
-    </section>{buying && <section className="shell buying-guide" aria-labelledby="buying-heading"><h2 id="buying-heading">Buying {item.name.toLowerCase()} from JOZING</h2>{buying.questions.map(({question,answer}) => <article key={question}><h3>{question}</h3><p>{answer}</p></article>)}<div className="buying-links"><a href={`/guides/${buying.guide}/`}>{buying.guideLabel} →</a><a className="btn primary" href={`/contact/?product=${encodeURIComponent(item.name)}`}>Request availability & packing list</a></div></section>}<SiteFooter /></main>;
+    </section>{item.slug === "ceramic-mug-cup" && <MugLoadingPlan />}{buying && <section className="shell buying-guide" aria-labelledby="buying-heading"><h2 id="buying-heading">Buying {item.name.toLowerCase()} from JOZING</h2>{buying.questions.map(({question,answer}) => <article key={question}><h3>{question}</h3><p>{answer}</p></article>)}<div className="buying-links"><a href={`/guides/${buying.guide}/`}>{buying.guideLabel} →</a><a className="btn primary" href={`/contact/?product=${encodeURIComponent(item.name)}`}>Request availability & packing list</a></div></section>}<SiteFooter /></main>;
 }

@@ -291,3 +291,13 @@ body{background:#fbfaf6;color:#0d2b22}.topbar{background:#071e18;color:#d8e5df;b
 
 .nav .brand-logo img,.footer-logo img{width:100%;height:44px;object-fit:cover;object-position:center}
 .rfq-form .inquiry-email-button{background:transparent;color:var(--ink);height:auto;min-height:44px;border:1px solid var(--line);border-radius:6px;padding:12px 16px;font-size:14px}.rfq-form small{font-size:12px;line-height:1.7}
+
+/* Contextual buying paths for procurement articles. */
+.blog-sourcing-callout{margin:1.75rem 0;padding:1.5rem;background:#eef3ef;border:1px solid #cbd8cf;border-left:4px solid #1d5140;border-radius:12px;color:#16362c}
+.blog-sourcing-callout h2{font-size:1.3rem;line-height:1.35;margin:.5rem 0 .8rem}
+.blog-sourcing-callout>p:not(.eyebrow){font-size:1rem;line-height:1.7;color:#374e45;margin:0 0 1rem}
+.blog-sourcing-callout nav,.sourcing-actions{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;align-items:center}
+.blog-sourcing-callout nav a{font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.sourcing-actions{margin-top:1.2rem}
+.mug-loading-plan>p>a{text-decoration:underline}
+@media(max-width:620px){.blog-sourcing-callout{padding:1.1rem}.blog-sourcing-callout nav{align-items:flex-start;flex-direction:column}.sourcing-actions .btn{white-space:normal;text-align:center}}

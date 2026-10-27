@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+import { SourcingCallout, sourcingCalloutSlugs, sourcingCalloutUpdated } from "../sourcing-callout";
 import { BuyerNextStep, buyerNextStepSlugs } from "../buyer-next-step";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -44,13 +46,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     return product ? [product] : [];
   });
 
+  const hasSourcingCallout = sourcingCalloutSlugs.includes(slug);
+  const paragraphOffsets = post.sections.map((_, index) => post.sections.slice(0, index).reduce((sum, section) => sum + section.paragraphs.length, 0));
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    ...(buyerNextStepSlugs.includes(slug) ? { dateModified: "2026-09-24" } : relatedProducts.length ? { dateModified: blogProductLinksUpdated } : {}),
+    ...(hasSourcingCallout ? { dateModified: sourcingCalloutUpdated } : buyerNextStepSlugs.includes(slug) ? { dateModified: "2026-09-24" } : relatedProducts.length ? { dateModified: blogProductLinksUpdated } : {}),
     author: { "@type": "Organization", name: "JOZING Industrial Co., Ltd." },
     publisher: { "@type": "Organization", name: "JOZING Ceramics", url: "https://www.jozing.com/" },
     mainEntityOfPage: `https://www.jozing.com/blog/${post.slug}/`,
@@ -75,14 +80,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <SiteHeader />
       <article className="shell" style={{ maxWidth: "820px", paddingTop: "3rem", paddingBottom: "3rem" }}>
-        <p style={{ fontSize: "0.8rem", color: "#9ca3af", letterSpacing: "0.06em", textTransform: "uppercase", margin: "0 0 0.5rem" }}>{post.date} · {post.readingTime} · JOZING Export Team</p>
+        <p style={{ fontSize: "0.8rem", color: "#9ca3af", letterSpacing: "0.06em", textTransform: "uppercase", margin: "0 0 0.5rem" }}>{post.date}{hasSourcingCallout ? ` · Updated ${sourcingCalloutUpdated}` : ""} · {post.readingTime} · JOZING Export Team</p>
         <h1 style={{ fontSize: "clamp(1.7rem, 4vw, 2.4rem)", lineHeight: 1.25, margin: "0 0 1rem" }}>{post.title}</h1>
         <p style={{ fontSize: "1.05rem", color: "#4b5563", lineHeight: 1.7, margin: "0 0 2rem" }}>{post.description}</p>
-        {post.sections.map((section) => (
+        {post.sections.map((section, sectionIndex) => (
           <section key={section.h2} style={sectionStyle}>
             <h2 style={{ fontSize: "1.3rem", margin: "0 0 0.8rem" }}>{section.h2}</h2>
             {section.paragraphs.map((p, i) => (
-              <p key={i} style={pStyle}>{p}</p>
+              <Fragment key={i}><p style={pStyle}>{p}</p>{hasSourcingCallout && paragraphOffsets[sectionIndex] + i === 1 && <SourcingCallout slug={slug} placement="early" />}</Fragment>
             ))}
             {section.list && (
               <ul style={listStyle}>
@@ -115,16 +120,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </li>)}
           </ul>
         </section>}
-        <section className="page-cta" style={{ marginTop: "1rem" }}>
+        {hasSourcingCallout ? <SourcingCallout slug={slug} placement="end" /> : <section className="page-cta" style={{ marginTop: "1rem" }}>
           <div className="shell">
             <p className="eyebrow">READY TO SOURCE?</p>
             <h2 style={{ fontSize: "1.4rem" }}>Talk to our team about your order.</h2>
             <div>
-              <a className="btn primary" href="/contact">Request a quote</a>
-              <a className="btn text" href="/stock">Browse stock catalog →</a>
+              <Link className="btn primary" href="/contact/">Request a quote</Link>
+              <Link className="btn text" href="/stock/">Browse stock catalog →</Link>
             </div>
           </div>
-        </section>
+        </section>}
       </article>
       <SiteFooter />
     </main>
