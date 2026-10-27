@@ -36,14 +36,14 @@ export const buyingPages: Record<string, BuyingPage> = {
     ], guide: "ceramic-stock-lots-vs-regular-production", guideLabel: "Choose ready stock or repeatable production"
   },
   "ceramic-mug-cup": {
-    selections: { title: "Choose your wholesale mug assortment", description: "Compare white mugs for a simple range, colorful mugs for variety, and decorated 3D designs. Prices and MOQs below belong to each individual listing.", codes: ["STOCK · 09", "STOCK · 10", "JZ-A1601655571782"] },
+    selections: { title: "Choose your wholesale mug assortment", description: "Compare white mugs for a simple range and colorful textured mugs for variety. Prices and MOQs below belong to each individual listing.", codes: ["STOCK · 09", "STOCK · 10"] },
     title: "Wholesale Ceramic Mugs | Bulk Ready Stock | JOZING",
     description: "Compare ready-stock ceramic coffee mugs, listed MOQs and tier prices. Request current designs, carton quantities and export packing from JOZING.",
     intro: "Source assorted ceramic coffee mugs for wholesale, retail and promotional supply. Compare each listing's MOQ and price tiers, then request current designs and packing for your order.",
     questions: [
-      { question: "What is the minimum order for wholesale ceramic mugs?", answer: "MOQ depends on the listing and assortment. For example, our 12oz white mug collection and cute 3D mug collection list a starting MOQ of 1,000 pieces. This is not a category-wide minimum; confirm the selected product and mix before ordering." },
+      { question: "What is the minimum order for wholesale ceramic mugs?", answer: "MOQ depends on the listing and assortment. For example, our 12oz white mug collection lists a starting MOQ of 1,000 pieces. This is not a category-wide minimum; confirm the selected product and mix before ordering." },
       { question: "Can I mix mug designs in one order?", answer: "Send the product codes, preferred designs and quantities. We will confirm the available assortment, minimum quantity per design and whether the items can share a shipment. Ready-stock patterns may not be repeatable once sold." },
-      { question: "What packing details should I compare?", answer: "Compare pieces per carton, carton dimensions, gross weight and CBM alongside the piece price. The cute 3D mug listing specifies 54 pieces per carton, 62 × 35 × 33 cm and 24–25 kg per carton. Packing varies by product; request the final packing list." },
+      { question: "What packing details should I compare?", answer: "Compare pieces per carton, carton dimensions, gross weight and CBM alongside the piece price. Packing varies by product; request the final packing list." },
       { question: "Can I add my logo to bulk ceramic mugs?", answer: "Ready-stock decoration and custom production are separate options. Send your logo, placement, mug reference and quantity so we can check the decoration method, sample process and MOQ. A listed stock price does not include custom printing unless confirmed in the quotation." },
       { question: "Are all mugs microwave and dishwasher safe?", answer: "Check the individual product specification, especially for metallic decoration or special finishes. Do not assume one mug's care instructions apply to every design in an assorted lot." }
     ], guide: "ceramic-container-loading-guide", guideLabel: "Plan carton quantities and mixed loading"
