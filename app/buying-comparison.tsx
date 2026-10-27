@@ -8,11 +8,12 @@ export function BuyingComparison({ products, category, sourcePath, title, descri
     <p>{description ?? "Compare each offer in its own selling unit. Confirm the available assortment, packing and delivery date before ordering."}</p>
     <div className="buying-table-scroll" role="region" aria-label="Wholesale product comparison" tabIndex={0}>
       <table><caption>Selected {category.toLowerCase()}: specifications and starting order quantities</caption>
-        <thead><tr><th scope="col">Product</th><th scope="col">Size / capacity</th><th scope="col">Selling unit</th><th scope="col">Starting MOQ</th><th scope="col">Packing</th></tr></thead>
+        <thead><tr><th scope="col">Product</th><th scope="col">Size / capacity</th><th scope="col">Selling unit</th><th scope="col">Starting MOQ</th><th scope="col">Listed price tiers (USD)</th><th scope="col">Packing</th></tr></thead>
         <tbody>{products.map(product => <tr key={product.code}>
           <th scope="row"><a href={`/products/${productSlug(product.name)}/`}>{product.name}</a></th>
           <td>{product.capacity ?? product.size ?? "See product specifications"}</td>
           <td>{product.priceLabel ?? product.pack}</td><td>{product.stock}</td>
+          <td>{product.tiers?.length ? product.tiers.map(tier => <div key={tier.quantity}><strong>{tier.price}</strong> — {tier.quantity}</div>) : "Request a quotation"}</td>
           <td>{product.cartonQty ?? "Request carton quantity, dimensions and gross weight"}</td>
         </tr>)}</tbody>
       </table>

@@ -31,7 +31,9 @@ export default function TestReportsPage() {
       </section>)}</div>
       <aside className={styles.scope}><h2>Check the report against your order.</h2><p>{reportScope}</p>
         <p>The original PDFs are reproduced unchanged. For clarification of any test condition, unit or product classification in a report, consult the issuing laboratory before using it for a compliance decision.</p>
+        <h3>What to include in a document request</h3><ul><li>The product code, shape, glaze and decoration of your selected item.</li><li>Your destination market and intended food-contact use.</li><li>Whether the supplied report identifies the same sample, or fresh testing is needed.</li><li>The inspection and document requirements to include in your quotation.</li></ul>
         <Link href="/contact/" className="btn primary">Request Product-Specific Documents</Link>
+        <p><Link href="/stock/ceramic-plates/">Compare ceramic plates</Link> · <Link href="/stock/ceramic-mug-cup/">Compare ceramic mugs</Link> · <Link href="/supplier-profile/">Review supplier facts</Link></p>
       </aside>
     </article><SiteFooter />
   </main>;

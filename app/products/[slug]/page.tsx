@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ProductBuyingNotes } from "../../product-buying-notes";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -98,6 +99,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <h2>{section.title}</h2>
       <div className="product-description-images">{section.images.map(image => <a href={image.src} target="_blank" rel="noopener noreferrer" key={image.src} aria-label={`Open image: ${image.alt}`}><img src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" /></a>)}</div>
     </section>)}
+    <ProductBuyingNotes code={product.code} />
     <section className="related-products shell" aria-labelledby="related-products-title">
       <div className="related-products-head"><div><p className="eyebrow">KEEP EXPLORING</p><h2 id="related-products-title">More {categoryName.toLowerCase()} products</h2></div><Link href={categoryUrl}>View all {categoryName} →</Link></div>
       <div className="related-products-grid">{relatedProducts.map((item) => <article key={item.code}>

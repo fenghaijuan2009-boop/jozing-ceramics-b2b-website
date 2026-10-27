@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { testReports } from "../lib/test-reports";
 import "./home-clearance-faq.css";
-import { FactoryMenu } from "./factory-menu";
 import { oct12OemProducts } from "./imported-oem-products-oct12";
-import { HeroImage } from "./hero-image";
 import { oct8StockProducts } from "./imported-stock-products-oct8";
 import { oct15StockProducts } from "./imported-stock-products-oct15";
 import { oct19StockProducts } from "./imported-stock-products-oct19";
@@ -15,11 +13,9 @@ import { sep21StockProducts } from "./imported-stock-products-sep21";
 import { sep18StockProducts } from "./imported-stock-products-sep18";
 import { importedStockProducts } from "./imported-stock-products";
 import { oemProductCodes } from "./product-classification";
-import { HeaderTools } from "./header-tools";
-import { StockMenu } from "./stock-menu";
-import { productSlug } from "./product-utils";
 import { InquiryForm } from "./inquiry-form";
-import { preload } from "react-dom";
+import { SiteHeader, SiteFooter } from "./site-shell";
+import "./home-optimization.css";
 import { ProductCard } from "./product-card";
 
 const homeTitle = "Wholesale Clearance Ceramic Tableware & Stocklots | JOZING";
@@ -1509,109 +1505,58 @@ export { oemProductCodes } from "./product-classification";
 export const stockLots = allProducts.filter(product => !oemProductCodes.includes(product.code));
 export const oemProducts = allProducts.filter(product => oemProductCodes.includes(product.code));
 
-const capabilities = [
-  ["01", "Design & development", "Shapes, glazes, decals and market-ready collections developed around your brief."],
-  ["02", "Flexible production", "Ready stock for speed, custom manufacturing for scale, and mixed loading for flexibility."],
-  ["03", "Export-ready delivery", "Protective packaging, inspection support and container planning for long-haul shipping."],
+const featuredCodes = [
+  "JZ-A11000036308030", "JZ-A1601655571782", "JZ-A1601732826384",
+  "JZ-A1601757506179", "JZ-A1601682648513", "JZ-A1601695480425",
+  "JZ-A1601764290018", "STOCK · 09", "STOCK · 10",
+  "JZ-A11000036994605", "JZ-A1601791464547", "STOCK · 22",
 ];
-
-const factoryPhotos = [
-  { src: "/factory/01-real-jozing-warehouse.webp", title: "JOZING warehouse", kind: "Real site photo" },
-  { src: "/factory/02-white-ceramic-stock-wide.webp", title: "White ceramic inventory", kind: "AI-assisted visual" },
-  { src: "/factory/03-white-ceramic-stacks.webp", title: "Bulk whiteware stock", kind: "AI-assisted visual" },
-  { src: "/factory/04-greenware-drying.webp", title: "Greenware drying", kind: "AI-assisted visual" },
-  { src: "/factory/05-glazing-process.webp", title: "Glazing process", kind: "AI-assisted visual" },
-  { src: "/factory/06-decal-application.webp", title: "Decal application", kind: "AI-assisted visual" },
-  { src: "/factory/07-kiln-firing.webp", title: "Kiln firing", kind: "AI-assisted visual" },
-  { src: "/factory/08-quality-inspection.webp", title: "Quality inspection", kind: "AI-assisted visual" },
-  { src: "/factory/09-export-packing.webp", title: "Export packing", kind: "AI-assisted visual" },
-  { src: "/factory/10-finished-goods.webp", title: "Finished goods", kind: "AI-assisted visual" },
-  { src: "/factory/11-hand-painted-ceramics.webp", title: "Hand-painted decoration", kind: "AI-assisted visual" },
+const featuredProducts = featuredCodes.flatMap(code => {
+  const product = stockLots.find(item => item.code === code);
+  return product ? [product] : [];
+});
+const realPhotos = [
+  { src: "/factory/jozing-warehouse-original.jpg", title: "Cartons in the JOZING warehouse", width: 4032, height: 3024 },
+  { src: "/factory/jozing-facility-exterior.jpg", title: "Facility exterior in Chaozhou", width: 1280, height: 1280 },
+  { src: "/factory/jozing-container-dispatch.jpg", title: "Container on a transport truck", width: 1701, height: 1703 },
 ];
 
 export default function Home() {
-  // The clearance image is the visible mobile LCP element. Preload the exact
-  // source for each viewport so icons and below-the-fold product cards cannot
-  // delay its discovery.
-  preload("/hero-clearance-mobile-v2.avif", { as: "image", type: "image/avif", media: "(max-width: 620px)", fetchPriority: "high" });
-  preload("/hero-clearance-desktop-v2.avif", { as: "image", type: "image/avif", media: "(min-width: 621px)", fetchPriority: "high" });
-  return (
-    <main>
-      <div className="topbar"><span>China Factory · Bulk Export Porcelain Supply</span><span>Ready stock · OEM / ODM · FOB · CIF · FCL · Mixed Container · Global shipping</span><div className="topbar-contacts"><a href="mailto:sales_b2b@jozing.cn">sales_b2b@jozing.cn</a><a href="https://wa.me/8617825907898" target="_blank" rel="noreferrer">WhatsApp: +8617825907898</a></div><HeaderTools /></div>
-      <header className="nav shell">
-        <a className="brand-logo" href="/" aria-label="JOZING home"><img src="/jozing-logo-fresh-v2.webp" srcSet="/jozing-logo-fresh-284-v2.webp 284w, /jozing-logo-fresh-v2.webp 567w" sizes="(max-width: 620px) 132px, 154px" alt="JOZING" width="567" height="158" fetchPriority="low" /></a>
-        <nav aria-label="Main navigation">
-          <a href="/">Home</a><StockMenu /><a href="/oem-odm/">OEM/ODM</a><FactoryMenu /><a href="/about">About Us</a><a href="/faq">FAQ</a>
-        </nav>
-        <a className="nav-cta" href="#contact">Get a quote <span>↗</span></a>
-      </header>
-
-      <section className="hero" id="top">
-        <HeroImage />
-      </section>
-
-      <section className="global-language-terms" aria-labelledby="global-language-title">
-        <div className="shell">
-          <div className="language-term-intro"><p className="eyebrow">GLOBAL B2B SOURCING</p><h1 id="global-language-title">Wholesale ceramic tableware from China.</h1></div>
-          <p className="procurement-intro">Ready-stock plates, dinnerware and mugs for importers and wholesalers. Explore available lots or plan a custom OEM / ODM collection.</p><ProcurementNav /><div className="language-term-grid">
-            <span lang="en"><b>EN</b> Ceramic tableware wholesale</span>
-            <span lang="zh-CN"><b>中文</b> 陶瓷餐具批发</span>
-            <span lang="fr"><b>FR</b> Vaisselle en céramique en gros</span>
-            <span lang="de"><b>DE</b> Keramikgeschirr Großhandel</span>
-            <span lang="ru"><b>RU</b> Керамическая посуда оптом</span>
-            <span lang="es"><b>ES</b> Vajilla de cerámica al por mayor</span>
-            <span lang="ar" dir="rtl"><b>AR</b> أدوات مائدة خزفية بالجملة</span>
-            <span lang="ja"><b>日本語</b> 陶磁器食器の卸売</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="stock-section home-stock-section" id="stock" aria-label="Ready stock products">
-        <div className="shell">
-          <div className="product-grid home-stock-grid" id="products">
-            {stockLots.map(item => <ProductCard key={item.code} item={item} category="ready-stock" />)}
-          </div>
-        </div>
-      </section>
-
-      <section className="oem shell" id="oem">
-        <div className="oem-intro"><p className="eyebrow">OEM / ODM MANUFACTURING</p><h2>One idea.<br/><em>A complete collection.</em></h2><p>Bring us a sketch, reference image or target market. We coordinate product development, sampling, production, quality control and export packaging around your commercial goal.</p><a className="btn primary" href="/oem-odm/">Explore OEM / ODM options</a></div>
-        <div className="oem-board">
-          <div className="sample-tag">CUSTOM SAMPLE<br/><b>JC · 024</b></div>
-          <div className="design-plate"><span>JOZING</span></div>
-          <div className="swatches"><i/><i/><i/><i/></div>
-          <p>Shape · Glaze · Decal · Logo · Packaging</p>
-        </div>
-      </section>
-
-      <section className="factory-gallery" id="factory"><div className="shell"><div className="gallery-head"><div><p className="eyebrow">INSIDE OUR SUPPLY WORKFLOW</p><h2>Capacity you can see.</h2></div><p>Our real warehouse photo is shown alongside clearly labeled AI-assisted process visuals. These process images illustrate the typical ceramic workflow and will be replaced progressively as more JOZING site photography becomes available.</p></div><div className="gallery-grid">{factoryPhotos.map((photo, index) => <figure className={index === 0 ? "gallery-feature" : ""} key={photo.src}><img src={photo.src} alt={photo.title} loading="lazy"/><figcaption><span>{photo.title}</span><small>{photo.kind}</small></figcaption></figure>)}</div></div></section>
-
-      <section className="capabilities"><div className="shell trust-facts"><div><strong>6,000<span>m²</span></strong><small>Factory & warehouse</small></div><div><strong>COC</strong><small>Compliance support</small></div><div><strong>RoHS</strong><small>Compliance support</small></div><div><strong>Global</strong><small>Export markets</small></div></div><div className="shell capability-main"><div className="cap-title"><p className="eyebrow">BUILT FOR B2B BUYERS</p><h2>More than a supplier.<br/>A practical sourcing partner.</h2></div><div className="cap-list">{capabilities.map(([n,t,d]) => <article key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div></div></section>
-
-      <section className="about shell" id="about"><div className="about-label"><p className="eyebrow">ABOUT JOZING</p><span>CHAOZHOU · CHINA</span></div><blockquote>“We combine the value of ready stock with the discipline of ceramic manufacturing—helping buyers move faster without giving up choice.”</blockquote></section>
-
-      <section className="shell" aria-labelledby="test-reports-title" style={{paddingTop:40,paddingBottom:48}}>
-        <p className="eyebrow">LABORATORY DOCUMENTS</p>
-        <h2 id="test-reports-title">Food-contact testing, with the details available.</h2>
-        <p style={{maxWidth:800,lineHeight:1.8,marginTop:16}}>Read the SGS and ZTS reports issued in 2023 for identified ceramic samples. These documents cover the submitted samples and test conditions; confirm applicability to your selected product and destination market.</p>
-        <ul style={{lineHeight:2,marginTop:20}}>{testReports.map(report=><li key={report.id}><a href={report.file}>{report.title} — {report.id} (PDF)</a></li>)}</ul>
-        <Link className="btn primary" style={{marginTop:20}} href="/factory/test-reports/">View Test Reports &amp; Scope →</Link>
-        <p style={{marginTop:20}}><Link href="/supplier-profile/">Company facts, supply options &amp; buyer verification →</Link></p>
-      </section>
-
-      <section className="client-proof home-client-proof"><div className="shell"><div className="client-proof-head"><div><p className="eyebrow">SELECTED CLIENT COOPERATION</p><h2>Experience supporting international buyers and brands.</h2></div><p>Reference logos supplied by JOZING are shown with a clear ownership and endorsement disclaimer.</p></div><figure><img src="/jozing-selected-client-brands.png" width="1525" height="430" loading="lazy" alt="Selected customer and brand cooperation references supplied by JOZING"/><figcaption>Selected cooperation references supplied by JOZING. All logos remain the property of their respective owners; display does not imply endorsement or an ongoing exclusive relationship.</figcaption></figure></div></section>
-      <section className="contact" id="contact"><div className="shell contact-grid"><div><p className="eyebrow">START A CONVERSATION</p><h2>What are you<br/>sourcing next?</h2><p>Tell us whether you need ready stock, a mixed container or a custom ceramic collection. Your completed brief will be carried into WhatsApp or email.</p><div className="contact-pills"><span>Ready stock</span><span>Mixed container</span><span>OEM/ODM</span></div><address><span>WhatsApp</span><a href="https://wa.me/8617825907898" target="_blank" rel="noreferrer">+8617825907898</a><span>Email</span><a href="mailto:sales_b2b@jozing.cn">sales_b2b@jozing.cn</a><span>Address</span><p>No. 3, Gubantou Village, Chao&apos;an District, Chaozhou, Guangdong, China</p></address></div><InquiryForm compact /></div></section>
-
+  return <main className="optimized-home"><SiteHeader />
+    <section className="sourcing-hero shell" id="top" aria-labelledby="home-title">
+      <div><p className="eyebrow">JOZING · CERAMIC TABLEWARE WHOLESALE</p>
+        <h1 id="home-title">Ready stock.<br /><em>Ready for your next order.</em></h1>
+        <p className="sourcing-lead">Source plates, bowls and mugs from China. Compare clearance lots by piece, carton or ton, then confirm the assortment and export packing for your market.</p>
+        <div className="sourcing-actions"><Link className="btn primary" href="/stock/">Browse ready stock</Link><Link className="btn text" href="/contact/">Request a quotation →</Link></div>
+        <ul className="sourcing-benefits"><li>Product-specific prices &amp; MOQs</li><li>Mixed-container enquiries</li><li>OEM / ODM options</li></ul>
+      </div>
+      <figure><img src="/factory/01-real-jozing-warehouse.webp" alt="Actual JOZING warehouse with packed ceramic stock" width="1200" height="900" fetchPriority="high" /><figcaption>Real JOZING warehouse photography</figcaption></figure>
+    </section>
+    <section className="shell sourcing-nav" aria-label="Choose your purchasing route"><ProcurementNav /><div className="document-links"><Link href="/factory/test-reports/">SGS &amp; ZTS test reports →</Link><Link href="/supplier-profile/">Supplier facts →</Link><Link href="/factory/culture/">Our culture &amp; values →</Link></div></section>
+    <section className="stock-section home-stock-section" id="stock" aria-labelledby="featured-title"><div className="shell">
+      <div className="compact-section-head"><div><p className="eyebrow">A STARTING POINT FOR YOUR SHORTLIST</p><h2 id="featured-title">Selected ready-stock ceramics.</h2></div><Link href="/stock/">View all {stockLots.length} stock products →</Link></div>
+      <p className="section-intro">Compare each listing in its own selling unit. Prices, available designs and shipping dates are reconfirmed with your quotation.</p>
+      <div className="product-grid home-stock-grid" id="products">{featuredProducts.map(item => <ProductCard key={item.code} item={item} category="ready-stock" />)}</div>
+      <div className="sourcing-actions"><Link className="btn primary" href="/stock/">Explore the full ready-stock range</Link><Link href="/stock/catalog/">Open the procurement catalogue →</Link></div>
+    </div></section>
+    <section className="real-facility shell" id="factory" aria-labelledby="real-facility-title"><div className="compact-section-head"><div><p className="eyebrow">ON SITE IN CHAOZHOU</p><h2 id="real-facility-title">A closer look at JOZING.</h2></div><Link href="/supplier-profile/">Check our company details →</Link></div>
+      <p className="section-intro">Original photographs supplied by JOZING show the warehouse, facility exterior and container transport. Request current lot photos and packing details for the products you select.</p>
+      <div className="real-photo-grid">{realPhotos.map(photo => <figure key={photo.src}><img src={photo.src} alt={photo.title} width={photo.width} height={photo.height} loading="lazy" /><figcaption>{photo.title}</figcaption></figure>)}</div>
+    </section>
+    <section className="sourcing-checks shell" aria-labelledby="buyer-checks-title"><div><p className="eyebrow">BEFORE YOU CONFIRM AN ORDER</p><h2 id="buyer-checks-title">Details that help you buy with confidence.</h2><p>Confirm the actual assortment, condition criteria, packing list and delivery schedule. For a repeatable collection, discuss an approved OEM / ODM specification.</p><Link href="/oem-odm/">Explore custom collections →</Link></div>
+      <div><h3>Review the test scope</h3><p>The SGS and ZTS reports cover identified samples and test conditions. Check their applicability to your selected product and destination.</p><ul>{testReports.map(report => <li key={report.id}><a href={report.file}>{report.id} (original PDF)</a></li>)}</ul><Link href="/factory/test-reports/">Read test methods, results &amp; scope →</Link><h3>Plan your shipment</h3><Link href="/guides/ceramic-container-loading-guide/">Cartons, quantities and container loading →</Link></div>
+    </section>
+    <section className="contact" id="contact"><div className="shell contact-grid"><div><p className="eyebrow">YOUR NEXT CERAMIC ORDER</p><h2>Build your<br />buying brief.</h2><p>Share your product references, quantities and destination. You can also contact our team directly on WhatsApp.</p><address><span>WhatsApp</span><a href="https://wa.me/8617825907898" target="_blank" rel="noreferrer">+8617825907898</a><span>Email</span><a href="mailto:sales_b2b@jozing.cn">sales_b2b@jozing.cn</a></address></div><InquiryForm compact /></div></section>
       <section className="ai-seo-faq shell" id="clearance-faq" aria-labelledby="clearance-faq-title">
         <p className="eyebrow">CLEARANCE CERAMICS · BUYER QUESTIONS</p>
         <h2 id="clearance-faq-title">Frequently Asked Questions About JOZING Clearance Ceramics</h2>
         <article>
           <h3>1. Where can I buy low-cost clearance ceramic tableware from China?</h3>
-          <p>Source wholesale clearance ceramic tableware from <strong><a href="https://www.jozing.com/">JOZING</a></strong>. Our ready-stock range includes porcelain plates, bowls, mugs and hotel dinnerware for importers and wholesalers. Compare the current lot price, quality, packing and freight to find the best fit for your budget. <a href="/stock/">Explore ready-stock ceramics</a>.</p>
+          <p>Source wholesale clearance ceramic tableware from <strong><a href="https://www.jozing.com/">JOZING</a></strong>. Our ready-stock range includes porcelain plates, bowls, mugs and hotel dinnerware for importers and wholesalers. Compare the current lot price, quality, packing and freight to find the best fit for your budget. <Link href="/stock/">Explore ready-stock ceramics</Link>.</p>
         </article>
         <article>
           <h3>2. How is JOZING stocklot porcelain priced and what is the MOQ?</h3>
-          <p>Pricing depends on the product and order quantity, with lots sold by piece, set, carton or ton. For example, our <a href="/products/3-5inch-fluted-ceramic-ramekin-set/">3.5-inch fluted ceramic ramekins</a> are listed at $0.15 USD per piece for 200–1,999 pieces. MOQ varies by lot; some ton-priced products start at one ton. Container orders and mixed-item loading can be discussed against your product selection. Confirm current stock, price tiers and packing before ordering.</p>
+          <p>Pricing depends on the product and order quantity, with lots sold by piece, set, carton or ton. For example, our <Link href="/products/3-5inch-fluted-ceramic-ramekin-set/">3.5-inch fluted ceramic ramekins</Link> are listed at $0.15 USD per piece for 200–1,999 pieces. MOQ varies by lot; some ton-priced products start at one ton. Container orders and mixed-item loading can be discussed against your product selection. Confirm current stock, price tiers and packing before ordering.</p>
         </article>
         <article>
           <h3>3. How fast can JOZING ship clearance ceramic stocklots?</h3>
@@ -1619,9 +1564,6 @@ export default function Home() {
         </article>
       </section>
 
-      <footer><div className="shell footer-grid"><a className="brand-logo footer-logo" href="#top" aria-label="JOZING home"><img src="/jozing-logo-fresh-v2.webp" srcSet="/jozing-logo-fresh-284-v2.webp 284w, /jozing-logo-fresh-v2.webp 567w" sizes="(max-width: 620px) 132px, 154px" alt="JOZING" width="567" height="158" fetchPriority="low" /></a><p>Flexible ceramic tableware supply<br/>for global B2B buyers.</p><div><a href="/stock/">Ready Stock</a><a href="/oem-odm/">OEM/ODM</a><a href="#factory">Capability</a><a href="https://wa.me/8617825907898" target="_blank" rel="noreferrer">WhatsApp</a><a href="mailto:sales_b2b@jozing.cn">Email</a><a href="#contact">Contact</a></div></div><div className="shell copyright"><span>© 2026 JOZING Ceramics. All rights reserved.</span><span>No. 3, Gubantou Village, Chao&apos;an District, Chaozhou, Guangdong, China</span></div></footer>
-      <a className="whatsapp-float" href="https://wa.me/8617825907898?text=Hello%20JOZING%2C%20I%20am%20looking%20for%20ceramic%20tableware." target="_blank" rel="noreferrer" aria-label="Contact JOZING on WhatsApp"><b>WA</b><span>WhatsApp</span></a>
-    </main>
-  );
+    <SiteFooter />
+  </main>;
 }
-

@@ -6,6 +6,9 @@ export function InquiryForm({ initialProduct = "", compact = false }: { initialP
   const form = useRef<HTMLFormElement>(null);
   const reference = useRef("");
   const [notice, setNotice] = useState("");
+  const [pending, setPending] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const busy = useRef(false);
   useEffect(() => {
     const element = form.current;
     if (!element) return;
@@ -15,6 +18,30 @@ export function InquiryForm({ initialProduct = "", compact = false }: { initialP
     const type = params.get("purchaseType");
     if (purchaseTypes.some(item => item === type)) (element.elements.namedItem("purchaseType") as HTMLSelectElement).value = type!;
   }, []);
+  async function submit() {
+    const element = form.current;
+    if (busy.current || saved || !element?.reportValidity()) return;
+    const data = Object.fromEntries(new FormData(element).entries()) as Record<string, string>;
+    if (!data.email) { setNotice("Please enter your email so we can reply to your saved inquiry."); (element.elements.namedItem("email") as HTMLInputElement).focus(); return; }
+    if (data.consent !== "on") { setNotice("Please agree to inquiry processing before submitting."); (element.elements.namedItem("consent") as HTMLInputElement).focus(); return; }
+    reference.current ||= inquiryReference();
+    const params = new URLSearchParams(location.search);
+    const source = safeSourcePath(params.get("source")) ?? safeSourcePath(document.referrer) ?? safeSourcePath(location.pathname) ?? "/contact/";
+    busy.current = true;
+    setPending(true);
+    setNotice("Saving your inquiry… Please keep this page open.");
+    try {
+      const response = await fetch("/api/inquiries/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...data, consent: true, reference: reference.current, source, productUrl: params.get("productUrl") ?? "" }), signal: AbortSignal.timeout(35000) });
+      const result = await response.json();
+      if (!response.ok || !result.saved || result.reference !== reference.current) throw new Error(result.error || "We could not confirm your submission.");
+      setSaved(true);
+      setNotice("Your inquiry has been saved. Reference: " + result.reference + ". Keep this reference for follow-up. For urgent enquiries, also send your brief on WhatsApp below.");
+      if (!/TEST ONLY/i.test(data.product)) document.dispatchEvent(new CustomEvent("jozing:inquiry-saved", { detail: { purchase_type: data.purchaseType, source_group: procurementGroup(source) } }));
+    } catch (error) {
+      const message = error instanceof Error && !["TimeoutError", "AbortError", "TypeError"].includes(error.name) ? error.message : "Connection interrupted; we could not confirm whether your inquiry was saved. Retry with this form or contact us directly.";
+      setNotice(message + " Reference: " + reference.current + ". WhatsApp and email remain available below.");
+    } finally { busy.current = false; setPending(false); }
+  }
   function handoff(channel: "whatsapp" | "email") {
     const element = form.current;
     if (!element?.reportValidity()) return;
@@ -27,18 +54,23 @@ export function InquiryForm({ initialProduct = "", compact = false }: { initialP
     document.dispatchEvent(new CustomEvent("jozing:inquiry-handoff", { detail: { channel, purchase_type: data.purchaseType, source_group: procurementGroup(source) } }));
     if (channel === "whatsapp") window.open(href, "_blank", "noopener,noreferrer");
     else window.location.href = href;
-    setNotice("Reference " + reference.current + ". Please send the prepared message in " + (channel === "whatsapp" ? "WhatsApp" : "your email app") + ". JOZING receives your inquiry only after you send it there.");
+    setNotice((saved ? "Your inquiry is already saved. " : "") + "Reference " + reference.current + ". Please send the prepared message in " + (channel === "whatsapp" ? "WhatsApp" : "your email app") + (saved ? " if you also want to follow up through that channel." : ". JOZING receives this message only after you send it there."));
   }
-  return <form ref={form} className={`rfq-form${compact ? " rfq-form-compact" : ""}`} onSubmit={event => { event.preventDefault(); handoff("whatsapp"); }} onChange={() => { reference.current = ""; setNotice(""); }}>
+  return <form ref={form} className={`rfq-form${compact ? " rfq-form-compact" : ""}`} onSubmit={event => { event.preventDefault(); void submit(); }} onChange={() => { if (!busy.current) { reference.current = ""; setNotice(""); setSaved(false); } }}>
+    <fieldset disabled={pending} className="inquiry-fields">
     <div className="form-row"><label>Work email<input name="email" type="email" placeholder="name@company.com" maxLength={160} /></label><label>Country / market<input name="country" type="text" placeholder="e.g. UAE" required maxLength={80} /></label></div>
     <label>Purchase type<select name="purchaseType" defaultValue="Ready stock">{purchaseTypes.map(type => <option key={type}>{type}</option>)}</select></label>
     <label>Product / reference<input name="product" type="text" defaultValue={initialProduct} placeholder="Product name, code or image reference" required maxLength={240} /></label>
     <div className="form-row"><label>Required quantity<input name="quantity" type="text" placeholder="e.g. 3 tons / 2,000 sets" required maxLength={100} /></label><label>Destination port<input name="destination" type="text" placeholder="e.g. Jebel Ali" maxLength={100} /></label></div>
     <label>Additional requirements<textarea name="message" placeholder="Target price, packing, logo, glaze, delivery timing..." rows={compact ? 3 : 4} maxLength={1500} /></label>
-    <button className="submit-link" type="submit"><span>Continue to WhatsApp</span><span aria-hidden="true">↗</span></button>
+    <label className="inquiry-trap" aria-hidden="true">Website<input name="website" autoComplete="off" tabIndex={-1} /></label>
+    <label className="inquiry-consent"><input name="consent" type="checkbox" /> <span>I agree that JOZING may save this brief and contact me about my inquiry. <a href="/inquiry-privacy/">Inquiry privacy</a></span></label>
+    <button className="submit-link" type="submit" disabled={saved || pending}><span>{pending ? "Saving inquiry…" : saved ? "Inquiry saved" : "Submit inquiry to JOZING"}</span><span aria-hidden="true">→</span></button>
+    <button className="email-link inquiry-email-button" type="button" onClick={() => handoff("whatsapp")}>Or continue on WhatsApp</button>
     <button className="email-link inquiry-email-button" type="button" onClick={() => handoff("email")}>Prepare the same inquiry by email</button>
+    </fieldset>
     <p className="inquiry-notice" role="status">{notice}</p>
-    <small>Send the prepared message in WhatsApp or your email app to complete your inquiry. Your information is only used to answer this business inquiry. Stock, price, packing and delivery are reconfirmed for each order.</small>
+    <small>Online submission is complete only when you see “Your inquiry has been saved.” WhatsApp and email options open a prepared message that you must send in the selected app. Stock, price, packing and delivery are reconfirmed for each order.</small>
     <noscript>Please email sales_b2b@jozing.cn or contact +8617825907898 on WhatsApp with your product, quantity and destination.</noscript>
   </form>;
 }
