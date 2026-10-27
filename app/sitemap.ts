@@ -22,7 +22,7 @@ export default function sitemap():MetadataRoute.Sitemap{
   const sep18Codes=new Set(sep18StockProducts.map(product=>product.code));
   const sep21Codes=new Set(sep21StockProducts.map(product=>product.code));
   const refreshedCodes=new Set(["JZ-A11000036994605"]);
-  const optimizedCodes = new Set(["JZ-A11000036308030", "JZ-A1601732826384", "JZ-A1601757506179", "JZ-A1601682648513", "JZ-A1601764290018", "JZ-A1601695480425"]);
+  const optimizedCodes = new Set(["JZ-A1601655571782", "JZ-A11000036308030", "JZ-A1601732826384", "JZ-A1601757506179", "JZ-A1601682648513", "JZ-A1601764290018", "JZ-A1601695480425"]);
   const products=allProducts.map((product)=>({url:`${origin}/products/${productSlug(product.name)}/`,lastModified:new Date(optimizedCodes.has(product.code)?"2026-10-27":product.code==="JZ-A11000036308030"?"2026-10-23":oemBakewareCodes.includes(product.code)?"2026-10-12":oct8UpdatedCodes.includes(product.code)?"2026-10-08":sep28UpdatedCodes.includes(product.code)?"2026-09-28":"2026-09-25"),changeFrequency:"weekly" as const,priority:.8}));
   const articles=guides.map((guide)=>({url:`${origin}/guides/${guide.slug}/`,lastModified:new Date(guide.updated),changeFrequency:"monthly" as const,priority:.7}));
   const blogs=blogPosts.map((post)=>({url:`${origin}/blog/${post.slug}/`,lastModified:new Date(buyerNextStepSlugs.includes(post.slug)?"2026-09-24":blogProductCodes[post.slug]?blogProductLinksUpdated:post.date),changeFrequency:"monthly" as const,priority:.6}));

@@ -1,4 +1,6 @@
 export function productSlug(name: string) {
+  // Keep the existing listing URL when refreshing this Alibaba product.
+  if (name === "Wholesale Ceramic Coffee Mugs – 3D Animal Designs & Bulk Mugs Assortment") return "wholesale-ready-stock-ceramic-coffee-mug-cute-3d-porcelain-cups";
   // Keep published OEM product URLs stable after title updates.
   if (name === "3-Piece Oval Ceramic Baking Dish Set – Strawberry & Floral") return "wholesale-3-piece-oval-ceramic-baking-dish-set-with-strawberry-floral-designs";
   if (name === "3-Piece Rectangular Ceramic Baking Dish Set – Blue & White Floral") return "wholesale-3-piece-blue-floral-ceramic-baking-dish-set-with-handles";
