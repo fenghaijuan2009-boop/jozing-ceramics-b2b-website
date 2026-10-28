@@ -2,6 +2,8 @@
 .sourcing-hero h1{font-family:var(--font-serif),Georgia,serif;font-size:clamp(38px,4.5vw,62px);line-height:1.08;letter-spacing:-.035em;margin:0;font-weight:500}
 .sourcing-hero h1 em{color:#8b623d;font-weight:400}
 .sourcing-lead{font-size:17px;line-height:1.8;max-width:580px;margin:24px 0}
+/* First-screen buying copy can render immediately using the local fallback. */
+.optimized-home .sourcing-hero{font-family:Arial,Helvetica,sans-serif}
 .sourcing-actions{display:flex;flex-wrap:wrap;align-items:center;gap:20px;margin:24px 0 0}
 .sourcing-actions a{line-height:1.5}
 .sourcing-benefits{display:flex;flex-wrap:wrap;gap:10px 24px;padding:0;margin:24px 0 0;list-style:none;font-size:13px;color:#53675c}
