@@ -1516,9 +1516,9 @@ const featuredProducts = featuredCodes.flatMap(code => {
   return product ? [product] : [];
 });
 const realPhotos = [
-  { src: "/factory/jozing-warehouse-original.jpg", title: "Cartons in the JOZING warehouse", width: 4032, height: 3024 },
-  { src: "/factory/jozing-facility-exterior.jpg", title: "Facility exterior in Chaozhou", width: 1280, height: 1280 },
-  { src: "/factory/jozing-container-dispatch.jpg", title: "Container on a transport truck", width: 1701, height: 1703 },
+  { src: "/factory/jozing-warehouse", title: "Cartons in the JOZING warehouse", width: 4032, height: 3024 },
+  { src: "/factory/jozing-facility-exterior", title: "Facility exterior in Chaozhou", width: 1280, height: 1280 },
+  { src: "/factory/jozing-container-dispatch", title: "Container on a transport truck", width: 1701, height: 1703 },
 ];
 
 export default function Home() {
@@ -1530,18 +1530,18 @@ export default function Home() {
         <div className="sourcing-actions"><Link className="btn primary" href="/stock/">Browse ready stock</Link><Link className="btn text" href="/contact/">Request a quotation →</Link></div>
         <ul className="sourcing-benefits"><li>Product-specific prices &amp; MOQs</li><li>Mixed-container enquiries</li><li>OEM / ODM options</li></ul>
       </div>
-      <figure><img src="/factory/01-real-jozing-warehouse.webp" alt="Actual JOZING warehouse with packed ceramic stock" width="1200" height="900" fetchPriority="high" /><figcaption>Real JOZING warehouse photography</figcaption></figure>
+      <figure><img src="/factory/jozing-warehouse-768.webp" srcSet="/factory/jozing-warehouse-480.webp 480w, /factory/jozing-warehouse-768.webp 768w, /factory/jozing-warehouse-1200.webp 1200w" sizes="(max-width: 620px) calc(100vw - 28px), (max-width: 1000px) 46vw, 550px" alt="Actual JOZING warehouse with packed ceramic stock" width="1200" height="900" fetchPriority="high" /><figcaption>Real JOZING warehouse photography</figcaption></figure>
     </section>
     <section className="shell sourcing-nav" aria-label="Choose your purchasing route"><ProcurementNav /><div className="document-links"><Link href="/factory/test-reports/">SGS &amp; ZTS test reports →</Link><Link href="/supplier-profile/">Supplier facts →</Link><Link href="/factory/culture/">Our culture &amp; values →</Link></div></section>
     <section className="stock-section home-stock-section" id="stock" aria-labelledby="featured-title"><div className="shell">
       <div className="compact-section-head"><div><p className="eyebrow">A STARTING POINT FOR YOUR SHORTLIST</p><h2 id="featured-title">Selected ready-stock ceramics.</h2></div><Link href="/stock/">View all {stockLots.length} stock products →</Link></div>
       <p className="section-intro">Compare each listing in its own selling unit. Prices, available designs and shipping dates are reconfirmed with your quotation.</p>
-      <div className="product-grid home-stock-grid" id="products">{featuredProducts.map(item => <ProductCard key={item.code} item={item} category="ready-stock" />)}</div>
+      <div className="product-grid home-stock-grid" id="products">{featuredProducts.map(item => <ProductCard key={item.code} item={item} category="ready-stock" imageSizes="(max-width: 620px) calc((100vw - 40px) / 2), (max-width: 1000px) 30vw, (max-width: 1230px) 23vw, 280px" />)}</div>
       <div className="sourcing-actions"><Link className="btn primary" href="/stock/">Explore the full ready-stock range</Link><Link href="/stock/catalog/">Open the procurement catalogue →</Link></div>
     </div></section>
     <section className="real-facility shell" id="factory" aria-labelledby="real-facility-title"><div className="compact-section-head"><div><p className="eyebrow">ON SITE IN CHAOZHOU</p><h2 id="real-facility-title">A closer look at JOZING.</h2></div><Link href="/supplier-profile/">Check our company details →</Link></div>
       <p className="section-intro">Original photographs supplied by JOZING show the warehouse, facility exterior and container transport. Request current lot photos and packing details for the products you select.</p>
-      <div className="real-photo-grid">{realPhotos.map(photo => <figure key={photo.src}><img src={photo.src} alt={photo.title} width={photo.width} height={photo.height} loading="lazy" /><figcaption>{photo.title}</figcaption></figure>)}</div>
+      <div className="real-photo-grid">{realPhotos.map(photo => <figure key={photo.src}><img src={`${photo.src}-768.webp`} srcSet={`${photo.src}-480.webp 480w, ${photo.src}-768.webp 768w`} sizes="(max-width: 620px) calc(100vw - 28px), (max-width: 1230px) 30vw, 380px" alt={photo.title} width={photo.width} height={photo.height} loading="lazy" decoding="async" /><figcaption>{photo.title}</figcaption></figure>)}</div>
     </section>
     <section className="sourcing-checks shell" aria-labelledby="buyer-checks-title"><div><p className="eyebrow">BEFORE YOU CONFIRM AN ORDER</p><h2 id="buyer-checks-title">Details that help you buy with confidence.</h2><p>Confirm the actual assortment, condition criteria, packing list and delivery schedule. For a repeatable collection, discuss an approved OEM / ODM specification.</p><Link href="/oem-odm/">Explore custom collections →</Link></div>
       <div><h3>Review the test scope</h3><p>The SGS and ZTS reports cover identified samples and test conditions. Check their applicability to your selected product and destination.</p><ul>{testReports.map(report => <li key={report.id}><a href={report.file}>{report.id} (original PDF)</a></li>)}</ul><Link href="/factory/test-reports/">Read test methods, results &amp; scope →</Link><h3>Plan your shipment</h3><Link href="/guides/ceramic-container-loading-guide/">Cartons, quantities and container loading →</Link></div>
