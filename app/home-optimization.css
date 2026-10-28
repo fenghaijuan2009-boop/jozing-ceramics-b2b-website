@@ -1,3 +1,4 @@
+.optimized-home{--font-sans:Arial,Helvetica,sans-serif;--font-serif:Georgia,"Times New Roman",serif;font-family:var(--font-sans)}
 .optimized-home .sourcing-hero{display:grid;grid-template-columns:1.05fr 1fr;gap:54px;align-items:center;padding-top:52px;padding-bottom:48px}
 .sourcing-hero h1{font-family:var(--font-serif),Georgia,serif;font-size:clamp(38px,4.5vw,62px);line-height:1.08;letter-spacing:-.035em;margin:0;font-weight:500}
 .sourcing-hero h1 em{color:#8b623d;font-weight:400}
