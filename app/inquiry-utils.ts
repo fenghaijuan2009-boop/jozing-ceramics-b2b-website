@@ -1,5 +1,5 @@
 export const purchaseTypes = ["Ready stock", "OEM / ODM", "Mixed container", "Not sure yet"] as const;
-const sourcePaths = ["/", "/stock/", "/stock/ceramic-plates/", "/stock/dinner-set-tableware/", "/stock/ceramic-mug-cup/", "/stock/hot-sale-by-ton-carton/", "/oem-odm/", "/contact/"];
+const sourcePaths = ["/", "/stock/", "/stock/ceramic-plates/", "/stock/dinner-set-tableware/", "/stock/ceramic-mug-cup/", "/stock/hot-sale-by-ton-carton/", "/oem-odm/", "/contact/", "/es/vajilla-por-tonelada/"];
 // Only published routes, never query strings or contact details.
 export function safeSourcePath(value: string | null): string | null {
   if (!value) return null;
@@ -11,6 +11,7 @@ export function safeSourcePath(value: string | null): string | null {
   } catch { return null; }
 }
 export function procurementGroup(path: string): string {
+  if (path === "/es/vajilla-por-tonelada/") return "stock";
   if (path === "/stock/ceramic-plates/") return "plates";
   if (path === "/stock/dinner-set-tableware/") return "dinnerware";
   if (path === "/stock/ceramic-mug-cup/") return "mugs";

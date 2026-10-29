@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import { adsPageLocation, conversionParameters } from '../app/ads-measurement.ts';
+import { readCampaignAttribution } from '../app/analytics-attribution.ts';
+import { safeSourcePath, procurementGroup } from '../app/inquiry-utils.ts';
+assert.equal(adsPageLocation('https://www.jozing.com/contact/?email=private@example.com&message=secret#private'), 'https://www.jozing.com/contact/');
+assert.equal(adsPageLocation('https://www.jozing.com/es/vajilla-por-tonelada/?gclid=Example_123456&email=private@example.com'), 'https://www.jozing.com/es/vajilla-por-tonelada/?gclid=Example_123456');
+assert.equal(adsPageLocation('https://www.jozing.com/?gclid=Example_123456&gclid=Duplicate1234'), 'https://www.jozing.com/');
+assert.equal(conversionParameters({ measurement_id: 'private@example.com' }), null);
+const id = crypto.randomUUID();
+assert.deepEqual(conversionParameters({ measurement_id: id, email: 'private@example.com', message: 'secret' }), { send_to: 'AW-842600977/--KRCLap_60dEJGk5JED', transaction_id: id });
+assert.equal(conversionParameters({}), null);
+assert.equal(safeSourcePath('/es/vajilla-por-tonelada/?gclid=123'), '/es/vajilla-por-tonelada/');
+assert.equal(procurementGroup('/es/vajilla-por-tonelada/'), 'stock');
+assert.equal(readCampaignAttribution('?utm_source=google&utm_medium=cpc&utm_campaign=peru_ton_202610&utm_content=ton_lots')?.campaign_name, 'peru_ton_202610');
+assert.equal(readCampaignAttribution('?utm_source=google&utm_medium=cpc&utm_campaign=peru_ton_202610&utm_content=private@example.com'), null);
+console.log('Ads privacy, click attribution, conversion allowlist and Spanish inquiry source checks passed.');
