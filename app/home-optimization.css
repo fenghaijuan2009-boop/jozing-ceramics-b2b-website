@@ -12,6 +12,8 @@
 .sourcing-hero figure{margin:0;background:#e9e5db;border-radius:16px;overflow:hidden}
 .sourcing-hero img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
 .sourcing-hero figcaption{font-size:12px;padding:12px 16px}
+.ceramic-world-banner{margin:0 0 32px;width:100%}
+.ceramic-world-banner img{display:block;width:100%;height:auto;aspect-ratio:2154/730}
 .sourcing-nav{padding-bottom:24px}.document-links{display:flex;flex-wrap:wrap;gap:14px 28px;margin:18px 0;font-size:14px}
 .compact-section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:18px}
 .optimized-home .compact-section-head h2,.optimized-home .sourcing-checks h2,.optimized-home .ai-seo-faq>h2{font-family:var(--font-serif),Georgia,serif;font-weight:500;font-size:clamp(30px,3vw,42px);line-height:1.15;margin:0}

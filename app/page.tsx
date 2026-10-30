@@ -1532,6 +1532,9 @@ export default function Home() {
       </div>
       <figure><img src="/factory/jozing-warehouse-768.webp" srcSet="/factory/jozing-warehouse-480.webp 480w, /factory/jozing-warehouse-768.webp 768w, /factory/jozing-warehouse-1200.webp 1200w" sizes="(max-width: 620px) calc(100vw - 28px), (max-width: 1000px) 46vw, 550px" alt="Actual JOZING warehouse with packed ceramic stock" width="1200" height="900" fetchPriority="high" /><figcaption>Real JOZING warehouse photography</figcaption></figure>
     </section>
+    <figure className="ceramic-world-banner">
+      <img src="/brand/jozing-ceramic-world-1600.webp" srcSet="/brand/jozing-ceramic-world-720.webp 720w, /brand/jozing-ceramic-world-1080.webp 1080w, /brand/jozing-ceramic-world-1600.webp 1600w, /brand/jozing-ceramic-world-2154.webp 2154w" sizes="100vw" width="2154" height="730" loading="lazy" decoding="async" alt="JOZING promotional illustration: a world map made from ceramic tableware connects Chaozhou, China with global buyers. Affordable ceramics. A world of possibilities." />
+    </figure>
     <section className="shell sourcing-nav" aria-label="Choose your purchasing route"><ProcurementNav /><div className="document-links"><Link href="/factory/test-reports/">SGS &amp; ZTS test reports →</Link><Link href="/supplier-profile/">Supplier facts →</Link><Link href="/factory/culture/">Our culture &amp; values →</Link></div></section>
     <section className="stock-section home-stock-section" id="stock" aria-labelledby="featured-title"><div className="shell">
       <div className="compact-section-head"><div><p className="eyebrow">A STARTING POINT FOR YOUR SHORTLIST</p><h2 id="featured-title">Selected ready-stock ceramics.</h2></div><Link href="/stock/">View all {stockLots.length} stock products →</Link></div>
