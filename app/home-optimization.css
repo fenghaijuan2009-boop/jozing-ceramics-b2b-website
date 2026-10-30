@@ -21,6 +21,10 @@
 .section-intro{max-width:790px;font-size:16px;line-height:1.8;margin:0 0 28px}
 .optimized-home .stock-section,.optimized-home .contact,.optimized-home footer{content-visibility:visible;contain-intrinsic-size:none}
 .optimized-home .home-stock-section{padding:36px 0 56px}.optimized-home .home-stock-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+/* Keep each product row level even when titles and price-tier counts differ. */
+.optimized-home .home-stock-grid>.home-stock-priced{align-self:stretch;display:flex;flex-direction:column}
+.optimized-home .home-stock-grid .home-stock-priced-copy{display:flex;flex-direction:column;flex:1}
+.optimized-home .home-stock-grid .home-stock-prices{margin-top:auto}
 .real-facility{padding-top:32px;padding-bottom:56px}.real-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .real-photo-grid figure{margin:0;border-radius:12px;overflow:hidden;background:#eee9df}.real-photo-grid img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}.real-photo-grid figcaption{padding:16px;font-size:14px}
 .sourcing-checks{display:grid;grid-template-columns:1fr 1fr;gap:64px;padding-top:40px;padding-bottom:56px;border-top:1px solid var(--line)}
