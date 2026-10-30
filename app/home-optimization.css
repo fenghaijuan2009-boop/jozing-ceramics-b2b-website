@@ -10,7 +10,7 @@
 .sourcing-benefits{display:flex;flex-wrap:wrap;gap:10px 24px;padding:0;margin:24px 0 0;list-style:none;font-size:13px;color:#53675c}
 .sourcing-benefits li:before{content:'✓ ';color:var(--forest)}
 .sourcing-hero figure{margin:0;background:#e9e5db;border-radius:16px;overflow:hidden}
-.sourcing-hero img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
+.sourcing-hero img{width:100%;height:auto;display:block}
 .sourcing-hero figcaption{font-size:12px;padding:12px 16px}
 .ceramic-world-banner{margin:0 0 32px;width:100%}
 .ceramic-world-banner img{display:block;width:100%;height:auto;aspect-ratio:2154/730}
