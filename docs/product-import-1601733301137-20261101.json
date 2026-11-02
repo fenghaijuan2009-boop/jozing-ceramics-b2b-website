@@ -1,0 +1,49 @@
+{
+  "source": "https://www.alibaba.com/product-detail/Wholesale-Fluted-Ceramic-Clay-Bowl-Plate_1601733301137.html",
+  "checked": "2026-11-01",
+  "timezone": "America/Los_Angeles",
+  "model": "2026103001",
+  "minimumOrderPieces": 200,
+  "pricesUSD": {
+    "bowl": 0.32,
+    "plate": 0.64
+  },
+  "pricingBasis": "per piece by variant, not quantity tiers",
+  "categories": [
+    "dinner-set-tableware",
+    "ceramic-plates",
+    "ceramic-bowl"
+  ],
+  "images": [
+    {
+      "file": "public/products/fluted-1601733301137/main-01.png",
+      "source": "https://s.alicdn.com/@sc04/kf/Aea8cb6621ff94b3e918a3c2c63e516ccs.png_960x960q80.jpg",
+      "sha256": "a79271dd7874b27c53dfd8c08df262186d7d172f0cdbed31b8c75e9e5be42b58"
+    },
+    {
+      "file": "public/products/fluted-1601733301137/main-02.png",
+      "source": "https://s.alicdn.com/@sc04/kf/A10c4b04ed3ca4d789e56b92be9bf9ac7y.png_960x960q80.jpg",
+      "sha256": "1ee03e13132762bd8c34450d50ded56757db8268786247ab308d152913dccd4c"
+    },
+    {
+      "file": "public/products/fluted-1601733301137/main-03.png",
+      "source": "https://s.alicdn.com/@sc04/kf/A330920accfae40cdb32d8667783e580eU.png_960x960q80.jpg",
+      "sha256": "83381f78cb4691f1ff3e147e4fa7a489940d88bf4b7a22c0d509eff4f98eec3b"
+    },
+    {
+      "file": "public/products/fluted-1601733301137/main-04.png",
+      "source": "https://s.alicdn.com/@sc04/kf/A4d4bc2013fa14a1ba61a99436f5a176aV.png_960x960q80.jpg",
+      "sha256": "fad9b1dbdfe57f62f3dfbb8234c349948835e44dfc59c5ce888108415c13aa41"
+    },
+    {
+      "file": "public/products/fluted-1601733301137/main-05.png",
+      "source": "https://s.alicdn.com/@sc04/kf/Ad6c22f5757c1430a80795087cfad055bA.png_960x960q80.jpg",
+      "sha256": "fc5673067a074cd8d46ae839adc443543e3e4310e3c46429bbf608c7ea2a0c5e"
+    },
+    {
+      "file": "public/products/fluted-1601733301137/main-06.png",
+      "source": "https://s.alicdn.com/@sc04/kf/A9221ff3789364256a0a314efea0a45f9m.png_960x960q80.jpg",
+      "sha256": "65b0b802d3e5d7c1cf0b3249734c64d73f074630b12ad900e19a44132fdd681f"
+    }
+  ]
+}
