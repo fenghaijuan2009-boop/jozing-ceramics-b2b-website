@@ -1,5 +1,5 @@
 import { oemProductCodes } from "./product-classification";
-const nov2CategoryCodes: Record<string, string[]> = {"ceramic-pot-kettle":["JZ-A11000035990498"],"dinner-set-tableware":["JZ-A11000035990498","JZ-A1600189763431","JZ-A1601760244702","JZ-A1601686317035","JZ-A11000036928601","JZ-A1601766562326"],"ceramic-plates":["JZ-A1601760244702","JZ-A11000036928601","JZ-A1601766562326"],"ceramic-bowl":["JZ-A11000036928601"]};
+const nov2CategoryCodes: Record<string, string[]> = {"ceramic-pot-kettle":["JZ-A11000035990498"],"dinner-set-tableware":["JZ-A11000035990498","JZ-A1601760244702","JZ-A11000036928601","JZ-A1601766562326"],"ceramic-plates":["JZ-A1601760244702","JZ-A11000036928601","JZ-A1601766562326"],"ceramic-bowl":["JZ-A11000036928601"]};
 const nov1CategoryCodes: Record<string, string[]> = {
   "dinner-set-tableware": ["JZ-A1601733301137"],
   "ceramic-plates": ["JZ-A1601733301137"],

@@ -7,7 +7,7 @@ import { PageHero, SiteFooter, SiteHeader } from "../../site-shell";
 
 export const metadata: Metadata = {
   title: "Custom Ceramic Baking Dish Sets Wholesale | OEM/ODM | JOZING",
-  description: "Source three-piece oval and rectangular ceramic baking dish sets with handles. OEM/ODM logo, floral decoration and packaging options. Starting MOQ 1,000 sets.",
+  description: "Source three-piece oval, square and rectangular ceramic baking dish sets with handles. OEM/ODM logo, decoration and packaging options. Starting MOQ 500 sets, depending on the product.",
   alternates: { canonical: "/oem-odm/bakeware/" },
 };
 
@@ -24,11 +24,11 @@ export default function BakewarePage() {
   return <main>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <SiteHeader />
-    <PageHero eyebrow="OEM / ODM · CERAMIC BAKEWARE" title="Custom ceramic baking dish sets for wholesale." intro="Oval and rectangular three-piece collections with handles, glossy glaze and decorative motifs for kitchenware brands, importers and hospitality buyers." />
+    <PageHero eyebrow="OEM / ODM · CERAMIC BAKEWARE" title="Custom ceramic baking dish sets for wholesale." intro="Oval, square and rectangular three-piece collections with handles, white glaze or decorative motifs for kitchenware brands, importers and hospitality buyers." />
     <section className="shell stock-category-content">
       <nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/oem-odm/">OEM/ODM</a> / Ceramic Bakeware</nav>
       <h2>Ceramic Baking Dishes &amp; Pans</h2>
-      <p>Prices are in USD per three-piece set for the listed specification: $5.22 for 1,000–1,999 sets and $4.78 for 2,000 sets or more. Custom logo, decoration, packaging, sampling, freight and lead time require a confirmed quotation.</p>
+      <p>Prices are in USD per three-piece set for the listed specification. See each product for its price tiers and starting MOQ. Custom logo, decoration, packaging, sampling, freight and lead time require a confirmed quotation.</p>
       <div className="product-grid">{products.map(product => <ProductCard key={product.code} item={product} category="oem-bakeware" />)}</div>
       <h2>Build your branded bakeware collection</h2>
       <p>Send your preferred shape, design reference, logo artwork, quantity and packing requirements. Confirm the approved sample, dimensions, care instructions and export carton details before bulk production.</p>
