@@ -257,7 +257,7 @@ body{background:#fbfaf6;color:#0d2b22}.topbar{background:#071e18;color:#d8e5df;b
 .home-stock-section{padding:40px 0 64px}
 .home-stock-grid{gap:20px}
 .home-stock-tile{min-width:0}
-.home-stock-priced{align-self:start;background:#fff;border-radius:20px;overflow:hidden;color:#000}
+.home-stock-priced{align-self:stretch;background:#fff;border-radius:20px;overflow:hidden;color:#000}
 .home-stock-priced .home-stock-link{border-radius:20px 20px 0 0}
 .home-stock-priced-image{position:relative}
 .home-stock-whatsapp{position:absolute;right:12px;bottom:12px;display:grid;place-items:center;width:46px;height:46px;border:2px solid #fff;border-radius:50%;background:linear-gradient(145deg,#36dc87 0%,#12b969 48%,#079b59 100%);color:#fff;box-shadow:0 3px 10px #087a4938,inset 0 1px 1px #ffffff70;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}

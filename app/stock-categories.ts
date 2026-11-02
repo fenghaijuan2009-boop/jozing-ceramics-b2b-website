@@ -1,4 +1,10 @@
 import { oemProductCodes } from "./product-classification";
+const hotelNov2CategoryCodes: Record<string, string[]> = {
+  "dinner-set-tableware": ["JZ-A1601694009977"],
+  "hot-sale-by-ton-carton": ["JZ-A1601694009977"],
+  "ceramic-plates": ["JZ-A1601694009977"],
+  "ceramic-bowl": ["JZ-A1601694009977"],
+};
 const nov2CategoryCodes: Record<string, string[]> = {"ceramic-pot-kettle":["JZ-A11000035990498"],"dinner-set-tableware":["JZ-A11000035990498","JZ-A1601760244702","JZ-A11000036928601","JZ-A1601766562326"],"ceramic-plates":["JZ-A1601760244702","JZ-A11000036928601","JZ-A1601766562326"],"ceramic-bowl":["JZ-A11000036928601"]};
 const nov1CategoryCodes: Record<string, string[]> = {
   "dinner-set-tableware": ["JZ-A1601733301137"],
@@ -34,5 +40,5 @@ export const stockCategories = [
   { slug: "ceramic-canister-jar", name: "Storage & Utensil Holders", codes: ["JZ-A11000037735085", "JZ-A1600154684883"] },
   { slug: "ceramic-decoration-vase", name: "Ceramic Decoration & Vase", codes: ["JZ-A1601771195975", "JZ-A11000037735085", "JZ-A1601930734277", ] },
   { slug: "ungrouped", name: "Ungrouped", codes: ["STOCK · 07"] },
-].map(category => ({ ...category, codes: [...new Set([...(nov2CategoryCodes[category.slug] ?? []), ...(nov1CategoryCodes[category.slug] ?? []), ...(oct23CategoryCodes[category.slug] ?? []), ...(oct19CategoryCodes[category.slug] ?? []), ...(oct15CategoryCodes[category.slug] ?? []), ...category.codes])].filter(code => !oemProductCodes.includes(code)) }));
+].map(category => ({ ...category, codes: [...new Set([...(hotelNov2CategoryCodes[category.slug] ?? []), ...(nov2CategoryCodes[category.slug] ?? []), ...(nov1CategoryCodes[category.slug] ?? []), ...(oct23CategoryCodes[category.slug] ?? []), ...(oct19CategoryCodes[category.slug] ?? []), ...(oct15CategoryCodes[category.slug] ?? []), ...category.codes])].filter(code => !oemProductCodes.includes(code)) }));
 
