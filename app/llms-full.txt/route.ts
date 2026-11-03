@@ -1,3 +1,4 @@
+import { company } from "../../lib/company";
 import { allProducts } from "../page";
 import { productSlug } from "../product-utils";
 import { oemProductCodes } from "../product-classification";
@@ -55,7 +56,7 @@ export function GET() {
       ...(product.leadTime ? [`- Published lead time (confirm for order): ${product.leadTime}`] : []),
     ].join("\n")),
     "## Current quotation and contact",
-    `Send the product code or assortment brief, quantity, destination and packing requirements. JOZING will confirm the applicable offer and supporting documents.\n\nContact: ${origin}/contact/\nEmail: sales_b2b@jozing.cn\nWhatsApp: https://wa.me/8617825907898`,
+    `Send the product code or assortment brief, quantity, destination and packing requirements. JOZING will confirm the applicable offer and supporting documents.\n\nContact: ${origin}/contact/\nEmail: ${company.email}\nWhatsApp: ${company.whatsapp} (${company.whatsappUrl})`,
   ];
   return new Response(`${sections.join("\n\n")}\n`, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
 }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { companyHistory, companyFacility } from "../../lib/company";
 import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
 
@@ -56,10 +58,10 @@ export default function KnowledgeBasePage() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     <PageHero eyebrow="JOZING BUYER KNOWLEDGE · UPDATED 2026-09-04" title="Bulk stock-lot ceramic tableware, explained." intro="A practical reference for importers, wholesalers, discount retailers, hospitality suppliers and online sellers buying ready-stock ceramic tableware from China." />
     <article className="guide-article shell knowledge-article">
-      <nav className="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Knowledge Base</span></nav>
+      <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span>Knowledge Base</span></nav>
       <div className="kb-summary"><p className="eyebrow">QUICK SUMMARY</p><h2>Buy around the actual lot—not a generic promise.</h2><p>JOZING supports ready-stock ceramic tableware sold by piece, set, carton, pallet, ton or container. Availability, assortment, packing, weight, price, lead time, loading port, inspection and compliance scope are reconfirmed for each lot before order confirmation.</p></div>
 
-      <section><h2>1. About JOZING</h2><p>JOZING Ceramics is operated by Xiamen Jozing Industrial Co., Ltd., registered in 2017, with ceramic tableware experience dating back to 2003. Our factory and warehouse operations are based in Chaozhou, Guangdong, one of China&apos;s major ceramic manufacturing centers.</p><p>We support two distinct buyer needs: value-driven ready-stock and clearance opportunities, and planned OEM/ODM manufacturing for repeatable custom collections. This page focuses on the ready-stock purchasing path.</p></section>
+      <section><h2>1. About JOZING</h2><p>{companyHistory}</p><p>{companyFacility}</p><p>We support two distinct buyer needs: value-driven ready-stock and clearance opportunities, and custom OEM/ODM sourcing for repeatable custom collections. This page focuses on the ready-stock purchasing path.</p></section>
 
       <section><h2>2. How ready-stock orders can be structured</h2><div className="kb-grid"><article><b>01</b><h3>By ton</h3><p>Suitable for selected mixed or bulk lots when weight is the commercial unit. Confirm net/gross weight and included assortment.</p></article><article><b>02</b><h3>By carton</h3><p>Useful for smaller trial orders or defined SKUs. Carton quantity, pieces per carton and export packing vary by lot.</p></article><article><b>03</b><h3>By container</h3><p>20GP or 40HQ loading can be planned around carton volume, weight limits, product mix and destination requirements.</p></article><article><b>04</b><h3>Mixed loading</h3><p>Bowls, plates, cups and sets may be combined when compatible stock and a workable loading plan are available.</p></article></div></section>
 

@@ -1,3 +1,4 @@
+import { company } from "../lib/company";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { testReports } from "../lib/test-reports";
@@ -1536,11 +1537,8 @@ export default function Home() {
         <div className="sourcing-actions"><Link className="btn primary" href="/stock/">Browse ready stock</Link><Link className="btn text" href="/contact/">Request a quotation →</Link></div>
         <ul className="sourcing-benefits"><li>Product-specific prices &amp; MOQs</li><li>Mixed-container enquiries</li><li>OEM / ODM options</li></ul>
       </div>
-      <figure><img src="/brand/jozing-stocklots-facility-768.webp" srcSet="/brand/jozing-stocklots-facility-480.webp 480w, /brand/jozing-stocklots-facility-768.webp 768w, /brand/jozing-stocklots-facility-1200.webp 1200w, /brand/jozing-stocklots-facility-1392.webp 1392w" sizes="(max-width: 620px) calc(100vw - 28px), (max-width: 1000px) 46vw, 550px" alt="JOZING ceramic stocklots: facility exterior, warehouse cartons and stacks of white ceramic plates" width="1392" height="1130" fetchPriority="high" /><figcaption>JOZING ceramic stocklots &amp; facility overview</figcaption></figure>
+      <figure><img src="/factory/jozing-warehouse-768.webp" srcSet="/factory/jozing-warehouse-480.webp 480w, /factory/jozing-warehouse-768.webp 768w" sizes="(max-width: 620px) calc(100vw - 28px), (max-width: 1000px) 46vw, 550px" alt="Cartons in the JOZING warehouse in Chaozhou" width="4032" height="3024" fetchPriority="high" /><figcaption>JOZING warehouse · Original site photograph</figcaption></figure>
     </section>
-    <figure className="ceramic-world-banner">
-      <img src="/brand/jozing-ceramic-world-1600.webp" srcSet="/brand/jozing-ceramic-world-720.webp 720w, /brand/jozing-ceramic-world-1080.webp 1080w, /brand/jozing-ceramic-world-1600.webp 1600w, /brand/jozing-ceramic-world-2154.webp 2154w" sizes="100vw" width="2154" height="730" loading="lazy" decoding="async" alt="JOZING promotional illustration: a world map made from ceramic tableware connects Chaozhou, China with global buyers. Affordable ceramics. A world of possibilities." />
-    </figure>
     <section className="shell sourcing-nav" aria-label="Choose your purchasing route"><ProcurementNav /><div className="document-links"><Link href="/factory/test-reports/">SGS &amp; ZTS test reports →</Link><Link href="/supplier-profile/">Supplier facts →</Link><Link href="/factory/culture/">Our culture &amp; values →</Link></div></section>
     <section className="stock-section home-stock-section" id="stock" aria-labelledby="featured-title"><div className="shell">
       <div className="compact-section-head"><div><p className="eyebrow">A STARTING POINT FOR YOUR SHORTLIST</p><h2 id="featured-title">Selected ready-stock ceramics.</h2></div><Link href="/stock/">View all {stockLots.length} stock products →</Link></div>
@@ -1555,7 +1553,7 @@ export default function Home() {
     <section className="sourcing-checks shell" aria-labelledby="buyer-checks-title"><div><p className="eyebrow">BEFORE YOU CONFIRM AN ORDER</p><h2 id="buyer-checks-title">Details that help you buy with confidence.</h2><p>Confirm the actual assortment, condition criteria, packing list and delivery schedule. For a repeatable collection, discuss an approved OEM / ODM specification.</p><Link href="/oem-odm/">Explore custom collections →</Link></div>
       <div><h3>Review the test scope</h3><p>The SGS and ZTS reports cover identified samples and test conditions. Check their applicability to your selected product and destination.</p><ul>{testReports.map(report => <li key={report.id}><a href={report.file}>{report.id} (original PDF)</a></li>)}</ul><Link href="/factory/test-reports/">Read test methods, results &amp; scope →</Link><h3>Plan your shipment</h3><Link href="/guides/ceramic-container-loading-guide/">Cartons, quantities and container loading →</Link></div>
     </section>
-    <section className="contact" id="contact"><div className="shell contact-grid"><div><p className="eyebrow">YOUR NEXT CERAMIC ORDER</p><h2>Build your<br />buying brief.</h2><p>Share your product references, quantities and destination. You can also contact our team directly on WhatsApp.</p><address><span>WhatsApp</span><a href="https://wa.me/8617825907898" target="_blank" rel="noreferrer">+8617825907898</a><span>Email</span><a href="mailto:sales_b2b@jozing.cn">sales_b2b@jozing.cn</a></address></div><InquiryForm compact /></div></section>
+    <section className="contact" id="contact"><div className="shell contact-grid"><div><p className="eyebrow">YOUR NEXT CERAMIC ORDER</p><h2>Build your<br />buying brief.</h2><p>Share your product references, quantities and destination. You can also contact our team directly on WhatsApp.</p><address><span>WhatsApp</span><a href="https://wa.me/8617825907898" target="_blank" rel="noreferrer">{company.whatsapp}</a><span>Email</span><a href="mailto:sales_b2b@jozing.cn">{company.email}</a></address></div><InquiryForm compact /></div></section>
       <section className="ai-seo-faq shell" id="clearance-faq" aria-labelledby="clearance-faq-title">
         <p className="eyebrow">CLEARANCE CERAMICS · BUYER QUESTIONS</p>
         <h2 id="clearance-faq-title">Frequently Asked Questions About JOZING Clearance Ceramics</h2>

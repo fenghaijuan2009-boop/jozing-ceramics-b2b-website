@@ -1,3 +1,4 @@
+import { company, companyHistory, companyFacility, companySameAs } from "../lib/company";
 import { InquiryTracking } from "./inquiry-tracking";
 import { reportStructuredData } from "../lib/test-reports";
 import type { Metadata } from "next";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   verification: { google: ["PyzNVgmVXAYdBNxB2x4bVG306-fMzeVaKbCZH_98pQ0", "WG98Abrx_wPH8IVbfPUX7fCuSqpiD4-vaGrOmMYHELg"] },
   title: "Wholesale Ceramic Tableware from China | JOZING",
-  description: "Source ceramic tableware from China by carton, pallet, ton or container. Ready stock, mixed loading and OEM/ODM manufacturing for global B2B buyers.",
+  description: "Source ceramic tableware from China by carton, pallet, ton or container. Ready stock, mixed loading and OEM/ODM sourcing for global B2B buyers.",
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   icons: {
     icon: [
@@ -31,16 +32,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const analyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-43Z67R5H54";
-  const organization = { "@context": "https://schema.org", "@type": "Organization", "@id": "https://www.jozing.com/#organization", name: "Xiamen Jozing Industrial Co., Ltd.", alternateName: ["JOZING", "JOZING Ceramics"], url: "https://www.jozing.com/", logo: { "@type": "ImageObject", url: "https://www.jozing.com/jozing-logo.png", width: 240, height: 241 }, image: "https://www.jozing.com/og.png", foundingDate: "2017", description: "China ceramic tableware supplier with ceramic experience since 2003, supporting ready-stock clearance lots and OEM/ODM manufacturing for global B2B buyers.", slogan: "Tableware supply, made flexible.", knowsAbout: ["ceramic tableware", "porcelain dinnerware", "ready-stock ceramic lots", "ceramic tableware OEM", "ceramic tableware ODM", "ceramic export packing"], areaServed: "Worldwide", sameAs: ["https://www.youtube.com/@jozingstockceramic", "https://www.facebook.com/profile.php?id=100064043678536", "https://www.instagram.com/jozingstockceramic"], address: { "@type": "PostalAddress", streetAddress: "No. 3, Gubantou Village, Chao'an District", addressLocality: "Chaozhou", addressRegion: "Guangdong", addressCountry: "CN" }, contactPoint: { "@type": "ContactPoint", telephone: "+8617825907898", email: "sales_b2b@jozing.cn", contactType: "sales", areaServed: "Worldwide", availableLanguage: ["English", "Chinese"] } };
-  const organizationWithReports = { ...organization, legalName: "Xiamen Jozing Industrial Co., Ltd.", subjectOf: reportStructuredData };
+  const organization = { "@context": "https://schema.org", "@type": "Organization", "@id": "https://www.jozing.com/#organization", name: company.legalName, alternateName: ["JOZING", "JOZING Ceramics"], url: company.website, logo: { "@type": "ImageObject", url: "https://www.jozing.com/jozing-logo.png", width: 240, height: 241 }, image: "https://www.jozing.com/og.png", foundingDate: company.registrationYear, description: `${companyHistory} ${companyFacility}`, slogan: "Tableware supply, made flexible.", knowsAbout: ["ceramic tableware", "porcelain dinnerware", "ready-stock ceramic lots", "ceramic tableware OEM", "ceramic tableware ODM", "ceramic export packing"], areaServed: "Worldwide", sameAs: companySameAs, address: { "@type": "PostalAddress", streetAddress: company.streetAddress, addressLocality: company.addressLocality, addressRegion: company.addressRegion, addressCountry: company.addressCountry }, contactPoint: { "@type": "ContactPoint", telephone: company.telephone, email: company.email, contactType: "sales", areaServed: "Worldwide", availableLanguage: ["English", "Chinese"] } };
+  const organizationWithReports = { ...organization, legalName: company.legalName, subjectOf: reportStructuredData };
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://www.jozing.com/#website",
     name: "JOZING - Wholesale Clearance Ceramic Tableware",
     alternateName: ["JOZING", "JOZING Ceramics"],
-    url: "https://www.jozing.com/",
-    description: "Wholesale ready-stock clearance ceramic tableware and stocklot porcelain plates, bowls and mugs from China. Sourcing by carton, pallet, ton or container, with OEM/ODM manufacturing for global B2B buyers.",
+    url: company.website,
+    description: "Wholesale ready-stock clearance ceramic tableware and stocklot porcelain plates, bowls and mugs from China. Sourcing by carton, pallet, ton or container, with OEM/ODM sourcing for global B2B buyers.",
     publisher: { "@id": "https://www.jozing.com/#organization" },
     inLanguage: "en",
   };

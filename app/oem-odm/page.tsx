@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ProductCard } from "../product-card";
 import { oemProducts } from "../page";
 import { oemBakewareCodes } from "../product-classification";
@@ -7,7 +8,7 @@ import { SiteFooter, SiteHeader } from "../site-shell";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/oem-odm/" },
-  title: "Ceramic Tableware Manufacturer in China | OEM/ODM | JOZING",
+  title: "Custom Ceramic Tableware Sourcing | OEM/ODM | JOZING",
   description: "Custom ceramic tableware from Chaozhou, China. Explore OEM/ODM shapes, glazes, logos and packaging, with sampling support for brands and importers.",
 };
 
@@ -88,7 +89,7 @@ export default function OemOdmPage() {
           <h2>Send your reference — we&apos;ll check feasibility.</h2>
           <div>
             <a className="btn primary" href="/contact/?product=Custom%20ceramic%20tableware&purchaseType=OEM%20%2F%20ODM&source=%2Foem-odm%2F">Discuss your project</a>
-            <a className="btn text" href="/stock">Browse ready stock instead →</a>
+            <Link className="btn text" href="/stock/">Browse ready stock instead →</Link>
           </div>
         </div>
       </section>

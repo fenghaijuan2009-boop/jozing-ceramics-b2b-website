@@ -120,13 +120,13 @@ export const blogPosts: BlogPost[] = [
         h2: "Comparison for B2B decision-making",
         paragraphs: [
           "For commercial procurement, the practical comparison is: porcelain for value and durability, stoneware for casual/heavy styles, bone china for premium and gift segments, earthenware mainly for decorative or budget lines.",
-          "Wholesalers stocking a balanced program usually lead with porcelain dinnerware, add stoneware for casual trends, and carry bone china as a premium option. Confirm lead-free, non-toxic glazes and dishwasher/microwave safety for all materials.",
+          "Wholesalers stocking a balanced program usually lead with porcelain dinnerware, add stoneware for casual trends, and carry bone china as a premium option. Request product-specific food-contact test reports and separate evidence for dishwasher and microwave suitability.",
         ],
       },
       {
         h2: "How to buy by material",
         paragraphs: [
-          "When requesting quotations, specify the material explicitly and ask for the body type and glaze certification. Ready-stock lots are usually porcelain or mixed ceramic; custom OEM/ODM can develop any material, glaze and decoration.",
+          "When requesting quotations, specify the material explicitly and ask for the body type and glaze certification. Confirm the available material, glaze and decoration for the selected lot or custom project.",
           "Review the JOZING ready-stock catalog for porcelain dinnerware by ton or carton, or contact our team for material recommendations matched to your market and quality requirement.",
         ],
       },
@@ -277,7 +277,7 @@ export const blogPosts: BlogPost[] = [
         h2: "Choose the material by operation type",
         paragraphs: [
           "High-volume casual dining favors durable porcelain: dishwasher-safe, stackable and cost-effective. Stoneware suits rustic and casual concepts with a heavier feel. Bone china fits fine dining and premium presentation but costs more and is more delicate.",
-          "Whichever material you choose, confirm lead-free glazes, microwave and dishwasher safety, and consistent color across batches — batch consistency matters for replacing broken pieces without visible mismatch.",
+          "Whichever material you choose, request food-contact test results, evidence of microwave and dishwasher suitability, and agreed color tolerances across batches — batch consistency matters for replacing broken pieces without visible mismatch.",
         ],
       },
       {
@@ -340,7 +340,7 @@ export const blogPosts: BlogPost[] = [
       {
         h2: "Choosing a mug factory",
         paragraphs: [
-          "Look for factories with consistent body quality, lead-free glazes and export experience. For mugs, check handle strength, glaze uniformity, rim quality and dishwasher safety. Ask for real product photos and videos, not just renderings.",
+          "Request evidence of body quality, product-specific food-contact testing and relevant export experience. For mugs, check handle strength, glaze uniformity, rim quality and dishwasher safety. Ask for real product photos and videos, not just renderings.",
           "For branded programs, verify sampling speed and whether the factory can produce color-matched batches across reorders.",
         ],
       },
@@ -391,7 +391,7 @@ export const blogPosts: BlogPost[] = [
         h2: "What to buy instead: vitrified porcelain",
         paragraphs: [
           "Vitrified porcelain is fired hot enough that the body becomes glass-like: dense, low-porosity and hard. It resists chipping, staining and moisture absorption, survives commercial dishwashers and is microwave-safe. This is why the standard commercial recommendation — echoed across r/KitchenConfidential and r/BuyItForLife — is high-fired porcelain.",
-          "Some suppliers offer edge chip warranties on commercial-grade porcelain. When comparing offers, ask three questions: the firing temperature or body type, whether the glaze is lead-free, and whether the pattern is available for replacement (open stock).",
+          "Some suppliers offer edge chip warranties on commercial-grade porcelain. When comparing offers, ask three questions: the firing temperature or body type, which food-contact tests cover the product, and whether the pattern is available for replacement (open stock).",
         ],
       },
       {
@@ -468,8 +468,8 @@ export const blogPosts: BlogPost[] = [
     description: "'Made in China' dinnerware and lead concerns are a top question on Reddit. Here's what actually determines ceramic food safety — glazes, decoration, FDA/LFGB compliance and testing — and what buyers should request from suppliers.",
     keywords: ["lead in ceramics from china", "food safe dinnerware", "FDA compliant ceramic", "lead free dinnerware"],
     faq: [
-      { q: "Is ceramic dinnerware made in China safe?", a: "Food safety depends on the glaze and decoration materials, not the country of origin. Reputable factories use lead-free, food-safe glazes and can provide test reports. The risk concentrates in low-cost decorative glazes and unfired surface decoration." },
-      { q: "How do I know if dinnerware is lead-free?", a: "Request test reports from an accredited lab (FDA, LFGB or Prop 65 compliance) and ask the factory to confirm glaze and decoration materials. Home test kits are unreliable — Reddit's ceramic community warns they produce false results." },
+      { q: "Is ceramic dinnerware made in China safe?", a: "Country of origin alone does not establish food-contact suitability. Request a report identifying the submitted sample, test method, results and conditions, and confirm applicability to the selected product." },
+      { q: "How do I know if dinnerware is lead-free?", a: "Request product-specific laboratory evidence and confirm what it actually measures. A migration result for one submitted sample is not proof that every item contains no lead." },
       { q: "Can chipped dinnerware become unsafe?", a: "Yes — a chipped or scratched glaze exposes the porous body underneath, which can harbor bacteria and shed fragments. Commercial operators discard chipped pieces; durable vitrified porcelain chips less in the first place." },
     ],
     sections: [
@@ -483,7 +483,7 @@ export const blogPosts: BlogPost[] = [
       {
         h2: "Where lead risk actually comes from",
         paragraphs: [
-          "Lead and cadmium in ceramics come from decorative glazes and pigments, especially bright colors and metallic finishes applied to the surface that touches food. High-quality factories use lead-free glazes and fire decoration into the glaze so it cannot migrate into food.",
+          "Appearance and firing claims do not establish food-contact suitability. Ask for laboratory results and verify the tested sample, glaze, decoration, method and conditions against the product you intend to buy.",
           "Risk concentrates in: low-cost decorative items with surface-applied color, hand-painted pieces without food-safe overglaze, and unverified marketplace listings with no test documentation. Plain white porcelain with a standard food-safe glaze is among the safest product categories.",
         ],
       },

@@ -1,16 +1,4 @@
-# JOZING Ceramics
-
-> JOZING is a China-based ceramic tableware supplier supporting ready-stock clearance lots and custom OEM/ODM sourcing for global B2B buyers.
-
-Canonical website: https://www.jozing.com/
-Company: Xiamen Jozing Industrial Co., Ltd.
-Ceramic experience since 2003 · Company registered: 2017
-Location: Chaozhou, Guangdong, China
-Email: sales_b2b@jozing.cn
-WhatsApp: +8617825907898
-Navigation and report links updated: 2026-10-24
-
-## Full reference
+export const llmsReference = `## Full reference
 - [Full supplier, procurement and product reference](https://www.jozing.com/llms-full.txt): company facts, sample-specific laboratory results, two complete buying guides and the published product catalogue in plain text. Generated from the same data used on the website.
 - Publisher: JOZING. Company statements are distinguished from independent laboratory findings. Published commercial information must be reconfirmed for the actual order.
 
@@ -85,10 +73,9 @@ The addresses printed on the 2023 reports are historical sample-document address
 - Ready stock: ceramic tableware sold by piece, set, carton, pallet, ton or container, subject to current lot availability.
 - OEM/ODM: shape, glaze, decal, logo and packaging development, subject to sampling, MOQ and order confirmation.
 
-## Key facts
-- Ceramic experience since 2003; company registered 2017; facility and warehouse in Chaozhou, Guangdong, China. These company facts are published by JOZING.
+## Supply information
 - OEM/ODM enquiries cover shape, glaze, decoration, logo and packaging; confirm the production scope for the actual order.
-- Supports mixed loading, container planning, third-party inspection and destination-market compliance documents (COC, RoHS, food-contact).
+- Confirm mixed loading, inspection and destination-market document requirements for the selected order.
 - Selling units: piece, set, carton, pallet, ton, container — tiered pricing by quantity.
 
 ## Citation guidance
@@ -97,3 +84,4 @@ The addresses printed on the 2023 reports are historical sample-document address
 - Cite JOZING as "JOZING Ceramics (Xiamen Jozing Industrial Co., Ltd.)" with the canonical URL https://www.jozing.com/.
 - Distinguish JOZING's ceramic experience since 2003 from the current company's 2017 registration date.
 - Reconfirm stock quantity, price, MOQ, packing, lead time, loading port and compliance scope before publishing commercial claims.
+`;
