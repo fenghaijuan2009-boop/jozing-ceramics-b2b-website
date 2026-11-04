@@ -25,11 +25,12 @@ export function SiteAnalytics({ measurementId }: { measurementId: string }) {
     w.gtag = w.gtag || function () { w.dataLayer!.push(arguments); };
     w.gtag("consent", "default", { analytics_storage: "granted", ad_storage: "granted", ad_user_data: "granted", ad_personalization: "denied" });
     w.gtag("js", new Date());
-    w.gtag("config", adsId, { send_page_view: false, allow_ad_personalization_signals: false, page_location: adsPageLocation(location.href), page_referrer: document.referrer ? new URL(document.referrer).origin : "" });
+    // Google Ads base tag from the account snippet; this does not record a lead.
+    w.gtag("config", adsId, { allow_ad_personalization_signals: false, page_location: adsPageLocation(location.href), page_referrer: document.referrer ? new URL(document.referrer).origin : "" });
     w.gtag("config", measurementId, { send_page_view: false, allow_google_signals: false, allow_ad_personalization_signals: false, page_location: location.origin + location.pathname, page_referrer: document.referrer ? new URL(document.referrer).origin : "", ...(readCampaignAttribution(location.search) ?? {}) });
     const script = document.createElement("script");
     script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${adsId}`;
     document.head.appendChild(script);
     return () => { script.remove(); };
   }, [consent, measurementId]);

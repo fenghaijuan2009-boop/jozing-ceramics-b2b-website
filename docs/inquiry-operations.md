@@ -21,3 +21,9 @@ Requests require an allowed origin, JSON content, a valid email, required produc
 Replaying the same reference and brief returns the original success without creating another inquiry; different data with the same reference returns conflict. Never log inquiry bodies. `inquiry_saved` analytics contains only purchase type and source group, requires analytics consent and excludes product labels containing `TEST ONLY`.
 
 Run `node scripts/test-inquiry-service.mjs` for validation and failure-path checks. Verify a clearly labeled `TEST ONLY` brief in the deployed form and confirm its record in the private database after a release. Keep test records separate from real leads.
+
+## Google Ads website snippets
+
+The shared `SiteAnalytics` component inserts the account's Google tag into `document.head` after the visitor permits measurement. It loads `https://www.googletagmanager.com/gtag/js?id=AW-842600977` and configures `AW-842600977`; GA4 shares that loader. Do not add a second copy of either snippet to individual product or stock pages.
+
+The `JOZING | Website inquiry saved` event uses `send_to: AW-842600977/--KRCLap_60dEJGk5JED`. The form dispatches it only after `/api/inquiries/` confirms a saved inquiry with the matching reference. The Google Ads payload includes an opaque transaction ID for deduplication, never the buyer's contact details or message. Page views, WhatsApp handoffs, invalid submissions and `TEST ONLY` inquiries do not fire this conversion. The account's base tag detection and the conversion action's verified status are separate checks.
