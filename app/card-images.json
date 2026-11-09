@@ -290,5 +290,17 @@
   "/products/oct23-11000036308030/main-01.webp": {
     "360": "/products/oct23-11000036308030/card-360.webp",
     "720": "/products/oct23-11000036308030/card-720.webp"
+  },
+  "/products/import-1601785819983/main-01.webp": {
+    "360": "/products/import-1601785819983/card-360.webp",
+    "720": "/products/import-1601785819983/card-720.webp"
+  },
+  "/products/import-1601767227416/main-01.webp": {
+    "360": "/products/import-1601767227416/card-360.webp",
+    "720": "/products/import-1601767227416/card-720.webp"
+  },
+  "/products/import-11000035728154/main-01.webp": {
+    "360": "/products/import-11000035728154/card-360.webp",
+    "720": "/products/import-11000035728154/card-720.webp"
   }
 }

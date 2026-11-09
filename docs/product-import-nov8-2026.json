@@ -1,0 +1,78 @@
+{
+  "verified": [
+    {
+      "productId": "1601785819983",
+      "source": "https://www.alibaba.com/product-detail/Scalloped-Rim-Porcelain-Plates-Fluted-Round_1601785819983.html",
+      "checkedAt": "2026-11-08",
+      "mainImages": [
+        "https://s.alicdn.com/@sc04/kf/A260bea7eb8354b7ea1e52d6c9d87d3ffX.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/A4ef7cdd69c594413b735880106754e81H.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/A138db480843244b7b9cfaede51f55677y.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/A3fdf467736c34eadb3a6ed77a5131158F.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/A8f702032d6d24ca3a659c08fdc2bc366Q.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/A3753709e3e204b9192c2b61d3970ef5d6.png_960x960q80.jpg"
+      ],
+      "sellingUnit": "set",
+      "prices": [
+        {
+          "price": "$0.97",
+          "quantity": "≥200 sets"
+        }
+      ],
+      "notes": "Source a two-piece porcelain plate set with scalloped rims and a fluted profile for tableware wholesalers, cafes, hotels and event suppliers. Choose camel or white. Each set contains the listed 8.7-inch and 10.4-inch plates; the displayed USD price is per set, not per plate. Confirm available quantities by color, carton packing and dispatch timing with your quotation."
+    },
+    {
+      "productId": "1601767227416",
+      "source": "https://www.alibaba.com/product-detail/Wholesale-White-Ceramic-Soup-Bowls-Round_1601767227416.html",
+      "checkedAt": "2026-11-08",
+      "mainImages": [
+        "https://s.alicdn.com/@sc04/kf/A8b66073e54e54eb8ad415cbbe213b578D.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/Ae361952e3dee4a08838c6d2116c87654P.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/A4c1643de042348548c96d755541664fb9.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/Ac6cc9b21778949f994223c2eb5eb89e9Y.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/Ad367ec19837d4a818ecf83d1dd305316v.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/A6c840814dd7e4607b2f0820cac7c8080v.png_960x960q80.jpg"
+      ],
+      "sellingUnit": "piece",
+      "prices": [
+        {
+          "price": "$1.27",
+          "quantity": "≥200 pieces"
+        }
+      ],
+      "notes": "Order white ceramic soup and serving bowls with a deep round barrel-shaped profile and glossy glaze. The listed 7-inch bowls suit wholesale tableware ranges, restaurants, hotels and cafes. Prices are per individual bowl, with a starting MOQ of 200 pieces. Confirm usable capacity, carton quantity, current availability and dispatch timing before ordering."
+    },
+    {
+      "productId": "11000035728154",
+      "source": "https://www.alibaba.com/product-detail/Jozing-2-Piece-White-Porcelain-Bowl_11000035728154.html",
+      "checkedAt": "2026-11-08",
+      "mainImages": [
+        "https://s.alicdn.com/@sc04/kf/Aae1192eee3a445e78fa9adb59fd3ea51j.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/A3d3eac3ab594406b9d36ab41b059715c0.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/Acd2dc7d64077491d8f226697ac3687a5Y.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/A9377ee5997e042269fcd1d90d08468ceT.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/Ac931711a7a7c4a47b91a9b4a4f4ad07dC.png_960x960q80.jpg",
+        "https://s.alicdn.com/@sc04/kf/A1b66ae8859084408b90b2a79348fb1b62.png_960x960q80.jpg"
+      ],
+      "sellingUnit": "piece",
+      "prices": [
+        {
+          "price": "$0.67",
+          "quantity": "≥200 pieces · 8.1-inch bowl"
+        },
+        {
+          "price": "$0.87",
+          "quantity": "≥200 pieces · 10.2-inch bowl"
+        }
+      ],
+      "notes": "Compare two sizes of white porcelain bowls with a fluted round profile for soup, salads and table service. Choose 8.1-inch bowls at US$0.67 each or 10.2-inch bowls at US$0.87 each, starting at 200 pieces. Although the supplier title and gallery present a two-size collection, the variation selector prices each bowl separately. These prices do not include a two-piece set. Specify the quantities for each size and request a separate quotation if you need a combined set."
+    }
+  ],
+  "blocked": [
+    {
+      "productId": "1601770952573",
+      "reason": "Alibaba page states this product is temporarily unavailable and redirects to similar products. Exact ID web search returned no results. Not published without verified prices and specifications."
+    }
+  ],
+  "titlePolicy": "Use wholesale ceramic plus accurate bulk plates / bulk bowls; no mugs in verified products."
+}

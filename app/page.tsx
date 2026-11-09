@@ -1,3 +1,4 @@
+import { nov8StockProducts } from "./imported-stock-products-nov8";
 import { company } from "../lib/company";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -63,6 +64,7 @@ export type StockLot = {
 };
 
 export const allProducts: StockLot[] = [
+  ...nov8StockProducts,
   ...hotelNov2StockProducts,
   ...nov2StockProducts,
   ...nov1StockProducts,
