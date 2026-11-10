@@ -1,0 +1,14 @@
+.catalog { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: clamp(32px, 6vw, 88px); align-items: center; padding-top: 56px; padding-bottom: 72px; }
+.copy h1 { font-size: clamp(38px, 5vw, 64px); line-height: 1.1; margin: 16px 0 24px; }
+.copy p { line-height: 1.7; }
+.intro { font-size: 22px; }
+.details { font-size: 14px; margin-top: 24px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+.actions a { border: 1px solid #173e35; text-align: center; }
+.notice { font-size: 14px; color: #52645e; max-width: 510px; }
+.links { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 28px; }
+.links a { text-decoration: underline; text-underline-offset: 4px; }
+.cover { display: block; background: #fff; border: 1px solid #dddcd4; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 30px #153c3210; }
+.cover img { display: block; width: 100%; height: auto; }
+.cover span { display: block; font-size: 13px; padding: 16px 20px; border-top: 1px solid #eee; line-height: 1.5; }
+@media (max-width: 760px) { .catalog { grid-template-columns: minmax(0, 1fr); padding-top: 28px; padding-bottom: 40px; gap: 32px; } .intro { font-size: 20px; } .cover { max-width: 420px; width: 100%; margin: 0 auto; } }

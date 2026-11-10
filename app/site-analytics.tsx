@@ -47,7 +47,7 @@ export function SiteAnalytics({ measurementId }: { measurementId: string }) {
       const link = event.target instanceof Element ? event.target.closest("a") : null;
       if (!link) return;
       if (link.hasAttribute("data-catalog-download")) {
-        w.gtag?.("event", "catalogue_open", { catalogue_id: "jozing-product-catalogue", destination: "google_drive", page_location: page, send_to: measurementId });
+        w.gtag?.("event", "catalogue_open", { catalogue_id: "jozing-product-catalogue", destination: "website_pdf", page_location: page, send_to: measurementId });
         return;
       }
       const href = link.getAttribute("href") || "";

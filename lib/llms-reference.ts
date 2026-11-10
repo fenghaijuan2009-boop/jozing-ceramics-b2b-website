@@ -12,7 +12,8 @@ export const llmsReference = `## Full reference
 - Contact: https://www.jozing.com/contact/
 - Buyer FAQ: https://www.jozing.com/faq/
 - [Current stock-list request page](https://www.jozing.com/stock/)
-- [Buyer guides](https://www.jozing.com/guides/)
+- [Product Catalog](https://www.jozing.com/guides/)
+- [Product Catalog and Price from JOZING (PDF)](https://www.jozing.com/JOZING-Stock-Ceramic-Catalog-2026.pdf)
 - [Bulk stock-lot ceramic tableware knowledge base](https://www.jozing.com/knowledge-base/)
 - Blog: https://www.jozing.com/blog/
 - Sitemap: https://www.jozing.com/sitemap.xml
