@@ -33,3 +33,7 @@ export const productSeoTitlesBySlug: Record<string, string> = {
   "wholesale-modern-white-ceramic-dinnerware-set-for-restaurant-hotel": "White Ceramic Dinnerware for Restaurants & Hotels | JOZING",
   "factory-direct-large-14-20-inch-porcelain-white-serving-platters-stocked-sell-by-ton": "14–20inch White Porcelain Serving Platters by Ton | JOZING",
 };
+
+export const productSeoDescriptions: Record<string, string> = {
+  "JZ-A1601694009977": "Wholesale white hotel porcelain dinnerware at $400–$420/ton. MOQ 1 ton. Mixed plates, bowls & platters. Request current stock and packing list.",
+};

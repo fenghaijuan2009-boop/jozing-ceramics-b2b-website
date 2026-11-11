@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { allProducts, oemProductCodes } from "../../page";
 import { oemBakewareCodes } from "../../product-classification";
 import { productSlug } from "../../product-utils";
-import { productSeoTitles, productSeoTitlesBySlug } from "../../product-seo";
+import { productSeoDescriptions, productSeoTitles, productSeoTitlesBySlug } from "../../product-seo";
 import { stockCategories } from "../../stock-categories";
 import { SiteFooter, SiteHeader } from "../../site-shell";
 import { offerQuantity, unitPrice } from "../../offer-quantity";
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const product = allProducts.find((item) => productSlug(item.name) === slug);
   if (!product) return {};
   const title = productSeoTitles[product.code] ?? productSeoTitlesBySlug[slug] ?? `${product.name} | JOZING`;
-  const description = `${product.type}. ${product.pack}; MOQ ${product.stock}. Request current availability, packing details and a factory-direct quotation from JOZING.`;
+  const description = productSeoDescriptions[product.code] ?? `${product.type}. ${product.pack}; MOQ ${product.stock}. Request current availability, packing details and a factory-direct quotation from JOZING.`;
   const url = `${origin}/products/${slug}/`;
   const images = (product.gallery?.length ? product.gallery : [product.image]).map(image => ({ url: `${origin}${image}`, alt: product.name }));
   return {
@@ -45,11 +45,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const productCategories = isOem ? [] : stockCategories.filter(category => category.codes.includes(product.code));
   const url = `${origin}/products/${slug}/`;
   const images = product.gallery ?? [product.image];
+  const breadcrumbName = product.code === "JZ-A1601694009977" ? "White Hotel Dinnerware by the Ton" : undefined;
   const inquiryUrl = `/contact/?product=${encodeURIComponent(`${product.code} - ${product.name}`)}&productUrl=${encodeURIComponent(url)}${isOem ? "&purchaseType=OEM%20%2F%20ODM" : ""}`;
   const whatsappUrl = `https://wa.me/8617825907898?text=${encodeURIComponent(`Hello JOZING, please quote ${product.code} - ${product.name}.\nProduct: ${url}\nPlease confirm availability, MOQ and packing.`)}`;
   const offers = product.tiers?.map((tier) => ({ "@type": "Offer", priceCurrency: "USD", price: tier.price.replace(/[$,]/g, ""), eligibleQuantity: offerQuantity(tier.quantity), priceSpecification: unitPrice(product.priceLabel ?? product.pack, tier.price.replace(/[$,]/g, "")), description: `${product.priceLabel ?? product.pack}. Order tier: ${tier.quantity}. Availability and final commercial terms require confirmation.`, availability: isOem ? "https://schema.org/PreOrder" : "https://schema.org/LimitedAvailability", itemCondition: "https://schema.org/NewCondition", seller: { "@id": `${origin}/#organization` }, url })) ?? [];
   const productSchema = { "@context": "https://schema.org", "@type": "Product", "@id": `${url}#product`, name: product.name, sku: product.code, url, image: images.map((image) => `${origin}${image}`), description: `${product.type}. ${product.pack}. Starting MOQ: ${product.stock}.`, additionalProperty: [{ "@type": "PropertyValue", name: "Starting MOQ", value: product.stock }, { "@type": "PropertyValue", name: "Pricing basis", value: product.priceLabel ?? product.pack }], category: "Ceramic Tableware", material: product.material, color: product.colors, size: product.size ?? product.capacity, brand: { "@type": "Brand", name: "JOZING" }, manufacturer: { "@id": `${origin}/#organization` }, audience: { "@type": "BusinessAudience", audienceType: "Importers, wholesalers, hospitality suppliers and brands" }, offers: offers.length ? offers : undefined };
-  const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${origin}/` }, { "@type": "ListItem", position: 2, name: categoryName, item: `${origin}${categoryUrl}` }, { "@type": "ListItem", position: 3, name: product.name, item: url }] };
+  const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${origin}/` }, { "@type": "ListItem", position: 2, name: categoryName, item: `${origin}${categoryUrl}` }, { "@type": "ListItem", position: 3, name: breadcrumbName ?? product.name, item: url }] };
   const relatedProducts = allProducts
     .filter(item => item.code !== product.code && oemProductCodes.includes(item.code) === isOem)
     .map(item => ({
@@ -69,7 +70,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     <section className="product-detail shell" data-product-code={product.code} data-product-name={product.name} data-product-category={categoryName}>
       <div className="product-detail-media"><ProductGallery images={images} productName={product.name} /></div>
       <div className="product-detail-copy">
-        <nav className="breadcrumbs"><Link href="/">Home</Link><span>/</span><a href={categoryUrl}>{categoryName}</a><span>/</span><b>{product.code}</b></nav>
+        <nav className="breadcrumbs"><Link href="/">Home</Link><span>/</span><a href={categoryUrl}>{categoryName}</a><span>/</span><b>{breadcrumbName ?? product.code}</b></nav>
           <p className="eyebrow">{isOem ? "OEM / ODM" : "READY STOCK"} · {product.code}</p><h1>{product.name}</h1>
           {product.tiers ? <div className="detail-prices"><h2>{product.priceLabel ?? "Tier pricing"}</h2>{product.tiers.map((tier) => <div key={tier.quantity}><strong>{tier.price}</strong><span>{tier.quantity}</span></div>)}</div> : null}
         <div className="product-quote-actions"><a className="btn primary" href={inquiryUrl}>Request a quote</a><a className="btn text" href={whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div>
