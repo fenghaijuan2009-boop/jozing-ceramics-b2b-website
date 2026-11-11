@@ -1,4 +1,6 @@
 export function productSlug(name: string) {
+  // Preserve the published hotel dinnerware URL after the November title update.
+  if (name === "Bulk White Hotel Dinnerware Stocklots | $400–$420/Ton Porcelain") return "wholesale-white-hotel-dinnerware-by-the-ton-porcelain-plates-bowls-serving-platters";
   // Keep the existing listing URL when refreshing this Alibaba product.
   if (name === "Wholesale Ceramic Coffee Mugs – 3D Animal Designs & Bulk Mugs Assortment") return "wholesale-ready-stock-ceramic-coffee-mug-cute-3d-porcelain-cups";
   // Keep published OEM product URLs stable after title updates.

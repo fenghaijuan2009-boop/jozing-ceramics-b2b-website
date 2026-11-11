@@ -4,8 +4,8 @@ import type { StockLot } from "./page";
 export const hotelNov2StockProducts: StockLot[] = [
   {
     "code": "JZ-A1601694009977",
-    "name": "Wholesale White Hotel Dinnerware by the Ton – Porcelain Plates, Bowls & Serving Platters",
-    "type": "Wholesale White Hotel Dinnerware by the Ton – Porcelain Plates, Bowls & Serving Platters",
+    "name": "Bulk White Hotel Dinnerware Stocklots | $400–$420/Ton Porcelain",
+    "type": "Bulk White Hotel Dinnerware Stocklots | $400–$420/Ton Porcelain",
     "pack": "Sold by ton",
     "stock": "1 ton",
     "priceLabel": "Price / ton",
